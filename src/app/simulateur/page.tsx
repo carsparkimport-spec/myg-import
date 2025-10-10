@@ -21,10 +21,10 @@ export default function SimulateurPage() {
 
   const [priceYen, setPriceYen] = useState<number>(2780000);
   const [priceYenInput, setPriceYenInput] = useState<string>('2780000');
-  const [fixedFeesYen, setFixedFeesYen] = useState<number>(90000);
+  const fixedFeesYen = 90000; // constant in current model
   const [forfait, setForfait] = useState<number>(1490);
-  const [freightEuro, setFreightEuro] = useState<number>(1500);
-  const [customsPct, setCustomsPct] = useState<number>(10);
+  const freightEuro = 1500; // constant in current model
+  const customsPct = 10; // constant in current model
   const [vatPct, setVatPct] = useState<number>(17);
   const [budgetCurrency, setBudgetCurrency] = useState<'EUR' | 'JPY'>('EUR');
   const [targetBudgetYen, setTargetBudgetYen] = useState<number>(30000 * 175);
@@ -42,9 +42,6 @@ export default function SimulateurPage() {
     setVatPct(countryToVat[country]);
   }, [country]);
   const [targetBudgetEuro, setTargetBudgetEuro] = useState<number>(30000);
-  const [fxSource, setFxSource] = useState<string>('');
-  const [fxWindow, setFxWindow] = useState<number>(7);
-  const [showBidInput, setShowBidInput] = useState<boolean>(false);
 
   // Formatting helpers for inputs
   const groupDigits = (s: string) => s.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
@@ -109,7 +106,6 @@ export default function SimulateurPage() {
   const budgetEuroForInverse = useMemo(() => (budgetCurrency === 'EUR' ? targetBudgetEuro : targetBudgetYen / (jpyEur || 1)), [budgetCurrency, targetBudgetEuro, targetBudgetYen, jpyEur]);
   const estimatedBidYen = useMemo(() => solvePriceYenForTargetTotal(budgetEuroForInverse), [budgetEuroForInverse, jpyEur, fixedFeesYen, forfait, freightEuro, customsPct, vatPct]);
 
-  const formatEUR = (n: number) => n.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
   const formatEUR2 = (n: number) => n.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
   const formatJPY = (n: number) => `${Math.round(n).toLocaleString('fr-FR')} ¥`;
 
@@ -120,9 +116,7 @@ export default function SimulateurPage() {
       const data = await res.json();
       const jpyPerEur = data?.jpyPerEur; // preferred storage
       if (jpyPerEur) setJpyEur(+Number(jpyPerEur).toFixed(2));
-      if (data?.source) setFxSource(String(data.source));
-      if (data?.window) setFxWindow(Number(data.window));
-    } catch (e) {
+    } catch {
       // Fallback: keep current rate
     }
   }
@@ -256,7 +250,7 @@ export default function SimulateurPage() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-[13px] font-medium mb-1 text-gray-900 tracking-wide">Prix de l'enchère (¥)</label>
+                  <label className="block text-[13px] font-medium mb-1 text-gray-900 tracking-wide">Prix de l’enchère (¥)</label>
                   <input
                     type="text"
                     inputMode="numeric"
@@ -365,7 +359,7 @@ export default function SimulateurPage() {
                 </div>
               </details>
               <div className="mt-4 text-[11px] md:text-xs text-black/60">
-                Les montants affichés sont des estimations indicatives susceptibles d'évoluer en fonction du taux de change,
+                Les montants affichés sont des estimations indicatives susceptibles d’évoluer en fonction du taux de change,
                 des frais logistiques et des réglementations. Ils ne constituent pas une offre ferme.
               </div>
             </div>

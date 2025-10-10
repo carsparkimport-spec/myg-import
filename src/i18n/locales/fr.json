@@ -128,8 +128,88 @@
   "blog": {
     "title": "Blog - MYG Import",
     "heading": "Blog",
-    "comingSoon": "Articles à venir..."
+    "comingSoon": "Articles à venir...",
+    "imageAlt": "Fiche d’enchères - exemple",
+    "imageCaption": "Exemple de fiche d’enchères japonaise",
+    "legendAlt": "Légende de la fiche d’enchère - zones numérotées",
+    "legendCaption": "Légende : à quoi correspondent les cadres colorés",
+    "readTitle": "Comment lire une fiche d'enchère japonaise",
+    "guide": {
+      "title": "Guide de lecture d’une fiche d’enchère",
+      "intro": "Repérez les numéros sur la fiche et retrouvez ci‑dessous l’explication de chaque zone.",
+      "items": {
+        "1": { "title": "Numéro de lot / enchère", "desc": "Identifiant attribué au véhicule lors de la vente." },
+        "2": { "title": "Informations techniques", "desc": "Détails constructeur : code châssis, modèle, motorisation, version, transmission." },
+        "3": { "title": "Évaluation globale", "desc": "Note d’état global (ex. 4.5) et note intérieure (ex. B)." },
+        "4": { "title": "Informations additionnelles", "desc": "Couleur, type de pneus, version spécifique, etc." },
+        "5": { "title": "Informations principales / résumé", "desc": "Immatriculation, année, kilométrage, carburant, boîte, direction." },
+        "6": { "title": "Détails administratifs", "desc": "Année japonaise, type d’immatriculation, numéro de moteur, consommation, etc." },
+        "7": { "title": "Équipements et options", "desc": "GPS, sièges cuir, climatisation, toit ouvrant, PDK, Bose, etc." },
+        "8": { "title": "Informations fiscales / recyclage", "desc": "Montant de la taxe de recyclage et catégorie correspondante." },
+        "9": { "title": "Numéro de châssis (VIN)", "desc": "Identifiant du véhicule (ex. WPOZZZ98ZCS750855)." },
+        "10": { "title": "Observations / inspection", "desc": "Remarques de l’inspecteur : rayures, bosses, usure, etc." }
+      },
+      "tipsTitle": "Conseils rapides",
+      "tips": {
+        "1": "Comparer la note globale avec l’état indiqué sur le schéma.",
+        "2": "Vérifier la cohérence kilométrage / année / usure reportée.",
+        "3": "Confirmer la présence d’options clés (ex. PDK, cuir, Bose).",
+        "4": "Demander des photos détaillées si un point reste ambigu."
+      }
+    },
+    "annotations": {
+      "title": "Codes d’annotation des inspecteurs",
+      "subtitle": "Référentiel simple pour lire les annotations des fiches d’enchères japonaises.",
+      "headers": {
+        "code": "Code",
+        "jp": "Nom japonais",
+        "desc": "Traduction / Description",
+        "size": "Taille / Gravité typique"
+      },
+      "items": {
+        "A1": { "jp": "キズ小 (Kizu shō)", "desc": "Rayure légère, superficielle (dans le vernis uniquement)", "size": "< 2 cm" },
+        "A2": { "jp": "キズ中 (Kizu chū)", "desc": "Rayure moyenne, visible à l’œil nu, sans rouille", "size": "2–10 cm" },
+        "A3": { "jp": "キズ大 (Kizu dai)", "desc": "Rayure profonde atteignant la peinture ou apprêt", "size": "> 10 cm" },
+        "U1": { "jp": "ヘコミ小 (Hekomi shō)", "desc": "Petite bosse, peu visible, peinture intacte", "size": "< 2 cm" },
+        "U2": { "jp": "ヘコミ中 (Hekomi chū)", "desc": "Bosse moyenne, bien visible, peinture intacte ou légèrement marquée", "size": "2–5 cm" },
+        "U3": { "jp": "ヘコミ大 (Hekomi dai)", "desc": "Grosse bosse, visible de loin, souvent avec éclat de peinture", "size": "> 5 cm" },
+        "W1": { "jp": "波小 (Nami shō)", "desc": "Légère ondulation, reflet légèrement déformé", "size": "Localisé" },
+        "W2": { "jp": "波中 (Nami chū)", "desc": "Ondulation notable, possible panneau mal redressé", "size": "Zone moyenne" },
+        "W3": { "jp": "波大 (Nami dai)", "desc": "Panneau déformé ou mal réparé, nécessite redressage complet", "size": "Zone large" },
+        "P": { "jp": "ペイントハガレ (Peinto Hagare)", "desc": "Vernis ou peinture écaillée", "size": "Variable" },
+        "S1": { "jp": "サビ小 (Sabi shō)", "desc": "Petite tache de rouille superficielle", "size": "< 2 cm" },
+        "S2": { "jp": "サビ中 (Sabi chū)", "desc": "Rouille visible, nécessitant ponçage", "size": "2–5 cm" },
+        "S3": { "jp": "サビ大 (Sabi dai)", "desc": "Forte rouille, métal attaqué", "size": "> 5 cm" },
+        "C1": { "jp": "腐食小 (Fushoku shō)", "desc": "Corrosion légère (début de piqûres)", "size": "< 3 cm" },
+        "C2": { "jp": "腐食中 (Fushoku chū)", "desc": "Corrosion visible, métal affaibli", "size": "3–10 cm" },
+        "C3": { "jp": "腐食大 (Fushoku dai)", "desc": "Corrosion sévère, trou ou perforation", "size": "> 10 cm" },
+        "Y1": { "jp": "ワレ小 (Ware shō)", "desc": "Petite fissure sur plastique", "size": "≤ 2 cm" },
+        "Y2": { "jp": "ワレ中 (Ware chū)", "desc": "Fissure moyenne, visible à distance", "size": "2–5 cm" },
+        "Y3": { "jp": "ワレ大 (Ware dai)", "desc": "Grande fissure, élément à remplacer", "size": "> 5 cm" },
+        "X": { "jp": "要交換 (Yō kōkan)", "desc": "Élément à remplacer (endommagé ou structurel)", "size": "—" },
+        "XX": { "jp": "交換済 (Kōkan sumi)", "desc": "Élément déjà remplacé", "size": "—" },
+        "B1": { "jp": "ヘコミ・キズ小 (Hekomi/Kizu shō)", "desc": "Petite bosse avec éclat de peinture", "size": "≤ 2 cm" },
+        "B2": { "jp": "ヘコミ・キズ中 (Hekomi/Kizu chū)", "desc": "Bosse moyenne avec éclat visible", "size": "2–5 cm" },
+        "B3": { "jp": "ヘコミ・キズ大 (Hekomi/Kizu dai)", "desc": "Grosse bosse avec éclat important", "size": "> 5 cm" },
+        "E": { "jp": "エクボ/飛び石 (Ekubo/Tobishi)", "desc": "Impact ou éclat (ex. pare‑brise, phare)", "size": "< 1 cm" },
+        "G": { "jp": "ガラス割れ (Garasu ware)", "desc": "Fissure ou cassure sur vitrage", "size": "Variable" },
+        "D": { "jp": "雹害 (Hyōgai)", "desc": "Dommages de grêle (multiples U1)", "size": "Multiples petits impacts" },
+        "P/R": { "jp": "再塗装 (Saitosō)", "desc": "Panneau repeint", "size": "Zone hachurée sur schéma" }
+      },
+      "note": {
+        "title": "À savoir",
+        "items": {
+          "1": "Les tailles ne sont pas mesurées au centimètre, mais estimées visuellement selon la surface couverte.",
+          "2": "Les valeurs en cm sont indicatives mais correspondent à la formation officielle USS pour les inspecteurs agréés.",
+          "3": "Un A2 ou U2 peut être toléré sur un véhicule noté 4.5, mais pas plus.",
+          "4": "Un A3, U3, XX ou R abaisse fortement la note globale (souvent 3.5 ou moins).",
+          "5": "Les symboles sont cumulables sur un même panneau.",
+          "6": "W3, C3, S3, X, R, ou XX indiquent des réparations lourdes ou structurelles."
+        }
+      }
+    }
   },
+  "legendMissing": "Image de légende manquante. Ajoutez \"/public/images/auction-sheets/auction-legend.jpg\".",
   "about": {
     "meta": "À Propos - MYG Import",
     "title": "À Propos de MYG Import",

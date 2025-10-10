@@ -22,8 +22,9 @@ function getVehicleById(id: string): Vehicle | undefined {
   return vehicles.find(v => v.id === id);
 }
 
-export default function VehiclePage({ params }: { params: { id: string } }) {
-  const vehicle = getVehicleById(params.id);
+export default async function VehiclePage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const vehicle = getVehicleById(id);
   if (!vehicle) notFound();
 
   return (

@@ -5,7 +5,8 @@ import fr from './locales/fr.json';
 import en from './locales/en.json';
 
 type Locale = 'fr' | 'en';
-type Dictionary = Record<string, any>;
+type Primitive = string | number | boolean | null | undefined;
+type Dictionary = { [key: string]: Primitive | Dictionary };
 
 interface I18nContextValue {
   locale: Locale;
@@ -18,7 +19,16 @@ const I18nContext = createContext<I18nContextValue | undefined>(undefined);
 const ALL_DICTIONARIES: Record<Locale, Dictionary> = { fr, en };
 
 function getByPath(dict: Dictionary, path: string): string {
-  return path.split('.').reduce<any>((acc, part) => (acc && acc[part] != null ? acc[part] : undefined), dict) ?? path;
+  const parts = path.split('.');
+  let node: Primitive | Dictionary = dict;
+  for (const part of parts) {
+    if (node && typeof node === 'object' && part in node) {
+      node = (node as Dictionary)[part];
+    } else {
+      return path; // fallback to key if missing
+    }
+  }
+  return String(node);
 }
 
 export function I18nProvider({ children, initialLocale = 'fr' }: { children: React.ReactNode; initialLocale?: Locale }) {

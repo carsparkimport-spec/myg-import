@@ -65,7 +65,8 @@ export function I18nProvider({ children, defaultLocale = "fr" as Locale }: { chi
 
   const t = useCallback(
     (key: string, params?: Record<string, string | number>) => {
-      const template = (messages[key] ?? frMessages[key] ?? key) as string;
+      const fallbackFr = frMessages as unknown as Messages;
+      const template = (messages[key] ?? fallbackFr[key] ?? key) as string;
       if (!params) return template;
       return Object.keys(params).reduce((acc, k) => {
         const value = String(params[k] as unknown as string);

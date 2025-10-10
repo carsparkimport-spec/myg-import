@@ -50,7 +50,7 @@ export async function GET(req: Request) {
             });
           }
         }
-      } catch (err) {
+      } catch {
         // fall through to fallback
       }
     }
@@ -84,7 +84,7 @@ export async function GET(req: Request) {
       end: endStr,
       updatedAt: new Date().toISOString(),
     });
-  } catch (e) {
+  } catch {
     return NextResponse.json({ error: 'Unexpected error' }, { status: 500 });
   }
 }

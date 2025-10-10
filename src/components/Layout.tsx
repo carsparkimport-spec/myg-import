@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode, Suspense, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from './Navigation';
@@ -11,11 +11,12 @@ function Logo({ className, variant = 'rect' }: { className?: string; variant?: '
   // Point to an existing public asset to avoid 404
   const initialSrc = '/images/backgrounds/Logo MYG.jpeg';
   const [src, setSrc] = useState(initialSrc);
+  const variantClass = variant === 'square' ? 'rounded-lg' : '';
   return (
     <img
       src={src}
       alt="MYG Import Logo"
-      className={className ?? 'h-8 w-auto'}
+      className={`${className ?? 'h-8 w-auto'} ${variantClass}`}
       onError={() => setSrc('/vercel.svg')}
     />
   );
@@ -32,10 +33,14 @@ const Header = () => {
           </Link>
         </div>
         <div className="hidden md:flex flex-1 justify-center">
-          <Navigation />
+          <Suspense fallback={null}>
+            <Navigation />
+          </Suspense>
         </div>
         <div className="hidden md:flex items-center gap-3">
-          <LanguageSwitcher />
+          <Suspense fallback={null}>
+            <LanguageSwitcher />
+          </Suspense>
           <Link 
             href="/contact" 
             className="bg-red-600 hover:bg-red-700 text-white font-medium h-10 px-5 inline-flex items-center rounded-full transition-colors duration-300"

@@ -128,8 +128,88 @@
   "blog": {
     "title": "Blog - MYG Import",
     "heading": "Blog",
-    "comingSoon": "Articles coming soon..."
+    "comingSoon": "Articles coming soon...",
+    "imageAlt": "Auction sheet - example",
+    "imageCaption": "Example of a Japanese auction sheet",
+    "legendAlt": "Auction sheet legend - numbered sections",
+    "legendCaption": "Legend: what each colored box means",
+    "readTitle": "How to read a Japanese auction sheet",
+    "guide": {
+      "title": "How to read a Japanese auction sheet",
+      "intro": "Match the numbers on the sheet with the explanations below.",
+      "items": {
+        "1": { "title": "Lot / auction number", "desc": "Identifier assigned to the vehicle at auction." },
+        "2": { "title": "Technical information", "desc": "Manufacturer details: chassis code, model, engine, trim, transmission." },
+        "3": { "title": "Overall evaluation", "desc": "Overall grade (e.g. 4.5) and interior grade (e.g. B)." },
+        "4": { "title": "Additional information", "desc": "Color, tyre type, specific version, etc." },
+        "5": { "title": "Main info / summary", "desc": "Registration, year, mileage, fuel, gearbox, steering." },
+        "6": { "title": "Administrative details", "desc": "Japanese year, registration type, engine number, consumption, etc." },
+        "7": { "title": "Equipment and options", "desc": "GPS, leather seats, A/C, sunroof, PDK, Bose, etc." },
+        "8": { "title": "Fiscal / recycling info", "desc": "Recycling tax amount and category." },
+        "9": { "title": "Chassis number (VIN)", "desc": "Vehicle identifier (e.g. WPOZZZ98ZCS750855)." },
+        "10": { "title": "Observations / inspection", "desc": "Inspector remarks: scratches, dents, wear, etc." }
+      },
+      "tipsTitle": "Quick tips",
+      "tips": {
+        "1": "Compare overall grade with the damage diagram.",
+        "2": "Check consistency between mileage, year and reported wear.",
+        "3": "Confirm key options (e.g. PDK, leather, Bose).",
+        "4": "Ask for detailed photos if anything is unclear."
+      }
+    },
+    "annotations": {
+      "title": "Inspector annotation codes",
+      "subtitle": "Simple reference to read annotations on Japanese auction sheets.",
+      "headers": {
+        "code": "Code",
+        "jp": "Japanese name",
+        "desc": "Translation / Description",
+        "size": "Typical size / severity"
+      },
+      "items": {
+        "A1": { "jp": "キズ小 (Kizu shō)", "desc": "Light scratch, superficial (in clear coat only)", "size": "< 2 cm" },
+        "A2": { "jp": "キズ中 (Kizu chū)", "desc": "Medium scratch, visible to the naked eye, no rust", "size": "2–10 cm" },
+        "A3": { "jp": "キズ大 (Kizu dai)", "desc": "Deep scratch reaching paint or primer", "size": "> 10 cm" },
+        "U1": { "jp": "ヘコミ小 (Hekomi shō)", "desc": "Small dent, slightly visible, paint intact", "size": "< 2 cm" },
+        "U2": { "jp": "ヘコミ中 (Hekomi chū)", "desc": "Medium dent, clearly visible, paint intact or slightly marked", "size": "2–5 cm" },
+        "U3": { "jp": "ヘコミ大 (Hekomi dai)", "desc": "Large dent, visible from afar, often with paint chip", "size": "> 5 cm" },
+        "W1": { "jp": "波小 (Nami shō)", "desc": "Slight wave, slightly distorted reflection", "size": "Localized" },
+        "W2": { "jp": "波中 (Nami chū)", "desc": "Noticeable wave, possibly poorly straightened panel", "size": "Medium area" },
+        "W3": { "jp": "波大 (Nami dai)", "desc": "Deformed or poorly repaired panel, requires full straightening", "size": "Large area" },
+        "P": { "jp": "ペイントハガレ (Peinto Hagare)", "desc": "Flaking clear coat or paint", "size": "Variable" },
+        "S1": { "jp": "サビ小 (Sabi shō)", "desc": "Small superficial rust spot", "size": "< 2 cm" },
+        "S2": { "jp": "サビ中 (Sabi chū)", "desc": "Visible rust, needs sanding", "size": "2–5 cm" },
+        "S3": { "jp": "サビ大 (Sabi dai)", "desc": "Heavy rust, metal attacked", "size": "> 5 cm" },
+        "C1": { "jp": "腐食小 (Fushoku shō)", "desc": "Light corrosion (beginning of pitting)", "size": "< 3 cm" },
+        "C2": { "jp": "腐食中 (Fushoku chū)", "desc": "Visible corrosion, weakened metal", "size": "3–10 cm" },
+        "C3": { "jp": "腐食大 (Fushoku dai)", "desc": "Severe corrosion, hole or perforation", "size": "> 10 cm" },
+        "Y1": { "jp": "ワレ小 (Ware shō)", "desc": "Small crack on plastic", "size": "≤ 2 cm" },
+        "Y2": { "jp": "ワレ中 (Ware chū)", "desc": "Medium crack, visible from a distance", "size": "2–5 cm" },
+        "Y3": { "jp": "ワレ大 (Ware dai)", "desc": "Large crack, part to replace", "size": "> 5 cm" },
+        "X": { "jp": "要交換 (Yō kōkan)", "desc": "Part to replace (damaged or structural)", "size": "—" },
+        "XX": { "jp": "交換済 (Kōkan sumi)", "desc": "Part already replaced", "size": "—" },
+        "B1": { "jp": "ヘコミ・キズ小 (Hekomi/Kizu shō)", "desc": "Small dent with paint chip", "size": "≤ 2 cm" },
+        "B2": { "jp": "ヘコミ・キズ中 (Hekomi/Kizu chū)", "desc": "Medium dent with visible chip", "size": "2–5 cm" },
+        "B3": { "jp": "ヘコミ・キズ大 (Hekomi/Kizu dai)", "desc": "Large dent with major chip", "size": "> 5 cm" },
+        "E": { "jp": "エクボ/飛び石 (Ekubo/Tobishi)", "desc": "Impact or chip (e.g. windshield, headlight)", "size": "< 1 cm" },
+        "G": { "jp": "ガラス割れ (Garasu ware)", "desc": "Crack or break on glazing", "size": "Variable" },
+        "D": { "jp": "雹害 (Hyōgai)", "desc": "Hail damage (multiple U1)", "size": "Multiple small impacts" },
+        "P/R": { "jp": "再塗装 (Saitosō)", "desc": "Repainted panel", "size": "Shaded area on diagram" }
+      },
+      "note": {
+        "title": "Good to know",
+        "items": {
+          "1": "Sizes are not measured to the centimeter, but visually estimated based on covered area.",
+          "2": "Values in cm are indicative but follow the official USS training for certified inspectors.",
+          "3": "An A2 or U2 may be acceptable on a 4.5‑graded vehicle, but not more.",
+          "4": "An A3, U3, XX or R significantly lowers the overall grade (often 3.5 or less).",
+          "5": "Symbols can be combined on the same panel.",
+          "6": "W3, C3, S3, X, R or XX indicate heavy or structural repairs."
+        }
+      }
+    }
   },
+  "legendMissing": "Legend image missing. Please add \"/public/images/auction-sheets/auction-legend.jpg\".",
   "about": {
     "meta": "About - MYG Import",
     "title": "About MYG Import",
