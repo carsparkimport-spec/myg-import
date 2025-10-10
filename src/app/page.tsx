@@ -1,103 +1,94 @@
-import Image from "next/image";
+"use client";
+import Layout from '@/components/Layout';
+import Link from 'next/link';
+import { useI18n } from '@/i18n/I18nProvider';
+import VehicleCard from '@/components/VehicleCard';
+import vehiclesData from '@/data/vehicles.json';
+
+interface Vehicle {
+  id: string;
+  make: string;
+  model: string;
+  year: number;
+  mileage: number;
+  transmission: string;
+  price: number;
+  images: string[];
+  featured?: boolean;
+}
+
+const vehicles: Vehicle[] = vehiclesData as Vehicle[];
+const featuredVehicles = vehicles.filter(v => v.featured).slice(0, 3);
 
 export default function Home() {
+  const { t } = useI18n();
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <Layout title="MYG Import - Accueil | Powered by Passion">
+      {/* Hero Section with Supra background */}
+      <div
+        className="relative h-screen text-white overflow-hidden flex items-center bg-center bg-cover"
+        style={{
+          backgroundImage: 'url(/images/backgrounds/supra-main.png), url(/images/backgrounds/supra-bg.png)'
+        }}
+      >
+        <div className="relative z-10 text-left px-4 md:px-16 lg:px-24 w-full md:w-2/3 lg:w-1/2">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">{t('hero.title')}</h1>
+          <p className="text-2xl md:text-3xl mb-10 font-light text-gray-200 drop-shadow-md">{t('hero.subtitle')}</p>
+          <Link href="/stock">
+            <span className="inline-block bg-white/10 backdrop-blur-sm border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-black transition duration-300 ease-in-out cursor-pointer shadow-lg">
+              {t('hero.cta')}
+            </span>
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+
+      {/* Featured Vehicles Section */}
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-black">{t('home.featuredTitle')}</h2>
+          {featuredVehicles.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredVehicles.map((vehicle: Vehicle) => (
+                <VehicleCard key={vehicle.id} vehicle={vehicle} />
+              ))}
+            </div>
+          ) : (
+            <p className="text-center text-gray-600">{t('home.noFeatured')}</p>
+          )}
+          <div className="text-center mt-10">
+            <Link href="/stock">
+              <span className="inline-block bg-red-600 text-white font-semibold py-3 px-8 rounded hover:bg-red-700 transition duration-300 ease-in-out cursor-pointer">{t('home.viewAllStock')}</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-black">{t('home.testimonialsTitle')}</h2>
+          <p className="text-gray-600">{t('home.testimonialsSoon')}</p>
+        </div>
+      </section>
+
+      {/* Map */}
+      <section className="bg-gray-900 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-white">{t('home.findUs')}</h2>
+          <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md max-w-4xl mx-auto">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83108.1179706703!2d6.059999686718749!3d49.60067899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479545b9a7bd2cad%3A0x75e77b40ce1bf88f!2sLuxembourg!5e0!3m2!1sen!2slu!4v1712328587589!5m2!1sen!2slu"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="MYG Import Location - Accueil"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </Layout>
   );
 }

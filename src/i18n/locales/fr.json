@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "stock": "Nos Véhicules",
+    "import": "Importation",
+    "sim": "Simulateur",
+    "about": "À Propos",
+    "blog": "Blog",
+    "cgv": "CGV"
+  },
+  "hero": {
+    "title": "Importation de véhicules japonais",
+    "subtitle": "Service sur-mesure, transparence totale et accompagnement jusqu'aux démarches d'immatriculation",
+    "cta": "Découvrir nos véhicules"
+  },
+  "stock": {
+    "title": "Nos Véhicules",
+    "subtitle": "Découvrez notre sélection actuelle. Toutes les annonces sont mises à jour régulièrement.",
+    "current": "Notre Stock Actuel",
+    "empty": "Aucun véhicule disponible pour le moment."
+  },
+  "footer": {
+    "nav": "Navigation",
+    "contact": "Contact",
+    "location": "Luxembourg",
+    "about": "Importateur passionné de véhicules japonais d'exception au Luxembourg."
+  },
+  "cta": {
+    "contact": "Contactez-nous"
+  },
+  "import": {
+    "meta": "Processus d'Importation - MYG Import",
+    "title": "Notre Processus d'Importation",
+    "subtitle": "Un accompagnement clair et transparent, du brief à la livraison.",
+    "ctaTalk": "Parler de mon projet",
+    "ctaView": "Voir les véhicules",
+    "bottomHelp": "Ce processus transparent est conçu pour vous offrir une tranquillité d'esprit totale. N'hésitez pas à",
+    "bottomContact": "nous contacter",
+    "bottomSuffix": "pour toute question.",
+    "steps": {
+      "1": {
+        "title": "Recherche & sélection",
+        "b1": "🔎 Recherche du véhicule au Japon",
+        "b2": "✅ Validation avec le client",
+        "b3": "🧪 Inspection & rapport"
+      },
+      "2": {
+        "title": "Achat & documents",
+        "b1": "💳 Paiement du véhicule",
+        "b2": "📄 Obtention des documents japonais (deregistration, facture, certificat d’export)",
+        "b3": "⚡ Dès réception des documents → demande immédiate du COC au constructeur",
+        "b4": "👉 Gain de temps pour optimiser le rendez-vous avec les services d’homologation (SNCT)"
+      },
+      "3": {
+        "title": "Préparation à l’export",
+        "b1": "🚚 Transport interne vers le port japonais",
+        "b2": "🛂 Inspection avant export (si nécessaire)",
+        "b3": "🛳️ Réservation du transport maritime"
+      },
+      "4": {
+        "title": "Transport maritime",
+        "b1": "⛴️ Traversée 4–6 semaines",
+        "b2": "📍 Arrivée au port de Zeebrugge (Belgique)"
+      },
+      "5": {
+        "title": "Arrivée en Belgique (Zeebrugge)",
+        "b1": "⚓ Déchargement du navire",
+        "b2": "📑 Émission d’un document T1 (transit sous douane) → véhicule en transit vers Luxembourg"
+      },
+      "6": {
+        "title": "Transport vers Luxembourg",
+        "b1": "🚛 Convoyage obligatoire sur camion plateau (~600 € HT Zeebrugge → Luxembourg‑Ville)"
+      },
+      "7": {
+        "title": "Dédouanement au Luxembourg",
+        "b1": "🛂 Déclaration en douane luxembourgeoise",
+        "b2": "💰 Paiement :",
+        "b3": "• Droits de douane : 10 %",
+        "b4": "• TVA Luxembourg : 17 %",
+        "b5": "✅ Obtention du certificat de dédouanement"
+      },
+      "8": {
+        "title": "Suite des démarches (selon option)",
+        "b1": "✅ Véhicule livré au client dédouané, avec tous les documents nécessaires (dont le COC si déjà reçu)",
+        "b2": "🔧 Accompagnement MYG Import possible :",
+        "b3": "• Contrôle technique SNCT (réception à titre isolé)",
+        "b4": "• Traduction de documents",
+        "b5": "• Organisation du rendez‑vous avec les services d’homologation"
+      },
+      "9": {
+        "title": "Livraison finale",
+        "b1": "🔑 Remise du véhicule + documents au client",
+        "b2": "➡️ Le client procède à l’immatriculation définitive, avec ou sans accompagnement MYG Import"
+      }
+    }
+  },
+  "home": {
+    "featuredTitle": "Derniers Arrivages",
+    "noFeatured": "Aucun véhicule en vedette pour le moment.",
+    "viewAllStock": "Voir tout le stock",
+    "testimonialsTitle": "Ce que disent nos clients",
+    "testimonialsSoon": "Section témoignages bientôt disponible.",
+    "findUs": "Nous Trouver"
+  },
+  "contact": {
+    "meta": "Contact - MYG Import",
+    "heading": "Nous Contacter",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "send": "Envoyer"
+  },
+  "vehicleCard": {
+    "year": "Année",
+    "mileage": "Kilométrage",
+    "transmission": "Transmission",
+    "more": "Plus d'infos"
+  },
+  "vehicleDetail": {
+    "specs": "Spécifications",
+    "price": "Prix :",
+    "year": "Année :",
+    "mileage": "Kilométrage :",
+    "transmission": "Transmission :",
+    "interested": "Je suis intéressé",
+    "description": "Description"
+  },
+  "blog": {
+    "title": "Blog - MYG Import",
+    "heading": "Blog",
+    "comingSoon": "Articles à venir..."
+  },
+  "about": {
+    "meta": "À Propos - MYG Import",
+    "title": "À Propos de MYG Import",
+    "promise": "Notre promesse",
+    "promiseText": "L’automobile japonaise, en toute sérénité. Chez MYG Import, nous rendons l’importation d’un véhicule du Japon simple, sûre et transparente. De la recherche à la livraison au Luxembourg, tout est maîtrisé : sélection rigoureuse, budget clair, démarches encadrées, transport sécurisé. Notre mission est simple : vous permettre d’importer votre voiture du Japon sans stress ni surprise.",
+    "who": "Qui nous sommes ?",
+    "whoText": "MYG Import, société luxembourgeoise passionnée d’automobile japonaise, rend l’importation simple, sûre et transparente. Notre mission : trouver le bon véhicule, au bon prix, sans mauvaise surprise. Grâce à notre réseau local au Japon et un accompagnement humain de confiance, nous gérons chaque étape — de la recherche à l’immatriculation au Luxembourg — pour une expérience d’importation fluide et sereine.",
+    "whyTitle": "Pourquoi le Japon ?",
+    "whyText1": "Parce qu’au Japon, le respect, la rigueur et la qualité font partie intégrante de la culture automobile.",
+    "whyText2": "Chaque véhicule est expertisé avant la vente, avec un rapport d’inspection détaillé notant l’état intérieur et extérieur, et décrivant ses caractéristiques techniques.",
+    "whyText3": "C’est cette exigence qui fait du Japon la meilleure source au monde pour importer un véhicule de qualité en toute confiance.",
+    "difference": "Notre différence",
+    "diff1": "Transparence totale : processus, prix et délais expliqués dès le départ.",
+    "diff2": "Sélection exigeante : historique (en fonction), état et conformité sans compromis.",
+    "diff3": "Service clé en main : nous gérons tout, jusqu’à l’immatriculation au Luxembourg",
+    "diff4": "Logistique sécurisée : transport sur camion plateau obligatoire depuis le port (ex. Zeebrugge → Luxembourg-Ville, coût moyen constaté : ~600 € HT, à titre indicatif).",
+    "diff5": "Suivi personnalisé : un interlocuteur unique, des points d’étape clairs.",
+    "howTitle": "Comment ça se passe ?",
+    "how1": "Cahier des charges : définition de vos critères, budget et délais.",
+    "how2": "Recherche au Japon & vérifications : sélection, contrôles, rapport photo.",
+    "how3": "Achat & formalités d’export : documents officiels, assurances, transport maritime.",
+    "how4": "Arrivée en Europe : dédouanement, conformité et transport sur plateau jusqu’à vous.",
+    "how5": "Mise en circulation : gestion de l’homologation, CT et immatriculation au Luxembourg, remise des clés.",
+    "ethics": "Engagements et éthique",
+    "eth1": "Aucune mauvaise surprise : pas de frais cachés.",
+    "eth2": "Conseil avant tout : si un véhicule n’est pas une bonne idée, on vous le dit.",
+    "eth3": "Respect total : normes administratives, fiscales et techniques toujours respectées.",
+    "costs": "Transparence des coûts",
+    "cost1": "Commission MYG Import : selon le mandat choisi (contrat de mandat).",
+    "cost2": "Conditions de départ : le prix total du véhicule + la commission doivent être réglés 3 à 7 jours après l’achat au Japon.",
+    "cost3": "Transport interne UE : camion plateau obligatoire depuis le port d’arrivée (~600 € HT en moyenne entre Zeebrugge et Luxembourg-Ville, variable selon date, chargeur et modèle).",
+    "costsNote": "(Taxes, fret maritime, homologation et immatriculation dépendent du véhicule et seront détaillés dans votre devis personnalisé.)",
+    "costsExtra": {
+      "p1": "Chez MYG Import, la transparence fait partie de notre manière de travailler.",
+      "p2": "Au Japon, un agent local partenaire prend en charge la gestion des enchères et la logistique. Ses frais sont standardisés : ¥90 000, auxquels s’ajoutent 5 % au-delà d’un million de yens, et sont refacturés au réel, sans marge, justificatifs à l’appui."
+    }
+  },
+  "cgv": {
+    "meta": "CGV - MYG Import",
+    "title": "Conditions Générales de Vente",
+    "intro": "Les présentes Conditions Générales de Vente (CGV) encadrent les prestations de MYG Import by Car Spark Import.",
+    "p1": "Toute commande implique l’acceptation pleine et entière des CGV. Les prix, délais et modalités sont précisés dans le devis et/ou le contrat de mandat.",
+    "p2": "Pour toute question relative aux CGV, vous pouvez nous contacter à contact@mygimport.lu."
+  }
+}
+
+

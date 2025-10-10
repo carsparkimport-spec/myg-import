@@ -1,0 +1,169 @@
+{
+  "nav": {
+    "home": "Home",
+    "stock": "Vehicles",
+    "import": "Import",
+    "sim": "Simulator",
+    "about": "About",
+    "blog": "Blog",
+    "cgv": "T&Cs"
+  },
+  "hero": {
+    "title": "Import of Japanese vehicles",
+    "subtitle": "Tailor-made service, full transparency and support up to registration formalities",
+    "cta": "Browse our vehicles"
+  },
+  "stock": {
+    "title": "Our Vehicles",
+    "subtitle": "Discover our current selection. All listings are updated regularly.",
+    "current": "Current Stock",
+    "empty": "No vehicles available at the moment."
+  },
+  "footer": {
+    "nav": "Navigation",
+    "contact": "Contact",
+    "location": "Luxembourg",
+    "about": "Passionate importer of exceptional Japanese vehicles in Luxembourg."
+  },
+  "cta": {
+    "contact": "Contact us"
+  },
+  "import": {
+    "meta": "Import Process - MYG Import",
+    "title": "Our Import Process",
+    "subtitle": "Clear and transparent support, from brief to delivery.",
+    "ctaTalk": "Discuss my project",
+    "ctaView": "View vehicles",
+    "bottomHelp": "This transparent process is designed to offer you complete peace of mind. Feel free to",
+    "bottomContact": "contact us",
+    "bottomSuffix": "for any questions.",
+    "steps": {
+      "1": {
+        "title": "Search & selection",
+        "b1": "🔎 Vehicle search in Japan",
+        "b2": "✅ Validation with the client",
+        "b3": "🧪 Inspection & report"
+      },
+      "2": {
+        "title": "Purchase & documents",
+        "b1": "💳 Vehicle payment",
+        "b2": "📄 Japanese documents obtained (deregistration, invoice, export certificate)",
+        "b3": "⚡ Upon receipt of documents → immediate COC request from manufacturer",
+        "b4": "👉 Saves time to optimize booking with homologation services (SNCT)"
+      },
+      "3": {
+        "title": "Export preparation",
+        "b1": "🚚 Inland transport to Japanese port",
+        "b2": "🛂 Pre‑export inspection (if necessary)",
+        "b3": "🛳️ Sea transport booking"
+      },
+      "4": {
+        "title": "Sea transport",
+        "b1": "⛴️ Crossing 4–6 weeks",
+        "b2": "📍 Arrival at Zeebrugge (Belgium)"
+      },
+      "5": {
+        "title": "Arrival in Belgium (Zeebrugge)",
+        "b1": "⚓ Vessel unloading",
+        "b2": "📑 Issuance of T1 (customs transit) → vehicle in transit to Luxembourg"
+      },
+      "6": {
+        "title": "Transport to Luxembourg",
+        "b1": "🚛 Mandatory flatbed truck convoy (~€600 excl. VAT Zeebrugge → Luxembourg City)"
+      },
+      "7": {
+        "title": "Customs clearance in Luxembourg",
+        "b1": "🛂 Luxembourg customs declaration",
+        "b2": "💰 Payment:",
+        "b3": "• Customs duty: 10%",
+        "b4": "• Luxembourg VAT: 17%",
+        "b5": "✅ Customs clearance certificate obtained"
+      },
+      "8": {
+        "title": "Next steps (depending on option)",
+        "b1": "✅ Vehicle delivered to client cleared, with all necessary documents (including COC if already received)",
+        "b2": "🔧 MYG Import support possible:",
+        "b3": "• SNCT technical inspection (individual approval)",
+        "b4": "• Document translations",
+        "b5": "• Appointment scheduling with homologation services"
+      },
+      "9": {
+        "title": "Final delivery",
+        "b1": "🔑 Vehicle + documents handed over to client",
+        "b2": "➡️ Client proceeds with final registration, with or without MYG Import support"
+      }
+    }
+  },
+  "home": {
+    "featuredTitle": "Latest Arrivals",
+    "noFeatured": "No featured vehicles at the moment.",
+    "viewAllStock": "View all stock",
+    "testimonialsTitle": "What our clients say",
+    "testimonialsSoon": "Testimonials section coming soon.",
+    "findUs": "Find Us"
+  },
+  "contact": {
+    "meta": "Contact - MYG Import",
+    "heading": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send"
+  },
+  "vehicleCard": {
+    "year": "Year",
+    "mileage": "Mileage",
+    "transmission": "Transmission",
+    "more": "More info"
+  },
+  "vehicleDetail": {
+    "specs": "Specifications",
+    "price": "Price:",
+    "year": "Year:",
+    "mileage": "Mileage:",
+    "transmission": "Transmission:",
+    "interested": "I'm interested",
+    "description": "Description"
+  },
+  "blog": {
+    "title": "Blog - MYG Import",
+    "heading": "Blog",
+    "comingSoon": "Articles coming soon..."
+  },
+  "about": {
+    "meta": "About - MYG Import",
+    "title": "About MYG Import",
+    "promise": "Our Promise",
+    "promiseText": "At MYG Import, we make Japanese cars accessible with peace of mind: rigorous selection, controlled processes, clear budget, secure delivery to Luxembourg.",
+    "who": "Who We Are",
+    "whoText": "MYG Import is a Luxembourg company exclusively specialized in importing vehicles from Japan. Passionate and demanding, we put our local network and our method at the service of your project: finding the right vehicle, at the right price, with no unpleasant surprises.",
+    "difference": "Our Difference",
+    "diff1": "Total transparency: process, prices and timelines explained from the outset.",
+    "diff2": "Serious selection: history (if available), condition — we don't compromise.",
+    "diff3": "Turnkey procedures: from the search to registration in Luxembourg.",
+    "diff4": "Secure logistics: mandatory flatbed transport from the port (e.g. Zeebrugge → Luxembourg City, typical cost ~€600 excl. VAT, indicative).",
+    "diff5": "Personalized follow-up: a single point of contact, clear checkpoints.",
+    "ethics": "Commitments and Ethics",
+    "eth1": "No hidden fees.",
+    "eth2": "Advice first (if a vehicle isn't a good idea, we'll tell you).",
+    "eth3": "Compliance with standards (administrative, fiscal and technical).",
+    "costs": "Cost Transparency",
+    "cost1": "MYG Import commission: depending on the mandate contract and chosen options.",
+    "cost2": "Upfront conditions: the total vehicle price + commission must be paid within 3 to 7 days after the vehicle purchase in Japan.",
+    "cost3": "EU internal transport: mandatory flatbed truck from the port ~€600 excl. VAT typically between Zeebrugge and Luxembourg City (varies by date, carrier, model...).",
+    "costsNote": "(Taxes, sea freight, homologation and registration depend on the vehicle and will be detailed in your quote.)",
+    "costsExtra": {
+      "p1": "At MYG Import, transparency is part of how we work.",
+      "p2": "In Japan, a local partner agent handles auctions and logistics. Their fees are standardized: ¥90,000, plus 5% beyond one million yen, and are re‑invoiced at cost, with no margin and supporting documents."
+    }
+  },
+  "cgv": {
+    "meta": "Terms & Conditions - MYG Import",
+    "title": "Terms and Conditions of Sale",
+    "intro": "These Terms and Conditions of Sale govern the services provided by MYG Import by Car Spark Import.",
+    "p1": "Any order implies full acceptance of these terms. Prices, timelines and modalities are specified in the quote and/or mandate contract.",
+    "p2": "For any questions regarding the T&Cs, please contact us at contact@mygimport.lu."
+  }
+}
+
+
