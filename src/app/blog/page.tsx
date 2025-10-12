@@ -13,8 +13,10 @@ export default function BlogPage() {
     <Layout title={t('blog.title')}>
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl md:text-4xl font-bold mb-8 text-deep-black">{t('blog.heading')}</h1>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-deep-black text-center">{t('blog.readTitle')}</h2>
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-deep-black text-center tracking-tight leading-tight mb-2 md:mb-4">
+            {t('blog.readTitle')}
+          </h2>
         </div>
         {/* Sheet + legend within a single framed card */}
         <div className="max-w-6xl mx-auto mt-8 rounded-xl bg-white p-4 md:p-6 shadow ring-1 ring-gray-200">
