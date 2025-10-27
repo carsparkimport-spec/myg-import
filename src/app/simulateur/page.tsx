@@ -236,7 +236,7 @@ export default function SimulateurPage() {
 
             {/* Étape 1 — Budget */}
             <div className="bg-white text-black rounded-2xl ring-1 ring-inset ring-gray-300 shadow-xl p-3 sm:p-4">
-              <h3 className="text-lg font-semibold mb-3">Point de départ</h3>
+              <h3 className="text-xl md:text-2xl font-semibold text-center mb-3">Point de départ</h3>
               <div className="flex gap-2 mb-3">
                 <button
                   type="button"
@@ -419,7 +419,7 @@ export default function SimulateurPage() {
 
             {/* Étape 2 — Options essentielles */}
             <div className="bg-white text-black rounded-2xl ring-1 ring-inset ring-gray-300 shadow-xl p-3 sm:p-4">
-              <h3 className="text-lg font-semibold mb-3">Options essentielles</h3>
+              <h3 className="text-xl md:text-2xl font-semibold text-center mb-3">Options essentielles</h3>
               <div className="space-y-3">
                 <div>
                   <label className="block text-sm font-medium mb-1 text-gray-900">Port de déchargement</label>
@@ -522,8 +522,8 @@ export default function SimulateurPage() {
           </div>
         </div>
       </div>
-      {/* Sticky mobile summary */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-20">
+      {/* Sticky mobile summary (does not cover footer) */}
+      <div className="lg:hidden sticky bottom-0 left-0 right-0 z-20">
         <div className="mx-4 mb-4 rounded-2xl shadow-2xl ring-1 ring-inset ring-gray-300 overflow-hidden">
           <div className="bg-white text-black">
             <button

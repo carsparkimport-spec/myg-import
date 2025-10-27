@@ -40,3 +40,24 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## CGV content
+
+To provide legal CGV content without touching the code, drop locale-specific markdown files here:
+
+```
+public/cgv/fr.md
+public/cgv/en.md
+```
+
+Each section must start with a heading line exactly like:
+
+```
+Article 1 – Objet du mandat
+... your body ...
+
+Article 2 – Frais au Japon
+... etc ...
+```
+
+The app will parse these files and render a table of contents and anchors. If a file is missing, it falls back to the i18n titles/bodies.

@@ -22,10 +22,10 @@ export default function StockPage() {
   const { t } = useI18n();
   return (
     <Layout title={t('stock.title') + ' - MYG Import'}>
-      <main className="relative min-h-screen">
+      <main className="relative min-h-screen pb-[2cm]">
         {/* Full-page background inside main so it covers under all content */}
         <div className="absolute inset-0 z-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/backgrounds/FUKUOKA.jpg')" }}>
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute top-0 left-0 right-0 bottom-[2cm] bg-black/25" />
         </div>
         {/* Top header area spacing */}
         <div className="relative z-10 -mt-16 pt-24 pb-28 md:pb-32">
@@ -37,7 +37,7 @@ export default function StockPage() {
         <div className="container mx-auto px-4 relative z-10 -mt-6 md:-mt-10 lg:-mt-12">
           <div className="relative rounded-2xl shadow-lg">
             <div className="absolute inset-0 rounded-2xl backdrop-blur-sm bg-white/0 ring-1 ring-inset ring-white/10" aria-hidden="true" />
-            <div className="relative py-10">
+            <div className="relative p-[1cm]">
               <h1 className="text-3xl md:text-4xl font-bold mb-10 text-center text-white">{t('stock.current')}</h1>
               {vehicles.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

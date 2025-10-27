@@ -108,7 +108,13 @@
     "name": "Nom",
     "email": "Email",
     "message": "Message",
-    "send": "Envoyer"
+    "send": "Envoyer",
+    "hours": {
+      "title": "Horaires d'ouverture",
+      "monfri": "Lun – Ven: 9h – 20h",
+      "sat": "Samedi: sur rendez‑vous",
+      "sun": "Dimanche: fermé"
+    }
   },
   "vehicleCard": {
     "year": "Année",
@@ -123,7 +129,15 @@
     "mileage": "Kilométrage :",
     "transmission": "Transmission :",
     "interested": "Je suis intéressé",
-    "description": "Description"
+    "description": "Description",
+    "detailsCardTitle": "Données du véhicule"
+  },
+  "gallery": {
+    "image": "Image",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "close": "Fermer",
+    "lightbox": "Galerie plein écran"
   },
   "blog": {
     "title": "Blog - MYG Import",
@@ -252,7 +266,20 @@
     "title": "Conditions Générales de Vente",
     "intro": "Les présentes Conditions Générales de Vente (CGV) encadrent les prestations de MYG Import by Car Spark Import.",
     "p1": "Toute commande implique l’acceptation pleine et entière des CGV. Les prix, délais et modalités sont précisés dans le devis et/ou le contrat de mandat.",
-    "p2": "Pour toute question relative aux CGV, vous pouvez nous contacter à contact@mygimport.lu."
+    "p2": "Pour toute question relative aux CGV, vous pouvez nous contacter à contact@myg-import.com.",
+    "tabs": { "import": "Importation", "sale": "Vente de véhicule" },
+    "toc": "Sommaire",
+    "sections": {
+      "1": { "title": "Article 1 – Objet du mandat" },
+      "2": { "title": "Article 2 – Frais au Japon" },
+      "3": { "title": "Article 3 – Obligations du Mandataire" },
+      "4": { "title": "Article 4 – Obligations du Mandant" },
+      "5": { "title": "Article 5 – Garantie légale de conformité et garantie commerciale" },
+      "6": { "title": "Article 6 – Durée du mandat" },
+      "7": { "title": "Article 7 – Rémunération du Mandataire" },
+      "8": { "title": "Article 8 – Modalités de paiement" },
+      "9": { "title": "Article 9 – Droit de rétractation" }
+    }
   }
 }
 

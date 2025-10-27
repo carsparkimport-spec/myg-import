@@ -1,41 +1,38 @@
 [
   {
-    "id": "1",
-    "make": "Nissan",
-    "model": "Skyline GT-R R34 V-Spec",
-    "year": 1999,
-    "mileage": 75000,
+    "id": "4",
+    "make": "Porsche",
+    "model": "Cayman S 987.2",
+    "year": 2009,
+    "mileage": 58600,
     "fuel": "Essence",
-    "transmission": "Manuelle",
-    "price": 150000,
-    "description": "Iconique Nissan Skyline R34 GT-R V-Spec en excellent état.",
-    "images": ["/vercel.svg"],
-    "featured": true
-  },
-  {
-    "id": "2",
-    "make": "Toyota",
-    "model": "Supra MK4",
-    "year": 1998,
-    "mileage": 98000,
-    "fuel": "Essence",
-    "transmission": "Manuelle",
-    "price": 95000,
-    "description": "Légendaire Toyota Supra MK4 avec 2JZ-GTE.",
-    "images": ["/vercel.svg"],
-    "featured": true
-  },
-  {
-    "id": "3",
-    "make": "Mazda",
-    "model": "RX-7 FD Spirit R",
-    "year": 2002,
-    "mileage": 62000,
-    "fuel": "Essence",
-    "transmission": "Manuelle",
-    "price": 110000,
-    "description": "Mazda RX-7 FD Spirit R Type A, bi-turbo.",
-    "images": ["/vercel.svg"],
-    "featured": true
+    "transmission": "PDK",
+    "price": 43800,
+    "description": "Porsche Cayman S phase 2 (987.2). Dossier complet sur demande.",
+    "images": [
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/1.jpeg",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/2.jpeg",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/3.jpeg",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/4.jpeg",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/5.jpeg",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/6.jpeg",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/7.jpeg",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/8.jpeg",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/9.jpeg",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/10.jpeg",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/11.jpeg",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/12.jpeg",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/13.jpeg"
+    ],
+    "details": {
+      "Moteur": "3.4L",
+      "Boîte": "Automatique PDK",
+      "Année": 2009,
+      "Options": "Pack sport chrono; Porsche Active Suspension Management (PASM); Phares bi‑xénon directionnels + lave‑phares; Peinture métallisée Noir Basalte; Climatisation automatique; Sièges chauffants; Intérieur cuir Alcantara Beige Sable",
+      "Entretien": "Gros entretien effectué récemment",
+      "Pneus": "Neufs avec équilibrage et géométrie",
+      "Garantie": "12 mois, extension possible"
+    },
+    "featured": false
   }
-] 
+]

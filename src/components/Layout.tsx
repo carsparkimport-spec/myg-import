@@ -64,7 +64,7 @@ const Footer = () => {
               <Logo variant="square" className="h-14 w-auto rounded-lg" />
             </div>
             <p>{t('footer.about')}</p>
-            <p className="mt-4">© {new Date().getFullYear()} <span className="tracking-tight">MYG Import</span></p>
+            <p className="mt-4">© {new Date().getFullYear()} <span className="tracking-tight">MYG Import</span> by Car Spark Import</p>
           </div>
           <div>
             <h4 className="text-white font-semibold mb-4">{t('footer.nav')}</h4>
@@ -75,7 +75,7 @@ const Footer = () => {
               <li><Link href="/simulateur" className="hover:text-white">{t('nav.sim')}</Link></li>
               <li><Link href="/a-propos" className="hover:text-white">{t('nav.about')}</Link></li>
               <li><Link href="/blog" className="hover:text-white">{t('nav.blog')}</Link></li>
-              <li><Link href="/cgv" className="hover:text-white">{t('nav.cgv')}</Link></li>
+              <li><Link href="/cgv#toc" className="hover:text-white">{t('nav.cgv')}</Link></li>
             </ul>
           </div>
           <div>
@@ -87,8 +87,18 @@ const Footer = () => {
                 <span className="block">8070 Bertrange - Luxembourg</span>
                 <span className="block">RCS: B288405</span>
               </li>
-              <li><a href="mailto:contact@mygimport.lu" className="hover:text-white">contact@mygimport.lu</a></li>
-              <li><a href="tel:+352661408330" className="hover:text-white">+352 661 408 330</a></li>
+              <li className="flex items-center gap-2 flex-wrap">
+                <a href="mailto:contact@myg-import.com" className="hover:text-white">contact@myg-import.com</a>
+                <span className="text-gray-500">·</span>
+                <a href="tel:+352661408330" className="hover:text-white">+352 661 408 330</a>
+              </li>
+              <li>
+                <div className="text-sm text-gray-400">
+                  <div>{t('contact.hours.monfri')}</div>
+                  <div>{t('contact.hours.sat')}</div>
+                  <div>{t('contact.hours.sun')}</div>
+                </div>
+              </li>
             </ul>
           </div>
         </div>

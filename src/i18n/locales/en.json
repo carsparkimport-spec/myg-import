@@ -108,7 +108,13 @@
     "name": "Name",
     "email": "Email",
     "message": "Message",
-    "send": "Send"
+    "send": "Send",
+    "hours": {
+      "title": "Opening hours",
+      "monfri": "Mon – Fri: 9am – 8pm",
+      "sat": "Saturday: by appointment",
+      "sun": "Sunday: closed"
+    }
   },
   "vehicleCard": {
     "year": "Year",
@@ -123,7 +129,15 @@
     "mileage": "Mileage:",
     "transmission": "Transmission:",
     "interested": "I'm interested",
-    "description": "Description"
+    "description": "Description",
+    "detailsCardTitle": "Vehicle data"
+  },
+  "gallery": {
+    "image": "Image",
+    "previous": "Previous",
+    "next": "Next",
+    "close": "Close",
+    "lightbox": "Fullscreen gallery"
   },
   "blog": {
     "title": "Blog - MYG Import",
@@ -242,7 +256,20 @@
     "title": "Terms and Conditions of Sale",
     "intro": "These Terms and Conditions of Sale govern the services provided by MYG Import by Car Spark Import.",
     "p1": "Any order implies full acceptance of these terms. Prices, timelines and modalities are specified in the quote and/or mandate contract.",
-    "p2": "For any questions regarding the T&Cs, please contact us at contact@mygimport.lu."
+    "p2": "For any questions regarding the T&Cs, please contact us at contact@myg-import.com.",
+    "tabs": { "import": "Import", "sale": "Vehicle sale" },
+    "toc": "Summary",
+    "sections": {
+      "1": { "title": "Article 1 – Purpose of the mandate" },
+      "2": { "title": "Article 2 – Fees in Japan" },
+      "3": { "title": "Article 3 – Obligations of the Agent" },
+      "4": { "title": "Article 4 – Obligations of the Principal" },
+      "5": { "title": "Article 5 – Legal guarantee of conformity and commercial warranty" },
+      "6": { "title": "Article 6 – Term of the mandate" },
+      "7": { "title": "Article 7 – Agent's remuneration" },
+      "8": { "title": "Article 8 – Payment terms" },
+      "9": { "title": "Article 9 – Right of withdrawal" }
+    }
   }
 }
 

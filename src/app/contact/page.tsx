@@ -16,7 +16,15 @@ export default function ContactPage() {
               <p>8 Rue des Mérovingiens</p>
               <p>8070 Bertrange - Luxembourg</p>
               <p>RCS: B288405</p>
-              <p className="mt-2"><a className="text-red-600 hover:underline" href="mailto:contact@mygimport.lu">contact@mygimport.lu</a> · <a className="text-red-600 hover:underline" href="tel:+352661408330">+352 661 408 330</a></p>
+              <p className="mt-2 flex items-center gap-2 flex-wrap"><a className="text-red-600 hover:underline" href="mailto:contact@myg-import.com">contact@myg-import.com</a><span>·</span><a className="text-red-600 hover:underline" href="tel:+352661408330">+352 661 408 330</a></p>
+            </div>
+            <div className="mb-6">
+              <h2 className="text-lg font-semibold text-black mb-2">{t('contact.hours.title')}</h2>
+              <ul className="text-sm text-gray-700">
+                <li>{t('contact.hours.monfri')}</li>
+                <li>{t('contact.hours.sat')}</li>
+                <li>{t('contact.hours.sun')}</li>
+              </ul>
             </div>
             <form className="space-y-4">
               <div>
