@@ -80,7 +80,7 @@ const Footer = () => {
           </div>
           <div>
             <h4 className="text-white font-semibold mb-4">{t('footer.contact')}</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-4">
               <li>
                 <span className="block text-white font-medium">MYG Import by Car Spark Import</span>
                 <span className="block">8 Rue des Mérovingiens</span>
