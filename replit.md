@@ -10,6 +10,9 @@ MYG Import is a Next.js-based web application for a Luxembourg-based Japanese ve
 - Set up Replit workflow for development server
 - Configured deployment settings for Replit autoscale publishing
 - Project now runs cleanly on Replit with no cross-origin warnings
+- Fixed all React Hook dependency warnings in simulator page by converting functions to useCallback
+- Fixed Suspense boundary issue in CGV page for useSearchParams
+- Fixed auction sheet image path on blog page (changed .jpeg to .jpg extension to match actual file)
 
 # User Preferences
 

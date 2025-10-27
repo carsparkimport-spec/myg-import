@@ -23,7 +23,7 @@ export default function BlogPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           <div>
             <Image
-              src="/images/auction-sheets/auction-sheet.jpeg"
+              src="/images/auction-sheets/auction-sheet.jpg"
               alt={t('blog.imageAlt')}
               width={1200}
               height={1200}
