@@ -3,6 +3,7 @@
 import React, { ReactNode, Suspense, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navigation from './Navigation';
 import { useI18n } from '@/i18n/I18nProvider';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -13,9 +14,11 @@ function Logo({ className, variant = 'rect' }: { className?: string; variant?: '
   const [src, setSrc] = useState(initialSrc);
   const variantClass = variant === 'square' ? 'rounded-lg' : '';
   return (
-    <img
+    <Image
       src={src}
       alt="MYG Import Logo"
+      width={200}
+      height={200}
       className={`${className ?? 'h-8 w-auto'} ${variantClass}`}
       onError={() => setSrc('/vercel.svg')}
     />

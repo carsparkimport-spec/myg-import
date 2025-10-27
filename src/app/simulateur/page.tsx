@@ -566,7 +566,10 @@ export default function SimulateurPage() {
                     <div className="mt-2 text-xs text-black/70">
                       <div>Prix pris en compte: {formatJPY(priceYen)}</div>
                       <div>Frais fixes: {formatJPY(fixedFeesYen)}</div>
+
                       <div>Frais enchères (5% si &gt; 1M¥): {formatJPY(auctionFeeYen)}</div>
+
+
                       <div>Total avant conversion: {formatJPY(totalYenBeforeConv)} | Taux: 1€ = {jpyEur}¥</div>
                       <div>Transport interne (JP): {formatJPY(domesticYen)}</div>
                     </div>
