@@ -26,10 +26,11 @@ export default function BlogPage() {
               src="/images/auction-sheets/auction-sheet.jpg"
               alt={t('blog.imageAlt')}
               width={1200}
-              height={1200}
+              height={1600}
               sizes="(max-width: 768px) 100vw, 800px"
               className="w-full h-auto rounded-md object-contain max-h-[480px] md:max-h-[720px]"
               priority
+              unoptimized
             />
             <p className="text-gray-500 text-sm mt-2">{t('blog.imageCaption')}</p>
           </div>
