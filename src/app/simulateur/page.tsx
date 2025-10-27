@@ -250,7 +250,7 @@ export default function SimulateurPage() {
                   onClick={() => setInputMode('ENCHERE')}
                   className={`px-3 py-1.5 rounded-lg border text-sm ${inputMode === 'ENCHERE' ? 'bg-green-600 text-white border-green-600' : 'bg-white text-black border-gray-300'}`}
                 >
-                  Prix d'enchère (¥)
+                  Prix d&apos;enchère (¥)
                 </button>
               </div>
               <div className="grid grid-cols-1 gap-3">
@@ -566,7 +566,7 @@ export default function SimulateurPage() {
                     <div className="mt-2 text-xs text-black/70">
                       <div>Prix pris en compte: {formatJPY(priceYen)}</div>
                       <div>Frais fixes: {formatJPY(fixedFeesYen)}</div>
-                      <div>Frais enchères (5% si > 1M¥): {formatJPY(auctionFeeYen)}</div>
+                      <div>Frais enchères (5% si &gt; 1M¥): {formatJPY(auctionFeeYen)}</div>
                       <div>Total avant conversion: {formatJPY(totalYenBeforeConv)} | Taux: 1€ = {jpyEur}¥</div>
                       <div>Transport interne (JP): {formatJPY(domesticYen)}</div>
                     </div>
