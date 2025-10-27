@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { Suspense, useEffect, useMemo, useState } from 'react';
 import * as mammoth from 'mammoth/mammoth.browser';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import Layout from '@/components/Layout';
@@ -57,7 +57,7 @@ function extractTitleSuffix(title: string): string {
   return (m && m[1] ? m[1] : title).trim();
 }
 
-export default function CGVPage() {
+function CGVPageContent() {
   const { t, locale } = useI18n();
   const router = useRouter();
   const pathname = usePathname();
@@ -356,6 +356,10 @@ export default function CGVPage() {
   );
 }
 
-
-
-
+export default function CGVPage() {
+  return (
+    <Suspense fallback={<Layout title="Loading..."><div className="min-h-screen bg-gray-100 flex items-center justify-center"><p>Loading...</p></div></Layout>}>
+      <CGVPageContent />
+    </Suspense>
+  );
+}

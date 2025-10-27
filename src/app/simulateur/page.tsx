@@ -1,7 +1,7 @@
 "use client";
 
 import Layout from '@/components/Layout';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 type Country = 'Luxembourg' | 'France' | 'Belgique' | 'Allemagne';
 type Port = 'Zeebrugge (BE)' | 'Le Havre (FR)' | 'Bremerhaven (DE)' | 'Rotterdam (NL)' | 'Vlissingen (NL)';
@@ -29,14 +29,14 @@ export default function SimulateurPage() {
   const [domesticYenInput, setDomesticYenInput] = useState<string>('15000');
   const fixedFeesYen = 90000; // constant in current model
   const [forfait, setForfait] = useState<number>(1490);
-  const freightByPort: Record<Port, number> = {
+  const freightByPort: Record<Port, number> = useMemo(() => ({
     'Zeebrugge (BE)': 1500,
     'Le Havre (FR)': 1700,
     'Bremerhaven (DE)': 1600,
     'Rotterdam (NL)': 1550,
     'Vlissingen (NL)': 1450,
-  };
-  const freightEuro = useMemo(() => freightByPort[port], [port]);
+  }), []);
+  const freightEuro = useMemo(() => freightByPort[port], [port, freightByPort]);
   const customsPct = 10; // constant in current model
   const [vatPct, setVatPct] = useState<number>(17);
   const [budgetCurrency, setBudgetCurrency] = useState<'EUR' | 'JPY'>('EUR');
@@ -45,27 +45,27 @@ export default function SimulateurPage() {
   const [budgetYenInput, setBudgetYenInput] = useState<string>(String(30000 * 175));
   const [fxUpdatedAt, setFxUpdatedAt] = useState<string | null>(null);
   // VAT imposed by selected country
-  const countryToVat: Record<Country, number> = {
+  const countryToVat: Record<Country, number> = useMemo(() => ({
     Luxembourg: 17,
     France: 20,
     Belgique: 21,
     Allemagne: 19,
-  };
+  }), []);
 
   useEffect(() => {
     setVatPct(countryToVat[country]);
-  }, [country]);
+  }, [country, countryToVat]);
   const [targetBudgetEuro, setTargetBudgetEuro] = useState<number>(30000);
 
   // Formatting helpers for inputs
-  const groupDigits = (s: string) => s.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-  const formatEuroDisplay = (n: number) => {
+  const groupDigits = useCallback((s: string) => s.replace(/\B(?=(\d{3})+(?!\d))/g, ' '), []);
+  const formatEuroDisplay = useCallback((n: number) => {
     if (!isFinite(n) || n === 0) return '';
     const fixed = n.toFixed(2);
     const [intPart, decPart] = fixed.split('.');
     const intFmt = groupDigits(intPart);
     return decPart === '00' ? intFmt : `${intFmt},${decPart}`;
-  };
+  }, [groupDigits]);
 
   // Derived calculations
   const auctionFeeYen = useMemo(() => (priceYen > 1_000_000 ? Math.round(priceYen * 0.05) : 0), [priceYen]);
@@ -84,7 +84,7 @@ export default function SimulateurPage() {
   const totalEuro = useMemo(() => +(euroBase + forfait + freightEuro + customsEuro + vatEuro).toFixed(2), [euroBase, forfait, freightEuro, customsEuro, vatEuro]);
 
   // Inverse calculation: from a target TOTAL € (TTC, livré) estimate auction bid price (¥)
-  const computeTotalEuroForPriceYen = (candidateYen: number) => {
+  const computeTotalEuroForPriceYen = useCallback((candidateYen: number) => {
     const candidateAuctionFeeYen = candidateYen > 1_000_000 ? Math.round(candidateYen * 0.05) : 0;
     const candidateTotalYenBefore = candidateYen + fixedFeesYen + candidateAuctionFeeYen + domesticYen;
     const candidateEuroBase = candidateTotalYenBefore / (jpyEur || 1);
@@ -93,9 +93,9 @@ export default function SimulateurPage() {
     const candidateVatBaseEuro = candidateEuroBase + freightEuro + candidateCustomsEuro + forfait;
     const candidateVatEuro = candidateVatBaseEuro * (vatPct / 100);
     return candidateEuroBase + forfait + freightEuro + candidateCustomsEuro + candidateVatEuro;
-  };
+  }, [fixedFeesYen, domesticYen, jpyEur, freightEuro, customsPct, forfait, vatPct]);
 
-  const solvePriceYenForTargetTotal = (targetEuro: number) => {
+  const solvePriceYenForTargetTotal = useCallback((targetEuro: number) => {
     if (!isFinite(targetEuro) || targetEuro <= 0 || jpyEur <= 0) return 0;
     let low = 0;
     let high = 20000000; // 20M¥ initial cap
@@ -115,11 +115,11 @@ export default function SimulateurPage() {
       }
     }
     return low;
-  };
+  }, [jpyEur, computeTotalEuroForPriceYen]);
 
   // Use the budget value based on selected currency for inverse calc
   const budgetEuroForInverse = useMemo(() => (budgetCurrency === 'EUR' ? targetBudgetEuro : targetBudgetYen / (jpyEur || 1)), [budgetCurrency, targetBudgetEuro, targetBudgetYen, jpyEur]);
-  const estimatedBidYen = useMemo(() => solvePriceYenForTargetTotal(budgetEuroForInverse), [budgetEuroForInverse, jpyEur, fixedFeesYen, forfait, freightEuro, customsPct, vatPct]);
+  const estimatedBidYen = useMemo(() => solvePriceYenForTargetTotal(budgetEuroForInverse), [budgetEuroForInverse, solvePriceYenForTargetTotal]);
 
   // When in budget mode, automatically apply the estimated bid to the calculation
   useEffect(() => {
@@ -195,7 +195,7 @@ export default function SimulateurPage() {
         localStorage.setItem('simu_state_v1', JSON.stringify(payload));
       }
     } catch {}
-  }, [country, port, inputMode, jpyEur, priceYen, forfait, vatPct, budgetCurrency, targetBudgetEuro, targetBudgetYen]);
+  }, [country, port, inputMode, jpyEur, priceYen, domesticYen, forfait, vatPct, budgetCurrency, targetBudgetEuro, targetBudgetYen]);
 
   // Keep budgets in sync when FX rate changes
   useEffect(() => {
@@ -205,21 +205,21 @@ export default function SimulateurPage() {
     } else {
       setTargetBudgetEuro(+((targetBudgetYen / jpyEur)).toFixed(2));
     }
-  }, [jpyEur]);
+  }, [jpyEur, budgetCurrency, targetBudgetEuro, targetBudgetYen]);
 
   // Keep input strings in sync with numeric budgets (avoid forced 0 in input)
   useEffect(() => {
     setBudgetEuroInput(targetBudgetEuro ? formatEuroDisplay(targetBudgetEuro) : '');
-  }, [targetBudgetEuro]);
+  }, [targetBudgetEuro, formatEuroDisplay]);
   useEffect(() => {
     setBudgetYenInput(targetBudgetYen ? groupDigits(String(Math.round(targetBudgetYen))) : '');
-  }, [targetBudgetYen]);
+  }, [targetBudgetYen, groupDigits]);
   useEffect(() => {
     setPriceYenInput(priceYen ? groupDigits(String(Math.round(priceYen))) : '');
-  }, [priceYen]);
+  }, [priceYen, groupDigits]);
   useEffect(() => {
     setDomesticYenInput(domesticYen ? groupDigits(String(Math.round(domesticYen))) : '');
-  }, [domesticYen]);
+  }, [domesticYen, groupDigits]);
 
   return (
     <Layout title="Simulateur de Coût - MYG Import" mainClassName="bg-transparent">
