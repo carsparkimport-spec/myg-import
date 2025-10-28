@@ -22,15 +22,11 @@ export default function BlogPage() {
         <div className="max-w-6xl mx-auto mt-8 rounded-xl bg-white p-4 md:p-6 shadow ring-1 ring-gray-200">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           <div>
-            <Image
+            <img
               src="/images/auction-sheets/auction-sheet.jpg"
               alt={t('blog.imageAlt')}
-              width={1200}
-              height={1600}
-              sizes="(max-width: 768px) 100vw, 800px"
               className="w-full h-auto rounded-md object-contain max-h-[480px] md:max-h-[720px]"
-              priority
-              unoptimized
+              loading="eager"
             />
             <p className="text-gray-500 text-sm mt-2">{t('blog.imageCaption')}</p>
           </div>
