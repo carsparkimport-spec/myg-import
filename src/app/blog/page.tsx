@@ -2,7 +2,6 @@
 
 import Layout from '@/components/Layout';
 import { useI18n } from '@/i18n/I18nProvider';
-import Image from 'next/image';
 
 export default function BlogPage() {
   const { t } = useI18n();
