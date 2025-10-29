@@ -3,7 +3,6 @@ import Layout from '@/components/Layout';
 import { useI18n } from '@/i18n/I18nProvider';
 import AuctionCard from '@/components/AuctionCard';
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 import VehicleGallery from '@/components/VehicleGallery';
 
 interface AuctionItem {

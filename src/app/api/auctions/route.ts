@@ -82,42 +82,6 @@ function getGroupWeight(fileName: string, metaGroups?: AuctionMeta['groups']): n
   return g === 'label' ? 0 : g === 'interior' ? 2 : 1;
 }
 
-function sortImageFiles(fileNames: string[], meta?: AuctionMeta): string[] {
-  const files = [...fileNames];
-  const metaOrder = meta?.order;
-  if (metaOrder && Array.isArray(metaOrder) && metaOrder.length > 0) {
-    const orderIndex = new Map<string, number>();
-    metaOrder.forEach((name, idx) => orderIndex.set(name, idx));
-    files.sort((a, b) => {
-      const ia = orderIndex.has(a) ? (orderIndex.get(a) as number) : Number.POSITIVE_INFINITY;
-      const ib = orderIndex.has(b) ? (orderIndex.get(b) as number) : Number.POSITIVE_INFINITY;
-      if (ia !== ib) return ia - ib;
-      // Then numeric prefix
-      const na = (() => { const m = a.match(/^\s*(\d+)/); return m ? parseInt(m[1], 10) : Number.POSITIVE_INFINITY; })();
-      const nb = (() => { const m = b.match(/^\s*(\d+)/); return m ? parseInt(m[1], 10) : Number.POSITIVE_INFINITY; })();
-      if (na !== nb) return na - nb;
-      // Then group weight
-      const ga = getGroupWeight(a, meta?.groups);
-      const gb = getGroupWeight(b, meta?.groups);
-      if (ga !== gb) return ga - gb;
-      // Fallback to natural sort
-      return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
-    });
-    return files;
-  }
-  // Grouped sort then natural sort
-  return files.sort((a, b) => {
-    // Numeric prefix first if present
-    const na = (() => { const m = a.match(/^\s*(\d+)/); return m ? parseInt(m[1], 10) : Number.POSITIVE_INFINITY; })();
-    const nb = (() => { const m = b.match(/^\s*(\d+)/); return m ? parseInt(m[1], 10) : Number.POSITIVE_INFINITY; })();
-    if (na !== nb) return na - nb;
-    const ga = getGroupWeight(a, meta?.groups);
-    const gb = getGroupWeight(b, meta?.groups);
-    if (ga !== gb) return ga - gb;
-    return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
-  });
-}
-
 function listImagesInDir(dirPath: string, webBasePath: string, meta?: AuctionMeta): string[] {
   const fileNames = fs
     .readdirSync(dirPath, { withFileTypes: true })
@@ -142,7 +106,7 @@ function listImagesInDir(dirPath: string, webBasePath: string, meta?: AuctionMet
 
   const usesNumeric = entries.filter((e) => Number.isFinite(e.leadingNum)).length >= 1;
 
-  let ordered = [...entries];
+  const ordered = [...entries];
   if (meta?.order && Array.isArray(meta.order) && meta.order.length > 0) {
     const orderIndex = new Map<string, number>();
     meta.order.forEach((n, i) => orderIndex.set(n, i));
@@ -264,7 +228,7 @@ export async function GET() {
     }
 
     return NextResponse.json({ items }, { status: 200 });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ items: [], error: 'Failed to load auctions' }, { status: 200 });
   }
 }
