@@ -15,10 +15,14 @@ interface Vehicle {
   price: number;
   images: string[];
   featured?: boolean;
+  featuredOrder?: number;
 }
 
 const vehicles: Vehicle[] = vehiclesData as Vehicle[];
-const featuredVehicles = vehicles.filter(v => v.featured).slice(0, 3);
+const featuredVehicles = vehicles
+  .filter(v => v.featured)
+  .sort((a, b) => (a.featuredOrder ?? 9999) - (b.featuredOrder ?? 9999))
+  .slice(0, 3);
 
 export default function Home() {
   const { t } = useI18n();

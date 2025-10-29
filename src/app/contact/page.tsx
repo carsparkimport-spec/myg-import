@@ -14,7 +14,9 @@ export default function ContactPage() {
             <div className="mb-6 text-sm text-gray-700">
               <p className="text-base font-semibold text-black">MYG Import by Car Spark Import</p>
               <p>8 Rue des Mérovingiens</p>
-              <p>8070 Bertrange - Luxembourg</p>
+              <p>
+                8070 Bertrange - Luxembourg <span className="text-gray-500 text-xs">· {t('contact.appointmentOnly')}</span>
+              </p>
               <p>RCS: B288405</p>
               <p className="mt-2 flex items-center gap-2 flex-wrap"><a className="text-red-600 hover:underline" href="mailto:contact@myg-import.com">contact@myg-import.com</a><span>·</span><a className="text-red-600 hover:underline" href="tel:+352661408330">+352 661 408 330</a></p>
             </div>

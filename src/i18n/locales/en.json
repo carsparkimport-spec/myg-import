@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "stock": "Vehicles",
+    "auctions": "Past auctions",
     "import": "Import",
     "sim": "Simulator",
     "about": "About",
@@ -23,7 +24,8 @@
     "nav": "Navigation",
     "contact": "Contact",
     "location": "Luxembourg",
-    "about": "Passionate importer of exceptional Japanese vehicles in Luxembourg."
+    "about": "Passionate importer of exceptional Japanese vehicles in Luxembourg.",
+    "follow": "Follow us"
   },
   "cta": {
     "contact": "Contact us"
@@ -102,6 +104,23 @@
     "testimonialsSoon": "Testimonials section coming soon.",
     "findUs": "Find Us"
   },
+  "auctions": {
+    "meta": "Past Auctions - MYG Import",
+    "title": "Past auctions",
+    "subtitle": "Discover examples of vehicles recently sold at auction in Japan.",
+    "contentSoon": "Content coming soon: gallery of past auction examples.",
+    "refresh": "Refresh",
+    "noAuctions": "No listings yet.",
+    "loading": "Loading...",
+    "errorLoading": "Unable to load auctions.",
+    "disclaimer": "(*) Delivered prices incl. VAT are estimates; a small margin of error or appreciation may remain."
+  },
+  "auctionsCard": {
+    "house": "Auction house",
+    "grade": "Grade",
+    "priceYen": "Price (¥)",
+    "open": "View photos"
+  },
   "contact": {
     "meta": "Contact - MYG Import",
     "heading": "Contact Us",
@@ -109,6 +128,7 @@
     "email": "Email",
     "message": "Message",
     "send": "Send",
+    "appointmentOnly": "By appointment only",
     "hours": {
       "title": "Opening hours",
       "monfri": "Mon – Fri: 9am – 8pm",

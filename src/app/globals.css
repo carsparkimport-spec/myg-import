@@ -30,3 +30,15 @@ h1, h2, h3, h4 {
   font-family: var(--font-heading), var(--font-inter), Arial, Helvetica, sans-serif;
   letter-spacing: 0.01em;
 }
+
+/* Utilities */
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.break-anywhere {
+  overflow-wrap: anywhere;
+}

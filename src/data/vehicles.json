@@ -33,6 +33,7 @@
       "Pneus": "Neufs avec équilibrage et géométrie",
       "Garantie": "12 mois, extension possible"
     },
-    "featured": false
+    "featured": true,
+    "featuredOrder": 1
   }
 ]

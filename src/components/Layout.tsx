@@ -43,7 +43,7 @@ const Header = () => {
           </Suspense>
           <Link 
             href="/contact" 
-            className="bg-red-600 hover:bg-red-700 text-white font-medium h-10 px-5 inline-flex items-center rounded-full transition-colors duration-300"
+            className="bg-red-600 hover:bg-red-700 text-white font-medium h-10 px-5 inline-flex items-center rounded-full transition-colors duration-300 whitespace-nowrap"
           >
             {t('cta.contact')}
           </Link>
@@ -87,10 +87,49 @@ const Footer = () => {
                 <span className="block">8070 Bertrange - Luxembourg</span>
                 <span className="block">RCS: B288405</span>
               </li>
-              <li className="flex items-center gap-2 flex-wrap">
-                <a href="mailto:contact@myg-import.com" className="hover:text-white">contact@myg-import.com</a>
-                <span className="text-gray-500">·</span>
-                <a href="tel:+352661408330" className="hover:text-white">+352 661 408 330</a>
+              <li>
+                <div className="text-sm text-gray-400">
+                  <div className="text-white font-semibold mb-1">{t('footer.follow')}</div>
+                  <div className="flex items-center gap-4 flex-wrap">
+                    <a
+                      href="https://instagram.com/mygimportluxembourg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white inline-flex items-center gap-2"
+                    >
+                      <svg viewBox="0 0 24 24" className="w-4 h-4" aria-hidden="true">
+                        <defs>
+                          <linearGradient id="igGradient" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stopColor="#f58529" />
+                            <stop offset="50%" stopColor="#dd2a7b" />
+                            <stop offset="100%" stopColor="#515bd4" />
+                          </linearGradient>
+                        </defs>
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="url(#igGradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="url(#igGradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <circle cx="18" cy="6" r="1" fill="url(#igGradient)" />
+                      </svg>
+                      <span>Instagram @mygimportluxembourg</span>
+                    </a>
+                    <span className="text-gray-500">·</span>
+                    <a
+                      href="https://wa.me/352661408330"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white inline-flex items-center gap-2"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="w-4 h-4 text-[#25D366]"
+                        aria-hidden="true"
+                      >
+                        <path d="M20.52 3.48A11.64 11.64 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.12.55 4.1 1.51 5.83L0 24l6.33-1.66A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.25-6.2-3.48-8.52ZM12 22a9.94 9.94 0 0 1-5.09-1.39l-.36-.21-3.76.98.99-3.66-.23-.38A9.96 9.96 0 0 1 2 12C2 6.49 6.49 2 12 2s10 4.49 10 10-4.49 10-10 10Zm5.05-7.24c-.27-.14-1.59-.79-1.84-.88-.25-.09-.43-.14-.62.14-.18.27-.71.88-.87 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.2-1.34-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.62-1.49-.85-2.05-.22-.53-.45-.46-.62-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.98 2.65 1.11 2.83.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.55.58.65.2 1.24.17 1.71.1.52-.08 1.59-.65 1.81-1.28.22-.63.22-1.17.16-1.28-.07-.11-.25-.18-.52-.31Z"></path>
+                      </svg>
+                      <span>WhatsApp</span>
+                    </a>
+                  </div>
+                </div>
               </li>
               <li>
                 <div className="text-sm text-gray-400">
@@ -98,6 +137,14 @@ const Footer = () => {
                   <div>{t('contact.hours.sat')}</div>
                   <div>{t('contact.hours.sun')}</div>
                 </div>
+              </li>
+              <li>
+                <span className="block text-white font-semibold">{t('contact.appointmentOnly')}</span>
+              </li>
+              <li className="flex items-center gap-2 flex-wrap">
+                <a href="mailto:contact@myg-import.com" className="hover:text-white">contact@myg-import.com</a>
+                <span className="text-gray-500">·</span>
+                <a href="tel:+352661408330" className="hover:text-white">+352 661 408 330</a>
               </li>
             </ul>
           </div>

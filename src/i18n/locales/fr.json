@@ -2,6 +2,7 @@
   "nav": {
     "home": "Accueil",
     "stock": "Nos Véhicules",
+    "auctions": "Enchères passées",
     "import": "Importation",
     "sim": "Simulateur",
     "about": "À Propos",
@@ -23,7 +24,8 @@
     "nav": "Navigation",
     "contact": "Contact",
     "location": "Luxembourg",
-    "about": "Importateur passionné de véhicules japonais d'exception au Luxembourg."
+    "about": "Importateur passionné de véhicules japonais d'exception au Luxembourg.",
+    "follow": "Suivez-nous"
   },
   "cta": {
     "contact": "Contactez-nous"
@@ -102,6 +104,23 @@
     "testimonialsSoon": "Section témoignages bientôt disponible.",
     "findUs": "Nous Trouver"
   },
+  "auctions": {
+    "meta": "Enchères passées - MYG Import",
+    "title": "Enchères passées",
+    "subtitle": "Découvrez quelques exemples de véhicules récemment adjugés au Japon.",
+    "contentSoon": "Contenu à venir : galerie d'exemples d'enchères passées.",
+    "refresh": "Recharger",
+    "noAuctions": "Aucune annonce pour le moment.",
+    "loading": "Chargement...",
+    "errorLoading": "Impossible de charger les enchères.",
+    "disclaimer": "(*) Prix TTC livrés estimés : une petite marge d’erreur ou d’appréciation peut subsister."
+  },
+  "auctionsCard": {
+    "house": "Salle d’enchères",
+    "grade": "Note",
+    "priceYen": "Prix (¥)",
+    "open": "Voir les photos"
+  },
   "contact": {
     "meta": "Contact - MYG Import",
     "heading": "Nous Contacter",
@@ -109,6 +128,7 @@
     "email": "Email",
     "message": "Message",
     "send": "Envoyer",
+    "appointmentOnly": "Uniquement sur rendez‑vous",
     "hours": {
       "title": "Horaires d'ouverture",
       "monfri": "Lun – Ven: 9h – 20h",
