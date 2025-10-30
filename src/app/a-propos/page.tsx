@@ -14,12 +14,12 @@ export default function AboutPage() {
           <div className="space-y-8 text-base md:text-lg leading-relaxed">
             <section>
               <h2 className="text-2xl font-semibold text-black mb-3">{t('about.promise')}</h2>
-              <p>{t('about.promiseText')}</p>
+              <p className="whitespace-pre-line">{t('about.promiseText')}</p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-black mb-3">{t('about.who')}</h2>
-              <p>{t('about.whoText')}</p>
+              <p className="whitespace-pre-line">{t('about.whoText')}</p>
             </section>
 
             <section>
