@@ -6,7 +6,7 @@
     "year": 2009,
     "mileage": 58600,
     "fuel": "Essence",
-    "transmission": "PDK",
+    "transmission": "PDK 7 rapports",
     "price": 44300,
     "description": "Porsche Cayman S phase 2 (987.2). Dossier complet sur demande.",
     "images": [
@@ -26,8 +26,9 @@
     ],
     "details": {
       "Moteur": "3.4L",
-      "Boîte": "Automatique PDK",
+      "Boîte": "Automatique PDK 7 rapports",
       "Année": 2009,
+      "1re immat.": "21/04/2009",
       "Options": "Pack sport chrono; Porsche Active Suspension Management (PASM); Phares bi‑xénon directionnels + lave‑phares; Peinture métallisée Noir Basalte; Climatisation automatique; Sièges chauffants; Intérieur cuir Alcantara Beige Sable",
       "Entretien": "Gros entretien effectué récemment",
       "Pneus": "Neufs avec équilibrage et géométrie",
@@ -35,5 +36,34 @@
     },
     "featured": true,
     "featuredOrder": 1
+  },
+  {
+    "id": "macan-s",
+    "make": "Porsche",
+    "model": "Macan S – Phase 2 restylée 2019",
+    "year": 2019,
+    "mileage": 75400,
+    "fuel": "Essence",
+    "transmission": "PDK 7 rapports",
+    "price": 66400,
+    "description": "Porsche Macan S 3.0 V6 – Phase 2, restylée 2019.\n1re immat. 09/2019 – 354 ch – PDK 7.\nOptions détaillées ci-dessous.",
+    "images": [
+      "/images/vehicles/Porsche%20Macan%20S%20PDK%202009%20%20/1.jpeg",
+      "/images/vehicles/Porsche%20Macan%20S%20PDK%202009%20%20/2.jpeg",
+      "/images/vehicles/Porsche%20Macan%20S%20PDK%202009%20%20/3.jpeg",
+      "/images/vehicles/Porsche%20Macan%20S%20PDK%202009%20%20/4.jpeg",
+      "/images/vehicles/Porsche%20Macan%20S%20PDK%202009%20%20/5.jpeg",
+      "/images/vehicles/Porsche%20Macan%20S%20PDK%202009%20%20/6.jpeg",
+      "/images/vehicles/Porsche%20Macan%20S%20PDK%202009%20%20/7.jpeg",
+      "/images/vehicles/Porsche%20Macan%20S%20PDK%202009%20%20/8.jpeg"
+    ],
+    "details": {
+      "Moteur": "V6 3.0 turbo (EA839) – 354 ch / 480 Nm",
+      "Boîte": "PDK 7 rapports",
+      "Année": 2019,
+      "Options": "Train roulants revus, options PASM possibles; Nouveau PCM 10,9”, bandeau LED arrière, boucliers restylés; Suspension pneumatique à hauteur variable avec régulation automatique de la hauteur de caisse et de l’assiette; PASM (Porsche Active Suspension Management); Sorties d’échappement sport en Noir; Réservoir 75 litres; Servotronic Plus; Jantes Sport Classic 21 pouces en Noir (finition brillante); Sièges sport adaptatifs (18 positions électriques) avec Pack Mémoire; Sièges chauffants à l’avant; Volant Sport GT en cuir avec chauffage du volant; Ceintures de sécurité Rouge Grenat; Pack Confort Luminosité; Pack Fumeur; Tapis de sol; Toit ouvrant panoramique; Rampes de pavillon en aluminium peintes en Noir avec système de transport sur toit; Contours de vitres latérales en Noir (finition brillante); Poignées de portes peintes en Noir (finition brillante); Suppression de la désignation du modèle; Vitrage arrière fumé; Assistance parking avant et arrière avec caméra de recul et vue 360°; Régulateur de vitesse adaptatif; Pack Confort Luminosité (éclairage intérieur et extérieur optimisé)"
+    },
+    "featured": true,
+    "featuredOrder": 2
   }
 ]
