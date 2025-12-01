@@ -17,16 +17,23 @@ const navLinks = [
 const Navigation = () => {
   const pathname = usePathname();
   const { t } = useI18n();
+  const segments = pathname.split('/').filter(Boolean);
+  const firstSegment = segments[0] ?? '';
+  const brand = firstSegment === 'myg' || firstSegment === 'car-spark' ? firstSegment : '';
+  const vertical = firstSegment === 'jp' || firstSegment === 'eu' ? firstSegment : '';
+  const base = vertical ? `/${vertical}` : (brand ? `/${brand}` : '');
+  const links = vertical === 'eu' ? navLinks.filter(l => l.name !== 'Enchères passées') : navLinks;
 
   return (
     <nav className="flex flex-nowrap items-center space-x-6 overflow-x-auto text-[16px]">
-      {navLinks.map((link) => {
-        const isActive = pathname === link.href;
+      {links.map((link) => {
+        const href = link.href === '/' ? (base || '/') : `${base}${link.href}`;
+        const isActive = pathname === href || (href !== '/' && pathname.startsWith(`${href}/`));
         const key = link.name === 'Accueil' ? 'home' : link.name === 'Nos Véhicules' ? 'stock' : link.name === 'Enchères passées' ? 'auctions' : link.name === 'Importation' ? 'import' : link.name === 'Simulateur' ? 'sim' : link.name === 'À Propos' ? 'about' : 'blog';
         return (
           <Link
             key={link.name}
-            href={link.href}
+            href={href}
             className={`inline-flex items-center h-10 px-4 rounded-md text-base font-semibold text-white hover:text-red-600 transition-colors duration-200 whitespace-nowrap ${isActive ? 'text-red-600 underline underline-offset-4 decoration-red-600' : ''}`}>
             {t(`nav.${key}`)}
           </Link>

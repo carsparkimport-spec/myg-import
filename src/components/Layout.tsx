@@ -7,8 +7,9 @@ import Image from 'next/image';
 import Navigation from './Navigation';
 import { useI18n } from '@/i18n/I18nProvider';
 import LanguageSwitcher from './LanguageSwitcher';
+import { usePathname } from 'next/navigation';
 
-function Logo({ className, variant = 'rect' }: { className?: string; variant?: 'rect' | 'square' }) {
+function Logo({ className, variant = 'rect', brandDisplayName = 'MYG Import' }: { className?: string; variant?: 'rect' | 'square'; brandDisplayName?: string }) {
   // Point to an existing public asset to avoid 404
   const initialSrc = '/images/backgrounds/Logo MYG.jpeg';
   const [src, setSrc] = useState(initialSrc);
@@ -16,7 +17,7 @@ function Logo({ className, variant = 'rect' }: { className?: string; variant?: '
   return (
     <Image
       src={src}
-      alt="MYG Import Logo"
+      alt={`${brandDisplayName} Logo`}
       width={200}
       height={200}
       className={`${className ?? 'h-8 w-auto'} ${variantClass}`}
@@ -27,12 +28,18 @@ function Logo({ className, variant = 'rect' }: { className?: string; variant?: '
 
 const Header = () => {
   const { t } = useI18n();
+  const pathname = usePathname();
+  const segments = pathname.split('/').filter(Boolean);
+  const firstSegment = segments[0] ?? '';
+  const brand = firstSegment === 'myg' || firstSegment === 'car-spark' ? firstSegment : '';
+  const vertical = firstSegment === 'jp' || firstSegment === 'eu' ? firstSegment : '';
+  const brandDisplayName = brand === 'car-spark' ? 'Car Spark Import' : 'MYG Import';
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black h-20 shadow-lg">
       <div className="container mx-auto px-4 flex items-center justify-between h-full">
         <div className="flex-shrink-0 flex items-center h-full">
-          <Link href="/" className="flex items-center">
-            <Logo variant="rect" className="h-12 md:h-14 w-auto" />
+          <Link href={brand ? `/${brand}` : (vertical ? `/${vertical}` : '/')} className="flex items-center">
+            <Logo variant="rect" className="h-12 md:h-14 w-auto" brandDisplayName={brandDisplayName} />
           </Link>
         </div>
         <div className="hidden md:flex flex-1 justify-center">
@@ -45,7 +52,7 @@ const Header = () => {
             <LanguageSwitcher />
           </Suspense>
           <Link 
-            href="/contact" 
+            href={brand ? `/${brand}/contact` : (vertical ? `/${vertical}/contact` : '/contact')} 
             className="bg-red-600 hover:bg-red-700 text-white font-medium h-10 px-5 inline-flex items-center rounded-full transition-colors duration-300 whitespace-nowrap"
           >
             {t('cta.contact')}
@@ -58,34 +65,40 @@ const Header = () => {
 
 const Footer = () => {
   const { t } = useI18n();
+  const pathname = usePathname();
+  const segments = pathname.split('/').filter(Boolean);
+  const firstSegment = segments[0] ?? '';
+  const brand = firstSegment === 'myg' || firstSegment === 'car-spark' ? firstSegment : '';
+  const vertical = firstSegment === 'jp' || firstSegment === 'eu' ? firstSegment : '';
+  const brandDisplayName = brand === 'car-spark' ? 'Car Spark Import' : 'MYG Import';
   return (
     <footer className="bg-black text-gray-400 py-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="mb-4">
-              <Logo variant="square" className="h-14 w-auto rounded-lg" />
+              <Logo variant="square" className="h-14 w-auto rounded-lg" brandDisplayName={brandDisplayName} />
             </div>
             <p>{t('footer.about')}</p>
-            <p className="mt-4">© {new Date().getFullYear()} <span className="tracking-tight">MYG Import</span> by Car Spark Import</p>
+            <p className="mt-4">© {new Date().getFullYear()} <span className="tracking-tight">{brandDisplayName}</span></p>
           </div>
           <div>
             <h4 className="text-white font-semibold mb-4">{t('footer.nav')}</h4>
             <ul className="space-y-2">
-              <li><Link href="/" className="hover:text-white">{t('nav.home')}</Link></li>
-              <li><Link href="/stock" className="hover:text-white">{t('nav.stock')}</Link></li>
-              <li><Link href="/importation" className="hover:text-white">{t('nav.import')}</Link></li>
-              <li><Link href="/simulateur" className="hover:text-white">{t('nav.sim')}</Link></li>
-              <li><Link href="/a-propos" className="hover:text-white">{t('nav.about')}</Link></li>
-              <li><Link href="/blog" className="hover:text-white">{t('nav.blog')}</Link></li>
-              <li><Link href="/cgv#toc" className="hover:text-white">{t('nav.cgv')}</Link></li>
+              <li><Link href={brand ? `/${brand}` : (vertical ? `/${vertical}` : '/')} className="hover:text-white">{t('nav.home')}</Link></li>
+              <li><Link href={brand ? `/${brand}/stock` : (vertical ? `/${vertical}/stock` : '/stock')} className="hover:text-white">{t('nav.stock')}</Link></li>
+              <li><Link href={brand ? `/${brand}/importation` : (vertical ? `/${vertical}/importation` : '/importation')} className="hover:text-white">{t('nav.import')}</Link></li>
+              <li><Link href={brand ? `/${brand}/simulateur` : (vertical ? `/${vertical}/simulateur` : '/simulateur')} className="hover:text-white">{t('nav.sim')}</Link></li>
+              <li><Link href={brand ? `/${brand}/a-propos` : (vertical ? `/${vertical}/a-propos` : '/a-propos')} className="hover:text-white">{t('nav.about')}</Link></li>
+              <li><Link href={brand ? `/${brand}/blog` : (vertical ? `/${vertical}/blog` : '/blog')} className="hover:text-white">{t('nav.blog')}</Link></li>
+              <li><Link href={brand ? `/${brand}/cgv#toc` : (vertical ? `/${vertical}/cgv#toc` : '/cgv#toc')} className="hover:text-white">{t('nav.cgv')}</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-white font-semibold mb-4">{t('footer.contact')}</h4>
             <ul className="space-y-4">
               <li>
-                <span className="block text-white font-medium">MYG Import by Car Spark Import</span>
+                <span className="block text-white font-medium">{brandDisplayName}</span>
                 <span className="block">8 Rue des Mérovingiens</span>
                 <span className="block">8070 Bertrange - Luxembourg</span>
                 <span className="block">RCS: B288405</span>
@@ -164,11 +177,16 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children, title = 'MYG Import', mainClassName }) => {
+  const pathname = usePathname();
+  const firstSegment = pathname.split('/').filter(Boolean)[0] ?? '';
+  const brand = firstSegment === 'myg' || firstSegment === 'car-spark' ? firstSegment : '';
+  const brandDisplayName = brand === 'car-spark' ? 'Car Spark Import' : 'MYG Import';
+  const effectiveTitle = (title ?? brandDisplayName).replace(/MYG Import/g, brandDisplayName);
   return (
     <>
       <Head>
-        <title>{title}</title>
-        <meta name="description" content="MYG Import - Import de véhicules japonais." />
+        <title>{effectiveTitle}</title>
+        <meta name="description" content={`${brandDisplayName} - Import de véhicules japonais.`} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
