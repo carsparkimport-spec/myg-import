@@ -39,7 +39,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex items-center justify-between h-full">
         <div className="flex-shrink-0 flex items-center h-full">
           <Link href={brand ? `/${brand}` : (vertical ? `/${vertical}` : '/')} className="flex items-center">
-            <Logo variant="rect" className="h-12 md:h-14 w-auto" brandDisplayName={brandDisplayName} />
+            <Logo variant="rect" className="h-14 md:h-16 w-auto" brandDisplayName={brandDisplayName} />
           </Link>
         </div>
         <div className="hidden md:flex flex-1 justify-center">
@@ -85,6 +85,7 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-4">{t('footer.nav')}</h4>
             <ul className="space-y-2">
+              <li><Link href="/" className="hover:text-white">Changer d’univers</Link></li>
               <li><Link href={brand ? `/${brand}` : (vertical ? `/${vertical}` : '/')} className="hover:text-white">{t('nav.home')}</Link></li>
               <li><Link href={brand ? `/${brand}/stock` : (vertical ? `/${vertical}/stock` : '/stock')} className="hover:text-white">{t('nav.stock')}</Link></li>
               <li><Link href={brand ? `/${brand}/importation` : (vertical ? `/${vertical}/importation` : '/importation')} className="hover:text-white">{t('nav.import')}</Link></li>

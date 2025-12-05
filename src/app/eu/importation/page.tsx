@@ -9,15 +9,10 @@ export default function ImportationEuropePage() {
   const { t } = useI18n();
 
   const steps = [
-    { idx: 1, items: ['b1', 'b2', 'b3'] },
-    { idx: 2, items: ['b1', 'b2', 'b3', 'b4'] },
-    { idx: 3, items: ['b1', 'b2', 'b3'] },
-    { idx: 4, items: ['b1', 'b2'] },
-    { idx: 5, items: ['b1', 'b2'] },
-    { idx: 6, items: ['b1'] },
-    { idx: 7, items: ['b1', 'b2', 'b3', 'b4', 'b5'] },
-    { idx: 8, items: ['b1', 'b2', 'b3', 'b4', 'b5'] },
-    { idx: 9, items: ['b1', 'b2'] },
+    { idx: 1, items: ['b1', 'b2'] },
+    { idx: 2, items: ['b1', 'b2', 'b3'] },
+    { idx: 3, items: ['b1'] },
+    { idx: 4, items: ['b1'] },
   ];
 
   return (
@@ -57,10 +52,10 @@ export default function ImportationEuropePage() {
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 h-10 w-10 rounded-full bg-red-600 text-white font-bold flex items-center justify-center">{idx}</div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">{t(`import.steps.${idx}.title`)}</h3>
+                    <h3 className="text-xl font-semibold mb-2">{t(`import_eu.steps.${idx}.title`)}</h3>
                     <ul className="space-y-1 text-gray-100">
                       {items.map((key) => (
-                        <li key={key}>{t(`import.steps.${idx}.${key}`)}</li>
+                        <li key={key}>{t(`import_eu.steps.${idx}.${key}`)}</li>
                       ))}
                     </ul>
                   </div>

@@ -24,8 +24,8 @@ export default function StockPage() {
     <Layout title={t('stock.title') + ' - MYG Import'}>
       <main className="relative min-h-screen pb-[2cm]">
         {/* Full-page background inside main so it covers under all content */}
-        <div className="absolute inset-0 z-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/backgrounds/FUKUOKA.jpg')" }}>
-          <div className="absolute top-0 left-0 right-0 bottom-[2cm] bg-black/25" />
+        <div className="absolute inset-0 z-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/backgrounds/Stock europe 2.jpg')" }}>
+          <div className="absolute top-0 left-0 right-0 bottom-[2cm] bg-gradient-to-b from-black/25 via-black/10 to-transparent" />
         </div>
         {/* Top header area spacing */}
         <div className="relative z-10 -mt-16 pt-24 pb-28 md:pb-32">

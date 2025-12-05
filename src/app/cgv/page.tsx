@@ -222,6 +222,12 @@ function CGVPageContent() {
             <p>{t('cgv.intro')}</p>
             <p>{t('cgv.p1')}</p>
             <p>{t('cgv.p2')}</p>
+            {locale === 'en' ? (
+              <div className="mt-2 rounded-md bg-yellow-50 ring-1 ring-yellow-200 p-3 text-sm text-yellow-900">
+                <div className="font-semibold">{t('cgv.noticeTitle')}</div>
+                <p className="mt-1">{t('cgv.noticeBody')}</p>
+              </div>
+            ) : null}
             <div className="flex items-center gap-2 mt-2">
               <button
                 type="button"

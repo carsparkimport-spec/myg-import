@@ -96,6 +96,37 @@
       }
     }
   },
+  "import_eu": {
+    "meta": "Import Process - MYG Import",
+    "title": "Our Import Process",
+    "subtitle": "Clear and transparent support, from brief to delivery.",
+    "ctaTalk": "Discuss my project",
+    "ctaView": "View vehicles",
+    "bottomHelp": "This transparent process is designed to offer you complete peace of mind. Feel free to",
+    "bottomContact": "contact us",
+    "bottomSuffix": "for any questions.",
+    "steps": {
+      "1": {
+        "title": "Recherche & sélection",
+        "b1": "🔎 Recherche du véhicule neuf ou occasion selon critères",
+        "b2": "✅ Validation avec le client"
+      },
+      "2": {
+        "title": "Achat & documents",
+        "b1": "📄 Obtention des documents, Facture, carte grise",
+        "b2": "💳 Paiement du véhicule",
+        "b3": "⚡ Dès réception des documents → demande immédiate d’une nouvelle carte grise en fonction du pays de destination."
+      },
+      "3": {
+        "title": "Préparation à l’export",
+        "b1": "🚚 Transport routier international"
+      },
+      "4": {
+        "title": "Livraison finale",
+        "b1": "🔑 Remise du véhicule + un dossier documents au client"
+      }
+    }
+  },
   "home": {
     "featuredTitle": "Latest Arrivals",
     "noFeatured": "No featured vehicles at the moment.",
@@ -277,6 +308,8 @@
     "intro": "These Terms and Conditions of Sale govern the services provided by MYG Import by Car Spark Import.",
     "p1": "Any order implies full acceptance of these terms. Prices, timelines and modalities are specified in the quote and/or mandate contract.",
     "p2": "For any questions regarding the T&Cs, please contact us at contact@myg-import.com.",
+    "noticeTitle": "Important note",
+    "noticeBody": "This English version is provided for convenience. In case of discrepancy, the French version shall prevail.",
     "tabs": { "import": "Import", "sale": "Vehicle sale" },
     "toc": "Summary",
     "sections": {

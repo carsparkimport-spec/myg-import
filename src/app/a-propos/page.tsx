@@ -13,70 +13,34 @@ export default function AboutPage() {
 
           <div className="space-y-8 text-base md:text-lg leading-relaxed">
             <section>
-              <h2 className="text-2xl font-semibold text-black mb-3">{t('about.promise')}</h2>
-              <p className="whitespace-pre-line">{t('about.promiseText')}</p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-black mb-3">{t('about.who')}</h2>
-              <p className="whitespace-pre-line">{t('about.whoText')}</p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-black mb-3">{t('about.whyTitle')}</h2>
-              <p>{t('about.whyText1')}</p>
-              <p className="mt-2">{t('about.whyText2')}</p>
-              <p className="mt-2">{t('about.whyText3')}</p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-black mb-3">{t('about.difference')}</h2>
-              <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Transparence totale</strong> : process, prix et délais expliqués dès le départ.</li>
-                <li><strong>Sélection sérieuse</strong> : historique (si disponible), état, on ne transige pas.</li>
-                <li><strong>Démarches clés en main</strong> : de la recherche à l’immatriculation au Luxembourg.</li>
-                <li>
-                  <strong>Logistique sécurisée</strong> : transport sur camion plateau obligatoire depuis le port
-                  (ex. Zeebrugge → Luxembourg-Ville, coût moyen observé ~600 € HT, à titre indicatif).
-                </li>
-                <li><strong>Suivi personnalisé</strong> : un interlocuteur unique, des points d’étape clairs.</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-black mb-3">{t('about.howTitle')}</h2>
-              <ol className="list-decimal pl-6 space-y-2">
-                <li>{t('about.how1')}</li>
-                <li>{t('about.how2')}</li>
-                <li>{t('about.how3')}</li>
-                <li>{t('about.how4')}</li>
-                <li>{t('about.how5')}</li>
-              </ol>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-black mb-3">{t('about.ethics')}</h2>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>{t('about.eth1')}</li>
-                <li>{t('about.eth2')}</li>
-                <li>{t('about.eth3')}</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-black mb-3">{t('about.costs')}</h2>
-              <div className="mt-4 space-y-3">
-                <p>{t('about.costsExtra.p1')}</p>
-                <p>{t('about.costsExtra.p2')}</p>
-              </div>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>{t('about.cost1')}</li>
-                <li>{t('about.cost2')}</li>
-                <li>{t('about.cost3')}</li>
-              </ul>
-              <p className="text-sm text-gray-600 mt-2">
-                {t('about.costsNote')}
+              <p>
+                MYG Import est la marque commerciale de CAR SPARK IMPORT S.à r.l., société luxembourgeoise spécialisée dans la vente de véhicules d’occasion importés depuis l’Europe.
               </p>
+              <p className="mt-3">
+                Nous recherchons, achetons et revendons pour vous des véhicules sélectionnés en Allemagne, Belgique, Pays-Bas, etc., puis nous vous les livrons au Luxembourg dans un cadre légal clair, via un contrat de vente écrit.
+              </p>
+              <p className="mt-3">
+                👉 <strong>Notre objectif</strong> : vous proposer des véhicules au meilleur prix, sans compromis sur la transparence ni sur la qualité.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-black mb-3">Notre rôle</h2>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>trouver un véhicule cohérent (modèle, état, historique),</li>
+                <li>gérer la logistique et les démarches,</li>
+                <li>vous livrer un véhicule prêt à être immatriculé, avec garantie 12 mois.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-black mb-3">Ce qui nous guide</h2>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>transparence sur le prix final et le process,</li>
+                <li>sélection sérieuse des véhicules,</li>
+                <li>transport sécurisé (camion plateau),</li>
+                <li>accompagnement humain, du premier contact à la remise des clés.</li>
+              </ul>
             </section>
           </div>
         </div>

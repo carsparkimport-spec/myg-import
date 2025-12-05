@@ -96,6 +96,37 @@
       }
     }
   },
+  "import_eu": {
+    "meta": "Processus d'Importation - MYG Import",
+    "title": "Notre Processus d'Importation",
+    "subtitle": "Un accompagnement clair et transparent, du brief à la livraison.",
+    "ctaTalk": "Parler de mon projet",
+    "ctaView": "Voir les véhicules",
+    "bottomHelp": "Ce processus transparent est conçu pour vous offrir une tranquillité d'esprit totale. N'hésitez pas à",
+    "bottomContact": "nous contacter",
+    "bottomSuffix": "pour toute question.",
+    "steps": {
+      "1": {
+        "title": "Recherche & sélection",
+        "b1": "🔎 Recherche du véhicule neuf ou occasion selon critères",
+        "b2": "✅ Validation avec le client"
+      },
+      "2": {
+        "title": "Achat & documents",
+        "b1": "📄 Obtention des documents, Facture, carte grise",
+        "b2": "💳 Paiement du véhicule",
+        "b3": "⚡ Dès réception des documents → demande immédiate d’une nouvelle carte grise en fonction du pays de destination."
+      },
+      "3": {
+        "title": "Préparation à l’export",
+        "b1": "🚚 Transport routier international"
+      },
+      "4": {
+        "title": "Livraison finale",
+        "b1": "🔑 Remise du véhicule + un dossier documents au client"
+      }
+    }
+  },
   "home": {
     "featuredTitle": "Derniers Arrivages",
     "noFeatured": "Aucun véhicule en vedette pour le moment.",
@@ -287,6 +318,8 @@
     "intro": "Les présentes Conditions Générales de Vente (CGV) encadrent les prestations de MYG Import by Car Spark Import.",
     "p1": "Toute commande implique l’acceptation pleine et entière des CGV. Les prix, délais et modalités sont précisés dans le devis et/ou le contrat de mandat.",
     "p2": "Pour toute question relative aux CGV, vous pouvez nous contacter à contact@myg-import.com.",
+    "noticeTitle": "Note importante",
+    "noticeBody": "La version anglaise est fournie à titre informatif. En cas de divergence, la version française prévaut.",
     "tabs": { "import": "Importation", "sale": "Vente de véhicule" },
     "toc": "Sommaire",
     "sections": {
