@@ -1,6 +1,20 @@
 import { Octokit } from '@octokit/rest'
 
-let connectionSettings: any;
+interface OAuthCredentials {
+  access_token?: string;
+}
+
+interface ConnectionSettings {
+  settings?: {
+    expires_at?: string;
+    access_token?: string;
+    oauth?: {
+      credentials?: OAuthCredentials;
+    };
+  };
+}
+
+let connectionSettings: ConnectionSettings | undefined;
 
 async function getAccessToken() {
   if (connectionSettings?.settings?.expires_at && new Date(connectionSettings.settings.expires_at).getTime() > Date.now()) {
@@ -26,7 +40,7 @@ async function getAccessToken() {
         'X_REPLIT_TOKEN': xReplitToken
       }
     }
-  ).then(res => res.json()).then(data => data.items?.[0]);
+  ).then(res => res.json()).then(data => data.items?.[0] as ConnectionSettings | undefined);
 
   const accessToken = connectionSettings?.settings?.access_token || connectionSettings?.settings?.oauth?.credentials?.access_token;
 

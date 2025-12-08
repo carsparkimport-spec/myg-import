@@ -1,6 +1,7 @@
 "use client";
 
 import Layout from '@/components/Layout';
+import Link from 'next/link';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 type Country = 'Luxembourg' | 'France' | 'Belgique' | 'Allemagne';
@@ -536,12 +537,12 @@ export default function SimulateurPage() {
                 <div className="text-lg font-extrabold font-mono tracking-tight">{formatEUR2(totalEuro)}</div>
               </div>
               <div className="flex items-center gap-2">
-                <a
+                <Link
                   href="/contact"
                   className="text-sm px-3 py-2 rounded-md bg-green-600 hover:bg-green-700 text-white"
                 >
                   Demander un devis
-                </a>
+                </Link>
                 <span className="text-sm px-3 py-1 rounded-md bg-gray-900 text-white">
                   {mobileDetailsOpen ? 'Masquer' : 'Détails'}
                 </span>
