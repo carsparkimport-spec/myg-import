@@ -29,3 +29,5 @@ Article 10 – Miscellaneous
 Applicable law and competent jurisdiction are specified in the quote/mandate. In case of discrepancy between language versions, the French version may prevail for legal interpretation unless otherwise agreed. The Parties will prioritise amicable resolution before any formal proceedings.
 
 
+
+
