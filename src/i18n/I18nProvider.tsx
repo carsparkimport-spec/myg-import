@@ -1,8 +1,8 @@
 'use client';
 
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-import fr from './locales/fr.json';
-import en from './locales/en.json';
+import React, { createContext, useContext, useEffect, useMemo, useState, useCallback } from 'react';
+import frLocal from './locales/fr.json';
+import enLocal from './locales/en.json';
 
 type Locale = 'fr' | 'en';
 type Primitive = string | number | boolean | null | undefined;
@@ -11,30 +11,43 @@ type Dictionary = { [key: string]: Primitive | Dictionary };
 interface I18nContextValue {
   locale: Locale;
   t: (key: string) => string;
+  tObject: (key: string) => Dictionary | Primitive;
   setLocale: (locale: Locale) => void;
 }
 
 const I18nContext = createContext<I18nContextValue | undefined>(undefined);
 
-const ALL_DICTIONARIES: Record<Locale, Dictionary> = { fr, en };
+const LOCAL_DICTIONARIES: Record<Locale, Dictionary> = { fr: frLocal, en: enLocal };
 
-function getByPath(dict: Dictionary, path: string): string {
+function getByPath(dict: Dictionary, path: string): Primitive | Dictionary {
   const parts = path.split('.');
   let node: Primitive | Dictionary = dict;
   for (const part of parts) {
     if (node && typeof node === 'object' && part in node) {
       node = (node as Dictionary)[part];
     } else {
-      return path; // fallback to key if missing
+      return path;
     }
   }
-  return String(node);
+  return node;
 }
 
 export function I18nProvider({ children, initialLocale = 'fr' }: { children: React.ReactNode; initialLocale?: Locale }) {
   const [locale, setLocaleState] = useState<Locale>(initialLocale);
+  const [dictionaries, setDictionaries] = useState<Record<Locale, Dictionary>>(LOCAL_DICTIONARIES);
 
-  // Allow ?lang=en override and persist to cookie
+  const fetchTranslations = useCallback(async (lang: Locale) => {
+    try {
+      const response = await fetch(`/api/translations?locale=${lang}`);
+      if (response.ok) {
+        const data = await response.json();
+        setDictionaries(prev => ({ ...prev, [lang]: data }));
+      }
+    } catch (error) {
+      console.error(`Failed to fetch ${lang} translations from GitHub:`, error);
+    }
+  }, []);
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const urlLang = params.get('lang');
@@ -42,7 +55,6 @@ export function I18nProvider({ children, initialLocale = 'fr' }: { children: Rea
       setLocaleState(urlLang);
       document.cookie = `locale=${urlLang}; path=/; max-age=31536000`;
     } else {
-      // fallback to cookie
       const cookieMatch = document.cookie.match(/(?:^|; )locale=(en|fr)/);
       if (cookieMatch) {
         setLocaleState(cookieMatch[1] as Locale);
@@ -50,7 +62,11 @@ export function I18nProvider({ children, initialLocale = 'fr' }: { children: Rea
     }
   }, []);
 
-  const dict = useMemo(() => ALL_DICTIONARIES[locale], [locale]);
+  useEffect(() => {
+    fetchTranslations(locale);
+  }, [locale, fetchTranslations]);
+
+  const dict = useMemo(() => dictionaries[locale], [locale, dictionaries]);
 
   const value = useMemo<I18nContextValue>(() => ({
     locale,
@@ -59,6 +75,7 @@ export function I18nProvider({ children, initialLocale = 'fr' }: { children: Rea
       document.cookie = `locale=${l}; path=/; max-age=31536000`;
     },
     t: (key: string) => String(getByPath(dict, key)),
+    tObject: (key: string) => getByPath(dict, key),
   }), [locale, dict]);
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
