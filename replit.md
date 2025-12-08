@@ -2,7 +2,20 @@
 
 MYG Import is a Next.js-based web application for a Luxembourg-based Japanese vehicle import business. The platform provides a bilingual (French/English) storefront showcasing vehicles, import process information, pricing simulation, and legal documentation. The application focuses on transparency and customer education throughout the import journey.
 
+**IMPORTANT**: This site is synchronized with GitHub repository `carsparkimport-spec/myg-import`. All data changes (vehicles, translations) should be made on GitHub and will be reflected automatically on the site.
+
 # Recent Changes
+
+**December 8, 2025**: Full Git synchronization with GitHub repository
+- Performed `git reset --hard origin/main` to sync all code from GitHub
+- Recreated GitHub integration files for data synchronization:
+  - `src/lib/github.ts` - GitHub API client using Replit's GitHub connector
+  - `src/app/api/vehicles/route.ts` - Vehicles API endpoint
+  - `src/app/api/translations/route.ts` - Translations API endpoint
+- Updated I18nProvider with `tObject()` function and GitHub sync
+- Updated stock page and vehicle detail page to fetch from GitHub API
+- Changed port from 5050 to 5000 for Replit compatibility
+- To sync future code changes: run `git fetch origin && git reset --hard origin/main && npm install`
 
 **October 27, 2025**: Migrated from Vercel to Replit
 - Updated Next.js dev server configuration to bind to 0.0.0.0:5000 for Replit compatibility
