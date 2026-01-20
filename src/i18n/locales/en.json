@@ -107,23 +107,23 @@
     "bottomSuffix": "for any questions.",
     "steps": {
       "1": {
-        "title": "Recherche & sélection",
-        "b1": "🔎 Recherche du véhicule neuf ou occasion selon critères",
-        "b2": "✅ Validation avec le client"
+        "title": "Search & selection",
+        "b1": "🔎 Search for new or used vehicle according to criteria",
+        "b2": "✅ Validation with the client"
       },
       "2": {
-        "title": "Achat & documents",
-        "b1": "📄 Obtention des documents, Facture, carte grise",
-        "b2": "💳 Paiement du véhicule",
-        "b3": "⚡ Dès réception des documents → demande immédiate d’une nouvelle carte grise en fonction du pays de destination."
+        "title": "Purchase & documents",
+        "b1": "📄 Obtaining documents, invoice, registration card",
+        "b2": "💳 Vehicle payment",
+        "b3": "⚡ Upon receipt of documents → immediate request for new registration card based on destination country."
       },
       "3": {
-        "title": "Préparation à l’export",
-        "b1": "🚚 Transport routier international"
+        "title": "Export preparation",
+        "b1": "🚚 International road transport"
       },
       "4": {
-        "title": "Livraison finale",
-        "b1": "🔑 Remise du véhicule + un dossier documents au client"
+        "title": "Final delivery",
+        "b1": "🔑 Vehicle handover + document folder to the client"
       }
     }
   },
@@ -203,16 +203,46 @@
       "title": "How to read a Japanese auction sheet",
       "intro": "Match the numbers on the sheet with the explanations below.",
       "items": {
-        "1": { "title": "Lot / auction number", "desc": "Identifier assigned to the vehicle at auction." },
-        "2": { "title": "Technical information", "desc": "Manufacturer details: chassis code, model, engine, trim, transmission." },
-        "3": { "title": "Overall evaluation", "desc": "Overall grade (e.g. 4.5) and interior grade (e.g. B)." },
-        "4": { "title": "Additional information", "desc": "Color, tyre type, specific version, etc." },
-        "5": { "title": "Main info / summary", "desc": "Registration, year, mileage, fuel, gearbox, steering." },
-        "6": { "title": "Administrative details", "desc": "Japanese year, registration type, engine number, consumption, etc." },
-        "7": { "title": "Equipment and options", "desc": "GPS, leather seats, A/C, sunroof, PDK, Bose, etc." },
-        "8": { "title": "Fiscal / recycling info", "desc": "Recycling tax amount and category." },
-        "9": { "title": "Chassis number (VIN)", "desc": "Vehicle identifier (e.g. WPOZZZ98ZCS750855)." },
-        "10": { "title": "Observations / inspection", "desc": "Inspector remarks: scratches, dents, wear, etc." }
+        "1": {
+          "title": "Lot / auction number",
+          "desc": "Identifier assigned to the vehicle at auction."
+        },
+        "2": {
+          "title": "Technical information",
+          "desc": "Manufacturer details: chassis code, model, engine, trim, transmission."
+        },
+        "3": {
+          "title": "Overall evaluation",
+          "desc": "Overall grade (e.g. 4.5) and interior grade (e.g. B)."
+        },
+        "4": {
+          "title": "Additional information",
+          "desc": "Color, tyre type, specific version, etc."
+        },
+        "5": {
+          "title": "Main info / summary",
+          "desc": "Registration, year, mileage, fuel, gearbox, steering."
+        },
+        "6": {
+          "title": "Administrative details",
+          "desc": "Japanese year, registration type, engine number, consumption, etc."
+        },
+        "7": {
+          "title": "Equipment and options",
+          "desc": "GPS, leather seats, A/C, sunroof, PDK, Bose, etc."
+        },
+        "8": {
+          "title": "Fiscal / recycling info",
+          "desc": "Recycling tax amount and category."
+        },
+        "9": {
+          "title": "Chassis number (VIN)",
+          "desc": "Vehicle identifier (e.g. WPOZZZ98ZCS750855)."
+        },
+        "10": {
+          "title": "Observations / inspection",
+          "desc": "Inspector remarks: scratches, dents, wear, etc."
+        }
       },
       "tipsTitle": "Quick tips",
       "tips": {
@@ -232,34 +262,146 @@
         "size": "Typical size / severity"
       },
       "items": {
-        "A1": { "jp": "キズ小 (Kizu shō)", "desc": "Light scratch, superficial (in clear coat only)", "size": "< 2 cm" },
-        "A2": { "jp": "キズ中 (Kizu chū)", "desc": "Medium scratch, visible to the naked eye, no rust", "size": "2–10 cm" },
-        "A3": { "jp": "キズ大 (Kizu dai)", "desc": "Deep scratch reaching paint or primer", "size": "> 10 cm" },
-        "U1": { "jp": "ヘコミ小 (Hekomi shō)", "desc": "Small dent, slightly visible, paint intact", "size": "< 2 cm" },
-        "U2": { "jp": "ヘコミ中 (Hekomi chū)", "desc": "Medium dent, clearly visible, paint intact or slightly marked", "size": "2–5 cm" },
-        "U3": { "jp": "ヘコミ大 (Hekomi dai)", "desc": "Large dent, visible from afar, often with paint chip", "size": "> 5 cm" },
-        "W1": { "jp": "波小 (Nami shō)", "desc": "Slight wave, slightly distorted reflection", "size": "Localized" },
-        "W2": { "jp": "波中 (Nami chū)", "desc": "Noticeable wave, possibly poorly straightened panel", "size": "Medium area" },
-        "W3": { "jp": "波大 (Nami dai)", "desc": "Deformed or poorly repaired panel, requires full straightening", "size": "Large area" },
-        "P": { "jp": "ペイントハガレ (Peinto Hagare)", "desc": "Flaking clear coat or paint", "size": "Variable" },
-        "S1": { "jp": "サビ小 (Sabi shō)", "desc": "Small superficial rust spot", "size": "< 2 cm" },
-        "S2": { "jp": "サビ中 (Sabi chū)", "desc": "Visible rust, needs sanding", "size": "2–5 cm" },
-        "S3": { "jp": "サビ大 (Sabi dai)", "desc": "Heavy rust, metal attacked", "size": "> 5 cm" },
-        "C1": { "jp": "腐食小 (Fushoku shō)", "desc": "Light corrosion (beginning of pitting)", "size": "< 3 cm" },
-        "C2": { "jp": "腐食中 (Fushoku chū)", "desc": "Visible corrosion, weakened metal", "size": "3–10 cm" },
-        "C3": { "jp": "腐食大 (Fushoku dai)", "desc": "Severe corrosion, hole or perforation", "size": "> 10 cm" },
-        "Y1": { "jp": "ワレ小 (Ware shō)", "desc": "Small crack on plastic", "size": "≤ 2 cm" },
-        "Y2": { "jp": "ワレ中 (Ware chū)", "desc": "Medium crack, visible from a distance", "size": "2–5 cm" },
-        "Y3": { "jp": "ワレ大 (Ware dai)", "desc": "Large crack, part to replace", "size": "> 5 cm" },
-        "X": { "jp": "要交換 (Yō kōkan)", "desc": "Part to replace (damaged or structural)", "size": "—" },
-        "XX": { "jp": "交換済 (Kōkan sumi)", "desc": "Part already replaced", "size": "—" },
-        "B1": { "jp": "ヘコミ・キズ小 (Hekomi/Kizu shō)", "desc": "Small dent with paint chip", "size": "≤ 2 cm" },
-        "B2": { "jp": "ヘコミ・キズ中 (Hekomi/Kizu chū)", "desc": "Medium dent with visible chip", "size": "2–5 cm" },
-        "B3": { "jp": "ヘコミ・キズ大 (Hekomi/Kizu dai)", "desc": "Large dent with major chip", "size": "> 5 cm" },
-        "E": { "jp": "エクボ/飛び石 (Ekubo/Tobishi)", "desc": "Impact or chip (e.g. windshield, headlight)", "size": "< 1 cm" },
-        "G": { "jp": "ガラス割れ (Garasu ware)", "desc": "Crack or break on glazing", "size": "Variable" },
-        "D": { "jp": "雹害 (Hyōgai)", "desc": "Hail damage (multiple U1)", "size": "Multiple small impacts" },
-        "P/R": { "jp": "再塗装 (Saitosō)", "desc": "Repainted panel", "size": "Shaded area on diagram" }
+        "A1": {
+          "jp": "キズ小 (Kizu shō)",
+          "desc": "Light scratch, superficial (in clear coat only)",
+          "size": "< 2 cm"
+        },
+        "A2": {
+          "jp": "キズ中 (Kizu chū)",
+          "desc": "Medium scratch, visible to the naked eye, no rust",
+          "size": "2–10 cm"
+        },
+        "A3": {
+          "jp": "キズ大 (Kizu dai)",
+          "desc": "Deep scratch reaching paint or primer",
+          "size": "> 10 cm"
+        },
+        "U1": {
+          "jp": "ヘコミ小 (Hekomi shō)",
+          "desc": "Small dent, slightly visible, paint intact",
+          "size": "< 2 cm"
+        },
+        "U2": {
+          "jp": "ヘコミ中 (Hekomi chū)",
+          "desc": "Medium dent, clearly visible, paint intact or slightly marked",
+          "size": "2–5 cm"
+        },
+        "U3": {
+          "jp": "ヘコミ大 (Hekomi dai)",
+          "desc": "Large dent, visible from afar, often with paint chip",
+          "size": "> 5 cm"
+        },
+        "W1": {
+          "jp": "波小 (Nami shō)",
+          "desc": "Slight wave, slightly distorted reflection",
+          "size": "Localized"
+        },
+        "W2": {
+          "jp": "波中 (Nami chū)",
+          "desc": "Noticeable wave, possibly poorly straightened panel",
+          "size": "Medium area"
+        },
+        "W3": {
+          "jp": "波大 (Nami dai)",
+          "desc": "Deformed or poorly repaired panel, requires full straightening",
+          "size": "Large area"
+        },
+        "P": {
+          "jp": "ペイントハガレ (Peinto Hagare)",
+          "desc": "Flaking clear coat or paint",
+          "size": "Variable"
+        },
+        "S1": {
+          "jp": "サビ小 (Sabi shō)",
+          "desc": "Small superficial rust spot",
+          "size": "< 2 cm"
+        },
+        "S2": {
+          "jp": "サビ中 (Sabi chū)",
+          "desc": "Visible rust, needs sanding",
+          "size": "2–5 cm"
+        },
+        "S3": {
+          "jp": "サビ大 (Sabi dai)",
+          "desc": "Heavy rust, metal attacked",
+          "size": "> 5 cm"
+        },
+        "C1": {
+          "jp": "腐食小 (Fushoku shō)",
+          "desc": "Light corrosion (beginning of pitting)",
+          "size": "< 3 cm"
+        },
+        "C2": {
+          "jp": "腐食中 (Fushoku chū)",
+          "desc": "Visible corrosion, weakened metal",
+          "size": "3–10 cm"
+        },
+        "C3": {
+          "jp": "腐食大 (Fushoku dai)",
+          "desc": "Severe corrosion, hole or perforation",
+          "size": "> 10 cm"
+        },
+        "Y1": {
+          "jp": "ワレ小 (Ware shō)",
+          "desc": "Small crack on plastic",
+          "size": "≤ 2 cm"
+        },
+        "Y2": {
+          "jp": "ワレ中 (Ware chū)",
+          "desc": "Medium crack, visible from a distance",
+          "size": "2–5 cm"
+        },
+        "Y3": {
+          "jp": "ワレ大 (Ware dai)",
+          "desc": "Large crack, part to replace",
+          "size": "> 5 cm"
+        },
+        "X": {
+          "jp": "要交換 (Yō kōkan)",
+          "desc": "Part to replace (damaged or structural)",
+          "size": "—"
+        },
+        "XX": {
+          "jp": "交換済 (Kōkan sumi)",
+          "desc": "Part already replaced",
+          "size": "—"
+        },
+        "B1": {
+          "jp": "ヘコミ・キズ小 (Hekomi/Kizu shō)",
+          "desc": "Small dent with paint chip",
+          "size": "≤ 2 cm"
+        },
+        "B2": {
+          "jp": "ヘコミ・キズ中 (Hekomi/Kizu chū)",
+          "desc": "Medium dent with visible chip",
+          "size": "2–5 cm"
+        },
+        "B3": {
+          "jp": "ヘコミ・キズ大 (Hekomi/Kizu dai)",
+          "desc": "Large dent with major chip",
+          "size": "> 5 cm"
+        },
+        "E": {
+          "jp": "エクボ/飛び石 (Ekubo/Tobishi)",
+          "desc": "Impact or chip (e.g. windshield, headlight)",
+          "size": "< 1 cm"
+        },
+        "G": {
+          "jp": "ガラス割れ (Garasu ware)",
+          "desc": "Crack or break on glazing",
+          "size": "Variable"
+        },
+        "D": {
+          "jp": "雹害 (Hyōgai)",
+          "desc": "Hail damage (multiple U1)",
+          "size": "Multiple small impacts"
+        },
+        "P/R": {
+          "jp": "再塗装 (Saitosō)",
+          "desc": "Repainted panel",
+          "size": "Shaded area on diagram"
+        }
       },
       "note": {
         "title": "Good to know",
@@ -310,20 +452,39 @@
     "p2": "For any questions regarding the T&Cs, please contact us at contact@myg-import.com.",
     "noticeTitle": "Important note",
     "noticeBody": "This English version is provided for convenience. In case of discrepancy, the French version shall prevail.",
-    "tabs": { "import": "Import", "sale": "Vehicle sale" },
+    "tabs": {
+      "import": "Import",
+      "sale": "Vehicle sale"
+    },
     "toc": "Summary",
     "sections": {
-      "1": { "title": "Article 1 – Purpose of the mandate" },
-      "2": { "title": "Article 2 – Fees in Japan" },
-      "3": { "title": "Article 3 – Obligations of the Agent" },
-      "4": { "title": "Article 4 – Obligations of the Principal" },
-      "5": { "title": "Article 5 – Legal guarantee of conformity and commercial warranty" },
-      "6": { "title": "Article 6 – Term of the mandate" },
-      "7": { "title": "Article 7 – Agent's remuneration" },
-      "8": { "title": "Article 8 – Payment terms" },
-      "9": { "title": "Article 9 – Right of withdrawal" }
+      "1": {
+        "title": "Article 1 – Purpose of the mandate"
+      },
+      "2": {
+        "title": "Article 2 – Fees in Japan"
+      },
+      "3": {
+        "title": "Article 3 – Obligations of the Agent"
+      },
+      "4": {
+        "title": "Article 4 – Obligations of the Principal"
+      },
+      "5": {
+        "title": "Article 5 – Legal guarantee of conformity and commercial warranty"
+      },
+      "6": {
+        "title": "Article 6 – Term of the mandate"
+      },
+      "7": {
+        "title": "Article 7 – Agent's remuneration"
+      },
+      "8": {
+        "title": "Article 8 – Payment terms"
+      },
+      "9": {
+        "title": "Article 9 – Right of withdrawal"
+      }
     }
   }
 }
-
-
