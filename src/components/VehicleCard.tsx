@@ -11,6 +11,7 @@ interface Vehicle {
   transmission: string;
   price: number;
   images: string[];
+  status?: string;
 }
 
 interface VehicleCardProps {
@@ -18,15 +19,21 @@ interface VehicleCardProps {
 }
 
 const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle }) => {
-  const { id, make, model, year, mileage, transmission, price, images } = vehicle;
+  const { id, make, model, year, mileage, transmission, price, images, status } = vehicle;
   const { locale, t } = useI18n();
   const imageUrl = images[0] || '/vercel.svg';
   const localeTag = locale === 'fr' ? 'fr-FR' : 'en-GB';
+  const isSold = status === 'Vendu';
 
   return (
-    <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md bg-white flex flex-col h-full transition-shadow hover:shadow-lg">
+    <div className={`border border-gray-200 rounded-lg overflow-hidden shadow-md bg-white flex flex-col h-full transition-shadow hover:shadow-lg ${isSold ? 'opacity-75' : ''}`}>
       <div className="relative w-full h-48 sm:h-56 bg-white">
         <Image src={imageUrl} alt={`${make} ${model}`} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-contain p-4" />
+        {isSold && (
+          <div className="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+            Vendu
+          </div>
+        )}
       </div>
       <div className="p-4 flex flex-col flex-grow">
         <h3 className="text-xl font-bold mb-2">{make} {model}</h3>
