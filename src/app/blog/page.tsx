@@ -108,6 +108,115 @@ export default function BlogPage() {
           <li>{t('blog.annotations.note.items.6')}</li>
         </ul>
       </div>
+
+      {/* Shaken Article */}
+      <div className="max-w-6xl mx-auto mt-16">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-deep-black text-center tracking-tight leading-tight mb-2 md:mb-4">
+          {t('shaken.title')}
+        </h2>
+        <p className="text-gray-600 text-center max-w-3xl mx-auto mb-8">
+          {t('shaken.intro')}
+        </p>
+      </div>
+
+      {/* Section 1: Coûts */}
+      <div className="max-w-6xl mx-auto mt-8 rounded-xl bg-white p-4 md:p-6 shadow ring-1 ring-gray-200">
+        <h3 className="text-xl md:text-2xl font-bold text-deep-black mb-2">1. {t('shaken.sections.1.title')}</h3>
+        <p className="text-gray-600 mb-6">{t('shaken.sections.1.intro')}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          {[1, 2, 3, 4].map((i) => (
+            <div key={i} className="rounded-xl bg-gray-50 p-4 shadow-sm ring-1 ring-gray-200">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="inline-flex items-center justify-center w-8 h-8 text-white rounded-full bg-red-600">{i}</span>
+                <h4 className="font-semibold text-black">{t(`shaken.sections.1.items.${i}.title`)}</h4>
+              </div>
+              <p className="text-gray-600 text-sm">{t(`shaken.sections.1.items.${i}.desc`)}</p>
+            </div>
+          ))}
+        </div>
+        <div className="rounded-xl bg-gray-50 p-4 ring-1 ring-gray-200">
+          <h4 className="font-semibold text-black mb-3">{t('shaken.sections.1.costTable.title')}</h4>
+          <div className="overflow-x-auto">
+            <table className="min-w-full text-sm">
+              <tbody>
+                {[1, 2, 3, 4, 5, 6].map((i) => (
+                  <tr key={i} className="border-t border-gray-200">
+                    <td className="py-2 pr-4 text-gray-800">{t(`shaken.sections.1.costTable.rows.${i}.item`)}</td>
+                    <td className="py-2 text-right font-mono text-black">{t(`shaken.sections.1.costTable.rows.${i}.cost`)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      {/* Section 2: Exigences techniques */}
+      <div className="max-w-6xl mx-auto mt-8 rounded-xl bg-white p-4 md:p-6 shadow ring-1 ring-gray-200">
+        <h3 className="text-xl md:text-2xl font-bold text-deep-black mb-2">2. {t('shaken.sections.2.title')}</h3>
+        <p className="text-gray-600 mb-6">{t('shaken.sections.2.intro')}</p>
+        <div className="grid grid-cols-1 gap-4">
+          {[1, 2, 3, 4, 5, 6, 7].map((i) => {
+            const colors = ['bg-blue-600', 'bg-amber-500', 'bg-green-600', 'bg-purple-600', 'bg-cyan-600', 'bg-rose-600', 'bg-indigo-600'];
+            return (
+              <div key={i} className="rounded-xl bg-gray-50 p-4 shadow-sm ring-1 ring-gray-200">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className={`inline-flex items-center justify-center w-8 h-8 text-white rounded-full ${colors[i - 1]}`}>{i}</span>
+                  <h4 className="font-semibold text-black">{t(`shaken.sections.2.items.${i}.title`)}</h4>
+                </div>
+                <p className="text-gray-600 text-sm">{t(`shaken.sections.2.items.${i}.desc`)}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Section 3: Pratiques d'entretien */}
+      <div className="max-w-6xl mx-auto mt-8 rounded-xl bg-white p-4 md:p-6 shadow ring-1 ring-gray-200">
+        <h3 className="text-xl md:text-2xl font-bold text-deep-black mb-2">3. {t('shaken.sections.3.title')}</h3>
+        <p className="text-gray-600 mb-6">{t('shaken.sections.3.intro')}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[1, 2, 3, 4].map((i) => {
+            const colors = ['bg-emerald-600', 'bg-sky-600', 'bg-orange-500', 'bg-violet-600'];
+            return (
+              <div key={i} className="rounded-xl bg-gray-50 p-4 shadow-sm ring-1 ring-gray-200">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className={`inline-flex items-center justify-center w-8 h-8 text-white rounded-full ${colors[i - 1]}`}>{i}</span>
+                  <h4 className="font-semibold text-black">{t(`shaken.sections.3.items.${i}.title`)}</h4>
+                </div>
+                <p className="text-gray-600 text-sm">{t(`shaken.sections.3.items.${i}.desc`)}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Section 4: Impact sur la qualité */}
+      <div className="max-w-6xl mx-auto mt-8 rounded-xl bg-white p-4 md:p-6 shadow ring-1 ring-gray-200">
+        <h3 className="text-xl md:text-2xl font-bold text-deep-black mb-2">4. {t('shaken.sections.4.title')}</h3>
+        <p className="text-gray-600 mb-6">{t('shaken.sections.4.intro')}</p>
+        <div className="grid grid-cols-1 gap-4">
+          {[1, 2, 3, 4, 5].map((i) => {
+            const colors = ['bg-green-600', 'bg-blue-600', 'bg-teal-600', 'bg-amber-600', 'bg-rose-600'];
+            return (
+              <div key={i} className="rounded-xl bg-gray-50 p-4 shadow-sm ring-1 ring-gray-200">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className={`inline-flex items-center justify-center w-8 h-8 text-white rounded-full ${colors[i - 1]}`}>{i}</span>
+                  <h4 className="font-semibold text-black">{t(`shaken.sections.4.items.${i}.title`)}</h4>
+                </div>
+                <p className="text-gray-600 text-sm">{t(`shaken.sections.4.items.${i}.desc`)}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Conclusion */}
+      <div className="max-w-6xl mx-auto mt-8 rounded-xl bg-green-50 p-4 md:p-6 ring-1 ring-green-200">
+        <h3 className="text-base md:text-lg font-semibold text-green-900 mb-2">Conclusion</h3>
+        <p className="text-green-900">{t('shaken.conclusion')}</p>
+      </div>
+
       </div>
     </Layout>
   );
