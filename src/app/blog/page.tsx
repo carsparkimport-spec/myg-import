@@ -118,51 +118,71 @@ export default function BlogPage() {
           {t('shaken.intro')}
         </p>
 
-        <h3 className="text-xl font-bold text-deep-black mt-8 mb-3">1. {t('shaken.sections.1.title')}</h3>
-        <p className="text-gray-700 mb-4">{t('shaken.sections.1.intro')}</p>
-        <ul className="list-disc pl-6 space-y-3 text-gray-700 mb-6">
-          {[1, 2, 3, 4].map((i) => (
-            <li key={i}>
-              <strong>{t(`shaken.sections.1.items.${i}.title`)}</strong> : {t(`shaken.sections.1.items.${i}.desc`)}
-            </li>
-          ))}
-        </ul>
-        <p className="font-semibold text-black mb-2">{t('shaken.sections.1.costTable.title')} :</p>
+        <h3 className="text-xl font-bold text-deep-black mt-8 mb-3">1. {t('shaken.section1.title')}</h3>
+        <p className="text-gray-700 mb-4">{t('shaken.section1.intro')}</p>
+        
+        <h4 className="font-semibold text-black mt-4 mb-2">{t('shaken.section1.item1_title')}</h4>
+        <p className="text-gray-700 mb-4">{t('shaken.section1.item1_text')}</p>
+        
+        <h4 className="font-semibold text-black mt-4 mb-2">{t('shaken.section1.item2_title')}</h4>
+        <p className="text-gray-700 mb-4">{t('shaken.section1.item2_text')}</p>
+        
+        <h4 className="font-semibold text-black mt-4 mb-2">{t('shaken.section1.item3_title')}</h4>
+        <p className="text-gray-700 mb-4">{t('shaken.section1.item3_text')}</p>
+        
+        <h4 className="font-semibold text-black mt-4 mb-2">{t('shaken.section1.item4_title')}</h4>
+        <p className="text-gray-700 mb-4">{t('shaken.section1.item4_text')}</p>
+        
+        <h4 className="font-semibold text-black mt-6 mb-2">{t('shaken.section1.tableTitle')}</h4>
         <ul className="list-disc pl-6 space-y-1 text-gray-700 mb-6">
-          {[1, 2, 3, 4, 5, 6].map((i) => (
-            <li key={i}>{t(`shaken.sections.1.costTable.rows.${i}.item`)} : {t(`shaken.sections.1.costTable.rows.${i}.cost`)}</li>
-          ))}
+          <li>Inspection au centre (test) : ~2 000 ¥ - 11,20€</li>
+          <li>Timbres administratifs : ~1 200 ¥ - 6,70€</li>
+          <li>Taxe de poids (2 ans) : 16 400 ¥ - 92€ (voiture ~1 t) jusqu'à 32 800 ¥ - 184€ (&gt;1,5 t) (+39% si &gt;13 ans)</li>
+          <li>Assurance Jibaiseki (2 ans) : ~17 650 ¥ - 99€</li>
+          <li>Frais de service garage (optionnel) : ~40 000 ¥ - 224€</li>
+          <li>Entretien / pièces avant inspection : Variable (~20 000–50 000 ¥ - 112€ à 280€)</li>
         </ul>
 
-        <h3 className="text-xl font-bold text-deep-black mt-8 mb-3">2. {t('shaken.sections.2.title')}</h3>
-        <p className="text-gray-700 mb-4">{t('shaken.sections.2.intro')}</p>
-        <ul className="list-disc pl-6 space-y-3 text-gray-700 mb-6">
-          {[1, 2, 3, 4, 5, 6, 7].map((i) => (
-            <li key={i}>
-              <strong>{t(`shaken.sections.2.items.${i}.title`)}</strong> : {t(`shaken.sections.2.items.${i}.desc`)}
-            </li>
-          ))}
-        </ul>
+        <h3 className="text-xl font-bold text-deep-black mt-8 mb-3">2. {t('shaken.section2.title')}</h3>
+        <p className="text-gray-700 mb-4">{t('shaken.section2.intro')}</p>
+        
+        <h4 className="font-semibold text-black mt-4 mb-2">{t('shaken.section2.item1_title')}</h4>
+        <p className="text-gray-700 mb-4">{t('shaken.section2.item1_text')}</p>
+        
+        <h4 className="font-semibold text-black mt-4 mb-2">{t('shaken.section2.item2_title')}</h4>
+        <p className="text-gray-700 mb-4">{t('shaken.section2.item2_text')}</p>
+        
+        <h4 className="font-semibold text-black mt-4 mb-2">{t('shaken.section2.item3_title')}</h4>
+        <p className="text-gray-700 mb-4">{t('shaken.section2.item3_text')}</p>
+        
+        <h4 className="font-semibold text-black mt-4 mb-2">{t('shaken.section2.item4_title')}</h4>
+        <p className="text-gray-700 mb-4">{t('shaken.section2.item4_text')}</p>
+        
+        <h4 className="font-semibold text-black mt-4 mb-2">{t('shaken.section2.item5_title')}</h4>
+        <p className="text-gray-700 mb-4">{t('shaken.section2.item5_text')}</p>
+        
+        <h4 className="font-semibold text-black mt-4 mb-2">{t('shaken.section2.item6_title')}</h4>
+        <p className="text-gray-700 mb-4">{t('shaken.section2.item6_text')}</p>
+        
+        <h4 className="font-semibold text-black mt-4 mb-2">{t('shaken.section2.item7_title')}</h4>
+        <p className="text-gray-700 mb-4">{t('shaken.section2.item7_text')}</p>
+        
+        <p className="text-gray-700 mb-4 italic">{t('shaken.section2.footer')}</p>
 
-        <h3 className="text-xl font-bold text-deep-black mt-8 mb-3">3. {t('shaken.sections.3.title')}</h3>
-        <p className="text-gray-700 mb-4">{t('shaken.sections.3.intro')}</p>
-        <ul className="list-disc pl-6 space-y-3 text-gray-700 mb-6">
-          {[1, 2, 3, 4].map((i) => (
-            <li key={i}>
-              <strong>{t(`shaken.sections.3.items.${i}.title`)}</strong> : {t(`shaken.sections.3.items.${i}.desc`)}
-            </li>
-          ))}
-        </ul>
-
-        <h3 className="text-xl font-bold text-deep-black mt-8 mb-3">4. {t('shaken.sections.4.title')}</h3>
-        <p className="text-gray-700 mb-4">{t('shaken.sections.4.intro')}</p>
-        <ul className="list-disc pl-6 space-y-3 text-gray-700 mb-6">
-          {[1, 2, 3, 4, 5].map((i) => (
-            <li key={i}>
-              <strong>{t(`shaken.sections.4.items.${i}.title`)}</strong> : {t(`shaken.sections.4.items.${i}.desc`)}
-            </li>
-          ))}
-        </ul>
+        <h3 className="text-xl font-bold text-deep-black mt-8 mb-3">3. {t('shaken.section3.title')}</h3>
+        <p className="text-gray-700 mb-4">{t('shaken.section3.intro')}</p>
+        
+        <h4 className="font-semibold text-black mt-4 mb-2">{t('shaken.section3.item1_title')}</h4>
+        <p className="text-gray-700 mb-4">{t('shaken.section3.item1_text')}</p>
+        
+        <h4 className="font-semibold text-black mt-4 mb-2">{t('shaken.section3.item2_title')}</h4>
+        <p className="text-gray-700 mb-4">{t('shaken.section3.item2_text')}</p>
+        
+        <h4 className="font-semibold text-black mt-4 mb-2">{t('shaken.section3.item3_title')}</h4>
+        <p className="text-gray-700 mb-4">{t('shaken.section3.item3_text')}</p>
+        
+        <h4 className="font-semibold text-black mt-4 mb-2">{t('shaken.section3.item4_title')}</h4>
+        <p className="text-gray-700 mb-4">{t('shaken.section3.item4_text')}</p>
 
         <h3 className="text-xl font-bold text-deep-black mt-8 mb-3">Conclusion</h3>
         <p className="text-gray-700">{t('shaken.conclusion')}</p>
