@@ -1,5 +1,53 @@
 [
   {
+    "id": "clio-noir",
+    "make": "Renault",
+    "model": "Clio BLUE dCi 100 EVOLUTION",
+    "status": "En arrivage",
+    "year": 2025,
+    "mileage": 100,
+    "fuel": "Diesel",
+    "transmission": "Manuelle",
+    "price": 20480,
+    "description": "Renault Clio BLUE dCi 100 EVOLUTION neuve. Coloris Noir Étoile. Arrivée prévue fin de semaine prochaine. Prix hors frais de formalités d'immatriculation (340€ TTC).",
+    "images": [
+      "/images/vehicles/renault-clio-noir/1.png"
+    ],
+    "details": {
+      "Moteur": "dCi 100ch",
+      "Boîte": "Manuelle",
+      "Année": "11/2025",
+      "Coloris": "Noir Étoile",
+      "Équipements": "Caméra de recul; Aide au stationnement arrière; Régulateur de vitesse; Limiteur de vitesse; Climatisation manuelle; Apple CarPlay; Android Auto; EasyLink 7'' sans navigation",
+      "Garantie": "Constructeur"
+    },
+    "featured": true,
+    "featuredOrder": 1
+  },
+  {
+    "id": "clio-gris",
+    "make": "Renault",
+    "model": "Clio BLUE dCi 100 EVOLUTION",
+    "status": "En arrivage",
+    "year": 2025,
+    "mileage": 100,
+    "fuel": "Diesel",
+    "transmission": "Manuelle",
+    "price": 20480,
+    "description": "Renault Clio BLUE dCi 100 EVOLUTION neuve. Coloris Gris Schiste. Arrivée prévue fin de semaine prochaine. Prix hors frais de formalités d'immatriculation (340€ TTC).",
+    "images": [],
+    "details": {
+      "Moteur": "dCi 100ch",
+      "Boîte": "Manuelle",
+      "Année": "11/2025",
+      "Coloris": "Gris Schiste",
+      "Équipements": "Caméra de recul; Aide au stationnement arrière; Régulateur de vitesse; Limiteur de vitesse; Climatisation manuelle; Apple CarPlay; Android Auto; EasyLink 7'' sans navigation",
+      "Garantie": "Constructeur"
+    },
+    "featured": true,
+    "featuredOrder": 2
+  },
+  {
     "id": "4",
     "make": "Porsche",
     "model": "Cayman S 987.2",
@@ -35,7 +83,7 @@
       "Garantie": "12 mois, extension possible"
     },
     "featured": true,
-    "featuredOrder": 1
+    "featuredOrder": 3
   },
   {
     "id": "macan-s",
@@ -62,9 +110,9 @@
       "Moteur": "V6 3.0 turbo (EA839) – 354 ch / 480 Nm",
       "Boîte": "PDK 7 rapports",
       "Année": 2019,
-      "Options": "Train roulants revus, options PASM possibles; Nouveau PCM 10,9”, bandeau LED arrière, boucliers restylés; Suspension pneumatique à hauteur variable avec régulation automatique de la hauteur de caisse et de l’assiette; PASM (Porsche Active Suspension Management); Sorties d’échappement sport en Noir; Réservoir 75 litres; Servotronic Plus; Jantes Sport Classic 21 pouces en Noir (finition brillante); Sièges sport adaptatifs (18 positions électriques) avec Pack Mémoire; Sièges chauffants à l’avant; Volant Sport GT en cuir avec chauffage du volant; Ceintures de sécurité Rouge Grenat; Pack Confort Luminosité; Pack Fumeur; Tapis de sol; Toit ouvrant panoramique; Rampes de pavillon en aluminium peintes en Noir avec système de transport sur toit; Contours de vitres latérales en Noir (finition brillante); Poignées de portes peintes en Noir (finition brillante); Suppression de la désignation du modèle; Vitrage arrière fumé; Assistance parking avant et arrière avec caméra de recul et vue 360°; Régulateur de vitesse adaptatif; Pack Confort Luminosité (éclairage intérieur et extérieur optimisé)"
+      "Options": "Train roulants revus, options PASM possibles; Nouveau PCM 10,9 pouces, bandeau LED arrière, boucliers restylés; Suspension pneumatique à hauteur variable avec régulation automatique de la hauteur de caisse et de l'assiette; PASM (Porsche Active Suspension Management); Sorties d'échappement sport en Noir; Réservoir 75 litres; Servotronic Plus; Jantes Sport Classic 21 pouces en Noir (finition brillante); Sièges sport adaptatifs (18 positions électriques) avec Pack Mémoire; Sièges chauffants à l'avant; Volant Sport GT en cuir avec chauffage du volant; Ceintures de sécurité Rouge Grenat; Pack Confort Luminosité; Pack Fumeur; Tapis de sol; Toit ouvrant panoramique; Rampes de pavillon en aluminium peintes en Noir avec système de transport sur toit; Contours de vitres latérales en Noir (finition brillante); Poignées de portes peintes en Noir (finition brillante); Suppression de la désignation du modèle; Vitrage arrière fumé; Assistance parking avant et arrière avec caméra de recul et vue 360°; Régulateur de vitesse adaptatif; Pack Confort Luminosité (éclairage intérieur et extérieur optimisé)"
     },
-    "featured": true,
-    "featuredOrder": 2
+    "featured": false,
+    "featuredOrder": 4
   }
 ]
