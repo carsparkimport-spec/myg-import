@@ -3,9 +3,11 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useCallback, useState } from 'react';
+import { useI18n } from '@/i18n/I18nProvider';
 
 export default function VerticalSelector() {
   const router = useRouter();
+  const { t } = useI18n();
   const [logoSrc, setLogoSrc] = useState("/images/backgrounds/Logo MYG.jpeg");
 
   const choose = useCallback((vertical: 'jp' | 'eu') => {
@@ -30,7 +32,7 @@ export default function VerticalSelector() {
       </div>
       {/* Heading */}
       <div className="w-full max-w-5xl mx-auto mt-24 text-center">
-        <h1 className="text-white text-2xl md:text-3xl font-bold tracking-tight">Choisissez votre univers</h1>
+        <h1 className="text-white text-2xl md:text-3xl font-bold tracking-tight">{t('home.choose')}</h1>
       </div>
       {/* Cards */}
       <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
@@ -42,11 +44,11 @@ export default function VerticalSelector() {
           <div className="absolute inset-0 bg-black/45 group-hover:bg-black/35 transition" />
           <div className="relative h-full w-full flex items-center justify-center">
             <div className="text-center">
-              <div className="text-white text-2xl md:text-3xl font-bold">Import Japon</div>
-              <div className="text-gray-200 mt-2">Sélection, enchères, logistique</div>
+              <div className="text-white text-2xl md:text-3xl font-bold">{t('home.japan')}</div>
+              <div className="text-gray-200 mt-2">{t('home.japanSub')}</div>
               <div className="mt-4">
                 <span className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/30 text-white group-hover:bg-white group-hover:text-black transition">
-                  Entrer
+                  {t('home.enter')}
                 </span>
               </div>
             </div>
@@ -60,11 +62,11 @@ export default function VerticalSelector() {
           <div className="absolute inset-0 bg-black/45 group-hover:bg-black/35 transition" />
           <div className="relative h-full w-full flex items-center justify-center">
             <div className="text-center">
-              <div className="text-white text-2xl md:text-3xl font-bold">Import Europe</div>
-              <div className="text-gray-200 mt-2">Sélection EU, TVA, garantie</div>
+              <div className="text-white text-2xl md:text-3xl font-bold">{t('home.europe')}</div>
+              <div className="text-gray-200 mt-2">{t('home.europeSub')}</div>
               <div className="mt-4">
                 <span className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/30 text-white group-hover:bg-white group-hover:text-black transition">
-                  Entrer
+                  {t('home.enter')}
                 </span>
               </div>
             </div>

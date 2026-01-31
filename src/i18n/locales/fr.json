@@ -128,6 +128,12 @@
     }
   },
   "home": {
+    "choose": "Choisissez votre univers",
+    "japan": "Import Japon",
+    "japanSub": "Sélection, enchères, logistique",
+    "europe": "Import Europe",
+    "europeSub": "Sélection EU, TVA, garantie",
+    "enter": "Entrer",
     "featuredTitle": "Derniers Arrivages",
     "noFeatured": "Aucun véhicule en vedette pour le moment.",
     "viewAllStock": "Voir tout le stock",
