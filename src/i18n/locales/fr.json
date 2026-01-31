@@ -209,16 +209,46 @@
       "title": "Guide de lecture d’une fiche d’enchère",
       "intro": "Repérez les numéros sur la fiche et retrouvez ci‑dessous l’explication de chaque zone.",
       "items": {
-        "1": { "title": "Numéro de lot / enchère", "desc": "Identifiant attribué au véhicule lors de la vente." },
-        "2": { "title": "Informations techniques", "desc": "Détails constructeur : code châssis, modèle, motorisation, version, transmission." },
-        "3": { "title": "Évaluation globale", "desc": "Note d’état global (ex. 4.5) et note intérieure (ex. B)." },
-        "4": { "title": "Informations additionnelles", "desc": "Couleur, type de pneus, version spécifique, etc." },
-        "5": { "title": "Informations principales / résumé", "desc": "Immatriculation, année, kilométrage, carburant, boîte, direction." },
-        "6": { "title": "Détails administratifs", "desc": "Année japonaise, type d’immatriculation, numéro de moteur, consommation, etc." },
-        "7": { "title": "Équipements et options", "desc": "GPS, sièges cuir, climatisation, toit ouvrant, PDK, Bose, etc." },
-        "8": { "title": "Informations fiscales / recyclage", "desc": "Montant de la taxe de recyclage et catégorie correspondante." },
-        "9": { "title": "Numéro de châssis (VIN)", "desc": "Identifiant du véhicule (ex. WPOZZZ98ZCS750855)." },
-        "10": { "title": "Observations / inspection", "desc": "Remarques de l’inspecteur : rayures, bosses, usure, etc." }
+        "1": {
+          "title": "Numéro de lot / enchère",
+          "desc": "Identifiant attribué au véhicule lors de la vente."
+        },
+        "2": {
+          "title": "Informations techniques",
+          "desc": "Détails constructeur : code châssis, modèle, motorisation, version, transmission."
+        },
+        "3": {
+          "title": "Évaluation globale",
+          "desc": "Note d’état global (ex. 4.5) et note intérieure (ex. B)."
+        },
+        "4": {
+          "title": "Informations additionnelles",
+          "desc": "Couleur, type de pneus, version spécifique, etc."
+        },
+        "5": {
+          "title": "Informations principales / résumé",
+          "desc": "Immatriculation, année, kilométrage, carburant, boîte, direction."
+        },
+        "6": {
+          "title": "Détails administratifs",
+          "desc": "Année japonaise, type d’immatriculation, numéro de moteur, consommation, etc."
+        },
+        "7": {
+          "title": "Équipements et options",
+          "desc": "GPS, sièges cuir, climatisation, toit ouvrant, PDK, Bose, etc."
+        },
+        "8": {
+          "title": "Informations fiscales / recyclage",
+          "desc": "Montant de la taxe de recyclage et catégorie correspondante."
+        },
+        "9": {
+          "title": "Numéro de châssis (VIN)",
+          "desc": "Identifiant du véhicule (ex. WPOZZZ98ZCS750855)."
+        },
+        "10": {
+          "title": "Observations / inspection",
+          "desc": "Remarques de l’inspecteur : rayures, bosses, usure, etc."
+        }
       },
       "tipsTitle": "Conseils rapides",
       "tips": {
@@ -238,34 +268,146 @@
         "size": "Taille / Gravité typique"
       },
       "items": {
-        "A1": { "jp": "キズ小 (Kizu shō)", "desc": "Rayure légère, superficielle (dans le vernis uniquement)", "size": "< 2 cm" },
-        "A2": { "jp": "キズ中 (Kizu chū)", "desc": "Rayure moyenne, visible à l’œil nu, sans rouille", "size": "2–10 cm" },
-        "A3": { "jp": "キズ大 (Kizu dai)", "desc": "Rayure profonde atteignant la peinture ou apprêt", "size": "> 10 cm" },
-        "U1": { "jp": "ヘコミ小 (Hekomi shō)", "desc": "Petite bosse, peu visible, peinture intacte", "size": "< 2 cm" },
-        "U2": { "jp": "ヘコミ中 (Hekomi chū)", "desc": "Bosse moyenne, bien visible, peinture intacte ou légèrement marquée", "size": "2–5 cm" },
-        "U3": { "jp": "ヘコミ大 (Hekomi dai)", "desc": "Grosse bosse, visible de loin, souvent avec éclat de peinture", "size": "> 5 cm" },
-        "W1": { "jp": "波小 (Nami shō)", "desc": "Légère ondulation, reflet légèrement déformé", "size": "Localisé" },
-        "W2": { "jp": "波中 (Nami chū)", "desc": "Ondulation notable, possible panneau mal redressé", "size": "Zone moyenne" },
-        "W3": { "jp": "波大 (Nami dai)", "desc": "Panneau déformé ou mal réparé, nécessite redressage complet", "size": "Zone large" },
-        "P": { "jp": "ペイントハガレ (Peinto Hagare)", "desc": "Vernis ou peinture écaillée", "size": "Variable" },
-        "S1": { "jp": "サビ小 (Sabi shō)", "desc": "Petite tache de rouille superficielle", "size": "< 2 cm" },
-        "S2": { "jp": "サビ中 (Sabi chū)", "desc": "Rouille visible, nécessitant ponçage", "size": "2–5 cm" },
-        "S3": { "jp": "サビ大 (Sabi dai)", "desc": "Forte rouille, métal attaqué", "size": "> 5 cm" },
-        "C1": { "jp": "腐食小 (Fushoku shō)", "desc": "Corrosion légère (début de piqûres)", "size": "< 3 cm" },
-        "C2": { "jp": "腐食中 (Fushoku chū)", "desc": "Corrosion visible, métal affaibli", "size": "3–10 cm" },
-        "C3": { "jp": "腐食大 (Fushoku dai)", "desc": "Corrosion sévère, trou ou perforation", "size": "> 10 cm" },
-        "Y1": { "jp": "ワレ小 (Ware shō)", "desc": "Petite fissure sur plastique", "size": "≤ 2 cm" },
-        "Y2": { "jp": "ワレ中 (Ware chū)", "desc": "Fissure moyenne, visible à distance", "size": "2–5 cm" },
-        "Y3": { "jp": "ワレ大 (Ware dai)", "desc": "Grande fissure, élément à remplacer", "size": "> 5 cm" },
-        "X": { "jp": "要交換 (Yō kōkan)", "desc": "Élément à remplacer (endommagé ou structurel)", "size": "—" },
-        "XX": { "jp": "交換済 (Kōkan sumi)", "desc": "Élément déjà remplacé", "size": "—" },
-        "B1": { "jp": "ヘコミ・キズ小 (Hekomi/Kizu shō)", "desc": "Petite bosse avec éclat de peinture", "size": "≤ 2 cm" },
-        "B2": { "jp": "ヘコミ・キズ中 (Hekomi/Kizu chū)", "desc": "Bosse moyenne avec éclat visible", "size": "2–5 cm" },
-        "B3": { "jp": "ヘコミ・キズ大 (Hekomi/Kizu dai)", "desc": "Grosse bosse avec éclat important", "size": "> 5 cm" },
-        "E": { "jp": "エクボ/飛び石 (Ekubo/Tobishi)", "desc": "Impact ou éclat (ex. pare‑brise, phare)", "size": "< 1 cm" },
-        "G": { "jp": "ガラス割れ (Garasu ware)", "desc": "Fissure ou cassure sur vitrage", "size": "Variable" },
-        "D": { "jp": "雹害 (Hyōgai)", "desc": "Dommages de grêle (multiples U1)", "size": "Multiples petits impacts" },
-        "P/R": { "jp": "再塗装 (Saitosō)", "desc": "Panneau repeint", "size": "Zone hachurée sur schéma" }
+        "A1": {
+          "jp": "キズ小 (Kizu shō)",
+          "desc": "Rayure légère, superficielle (dans le vernis uniquement)",
+          "size": "< 2 cm"
+        },
+        "A2": {
+          "jp": "キズ中 (Kizu chū)",
+          "desc": "Rayure moyenne, visible à l’œil nu, sans rouille",
+          "size": "2–10 cm"
+        },
+        "A3": {
+          "jp": "キズ大 (Kizu dai)",
+          "desc": "Rayure profonde atteignant la peinture ou apprêt",
+          "size": "> 10 cm"
+        },
+        "U1": {
+          "jp": "ヘコミ小 (Hekomi shō)",
+          "desc": "Petite bosse, peu visible, peinture intacte",
+          "size": "< 2 cm"
+        },
+        "U2": {
+          "jp": "ヘコミ中 (Hekomi chū)",
+          "desc": "Bosse moyenne, bien visible, peinture intacte ou légèrement marquée",
+          "size": "2–5 cm"
+        },
+        "U3": {
+          "jp": "ヘコミ大 (Hekomi dai)",
+          "desc": "Grosse bosse, visible de loin, souvent avec éclat de peinture",
+          "size": "> 5 cm"
+        },
+        "W1": {
+          "jp": "波小 (Nami shō)",
+          "desc": "Légère ondulation, reflet légèrement déformé",
+          "size": "Localisé"
+        },
+        "W2": {
+          "jp": "波中 (Nami chū)",
+          "desc": "Ondulation notable, possible panneau mal redressé",
+          "size": "Zone moyenne"
+        },
+        "W3": {
+          "jp": "波大 (Nami dai)",
+          "desc": "Panneau déformé ou mal réparé, nécessite redressage complet",
+          "size": "Zone large"
+        },
+        "P": {
+          "jp": "ペイントハガレ (Peinto Hagare)",
+          "desc": "Vernis ou peinture écaillée",
+          "size": "Variable"
+        },
+        "S1": {
+          "jp": "サビ小 (Sabi shō)",
+          "desc": "Petite tache de rouille superficielle",
+          "size": "< 2 cm"
+        },
+        "S2": {
+          "jp": "サビ中 (Sabi chū)",
+          "desc": "Rouille visible, nécessitant ponçage",
+          "size": "2–5 cm"
+        },
+        "S3": {
+          "jp": "サビ大 (Sabi dai)",
+          "desc": "Forte rouille, métal attaqué",
+          "size": "> 5 cm"
+        },
+        "C1": {
+          "jp": "腐食小 (Fushoku shō)",
+          "desc": "Corrosion légère (début de piqûres)",
+          "size": "< 3 cm"
+        },
+        "C2": {
+          "jp": "腐食中 (Fushoku chū)",
+          "desc": "Corrosion visible, métal affaibli",
+          "size": "3–10 cm"
+        },
+        "C3": {
+          "jp": "腐食大 (Fushoku dai)",
+          "desc": "Corrosion sévère, trou ou perforation",
+          "size": "> 10 cm"
+        },
+        "Y1": {
+          "jp": "ワレ小 (Ware shō)",
+          "desc": "Petite fissure sur plastique",
+          "size": "≤ 2 cm"
+        },
+        "Y2": {
+          "jp": "ワレ中 (Ware chū)",
+          "desc": "Fissure moyenne, visible à distance",
+          "size": "2–5 cm"
+        },
+        "Y3": {
+          "jp": "ワレ大 (Ware dai)",
+          "desc": "Grande fissure, élément à remplacer",
+          "size": "> 5 cm"
+        },
+        "X": {
+          "jp": "要交換 (Yō kōkan)",
+          "desc": "Élément à remplacer (endommagé ou structurel)",
+          "size": "—"
+        },
+        "XX": {
+          "jp": "交換済 (Kōkan sumi)",
+          "desc": "Élément déjà remplacé",
+          "size": "—"
+        },
+        "B1": {
+          "jp": "ヘコミ・キズ小 (Hekomi/Kizu shō)",
+          "desc": "Petite bosse avec éclat de peinture",
+          "size": "≤ 2 cm"
+        },
+        "B2": {
+          "jp": "ヘコミ・キズ中 (Hekomi/Kizu chū)",
+          "desc": "Bosse moyenne avec éclat visible",
+          "size": "2–5 cm"
+        },
+        "B3": {
+          "jp": "ヘコミ・キズ大 (Hekomi/Kizu dai)",
+          "desc": "Grosse bosse avec éclat important",
+          "size": "> 5 cm"
+        },
+        "E": {
+          "jp": "エクボ/飛び石 (Ekubo/Tobishi)",
+          "desc": "Impact ou éclat (ex. pare‑brise, phare)",
+          "size": "< 1 cm"
+        },
+        "G": {
+          "jp": "ガラス割れ (Garasu ware)",
+          "desc": "Fissure ou cassure sur vitrage",
+          "size": "Variable"
+        },
+        "D": {
+          "jp": "雹害 (Hyōgai)",
+          "desc": "Dommages de grêle (multiples U1)",
+          "size": "Multiples petits impacts"
+        },
+        "P/R": {
+          "jp": "再塗装 (Saitosō)",
+          "desc": "Panneau repeint",
+          "size": "Zone hachurée sur schéma"
+        }
       },
       "note": {
         "title": "À savoir",
@@ -277,6 +419,98 @@
           "5": "Les symboles sont cumulables sur un même panneau.",
           "6": "W3, C3, S3, X, R, ou XX indiquent des réparations lourdes ou structurelles."
         }
+      }
+    },
+    "shaken": {
+      "title": "Rapport sur le contrôle technique japonais « Shaken »",
+      "intro": "Le Shaken (pour jidōsha kensa tōroku, inspection et enregistrement automobile) est le contrôle technique obligatoire au Japon pour les voitures particulières et véhicules motorisés de plus de 250 cm³. Ce rapport détaille les coûts moyens du Shaken, ses exigences techniques, les pratiques d'entretien entre deux inspections et l'impact de ce système sur la qualité des véhicules d'occasion exportés, afin de fournir des informations fiables.",
+      "section1": {
+        "title": "1. Coût complet du Shaken et ventilation des frais",
+        "intro": "La facture totale d'un Shaken est relativement élevée comparée à un contrôle technique européen. En moyenne, une voiture de tourisme génère une dépense d'environ 100 000 à 200 000 ¥ (560 à 1 120 €) tous les deux ans pour son Shaken. Ce coût se décompose en plusieurs postes obligatoires :",
+        "sub1": {
+          "title": "Frais d'inspection technique (main d'œuvre et centre agréé)",
+          "text": "Si le propriétaire confie le véhicule à un garage ou concessionnaire, celui-ci facture généralement la préparation et la présentation au Shaken. Cela inclut une inspection préliminaire de conformité (souvent ~20 000 ¥ - 112€), un frais de vérification des normes de sécurité (~10 000 ¥ - 56€) et parfois un frais d'agence pour le service (~10 000 ¥). En revanche, un propriétaire procédant lui-même (user shaken) ne paie pas ces coûts de service et ne s'acquitte que des frais réglementaires. Dans tous les cas, le passage sur le banc officiel engendre un frais de test du centre d'environ 2 000 ¥ - 11,2€ (via l'achat de timbres fiscaux)."
+        },
+        "sub2": {
+          "title": "Taxes obligatoires",
+          "text": "Le Shaken s'accompagne du règlement de plusieurs taxes pour la période de validité à venir (deux ans pour une voiture particulière). La principale est la taxe de poids du véhicule (jūryōzei), calculée selon la masse du véhicule et majorée pour les voitures anciennes. Par exemple, pour une voiture standard de moins de 1 t, la taxe poids est 16 400 ¥ - 92€ pour 2 ans ; si le poids est entre 1 et 1,5 t : 24 600 ¥ - 138€; plus de 1,5 t : 32 800 ¥ - 184€. Au-delà de 13 ans d'âge, ces montants augmentent d'environ 39% (et encore +10% après 18 ans). Les frais administratifs incluent aussi un petit timbre fiscal (environ 1 200 ¥) sur les documents officiels."
+        },
+        "sub3": {
+          "title": "Assurance obligatoire Jibaiseki (Jibaiseki hoken)",
+          "text": "Il s'agit de l'assurance responsabilité civile automobile que le propriétaire doit renouveler lors du Shaken pour couvrir les deux années à venir. Son coût est fixé nationalement et a récemment baissé grâce à la diminution des accidents. Pour une voiture particulière, la prime sur 24 mois est d'environ 17 650 ¥ - 99€ (tarif 2023). Les kei cars (véhicules légers à plaque jaune) bénéficient d'un tarif presque équivalent (≈17 540 ¥) légèrement inférieur du fait de leur gabarit."
+        },
+        "sub4": {
+          "title": "Entretien et réparations préalables",
+          "text": "Avant la présentation au Shaken, il est fréquent de réaliser des réparations ou remplacements des pièces d'usure afin d'assurer la conformité. Le Shaken lui-même n'inclut pas la maintenance du véhicule, il ne fait que la contrôler. Cependant, dans la pratique du 'maintenance Shaken', les garages profitent souvent de l'échéance pour effectuer l'entretien courant en même temps. Les postes fréquents incluent le changement de pneus, le remplacement des plaquettes ou disques de frein, la réparation d'amortisseurs, d'échappement ou de rotules de suspension, et le réglage des phares."
+        },
+        "summary": {
+          "title": "Résumé des coûts typiques du Shaken (voiture particulière standard)",
+          "items": [
+            "Inspection au centre (test) : ~2 000 ¥ - 11,20€",
+            "Timbres administratifs : ~1 200 ¥ - 6,70€",
+            "Taxe de poids (2 ans) : 16 400 ¥ - 92€ (voiture ~1 t) jusqu'à 32 800 ¥ - 184€ (plus de 1,5 t) (+39% si plus de 13 ans)",
+            "Assurance Jibaiseki (2 ans) : ~17 650 ¥ - 99€",
+            "Frais de service garage (optionnel) : ~40 000 ¥ - 224€",
+            "Entretien / pièces avant inspection : Variable (~20 000–50 000 ¥ - 112€ à 280€)"
+          ]
+        }
+      },
+      "section2": {
+        "title": "2. Exigences techniques et points vérifiés au Shaken",
+        "intro": "Le contrôle Shaken comporte plus de 60 points de vérification visant à s'assurer que le véhicule est conforme aux normes de sécurité routière et environnementale japonaises. Il est à la fois plus strict et plus exhaustif que le contrôle technique français, avec des seuils de conformité exigeants et une attention particulière aux modifications du véhicule. Les principaux volets techniques inspectés sont :",
+        "sub1": {
+          "title": "Carrosserie et dimensions extérieures",
+          "text": "Toute modification de carrosserie excessive ou non homologuée entraîne un refus. Par exemple, aucun élément saillant ne doit dépasser du gabarit d'origine – un embout d'échappement ne peut pas ressortir au-delà de la carrosserie. Les kits carrosserie ou élargisseurs d'ailes sont tolérés uniquement s'ils sont correctement ajustés et n'augmentent pas les dimensions hors tout au-delà des limites légales. Les ailerons ne doivent pas excéder la largeur de la voiture et doivent être fixés solidement sur le coffre."
+        },
+        "sub2": {
+          "title": "Équipements lumineux et visibilité",
+          "text": "L'intégralité des feux doit être en état de fonctionnement (phares, feux de position, clignotants, feux de freinage, de recul, warnings, etc.) et conformes en couleur et intensité. Un réglage précis des phares est contrôlé au banc : l'alignement en hauteur et la portée doivent respecter les valeurs standard sous peine de contre-visite. Les vitres avant conducteur et passager ne doivent pas être teintées (teinte d'origine très légère tolérée, mais aucun film foncé) afin de préserver la transparence."
+        },
+        "sub3": {
+          "title": "Système de freinage et roues",
+          "text": "Le banc d'essai vérifie l'efficacité des freins sur chaque essieu et l'équilibre du freinage. La puissance de freinage mesurée doit atteindre les minima réglementaires. On contrôle visuellement l'absence de fuites de liquide et l'épaisseur des plaquettes. Les pneus sont inspectés pour s'assurer qu'ils ne sont pas lisses, craquelés ou endommagés. La loi japonaise impose une profondeur de sculpture suffisante et des dimensions conformes à la carte de conformité du véhicule."
+        },
+        "sub4": {
+          "title": "Direction et suspension",
+          "text": "La direction ne doit présenter aucun jeu excessif. Le contrôle inclut un test du volant et de la géométrie (l'auto doit braquer correctement de part et d'autre sur un angle normalisé). La suspension est minutieusement vérifiée : aucune pièce ne doit être fissurée ou corrodée dangereusement (ressorts, amortisseurs, bras). Les silentblocs, rotules et articulations doivent être en bon état. Le véhicule doit respecter une hauteur minimale de caisse : typiquement 8 cm de garde au sol pour un empattement ~2 m, 9 cm si empattement ~2,5 m."
+        },
+        "sub5": {
+          "title": "Compteur de vitesse",
+          "text": "Le Shaken inclut un test d'odomètre/vitesses sur rouleaux. Le contrôleur fait accélérer le véhicule sur un banc à 40 km/h (deux fois) et compare l'indication du compteur à la vitesse réelle. Une discordance significative (compteur trop optimiste ou non-fonctionnel) entraînera un échec. Ce point assure que le conducteur peut évaluer correctement sa vitesse."
+        },
+        "sub6": {
+          "title": "Moteur, pollution et bruit",
+          "text": "Un volet crucial concerne les émissions polluantes. Le contrôle antipollution mesure les gaz d'échappement, notamment le monoxyde de carbone (CO) et les hydrocarbures imbrûlés (HC). Le Japon impose des limites strictes : pour les voitures de moins de 10 ans, le CO ne doit pas dépasser 1% du volume et les HC pas plus de 300 ppm ; pour les véhicules plus anciens (plus de 10 ans), jusqu'à 4,5% de CO et 1200 ppm de HC sont tolérés. Le niveau sonore de l'échappement est mesuré avec un sonomètre à 50 cm du tuyau. Le bruit d'échappement maximal autorisé est d'environ 96 dB(A) pour les voitures de moins de 10 ans, et 103 dB pour les plus anciennes."
+        },
+        "sub7": {
+          "title": "Habitacle et sécurité intérieure",
+          "text": "Le contrôleur inspecte l'intérieur pour des éléments de sécurité de base. Les ceintures de sécurité doivent être présentes et en bon état de fonctionnement (verrouillage, enroulement). Le tableau de bord ne doit pas afficher de voyants d'alerte critique (ex : airbag ou ABS allumé en permanence). On vérifie que le klaxon fonctionne, ainsi que le désembuage, essuie-glaces, etc."
+        },
+        "conclusion": "En cas d'échec sur l'un quelconque de ces points, le véhicule doit être réparé puis représenté à l'inspection. Le Shaken est donc un examen très rigoureux, qui dissuade fortement les modifications non homologuées et garantit qu'un véhicule en circulation respecte des normes strictes de sécurité, de bruit et d'émissions."
+      },
+      "section3": {
+        "title": "3. Pratiques courantes d'entretien entre deux Shaken",
+        "intro": "Entre deux inspections Shaken (espacées de 2 ans, sauf pour les véhicules neufs qui bénéficient de 3 ans avant la première), les automobilistes japonais observent généralement un entretien régulier et sérieux de leur véhicule. Cette culture de la maintenance préventive est à la fois encouragée par la réglementation et ancrée dans les habitudes des usagers.",
+        "sub1": {
+          "title": "Révisions périodiques obligatoires",
+          "text": "La loi japonaise impose formellement des inspections et entretiens périodiques en plus du Shaken lui-même. Concrètement, il est recommandé d'effectuer un contrôle annuel (12 mois) et même un petit contrôle à 6 mois, comme une sorte de 'visite médicale' du véhicule. Ces révisions, appelées tenken, incluent vidanges, vérification des freins, niveaux de fluides, etc., et doivent être consignées dans le carnet d'entretien du véhicule (Inspection and Maintenance Record Book)."
+        },
+        "sub2": {
+          "title": "Suivi en concession et pièces d'origine",
+          "text": "Il est très courant que les Japonais fassent entretenir leur voiture au réseau constructeur ou dans des ateliers spécialisés, même pour des opérations banales. La fierté de propriété et la volonté de conserver le véhicule 'comme neuf' incitent à respecter scrupuleusement le plan d'entretien du manufacturier. Par exemple, Toyota ou Honda préconisent souvent des intervalles plus rapprochés que les normes européennes. Un moteur japonais peut requérir une vidange d'huile tous les 5 000 miles (~8 000 km), là où un constructeur européen la recommande à 15 000 miles."
+        },
+        "sub3": {
+          "title": "Soins généraux et usage précautionneux",
+          "text": "Au-delà des obligations formelles, la mentalité japonaise valorise un entretien quasi-maniaque. Les propriétaires veillent à garder leur véhicule propre et en bon état. Par exemple, lavages fréquents et polish préservent la peinture, et l'intérieur est souvent impeccable (beaucoup de Japonais s'abstiennent de manger ou fumer dans leur voiture). Les pièces d'usure comme les plaquettes de frein, essuie-glaces, filtres, etc., sont remplacées dès qu'elles montrent des signes de fatigue."
+        },
+        "sub4": {
+          "title": "Réparations préventives",
+          "text": "Plutôt que d'attendre la panne, les conducteurs nippons ont tendance à faire réparer le moindre bruit ou voyant suspect immédiatement. Un claquement dans la suspension, un léger jeu dans la direction ou un suintement d'huile – autant de soucis qu'ils feront corriger en atelier sans tarder. Cette approche préventive, combinée à la qualité de construction des véhicules japonais, fait qu'une voiture bénéficie souvent de nombreux remplacements anticipés de pièces."
+        }
+      },
+      "sectionConclusion": {
+        "title": "Conclusion",
+        "text": "En résumé, la période entre deux Shaken est marquée au Japon par une maintenance continue et rigoureuse. La combinaison d'exigences légales (inspection annuelle recommandée) et de la culture locale de soin apporté aux objets garantit que les voitures restent en excellent état de fonctionnement à tout moment, pas uniquement pour 'passer le contrôle'. Ce souci d'entretien permanent rejaillit directement sur la qualité des véhicules japonais d'occasion."
       }
     }
   },
@@ -375,20 +609,39 @@
     "p2": "Pour toute question relative aux CGV, vous pouvez nous contacter à contact@myg-import.com.",
     "noticeTitle": "Note importante",
     "noticeBody": "La version anglaise est fournie à titre informatif. En cas de divergence, la version française prévaut.",
-    "tabs": { "import": "Importation", "sale": "Vente de véhicule" },
+    "tabs": {
+      "import": "Importation",
+      "sale": "Vente de véhicule"
+    },
     "toc": "Sommaire",
     "sections": {
-      "1": { "title": "Article 1 – Objet du mandat" },
-      "2": { "title": "Article 2 – Frais au Japon" },
-      "3": { "title": "Article 3 – Obligations du Mandataire" },
-      "4": { "title": "Article 4 – Obligations du Mandant" },
-      "5": { "title": "Article 5 – Garantie légale de conformité et garantie commerciale" },
-      "6": { "title": "Article 6 – Durée du mandat" },
-      "7": { "title": "Article 7 – Rémunération du Mandataire" },
-      "8": { "title": "Article 8 – Modalités de paiement" },
-      "9": { "title": "Article 9 – Droit de rétractation" }
+      "1": {
+        "title": "Article 1 – Objet du mandat"
+      },
+      "2": {
+        "title": "Article 2 – Frais au Japon"
+      },
+      "3": {
+        "title": "Article 3 – Obligations du Mandataire"
+      },
+      "4": {
+        "title": "Article 4 – Obligations du Mandant"
+      },
+      "5": {
+        "title": "Article 5 – Garantie légale de conformité et garantie commerciale"
+      },
+      "6": {
+        "title": "Article 6 – Durée du mandat"
+      },
+      "7": {
+        "title": "Article 7 – Rémunération du Mandataire"
+      },
+      "8": {
+        "title": "Article 8 – Modalités de paiement"
+      },
+      "9": {
+        "title": "Article 9 – Droit de rétractation"
+      }
     }
   }
 }
-
-

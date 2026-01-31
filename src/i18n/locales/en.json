@@ -420,6 +420,98 @@
           "6": "W3, C3, S3, X, R or XX indicate heavy or structural repairs."
         }
       }
+    },
+    "shaken": {
+      "title": "Report on the Japanese Technical Inspection 'Shaken'",
+      "intro": "The Shaken (short for jidōsha kensa tōroku, vehicle inspection and registration) is the mandatory technical inspection in Japan for passenger cars and motorized vehicles over 250cc. This report details the average costs of Shaken, its technical requirements, maintenance practices between inspections, and the impact of this system on the quality of exported used vehicles, to provide reliable information.",
+      "section1": {
+        "title": "1. Complete Shaken Cost and Fee Breakdown",
+        "intro": "The total Shaken bill is relatively high compared to a European technical inspection. On average, a passenger car generates an expense of approximately 100,000 to 200,000 ¥ (€560 to €1,120) every two years for its Shaken. This cost breaks down into several mandatory items:",
+        "sub1": {
+          "title": "Technical Inspection Fees (labor and authorized center)",
+          "text": "If the owner entrusts the vehicle to a garage or dealership, they typically charge for preparation and presentation at the Shaken. This includes a preliminary compliance inspection (often ~¥20,000 - €112), a safety standards verification fee (~¥10,000 - €56), and sometimes an agency fee for the service (~¥10,000). However, an owner proceeding themselves (user shaken) doesn't pay these service costs and only pays the regulatory fees. In all cases, the official test bench incurs a center test fee of approximately ¥2,000 - €11.20 (through the purchase of tax stamps)."
+        },
+        "sub2": {
+          "title": "Mandatory Taxes",
+          "text": "The Shaken comes with payment of several taxes for the upcoming validity period (two years for a passenger car). The main one is the vehicle weight tax (jūryōzei), calculated according to the vehicle's mass and increased for older cars. For example, for a standard car under 1 ton, the weight tax is ¥16,400 - €92 for 2 years; if weight is between 1 and 1.5 tons: ¥24,600 - €138; over 1.5 tons: ¥32,800 - €184. Beyond 13 years of age, these amounts increase by about 39% (and another +10% after 18 years). Administrative fees also include a small tax stamp (about ¥1,200) on official documents."
+        },
+        "sub3": {
+          "title": "Mandatory Jibaiseki Insurance (Jibaiseki hoken)",
+          "text": "This is the automobile civil liability insurance that the owner must renew during the Shaken to cover the next two years. Its cost is set nationally and has recently decreased due to the reduction in accidents. For a passenger car, the 24-month premium is approximately ¥17,650 - €99 (2023 rate). Kei cars (light vehicles with yellow plates) benefit from an almost equivalent rate (≈¥17,540) slightly lower due to their size."
+        },
+        "sub4": {
+          "title": "Prior Maintenance and Repairs",
+          "text": "Before presenting at the Shaken, it's common to make repairs or replace wear parts to ensure compliance. The Shaken itself doesn't include vehicle maintenance, it only inspects it. However, in the practice of 'maintenance Shaken', garages often take advantage of the deadline to perform routine maintenance at the same time. Common items include tire changes, brake pad or disc replacement, shock absorber repair, exhaust or suspension ball joint repair, and headlight adjustment."
+        },
+        "summary": {
+          "title": "Summary of Typical Shaken Costs (standard passenger car)",
+          "items": [
+            "Center inspection (test): ~¥2,000 - €11.20",
+            "Administrative stamps: ~¥1,200 - €6.70",
+            "Weight tax (2 years): ¥16,400 - €92 (car ~1t) up to ¥32,800 - €184 (over 1.5t) (+39% if over 13 years)",
+            "Jibaiseki insurance (2 years): ~¥17,650 - €99",
+            "Garage service fees (optional): ~¥40,000 - €224",
+            "Maintenance / parts before inspection: Variable (~¥20,000–50,000 - €112 to €280)"
+          ]
+        }
+      },
+      "section2": {
+        "title": "2. Technical Requirements and Points Checked at Shaken",
+        "intro": "The Shaken inspection includes more than 60 verification points to ensure that the vehicle complies with Japanese road safety and environmental standards. It is both stricter and more comprehensive than the French technical inspection, with demanding compliance thresholds and particular attention to vehicle modifications. The main technical areas inspected are:",
+        "sub1": {
+          "title": "Body and Exterior Dimensions",
+          "text": "Any excessive or non-approved body modification results in rejection. For example, no protruding element should extend beyond the original dimensions – an exhaust tip cannot protrude beyond the body. Body kits or fender flares are tolerated only if they are properly fitted and don't increase overall dimensions beyond legal limits. Spoilers must not exceed the car's width and must be solidly attached to the trunk."
+        },
+        "sub2": {
+          "title": "Lighting Equipment and Visibility",
+          "text": "All lights must be in working condition (headlights, position lights, turn signals, brake lights, reverse lights, hazard lights, etc.) and compliant in color and intensity. Precise headlight adjustment is checked on the bench: height alignment and range must meet standard values or face re-inspection. Driver and passenger front windows must not be tinted (very light factory tint tolerated, but no dark film) to preserve transparency."
+        },
+        "sub3": {
+          "title": "Braking System and Wheels",
+          "text": "The test bench verifies brake effectiveness on each axle and braking balance. Measured braking power must reach regulatory minimums. Visual inspection checks for fluid leaks and pad thickness. Tires are inspected to ensure they're not bald, cracked, or damaged. Japanese law requires sufficient tread depth and dimensions that match the vehicle's compliance card."
+        },
+        "sub4": {
+          "title": "Steering and Suspension",
+          "text": "Steering must show no excessive play. The inspection includes a steering wheel test and geometry check (the car must turn correctly on both sides at a standardized angle). Suspension is thoroughly checked: no part should be cracked or dangerously corroded (springs, shock absorbers, arms). Bushings, ball joints, and articulations must be in good condition. The vehicle must respect a minimum ground clearance: typically 8 cm for a ~2 m wheelbase, 9 cm if wheelbase ~2.5 m."
+        },
+        "sub5": {
+          "title": "Speedometer",
+          "text": "The Shaken includes an odometer/speed test on rollers. The inspector accelerates the vehicle on a bench to 40 km/h (twice) and compares the speedometer reading to the actual speed. A significant discrepancy (overly optimistic or non-functional speedometer) will result in failure. This ensures the driver can correctly assess their speed."
+        },
+        "sub6": {
+          "title": "Engine, Emissions and Noise",
+          "text": "A crucial component concerns pollutant emissions. The emissions test measures exhaust gases, particularly carbon monoxide (CO) and unburned hydrocarbons (HC). Japan imposes strict limits: for cars under 10 years old, CO must not exceed 1% by volume and HC no more than 300 ppm; for older vehicles (over 10 years), up to 4.5% CO and 1200 ppm HC are tolerated. Exhaust noise level is measured with a sound level meter at 50 cm from the pipe. Maximum allowed exhaust noise is approximately 96 dB(A) for cars under 10 years, and 103 dB for older ones."
+        },
+        "sub7": {
+          "title": "Interior and Safety",
+          "text": "The inspector checks the interior for basic safety elements. Seat belts must be present and in good working order (locking, retraction). The dashboard must not display critical warning lights (e.g., airbag or ABS permanently lit). The horn is verified to work, as well as defogger, windshield wipers, etc."
+        },
+        "conclusion": "In case of failure on any of these points, the vehicle must be repaired and then re-presented for inspection. The Shaken is therefore a very rigorous examination that strongly discourages non-approved modifications and ensures that a vehicle in circulation complies with strict safety, noise, and emissions standards."
+      },
+      "section3": {
+        "title": "3. Common Maintenance Practices Between Two Shaken",
+        "intro": "Between two Shaken inspections (spaced 2 years apart, except for new vehicles which have 3 years before the first), Japanese motorists generally observe regular and serious maintenance of their vehicle. This preventive maintenance culture is both encouraged by regulation and ingrained in user habits.",
+        "sub1": {
+          "title": "Mandatory Periodic Inspections",
+          "text": "Japanese law formally requires periodic inspections and maintenance in addition to the Shaken itself. Concretely, it's recommended to perform an annual check (12 months) and even a small check at 6 months, like a vehicle 'health check'. These inspections, called tenken, include oil changes, brake verification, fluid levels, etc., and must be recorded in the vehicle's maintenance booklet (Inspection and Maintenance Record Book)."
+        },
+        "sub2": {
+          "title": "Dealership Servicing and Original Parts",
+          "text": "It's very common for Japanese people to have their car serviced at the manufacturer's network or specialized workshops, even for routine operations. Pride of ownership and the desire to keep the vehicle 'like new' encourage strict adherence to the manufacturer's maintenance schedule. For example, Toyota or Honda often recommend shorter intervals than European standards. A Japanese engine may require an oil change every 5,000 miles (~8,000 km), while a European manufacturer recommends it at 15,000 miles."
+        },
+        "sub3": {
+          "title": "General Care and Cautious Use",
+          "text": "Beyond formal obligations, the Japanese mentality values almost obsessive maintenance. Owners take care to keep their vehicle clean and in good condition. For example, frequent washing and polishing preserve the paint, and the interior is often immaculate (many Japanese refrain from eating or smoking in their car). Wear parts like brake pads, windshield wipers, filters, etc., are replaced as soon as they show signs of fatigue."
+        },
+        "sub4": {
+          "title": "Preventive Repairs",
+          "text": "Rather than waiting for a breakdown, Japanese drivers tend to have any noise or suspicious warning light repaired immediately. A clicking in the suspension, slight play in the steering, or oil seepage – these are concerns they'll have corrected at the workshop without delay. This preventive approach, combined with the build quality of Japanese vehicles, means that a car often benefits from many early part replacements."
+        }
+      },
+      "sectionConclusion": {
+        "title": "Conclusion",
+        "text": "In summary, the period between two Shaken is marked in Japan by continuous and rigorous maintenance. The combination of legal requirements (recommended annual inspection) and the local culture of caring for objects ensures that cars remain in excellent working condition at all times, not just to 'pass the inspection'. This permanent maintenance mindset directly impacts the quality of used Japanese vehicles."
+      }
     }
   },
   "legendMissing": "Legend image missing. Please add \"/public/images/auction-sheets/auction-legend.jpg\".",
