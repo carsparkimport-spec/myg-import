@@ -35,7 +35,9 @@
     "transmission": "Manuelle",
     "price": 20480,
     "description": "Renault Clio BLUE dCi 100 EVOLUTION neuve. Coloris Gris Schiste. Arrivée prévue fin de semaine prochaine. Prix hors frais de formalités d'immatriculation (340€ TTC).",
-    "images": [],
+    "images": [
+      "/images/vehicles/renault-clio-gris/1.jpg"
+    ],
     "details": {
       "Moteur": "dCi 100ch",
       "Boîte": "Manuelle",
