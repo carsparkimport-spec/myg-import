@@ -6,6 +6,12 @@ MYG Import is a Next.js-based web application for a Luxembourg-based Japanese ve
 
 # Recent Changes
 
+**January 31, 2026**: Translation system improvements
+- Added complete translations for VerticalSelector component (homepage Japan/Europe selector)
+- Added full English/French translations for Shaken article in blog (previously hardcoded in French)
+- Fixed blog page to use tObject() for array translations
+- All pages now properly display in both French and English with language switcher
+
 **December 8, 2025**: Full Git synchronization with GitHub repository
 - Performed `git reset --hard origin/main` to sync all code from GitHub
 - Recreated GitHub integration files for data synchronization:
