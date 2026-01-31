@@ -35,7 +35,8 @@ export default function VehicleDetailsCard({ details }: VehicleDetailsCardProps)
             <dt className="col-span-1 text-gray-600 font-medium break-words">{item.label}</dt>
             <dd className="col-span-2 break-words">
               {(() => {
-                const isOptions = String(item.label).toLowerCase() === 'options';
+                const labelLower = String(item.label).toLowerCase();
+                const isOptions = labelLower === 'options' || labelLower === 'équipements';
                 const raw = item.value;
                 if (isOptions && typeof raw === 'string') {
                   const parts = raw
