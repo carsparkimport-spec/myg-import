@@ -3,7 +3,7 @@
     "id": "clio-noir",
     "make": "Renault",
     "model": "Clio 1.5 BLUE dCi 100 ÉVOLUTION",
-    "status": "Disponible",
+    "status": "Neuf",
     "year": 2026,
     "mileage": 11,
     "fuel": "Diesel",
@@ -37,24 +37,26 @@
   {
     "id": "clio-gris",
     "make": "Renault",
-    "model": "Clio BLUE dCi 100 EVOLUTION",
-    "status": "En arrivage",
-    "year": 2025,
-    "mileage": 100,
+    "model": "Clio 1.5 BLUE dCi 100 ÉVOLUTION",
+    "status": "Neuf",
+    "year": 2026,
+    "mileage": 11,
     "fuel": "Diesel",
     "transmission": "Manuelle",
-    "price": 20480,
-    "description": "Renault Clio BLUE dCi 100 EVOLUTION neuve. Coloris Gris Schiste. Arrivée prévue semaine du 16 / 02. Prix hors frais de formalités d'immatriculation (340€ TTC).",
+    "price": 20490,
+    "priceNote": "TVA 17% – hors frais d'immatriculation (340 € TTC)",
+    "description": "Renault Clio 1.5 Blue dCi 100ch finition Évolution. Véhicule neuf, mise en circulation 01/2026. Coloris Gris Schiste. Garantie constructeur 24 mois jusqu'en 01/2028. Prix de 20 490 € TTC (TVA 17%), hors frais d'immatriculation de 340 € TTC.",
     "images": [
       "/images/vehicles/renault-clio-gris/1.jpg"
     ],
     "details": {
-      "Moteur": "dCi 100ch",
+      "Moteur": "1.5 Blue dCi 100ch",
       "Boîte": "Manuelle",
-      "Année": "11/2025",
+      "Année": "01/2026",
       "Coloris": "Gris Schiste",
-      "Équipements": "Caméra de recul; Aide au stationnement arrière; Régulateur de vitesse; Limiteur de vitesse; Climatisation manuelle; Apple CarPlay; Android Auto; EasyLink 7'' sans navigation",
-      "Garantie": "Constructeur"
+      "Kilométrage": "11 km",
+      "Équipements": "Caméra de recul; Climatisation manuelle; Tableau de bord numérique 7 pouces; Écran central tactile 7 pouces; Réplication smartphone sans fil; Aide au parking arrière; Aide au démarrage en côte; Régulateur de vitesse; Aide au maintien dans la voie; Freinage d'urgence; Détecteur de fatigue; Feux avant et arrière LED; Essuie-glaces automatiques; Jantes tôle 16 pouces avec enjoliveurs",
+      "Garantie": "Constructeur 24 mois (jusqu'en 01/2028)"
     },
     "featured": true,
     "featuredOrder": 2
