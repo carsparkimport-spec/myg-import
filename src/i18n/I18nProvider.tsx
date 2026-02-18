@@ -6,24 +6,25 @@ import enLocal from './locales/en.json';
 
 type Locale = 'fr' | 'en';
 type Primitive = string | number | boolean | null | undefined;
-type Dictionary = { [key: string]: Primitive | Dictionary };
+type DictionaryValue = Primitive | Primitive[] | Dictionary | Dictionary[];
+type Dictionary = { [key: string]: DictionaryValue };
 
 interface I18nContextValue {
   locale: Locale;
   t: (key: string) => string;
-  tObject: (key: string) => Dictionary | Primitive;
+  tObject: (key: string) => DictionaryValue;
   setLocale: (locale: Locale) => void;
 }
 
 const I18nContext = createContext<I18nContextValue | undefined>(undefined);
 
-const LOCAL_DICTIONARIES: Record<Locale, Dictionary> = { fr: frLocal, en: enLocal };
+const LOCAL_DICTIONARIES: Record<Locale, Dictionary> = { fr: frLocal as Dictionary, en: enLocal as Dictionary };
 
-function getByPath(dict: Dictionary, path: string): Primitive | Dictionary {
+function getByPath(dict: Dictionary, path: string): DictionaryValue {
   const parts = path.split('.');
-  let node: Primitive | Dictionary = dict;
+  let node: DictionaryValue = dict;
   for (const part of parts) {
-    if (node && typeof node === 'object' && part in node) {
+    if (node && typeof node === 'object' && !Array.isArray(node) && part in node) {
       node = (node as Dictionary)[part];
     } else {
       return path;
