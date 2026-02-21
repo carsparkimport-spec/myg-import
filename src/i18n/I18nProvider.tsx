@@ -20,6 +20,24 @@ const I18nContext = createContext<I18nContextValue | undefined>(undefined);
 
 const LOCAL_DICTIONARIES: Record<Locale, Dictionary> = { fr: frLocal as Dictionary, en: enLocal as Dictionary };
 
+function deepMerge(base: Dictionary, override: Dictionary): Dictionary {
+  const result: Dictionary = { ...base };
+  for (const key of Object.keys(override)) {
+    const baseVal = base[key];
+    const overVal = override[key];
+    if (
+      baseVal && overVal &&
+      typeof baseVal === 'object' && !Array.isArray(baseVal) &&
+      typeof overVal === 'object' && !Array.isArray(overVal)
+    ) {
+      result[key] = deepMerge(baseVal as Dictionary, overVal as Dictionary);
+    } else {
+      result[key] = overVal;
+    }
+  }
+  return result;
+}
+
 function getByPath(dict: Dictionary, path: string): DictionaryValue {
   const parts = path.split('.');
   let node: DictionaryValue = dict;
@@ -42,7 +60,10 @@ export function I18nProvider({ children, initialLocale = 'fr' }: { children: Rea
       const response = await fetch(`/api/translations?locale=${lang}`);
       if (response.ok) {
         const data = await response.json();
-        setDictionaries(prev => ({ ...prev, [lang]: data }));
+        setDictionaries(prev => ({
+          ...prev,
+          [lang]: deepMerge(LOCAL_DICTIONARIES[lang], data),
+        }));
       }
     } catch (error) {
       console.error(`Failed to fetch ${lang} translations from GitHub:`, error);
