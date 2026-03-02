@@ -55,8 +55,8 @@ export async function GET(req: Request) {
       }
     }
 
-    // Fallback: exchangerate.host timeseries to compute 7-day average JPY per EUR
-    const url = `https://api.exchangerate.host/timeseries?base=${to}&symbols=${from}&start_date=${startStr}&end_date=${endStr}`;
+    // Fallback: frankfurter.app (ECB rates) timeseries to compute 7-day average JPY per EUR
+    const url = `https://api.frankfurter.app/${startStr}..${endStr}?from=${to}&to=${from}`;
     const res = await fetch(url, { cache: 'no-store' });
     if (!res.ok) {
       return NextResponse.json({ error: 'Failed to fetch rates' }, { status: 502 });
@@ -78,7 +78,7 @@ export async function GET(req: Request) {
     return NextResponse.json({
       eurPerJpy,
       jpyPerEur,
-      source: 'exchangerate.host',
+      source: 'frankfurter.app (BCE)',
       window: windowDays,
       start: startStr,
       end: endStr,
