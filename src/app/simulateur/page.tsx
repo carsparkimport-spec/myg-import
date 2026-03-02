@@ -78,8 +78,8 @@ export default function SimulateurPage() {
   const customsBaseEuro = useMemo(() => euroBase + freightEuro, [euroBase, freightEuro]);
   const customsEuro = useMemo(() => +(customsBaseEuro * (customsPct / 100)).toFixed(2), [customsBaseEuro, customsPct]);
 
-  // VAT: on euroBase + freight + customs + forfait
-  const vatBaseEuro = useMemo(() => euroBase + freightEuro + customsEuro + forfait, [euroBase, freightEuro, customsEuro, forfait]);
+  // VAT: on euroBase + freight + customs (forfait is already TTC, excluded from VAT base)
+  const vatBaseEuro = useMemo(() => euroBase + freightEuro + customsEuro, [euroBase, freightEuro, customsEuro]);
   const vatEuro = useMemo(() => +(vatBaseEuro * (vatPct / 100)).toFixed(2), [vatBaseEuro, vatPct]);
 
   const totalEuro = useMemo(() => +(euroBase + forfait + freightEuro + customsEuro + vatEuro).toFixed(2), [euroBase, forfait, freightEuro, customsEuro, vatEuro]);
@@ -91,7 +91,7 @@ export default function SimulateurPage() {
     const candidateEuroBase = candidateTotalYenBefore / (jpyEur || 1);
     const candidateCustomsBaseEuro = candidateEuroBase + freightEuro;
     const candidateCustomsEuro = candidateCustomsBaseEuro * (customsPct / 100);
-    const candidateVatBaseEuro = candidateEuroBase + freightEuro + candidateCustomsEuro + forfait;
+    const candidateVatBaseEuro = candidateEuroBase + freightEuro + candidateCustomsEuro;
     const candidateVatEuro = candidateVatBaseEuro * (vatPct / 100);
     return candidateEuroBase + forfait + freightEuro + candidateCustomsEuro + candidateVatEuro;
   }, [fixedFeesYen, domesticYen, jpyEur, freightEuro, customsPct, forfait, vatPct]);
