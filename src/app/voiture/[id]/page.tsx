@@ -3,7 +3,7 @@ import { SpecsTitle, DescriptionTitle, InterestedButton, SpecsTableRows } from '
 import VehicleGallery from '@/components/VehicleGallery';
 import VehicleDetailsCard from '@/components/VehicleDetailsCard';
 import { notFound } from 'next/navigation';
-import { headers } from 'next/headers';
+import vehiclesData from '@/data/vehicles.json';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -23,27 +23,10 @@ interface Vehicle {
 
 export default async function VehiclePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const headersList = await headers();
-  const host = headersList.get('host') || 'localhost:5000';
-  const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http';
-  
-  let vehicle: Vehicle | undefined;
-  try {
-    const response = await fetch(`${protocol}://${host}/api/vehicles`, {
-      cache: 'no-store',
-    });
-    
-    if (!response.ok) {
-      throw new Error(`Failed to fetch vehicles: ${response.status}`);
-    }
-    
-    const vehicles: Vehicle[] = await response.json();
-    vehicle = vehicles.find(v => v.id === id);
-  } catch (error) {
-    console.error('Error fetching vehicle:', error);
-    throw error;
-  }
-  
+
+  const vehicles: Vehicle[] = vehiclesData as Vehicle[];
+  const vehicle = vehicles.find(v => v.id === id);
+
   if (!vehicle) notFound();
 
   return (
@@ -75,4 +58,4 @@ export default async function VehiclePage({ params }: { params: Promise<{ id: st
       </div>
     </Layout>
   );
-} 
+}
