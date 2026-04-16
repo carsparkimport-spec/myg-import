@@ -18,13 +18,14 @@ interface Vehicle {
   price: number;
   description: string;
   images: string[];
-  details?: Record<string, string | number | boolean | null>;
+  details?: Record<string, string | number | boolean | null | undefined>;
+  [key: string]: unknown;
 }
 
 export default async function VehiclePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
 
-  const vehicles: Vehicle[] = vehiclesData as Vehicle[];
+  const vehicles: Vehicle[] = vehiclesData as unknown as Vehicle[];
   const vehicle = vehicles.find(v => v.id === id);
 
   if (!vehicle) notFound();
