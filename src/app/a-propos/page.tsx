@@ -18,10 +18,10 @@ export default function AboutPage() {
             <p>
               Nous recherchons, achetons et revendons pour vous des véhicules sélectionnés en Allemagne, Belgique, Pays-Bas, etc., puis nous vous les livrons au Luxembourg dans un cadre légal clair, via un contrat de vente écrit.
             </p>
-            <p>
-              👉 <strong>Notre objectif</strong><br />
-              Vous proposer des véhicules au meilleur prix, sans compromis sur la transparence ni sur la qualité.
-            </p>
+            <p className="font-semibold text-black">👉 Notre objectif</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Vous proposer des véhicules au meilleur prix, sans compromis sur la transparence ni sur la qualité.</li>
+            </ul>
 
             <p className="font-semibold text-black">👉 Notre rôle</p>
             <ul className="list-disc pl-6 space-y-2">
