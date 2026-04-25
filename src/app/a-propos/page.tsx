@@ -13,16 +13,16 @@ export default function AboutPage() {
 
           <div className="space-y-3 text-base md:text-lg leading-relaxed">
             <p>
-              MYG Import, marque commerciale de CAR SPARK IMPORT S.à r.l., est une société située au Luxembourg, spécialisée dans la recherche, l'importation, la vente et l'accompagnement à l'achat de véhicules d'occasion sélectionnés en Europe et au Japon.
+              MYG Import, marque commerciale de CAR SPARK IMPORT S.à r.l., est une société située au Luxembourg, spécialisée dans la recherche, l&apos;importation, la vente et l&apos;accompagnement à l&apos;achat de véhicules d&apos;occasion sélectionnés en Europe et au Japon.
             </p>
             <p>
-              Nous accompagnons particuliers et professionnels dans leur projet automobile, que ce soit pour l'achat d'un véhicule disponible en stock ou dans le cadre d'une recherche personnalisée. En tant que mandataire automobile, nous prenons en charge les principales étapes du projet : sélection, acquisition, transport et accompagnement administratif.
+              Nous accompagnons particuliers et professionnels dans leur projet automobile, que ce soit pour l&apos;achat d&apos;un véhicule disponible en stock ou dans le cadre d&apos;une recherche personnalisée. En tant que mandataire automobile, nous prenons en charge les principales étapes du projet : sélection, acquisition, transport et accompagnement administratif.
             </p>
             <p>
-              Nos véhicules en stock sont rigoureusement sélectionnés afin d'offrir à nos clients des opportunités attractives, à des prix compétitifs, sans compromis sur la qualité, l'historique et la fiabilité.
+              Nos véhicules en stock sont rigoureusement sélectionnés afin d&apos;offrir à nos clients des opportunités attractives, à des prix compétitifs, sans compromis sur la qualité, l&apos;historique et la fiabilité.
             </p>
             <p>
-              Depuis le Luxembourg, nous sélectionnons des véhicules sur différents marchés européens — Allemagne, Belgique, Pays-Bas, Slovénie, Lituanie, entre autres — ainsi qu'au Japon, avec une livraison possible au Luxembourg et dans les pays frontaliers.
+              Depuis le Luxembourg, nous sélectionnons des véhicules sur différents marchés européens — Allemagne, Belgique, Pays-Bas, Slovénie, Lituanie, entre autres — ainsi qu&apos;au Japon, avec une livraison possible au Luxembourg et dans les pays frontaliers.
             </p>
             <p className="font-semibold text-black">👉 Notre objectif</p>
             <ul className="list-disc pl-6 space-y-2">
@@ -40,7 +40,7 @@ export default function AboutPage() {
             <ul className="list-disc pl-6 space-y-2">
               <li>Transparence sur le prix final et le process,</li>
               <li>Sélection sérieuse des véhicules,</li>
-              <li>Organisation du transport jusqu'au lieu de livraison,</li>
+              <li>Organisation du transport jusqu&apos;au lieu de livraison,</li>
               <li>Accompagnement humain, du premier contact à la remise des clés.</li>
             </ul>
           </div>
