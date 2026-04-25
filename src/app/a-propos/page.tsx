@@ -13,10 +13,16 @@ export default function AboutPage() {
 
           <div className="space-y-3 text-base md:text-lg leading-relaxed">
             <p>
-              MYG Import est la marque commerciale de CAR SPARK IMPORT S.à r.l., société luxembourgeoise spécialisée dans la vente de véhicules d'occasion importés depuis l'Europe.
+              MYG Import, marque commerciale de CAR SPARK IMPORT S.à r.l., est une société située au Luxembourg, spécialisée dans la recherche, l'importation, la vente et l'accompagnement à l'achat de véhicules d'occasion sélectionnés en Europe et au Japon.
             </p>
             <p>
-              Nous recherchons, achetons et revendons pour vous des véhicules sélectionnés en Allemagne, Belgique, Pays-Bas, etc., puis nous vous les livrons au Luxembourg dans un cadre légal clair, via un contrat de vente écrit.
+              Nous accompagnons particuliers et professionnels dans leur projet automobile, que ce soit pour l'achat d'un véhicule disponible en stock ou dans le cadre d'une recherche personnalisée. En tant que mandataire automobile, nous prenons en charge les principales étapes du projet : sélection, acquisition, transport et accompagnement administratif.
+            </p>
+            <p>
+              Nos véhicules en stock sont rigoureusement sélectionnés afin d'offrir à nos clients des opportunités attractives, à des prix compétitifs, sans compromis sur la qualité, l'historique et la fiabilité.
+            </p>
+            <p>
+              Depuis le Luxembourg, nous sélectionnons des véhicules sur différents marchés européens — Allemagne, Belgique, Pays-Bas, Slovénie, Lituanie, entre autres — ainsi qu'au Japon, avec une livraison possible au Luxembourg et dans les pays frontaliers.
             </p>
             <p className="font-semibold text-black">👉 Notre objectif</p>
             <ul className="list-disc pl-6 space-y-2">
