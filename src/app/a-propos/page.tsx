@@ -25,21 +25,21 @@ export default function AboutPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-black mb-3">Notre rôle</h2>
+              <h2 className="text-2xl font-semibold text-black mb-3">👉 Notre rôle</h2>
               <ul className="list-disc pl-6 space-y-2">
-                <li>trouver un véhicule cohérent (modèle, état, historique),</li>
-                <li>gérer la logistique et les démarches,</li>
-                <li>vous livrer un véhicule prêt à être immatriculé, avec garantie 12 mois.</li>
+                <li>Trouver un véhicule cohérent (modèle, état, historique),</li>
+                <li>Gérer la logistique et les démarches,</li>
+                <li>Vous livrer un véhicule prêt à être immatriculé, avec garantie 12 mois.</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-black mb-3">Ce qui nous guide</h2>
+              <h2 className="text-2xl font-semibold text-black mb-3">👉 Ce qui nous guide</h2>
               <ul className="list-disc pl-6 space-y-2">
-                <li>transparence sur le prix final et le process,</li>
-                <li>sélection sérieuse des véhicules,</li>
-                <li>transport sécurisé (camion plateau),</li>
-                <li>accompagnement humain, du premier contact à la remise des clés.</li>
+                <li>Transparence sur le prix final et le process,</li>
+                <li>Sélection sérieuse des véhicules,</li>
+                <li>Transport sécurisé (camion plateau),</li>
+                <li>Accompagnement humain, du premier contact à la remise des clés.</li>
               </ul>
             </section>
           </div>
