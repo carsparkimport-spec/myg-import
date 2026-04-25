@@ -19,7 +19,8 @@ export default function AboutPage() {
               Nous recherchons, achetons et revendons pour vous des véhicules sélectionnés en Allemagne, Belgique, Pays-Bas, etc., puis nous vous les livrons au Luxembourg dans un cadre légal clair, via un contrat de vente écrit.
             </p>
             <p>
-              👉 <strong>Notre objectif</strong> : vous proposer des véhicules au meilleur prix, sans compromis sur la transparence ni sur la qualité.
+              👉 <strong>Notre objectif</strong><br />
+              Vous proposer des véhicules au meilleur prix, sans compromis sur la transparence ni sur la qualité.
             </p>
 
             <p className="font-semibold text-black">👉 Notre rôle</p>
