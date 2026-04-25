@@ -25,7 +25,7 @@ export default function AboutPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-black mb-3">👉 Notre rôle</h2>
+              <h2 className="text-base md:text-lg font-semibold text-black mb-3">👉 Notre rôle</h2>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Trouver un véhicule cohérent (modèle, état, historique),</li>
                 <li>Gérer la logistique et les démarches,</li>
@@ -34,7 +34,7 @@ export default function AboutPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-black mb-3">👉 Ce qui nous guide</h2>
+              <h2 className="text-base md:text-lg font-semibold text-black mb-3">👉 Ce qui nous guide</h2>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Transparence sur le prix final et le process,</li>
                 <li>Sélection sérieuse des véhicules,</li>
