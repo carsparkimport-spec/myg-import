@@ -40,7 +40,7 @@ export default function AboutPage() {
             <ul className="list-disc pl-6 space-y-2">
               <li>Transparence sur le prix final et le process,</li>
               <li>Sélection sérieuse des véhicules,</li>
-              <li>Transport sécurisé (camion plateau),</li>
+              <li>Organisation du transport jusqu'au lieu de livraison,</li>
               <li>Accompagnement humain, du premier contact à la remise des clés.</li>
             </ul>
           </div>
