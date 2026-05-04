@@ -73,7 +73,7 @@
     "id": "audi-tt-rs",
     "make": "Audi",
     "model": "TT RS 2.5 TFSI 400ch quattro S tronic",
-    "status": "Occasion",
+    "status": "Vendu",
     "year": 2022,
     "mileage": 32000,
     "fuel": "Essence",
@@ -82,6 +82,7 @@
     "priceNote": "Pour la France : malus de 11 785 € à ajouter, soit 67 275 € + carte grise (28CV × prix du cheval de la région). Sous réserve d'erreurs.",
     "description": "Audi TT RS 2.5 TFSI 400ch quattro S tronic – Gris Nardo verni. Mise en circulation 07/2022, 32 000 km. Animée par le mythique 5 cylindres 2.5 TFSI associé à la boîte S tronic et à la transmission intégrale quattro. Stage 1 réalisé chez BR Performance à 18 000 km pour une puissance de 472 ch (optimisation réversible). Entretien à jour réalisé chez Audi, factures disponibles sur demande.",
     "images": [
+      "/images/vehicles/audi-tt-rs/vendu.jpeg",
       "/images/vehicles/audi-tt-rs/1.jpeg",
       "/images/vehicles/audi-tt-rs/2.jpeg",
       "/images/vehicles/audi-tt-rs/3.jpeg",
@@ -119,6 +120,7 @@
     "id": "4",
     "make": "Porsche",
     "model": "Cayman S 987.2",
+    "status": "Vendu",
     "year": 2009,
     "mileage": 58900,
     "fuel": "Essence",
@@ -126,6 +128,7 @@
     "price": 42500,
     "description": "Porsche Cayman S phase 2 (987.2). Dossier complet sur demande.",
     "images": [
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/vendu.jpeg",
       "/images/vehicles/Porsche%20Cayman%20S%20987.2/1.jpeg",
       "/images/vehicles/Porsche%20Cayman%20S%20987.2/2.jpeg",
       "/images/vehicles/Porsche%20Cayman%20S%20987.2/3.jpeg",
