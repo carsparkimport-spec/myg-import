@@ -14,6 +14,8 @@ interface Vehicle {
   transmission: string;
   price: number;
   images: string[];
+  status?: string;
+  origin?: string;
 }
 
 export default function StockPage() {
@@ -27,7 +29,7 @@ export default function StockPage() {
         const response = await fetch('/api/vehicles');
         if (response.ok) {
           const data = await response.json();
-          setVehicles(data.filter((v: Vehicle & { origin?: string }) => v.origin === 'Japon'));
+          setVehicles(data.filter((v: Vehicle) => v.origin === 'Japon'));
         }
       } catch (error) {
         console.error('Error fetching vehicles:', error);
@@ -40,36 +42,47 @@ export default function StockPage() {
 
   return (
     <Layout title={t('stock.title') + ' - MYG Import'}>
-      <main className="relative min-h-screen pb-[2cm]">
-        <div className="absolute inset-0 z-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/backgrounds/FUKUOKA.jpg')" }}>
-          <div className="absolute top-0 left-0 right-0 bottom-[2cm] bg-gradient-to-b from-black/25 via-black/10 to-transparent" />
-        </div>
-        <div className="relative z-10 -mt-16 pt-24 pb-28 md:pb-32">
-          <div className="container mx-auto px-4">
-            <h1 className="text-3xl md:text-4xl font-bold mb-6 text-white">{t('stock.title')}</h1>
-            <p className="text-gray-100 max-w-2xl">{t('stock.subtitle')}</p>
-          </div>
-        </div>
-        <div className="container mx-auto px-4 relative z-10 -mt-6 md:-mt-10 lg:-mt-12">
-          <div className="relative rounded-2xl shadow-lg">
-            <div className="absolute inset-0 rounded-2xl backdrop-blur-sm bg-white/0 ring-1 ring-inset ring-white/10" aria-hidden="true" />
-            <div className="relative p-[1cm]">
-              <h1 className="text-3xl md:text-4xl font-bold mb-10 text-center text-white">{t('stock.current')}</h1>
-              {loading ? (
-                <p className="text-center text-white">Chargement...</p>
-              ) : vehicles.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {vehicles.map((vehicle: Vehicle) => (
-                    <VehicleCard key={vehicle.id} vehicle={vehicle} />
-                  ))}
-                </div>
-              ) : (
-                <p className="text-center">{t('stock.empty')}</p>
-              )}
+      <div
+        style={{
+          backgroundImage: "url('/images/backgrounds/FUKUOKA.jpg')",
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="bg-black/55 text-white">
+
+          {/* ── HERO ── */}
+          <div className="relative h-[32vh] min-h-[240px] flex flex-col items-center justify-center text-center px-6">
+            <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent" />
+            <div className="relative z-10">
+              <p className="text-red-500 text-xs font-semibold uppercase tracking-widest mb-2">Stock · Japon</p>
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight">{t('stock.title')}</h1>
+              <p className="mt-3 text-gray-300 max-w-xl mx-auto">{t('stock.subtitle')}</p>
             </div>
           </div>
+
+          {/* ── GRID ── */}
+          <div className="container mx-auto px-6 pb-16">
+            <h2 className="text-xl font-bold mb-8 border-b border-white/10 pb-4">{t('stock.current')}</h2>
+            {loading ? (
+              <div className="flex items-center justify-center py-32 gap-4">
+                <div className="w-8 h-8 border-2 border-red-600 border-t-transparent rounded-full animate-spin" />
+                <p className="text-gray-400">Chargement…</p>
+              </div>
+            ) : vehicles.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {vehicles.map((vehicle) => (
+                  <VehicleCard key={vehicle.id} vehicle={vehicle} basePath="/jp/voiture" />
+                ))}
+              </div>
+            ) : (
+              <p className="text-center text-gray-400 py-32">{t('stock.empty')}</p>
+            )}
+          </div>
+
         </div>
-      </main>
+      </div>
     </Layout>
   );
 }
