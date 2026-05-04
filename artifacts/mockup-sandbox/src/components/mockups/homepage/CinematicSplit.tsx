@@ -85,7 +85,7 @@ export function CinematicSplit() {
             EUROPE
           </h2>
           <p className="text-xl md:text-2xl font-light tracking-widest text-gray-300 uppercase mb-8 opacity-80 group-hover:opacity-100 transition-opacity">
-            Premium & Collections
+            Toutes marques
           </p>
           <div className="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
             <span className="inline-flex items-center gap-2 text-lg font-medium border-b border-white pb-1 hover:text-red-400 hover:border-red-400 transition-colors">

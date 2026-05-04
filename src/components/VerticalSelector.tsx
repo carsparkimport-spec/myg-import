@@ -139,7 +139,7 @@ export default function VerticalSelector() {
               EUROPE
             </h2>
             <p className="text-lg font-light tracking-[0.3em] text-gray-300 uppercase opacity-75 group-hover:opacity-100 transition-opacity mb-8">
-              Premium &amp; Collections
+              Toutes marques
             </p>
             <span className="opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75 inline-flex items-center gap-2 text-sm font-semibold border-b border-white pb-1 group-hover:text-red-400 group-hover:border-red-400 transition-colors">
               Explorer →
