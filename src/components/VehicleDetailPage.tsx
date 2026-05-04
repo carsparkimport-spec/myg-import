@@ -184,40 +184,45 @@ export default function VehicleDetailPage({ vehicle }: Props) {
               </section>
             )}
 
-            {/* Detailed specs table */}
-            {detailEntries.length > 0 && (
+            {/* Équipements section */}
+            {(() => {
+              const equipEntry = detailEntries.find(([label]) =>
+                label.toLowerCase() === 'équipements' || label.toLowerCase() === 'options'
+              );
+              if (!equipEntry || typeof equipEntry[1] !== 'string') return null;
+              const items = equipEntry[1].split(/[;\n]+/).map(s => s.trim()).filter(Boolean);
+              if (!items.length) return null;
+              return (
+                <section>
+                  <h2 className="text-xl font-bold border-b border-white/10 pb-3 mb-4">Équipements & Options</h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {items.map((item, i) => (
+                      <div key={i} className="flex items-start gap-2.5 bg-[#151515] border border-white/5 rounded-lg px-4 py-2.5 text-sm text-gray-200">
+                        <Check className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              );
+            })()}
+
+            {/* Detailed specs table (without équipements) */}
+            {detailEntries.filter(([label]) => label.toLowerCase() !== 'équipements' && label.toLowerCase() !== 'options').length > 0 && (
               <section>
                 <h2 className="text-xl font-bold border-b border-white/10 pb-3 mb-4">Spécifications détaillées</h2>
                 <div className="rounded-xl overflow-hidden border border-white/10 bg-[#111]">
-                  {detailEntries.map(([label, value], idx) => {
-                    const isEquipements = label.toLowerCase() === 'équipements' || label.toLowerCase() === 'options';
-                    const parts =
-                      isEquipements && typeof value === 'string'
-                        ? value.split(/[;\n]+/).map((s) => s.trim()).filter(Boolean)
-                        : null;
-                    return (
+                  {detailEntries
+                    .filter(([label]) => label.toLowerCase() !== 'équipements' && label.toLowerCase() !== 'options')
+                    .map(([label, value], idx) => (
                       <div
                         key={label}
-                        className={`px-5 py-4 text-sm border-b border-white/5 last:border-0 ${
-                          idx % 2 === 0 ? '' : 'bg-[#181818]'
-                        } ${parts ? 'flex flex-col gap-2' : 'flex justify-between items-start gap-4'}`}
+                        className={`px-5 py-4 text-sm border-b border-white/5 last:border-0 flex justify-between items-start gap-4 ${idx % 2 === 0 ? '' : 'bg-[#181818]'}`}
                       >
                         <span className="text-gray-400 font-medium flex-shrink-0">{label}</span>
-                        {parts ? (
-                          <ul className="space-y-1 mt-1">
-                            {parts.map((p, i) => (
-                              <li key={i} className="flex items-start gap-2 text-white/80">
-                                <Check className="w-3.5 h-3.5 text-emerald-400 mt-0.5 flex-shrink-0" />
-                                {p}
-                              </li>
-                            ))}
-                          </ul>
-                        ) : (
-                          <span className="text-white font-semibold text-right">{String(value ?? '')}</span>
-                        )}
+                        <span className="text-white font-semibold text-right">{String(value ?? '')}</span>
                       </div>
-                    );
-                  })}
+                    ))}
                 </div>
               </section>
             )}
