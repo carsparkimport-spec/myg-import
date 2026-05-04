@@ -59,15 +59,14 @@ export default function AuctionsPage() {
 
   return (
     <Layout title={t('auctions.meta') || 'Enchères passées - MYG Import'}>
-      <main className="bg-[#0d0d0d] min-h-screen text-white">
+      <main className="relative min-h-screen text-white">
+        {/* Full-page background */}
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/backgrounds/FUKUOKA.jpg')" }} />
+        <div className="absolute inset-0 bg-black/60" />
 
         {/* ── HERO ── */}
-        <div className="relative w-full h-[36vh] min-h-[280px] overflow-hidden">
-          <div
-            className="absolute inset-0 bg-cover bg-center scale-105"
-            style={{ backgroundImage: "url('/images/backgrounds/FUKUOKA.jpg')" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-[#0d0d0d]" />
+        <div className="relative w-full h-[36vh] min-h-[280px]">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent" />
           <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">{t('auctions.title')}</h1>
             <p className="mt-4 text-gray-300 text-base max-w-xl">{t('auctions.subtitle')}</p>
@@ -75,7 +74,7 @@ export default function AuctionsPage() {
         </div>
 
         {/* ── GRID ── */}
-        <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
 
           {/* Toolbar */}
           <div className="flex items-center justify-between mb-8">

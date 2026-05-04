@@ -22,7 +22,7 @@ export default function AuctionCard({ auction, onOpen }: { auction: AuctionItem;
 
   return (
     <div
-      className="group bg-[#151515] border border-white/5 rounded-2xl overflow-hidden flex flex-col cursor-pointer hover:border-white/20 transition-all duration-300"
+      className="group bg-black/40 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden flex flex-col cursor-pointer hover:border-white/30 hover:bg-black/50 transition-all duration-300"
       onClick={() => onOpen?.(auction)}
       role="button"
       tabIndex={0}
