@@ -272,7 +272,7 @@ export default function VehicleDetailPage({ vehicle }: Props) {
               </div>
 
               <div className="mt-5 pt-5 border-t border-white/5 space-y-2.5">
-                {['Inspection certifiée', 'Paiement sécurisé', 'Livraison à domicile'].map((feat) => (
+                {['Inspection certifiée', 'Paiement sécurisé'].map((feat) => (
                   <div key={feat} className="flex items-center gap-3 text-xs text-gray-400">
                     <div className="bg-white/5 p-1 rounded-full flex-shrink-0">
                       <Check className="w-3 h-3 text-emerald-400" />
