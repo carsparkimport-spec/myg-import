@@ -187,7 +187,6 @@ export default function SimulateurPage() {
 
         {/* ── Header ── */}
         <div className="text-center mb-10">
-          <p className="text-red-500 text-sm font-semibold uppercase tracking-widest mb-3">Simulateur</p>
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
             Estimez votre coût total
           </h1>

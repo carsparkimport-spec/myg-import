@@ -56,7 +56,6 @@ export default function AboutPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-[#0d0d0d]" />
           <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-            <p className="text-red-500 text-sm font-semibold uppercase tracking-widest mb-3">MYG Import</p>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">À Propos de nous</h1>
             <p className="mt-4 text-gray-300 text-lg max-w-xl">
               Mandataire automobile basé au Luxembourg, spécialisé en Europe et au Japon.

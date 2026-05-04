@@ -31,7 +31,6 @@ export default function ContactPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#0d0d0d]" />
           <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-            <p className="text-red-500 text-sm font-semibold uppercase tracking-widest mb-3">MYG Import</p>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Nous Contacter</h1>
             <p className="mt-3 text-gray-300 text-base max-w-md">
               Une question, un projet ? On vous répond sous 24h.
