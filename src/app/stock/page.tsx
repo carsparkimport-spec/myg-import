@@ -18,10 +18,13 @@ interface Vehicle {
   origin?: string;
 }
 
+type Filter = 'tous' | 'dispo' | 'vendu';
+
 export default function StockPage() {
   const { t } = useI18n();
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
   const [loading, setLoading] = useState(true);
+  const [filter, setFilter] = useState<Filter>('tous');
 
   useEffect(() => {
     async function fetchVehicles() {
@@ -40,6 +43,16 @@ export default function StockPage() {
     fetchVehicles();
   }, []);
 
+  const available = vehicles.filter(v => v.status !== 'Vendu');
+  const sold      = vehicles.filter(v => v.status === 'Vendu');
+  const displayed = filter === 'dispo' ? available : filter === 'vendu' ? sold : vehicles;
+
+  const tabs: { key: Filter; label: string; count: number }[] = [
+    { key: 'tous',  label: 'Tous',        count: vehicles.length },
+    { key: 'dispo', label: 'Disponibles', count: available.length },
+    { key: 'vendu', label: 'Vendus',      count: sold.length },
+  ];
+
   return (
     <Layout title={t('stock.title') + ' - MYG Import'}>
       <div
@@ -50,34 +63,62 @@ export default function StockPage() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="bg-black/55 text-white">
+        <div className="bg-black/65 text-white min-h-screen">
 
           {/* ── HERO ── */}
-          <div className="relative h-[32vh] min-h-[240px] flex flex-col items-center justify-center text-center px-6">
-            <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent" />
-            <div className="relative z-10">
-              <p className="text-red-500 text-xs font-semibold uppercase tracking-widest mb-2">Stock · Europe</p>
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight">{t('stock.title')}</h1>
-              <p className="mt-3 text-gray-300 max-w-xl mx-auto">{t('stock.subtitle')}</p>
+          <div className="relative pt-28 pb-16 px-6 text-center">
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent pointer-events-none" />
+            <div className="relative z-10 max-w-3xl mx-auto">
+              <p className="text-red-500 text-xs font-semibold uppercase tracking-[0.25em] mb-3">Stock · Europe</p>
+              <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">{t('stock.title')}</h1>
+              <p className="text-gray-300 text-lg">{t('stock.subtitle')}</p>
+            </div>
+          </div>
+
+          {/* ── FILTER BAR ── */}
+          <div className="sticky top-20 z-30 bg-black/70 backdrop-blur-md border-b border-white/10">
+            <div className="container mx-auto px-6 flex items-center gap-2 py-3">
+              {tabs.map(tab => (
+                <button
+                  key={tab.key}
+                  onClick={() => setFilter(tab.key)}
+                  className={`flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold transition-all ${
+                    filter === tab.key
+                      ? 'bg-red-600 text-white shadow-[0_0_16px_rgba(220,38,38,0.4)]'
+                      : 'bg-white/5 text-gray-300 hover:bg-white/10 border border-white/10'
+                  }`}
+                >
+                  {tab.label}
+                  <span className={`text-xs px-1.5 py-0.5 rounded-full font-mono ${filter === tab.key ? 'bg-white/20' : 'bg-white/10'}`}>
+                    {tab.count}
+                  </span>
+                </button>
+              ))}
+              {!loading && (
+                <span className="ml-auto text-xs text-gray-500">
+                  {displayed.length} véhicule{displayed.length > 1 ? 's' : ''}
+                </span>
+              )}
             </div>
           </div>
 
           {/* ── GRID ── */}
-          <div className="container mx-auto px-6 pb-16">
-            <h2 className="text-xl font-bold mb-8 border-b border-white/10 pb-4">{t('stock.current')}</h2>
+          <div className="container mx-auto px-6 py-10 pb-20">
             {loading ? (
-              <div className="flex items-center justify-center py-32 gap-4">
-                <div className="w-8 h-8 border-2 border-red-600 border-t-transparent rounded-full animate-spin" />
-                <p className="text-gray-400">Chargement…</p>
+              <div className="flex items-center justify-center py-40 gap-4">
+                <div className="w-9 h-9 border-2 border-red-600 border-t-transparent rounded-full animate-spin" />
+                <p className="text-gray-400 text-lg">Chargement…</p>
               </div>
-            ) : vehicles.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {vehicles.map((vehicle) => (
+            ) : displayed.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                {displayed.map((vehicle) => (
                   <VehicleCard key={vehicle.id} vehicle={vehicle} basePath="/eu/voiture" />
                 ))}
               </div>
             ) : (
-              <p className="text-center text-gray-400 py-32">{t('stock.empty')}</p>
+              <div className="text-center py-40">
+                <p className="text-gray-500 text-xl">{t('stock.empty')}</p>
+              </div>
             )}
           </div>
 
