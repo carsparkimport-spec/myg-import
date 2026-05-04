@@ -79,40 +79,6 @@ export default function VerticalSelector() {
         {/* Red divider */}
         <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] bg-red-600 z-40 pointer-events-none" />
 
-        {/* Japan side */}
-        <button
-          type="button"
-          onClick={() => choose('jp')}
-          onMouseEnter={() => setHoveredSide('jp')}
-          onMouseLeave={() => setHoveredSide(null)}
-          className="split-tx relative h-full group flex items-center justify-center cursor-pointer focus:outline-none border-0 bg-transparent p-0"
-          style={{ width: getWidth('jp') }}
-          aria-label="Univers Japon"
-        >
-          <div className="absolute inset-0 overflow-hidden">
-            <div
-              className="absolute inset-0 bg-center bg-cover transition-transform duration-[6000ms] ease-out group-hover:scale-105"
-              style={{ backgroundImage: "url('/images/backgrounds/supra-main.png')" }}
-            />
-            <div className="absolute inset-0 bg-black/50 group-hover:bg-black/25 transition-colors duration-700" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/50" />
-          </div>
-          <div className="relative z-10 flex flex-col items-center text-center px-8 transition-transform duration-700 group-hover:-translate-y-5">
-            <h2
-              className="tglow font-black uppercase tracking-tighter leading-none mb-3"
-              style={{ fontSize: 'clamp(3.5rem,7vw,6.5rem)', fontFamily: 'var(--font-antonio)' }}
-            >
-              JAPON
-            </h2>
-            <p className="text-lg font-light tracking-[0.3em] text-gray-300 uppercase opacity-75 group-hover:opacity-100 transition-opacity mb-8">
-              JDM &amp; Sport
-            </p>
-            <span className="opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75 inline-flex items-center gap-2 text-sm font-semibold border-b border-white pb-1 group-hover:text-red-400 group-hover:border-red-400 transition-colors">
-              Explorer →
-            </span>
-          </div>
-        </button>
-
         {/* Europe side */}
         <button
           type="button"
@@ -140,6 +106,40 @@ export default function VerticalSelector() {
             </h2>
             <p className="text-lg font-light tracking-[0.3em] text-gray-300 uppercase opacity-75 group-hover:opacity-100 transition-opacity mb-8">
               Toutes marques
+            </p>
+            <span className="opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75 inline-flex items-center gap-2 text-sm font-semibold border-b border-white pb-1 group-hover:text-red-400 group-hover:border-red-400 transition-colors">
+              Explorer →
+            </span>
+          </div>
+        </button>
+
+        {/* Japan side */}
+        <button
+          type="button"
+          onClick={() => choose('jp')}
+          onMouseEnter={() => setHoveredSide('jp')}
+          onMouseLeave={() => setHoveredSide(null)}
+          className="split-tx relative h-full group flex items-center justify-center cursor-pointer focus:outline-none border-0 bg-transparent p-0"
+          style={{ width: getWidth('jp') }}
+          aria-label="Univers Japon"
+        >
+          <div className="absolute inset-0 overflow-hidden">
+            <div
+              className="absolute inset-0 bg-center bg-cover transition-transform duration-[6000ms] ease-out group-hover:scale-105"
+              style={{ backgroundImage: "url('/images/backgrounds/supra-main.png')" }}
+            />
+            <div className="absolute inset-0 bg-black/50 group-hover:bg-black/25 transition-colors duration-700" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/50" />
+          </div>
+          <div className="relative z-10 flex flex-col items-center text-center px-8 transition-transform duration-700 group-hover:-translate-y-5">
+            <h2
+              className="tglow font-black uppercase tracking-tighter leading-none mb-3"
+              style={{ fontSize: 'clamp(3.5rem,7vw,6.5rem)', fontFamily: 'var(--font-antonio)' }}
+            >
+              JAPON
+            </h2>
+            <p className="text-lg font-light tracking-[0.3em] text-gray-300 uppercase opacity-75 group-hover:opacity-100 transition-opacity mb-8">
+              JDM &amp; Sport
             </p>
             <span className="opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75 inline-flex items-center gap-2 text-sm font-semibold border-b border-white pb-1 group-hover:text-red-400 group-hover:border-red-400 transition-colors">
               Explorer →
