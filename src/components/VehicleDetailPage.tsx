@@ -116,7 +116,7 @@ export default function VehicleDetailPage({ vehicle }: Props) {
               </h1>
             </div>
             <div className="text-left md:text-right">
-              <div className="text-4xl md:text-5xl font-bold tracking-tighter text-red-500 mb-1">
+              <div className="text-4xl md:text-5xl font-bold tracking-tighter text-white mb-1">
                 {formatPrice(vehicle.price)}
               </div>
               {vehicle.priceNote && (
@@ -221,7 +221,7 @@ export default function VehicleDetailPage({ vehicle }: Props) {
 
               <div className="mb-7">
                 <div className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-1">Prix total</div>
-                <div className="text-4xl font-bold text-white mb-1.5">{formatPrice(vehicle.price)}</div>
+                <div className="text-4xl font-bold text-white mb-1.5 tracking-tight">{formatPrice(vehicle.price)}</div>
                 {vehicle.priceNote && (
                   <p className="text-xs text-gray-500">{vehicle.priceNote}</p>
                 )}
