@@ -67,7 +67,7 @@ export default function AuctionsPage() {
             className="absolute inset-0 bg-cover bg-center scale-105"
             style={{ backgroundImage: "url('/images/backgrounds/FUKUOKA.jpg')" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#0d0d0d]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-[#0d0d0d]" />
           <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">{t('auctions.title')}</h1>
             <p className="mt-4 text-gray-300 text-base max-w-xl">{t('auctions.subtitle')}</p>
