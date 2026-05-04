@@ -3,77 +3,80 @@
 import Layout from '@/components/Layout';
 import Link from 'next/link';
 import { useI18n } from '@/i18n/I18nProvider';
-import Image from 'next/image';
+
+const steps = [
+  { idx: 1, items: ['b1', 'b2'] },
+  { idx: 2, items: ['b1', 'b2', 'b3'] },
+  { idx: 3, items: ['b1'] },
+  { idx: 4, items: ['b1'] },
+];
 
 export default function ImportationEuropePage() {
   const { t } = useI18n();
 
-  const steps = [
-    { idx: 1, items: ['b1', 'b2'] },
-    { idx: 2, items: ['b1', 'b2', 'b3'] },
-    { idx: 3, items: ['b1'] },
-    { idx: 4, items: ['b1'] },
-  ];
-
   return (
     <Layout title={t('import.meta')} mainClassName="bg-transparent text-white">
-      <div className="fixed inset-0 -z-10">
-        <Image
-          src="/images/backgrounds/Onglet Import Eu.png"
-          alt=""
-          fill
-          priority
-          quality={90}
-          sizes="100vw"
-          className="object-cover object-[center_80%]"
-        />
-      </div>
-      <div className="fixed inset-0 -z-10 bg-black/20" />
-      <div className="container mx-auto px-4 py-16 max-w-3xl">
-        <div className="relative rounded-2xl shadow-lg">
-          <div className="absolute inset-0 rounded-2xl backdrop-blur-sm bg-white/0 ring-1 ring-inset ring-white/10" aria-hidden="true" />
-          <div className="relative p-8 md:p-10 text-center">
-            <h1 className="text-3xl md:text-4xl font-bold mb-3">{t('import.title')}</h1>
-            <p className="text-gray-100 mb-6">{t('import.subtitle')}</p>
-            <div className="mt-4 flex flex-wrap gap-3 justify-center">
-              <Link href="/eu/contact"><span className="inline-block bg-red-600 text-white font-semibold py-2 px-5 rounded shadow-md hover:bg-red-700 transition">{t('import.ctaTalk')}</span></Link>
-            </div>
-          </div>
-        </div>
+      <div
+        style={{
+          backgroundImage: "url('/images/backgrounds/Onglet Import Eu.png')",
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 80%',
+        }}
+      >
+        <div className="bg-black/55">
+          <div className="container mx-auto px-4 py-16 max-w-3xl">
 
-        <div className="mt-10 space-y-6">
-          {steps.map(({ idx, items }, i) => (
-            <div key={idx} className="relative rounded-2xl shadow-lg">
-              <div className="absolute inset-0 rounded-2xl backdrop-blur-sm bg-white/5 ring-1 ring-inset ring-white/10" aria-hidden="true" />
-              {i < steps.length - 1 && (
-                <div className="absolute left-10 top-[3.75rem] bottom-[-1.5rem] w-px bg-white/30" aria-hidden="true" />
-              )}
-              <div className="relative p-5">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 h-10 w-10 rounded-full bg-red-600 text-white font-bold flex items-center justify-center">{idx}</div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">{t(`import_eu.steps.${idx}.title`)}</h3>
-                    <ul className="space-y-1 text-gray-100">
-                      {items.map((key) => (
-                        <li key={key}>{t(`import_eu.steps.${idx}.${key}`)}</li>
-                      ))}
-                    </ul>
+            {/* ── HERO ── */}
+            <div className="text-center mb-12">
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">{t('import.title')}</h1>
+              <p className="text-gray-300 text-lg max-w-xl mx-auto mb-8">{t('import.subtitle')}</p>
+              <Link href="/eu/contact">
+                <span className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-xl shadow-[0_0_20px_rgba(220,38,38,0.2)] hover:shadow-[0_0_30px_rgba(220,38,38,0.4)] transition-all">
+                  {t('import.ctaTalk')}
+                </span>
+              </Link>
+            </div>
+
+            {/* ── STEPS ── */}
+            <div className="relative">
+              <div className="absolute left-[19px] top-5 bottom-5 w-px bg-gradient-to-b from-red-600 via-white/20 to-transparent" aria-hidden="true" />
+              <div className="space-y-4">
+                {steps.map(({ idx, items }) => (
+                  <div key={idx} className="relative flex gap-5">
+                    <div className="flex-shrink-0 z-10 h-10 w-10 rounded-full bg-red-600 text-white font-extrabold text-sm flex items-center justify-center shadow-[0_0_12px_rgba(220,38,38,0.5)]">
+                      {idx}
+                    </div>
+                    <div className="flex-1 bg-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-5 hover:border-white/20 transition-all">
+                      <h3 className="text-base font-bold text-white mb-2">{t(`import_eu.steps.${idx}.title`)}</h3>
+                      <ul className="space-y-1.5">
+                        {items.map((key) => (
+                          <li key={key} className="flex items-start gap-2 text-sm text-gray-300">
+                            <span className="text-red-500 mt-0.5 flex-shrink-0">›</span>
+                            {t(`import_eu.steps.${idx}.${key}`)}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
 
-        <div className="mt-10 text-gray-200">
-          <p>
-            {t('import.bottomHelp')} <Link href="/eu/contact" className="underline underline-offset-2 decoration-white mx-1">{t('import.bottomContact')}</Link> {t('import.bottomSuffix')}
-          </p>
+            {/* ── BOTTOM ── */}
+            <div className="mt-12 text-center text-gray-300 text-sm">
+              <p>
+                {t('import.bottomHelp')}{' '}
+                <Link href="/eu/contact" className="text-white font-semibold underline underline-offset-4 decoration-red-500 hover:text-red-300 transition-colors">
+                  {t('import.bottomContact')}
+                </Link>{' '}
+                {t('import.bottomSuffix')}
+              </p>
+            </div>
+
+          </div>
         </div>
       </div>
     </Layout>
   );
 }
-
-
-

@@ -179,8 +179,18 @@ export default function SimulateurPage() {
 
   return (
     <Layout title="Simulateur de Coût - MYG Import" mainClassName="bg-transparent">
-      {/* Background */}
-      <div className="absolute inset-0 -z-10 bg-cover bg-center" style={{ backgroundImage: "url('/images/backgrounds/Maritime .png')" }} />
+      {/* Background via background-attachment:fixed pour garder le footer visible */}
+      <div
+        style={{
+          backgroundImage: "url('/images/backgrounds/Maritime .png')",
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          position: 'absolute',
+          inset: 0,
+          zIndex: -1,
+        }}
+      />
       <div className="absolute inset-0 -z-10 bg-black/40" />
 
       <div className="container mx-auto px-4 py-10 pb-32 max-w-6xl text-white">
