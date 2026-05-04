@@ -49,29 +49,33 @@ export default function VerticalSelector() {
 
       {/* Overlay header */}
       <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-3 bg-gradient-to-b from-black/90 to-transparent">
-        <Link href="/" className="flex-shrink-0">
-          <Image
-            src="/images/backgrounds/Logo MYG.png"
-            alt="MYG Import"
-            width={180}
-            height={80}
-            className="h-12 md:h-14 w-auto"
-            priority
-          />
-        </Link>
-        <nav className="hidden md:flex items-center gap-5 text-sm font-medium">
+        <div className="flex-shrink-0">
+          <Link href="/">
+            <Image
+              src="/images/backgrounds/Logo MYG.png"
+              alt="MYG Import"
+              width={180}
+              height={80}
+              className="h-12 md:h-14 w-auto"
+              priority
+            />
+          </Link>
+        </div>
+        <nav className="hidden md:flex flex-1 justify-center items-center gap-5 text-sm font-medium">
           <Link href="/jp/stock" className="text-gray-300 hover:text-white transition-colors">Stock Japon</Link>
           <Link href="/eu/stock" className="text-gray-300 hover:text-white transition-colors">Stock Europe</Link>
           <Link href="/jp/importation" className="text-gray-300 hover:text-white transition-colors">{t('nav.import') || 'Importation'}</Link>
           <Link href="/jp/simulateur" className="text-gray-300 hover:text-white transition-colors">{t('nav.sim') || 'Simulateur'}</Link>
           <Link href="/jp/a-propos" className="text-gray-300 hover:text-white transition-colors">{t('nav.about') || 'À Propos'}</Link>
+        </nav>
+        <div className="hidden md:flex items-center flex-shrink-0">
           <Link
             href="/jp/contact"
-            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-full transition-colors"
+            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-2 rounded-full transition-colors"
           >
             {t('cta.contact') || 'Contact'}
           </Link>
-        </nav>
+        </div>
       </header>
 
       {/* Cinematic split hero */}
