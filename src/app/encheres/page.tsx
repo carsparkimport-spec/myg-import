@@ -1,9 +1,11 @@
 "use client";
+
 import Layout from '@/components/Layout';
 import { useI18n } from '@/i18n/I18nProvider';
 import AuctionCard from '@/components/AuctionCard';
 import { useEffect, useState } from 'react';
 import VehicleGallery from '@/components/VehicleGallery';
+import { RefreshCw, X } from 'lucide-react';
 
 interface AuctionItem {
   id: string;
@@ -22,21 +24,20 @@ export default function AuctionsPage() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [selected, setSelected] = useState<AuctionItem | null>(null);
+  const [refreshing, setRefreshing] = useState(false);
 
-  const reload = () => {
-    setLoading(true);
+  const reload = async () => {
+    setRefreshing(true);
     setError(null);
-    fetch('/api/auctions', { cache: 'no-store' })
-      .then(async (res) => {
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        const data = await res.json();
-        setAuctions(Array.isArray(data.items) ? data.items : []);
-        setLoading(false);
-      })
-      .catch(() => {
-        setError('load');
-        setLoading(false);
-      });
+    try {
+      const res = await fetch('/api/auctions', { cache: 'no-store' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      setAuctions(Array.isArray(data.items) ? data.items : []);
+    } catch {
+      setError('load');
+    }
+    setRefreshing(false);
   };
 
   useEffect(() => {
@@ -51,77 +52,92 @@ export default function AuctionsPage() {
         }
       })
       .catch(() => {
-        if (isMounted) {
-          setError('load');
-          setLoading(false);
-        }
+        if (isMounted) { setError('load'); setLoading(false); }
       });
-    return () => {
-      isMounted = false;
-    };
+    return () => { isMounted = false; };
   }, []);
+
   return (
     <Layout title={t('auctions.meta') || 'Enchères passées - MYG Import'}>
-      <main className="relative min-h-screen pb-[2cm]">
-        <div className="absolute inset-0 z-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/backgrounds/FUKUOKA.jpg')" }}>
-          <div className="absolute top-0 left-0 right-0 bottom-[2cm] bg-black/30" />
-        </div>
-        <div className="relative z-10 -mt-16 pt-24 pb-28 md:pb-32">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-              <div>
-                <h1 className="text-3xl md:text-4xl font-bold mb-2 text-white">{t('auctions.title')}</h1>
-                <p className="text-gray-100 max-w-2xl">{t('auctions.subtitle')}</p>
-              </div>
-              <button
-                type="button"
-                onClick={reload}
-                className="self-start md:self-auto bg-white/10 hover:bg-white/20 text-white rounded px-4 py-2 backdrop-blur-sm"
-              >
-                {t('auctions.refresh')}
-              </button>
-            </div>
+      <main className="bg-[#0d0d0d] min-h-screen text-white">
+
+        {/* ── HERO ── */}
+        <div className="relative w-full h-[36vh] min-h-[280px] overflow-hidden">
+          <div
+            className="absolute inset-0 bg-cover bg-center scale-105"
+            style={{ backgroundImage: "url('/images/backgrounds/FUKUOKA.jpg')" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#0d0d0d]" />
+          <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+            <p className="text-red-500 text-sm font-semibold uppercase tracking-widest mb-3">MYG Import · Japon</p>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">{t('auctions.title')}</h1>
+            <p className="mt-4 text-gray-300 text-base max-w-xl">{t('auctions.subtitle')}</p>
           </div>
         </div>
-        <div className="container mx-auto px-4 relative z-10 -mt-6 md:-mt-10 lg:-mt-12">
-          <div className="relative rounded-2xl shadow-lg">
-            <div className="absolute inset-0 rounded-2xl backdrop-blur-sm bg-white/0 ring-1 ring-inset ring-white/10" aria-hidden="true" />
-            <div className="relative p-[1cm]">
-              {loading ? (
-                <p className="text-white">{t('auctions.loading')}</p>
-              ) : error ? (
-                <p className="text-white">{t('auctions.errorLoading')}</p>
-              ) : auctions.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {auctions.map((auction: AuctionItem) => (
-                    <AuctionCard key={auction.id} auction={auction} onOpen={setSelected} />
-                  ))}
-                </div>
-              ) : (
-                <p className="text-white">{t('auctions.noAuctions')}</p>
-              )}
-            </div>
+
+        {/* ── GRID ── */}
+        <div className="max-w-7xl mx-auto px-6 py-12">
+
+          {/* Toolbar */}
+          <div className="flex items-center justify-between mb-8">
+            <p className="text-gray-400 text-sm">
+              {!loading && !error && `${auctions.length} véhicule${auctions.length !== 1 ? 's' : ''}`}
+            </p>
+            <button
+              type="button"
+              onClick={reload}
+              disabled={refreshing}
+              className="flex items-center gap-2 text-sm text-gray-400 hover:text-white border border-white/10 hover:border-white/20 rounded-xl px-4 py-2 transition-all"
+            >
+              <RefreshCw className={`w-4 h-4 ${refreshing ? 'animate-spin' : ''}`} />
+              {t('auctions.refresh')}
+            </button>
           </div>
-        </div>
-        <div className="container mx-auto px-4 relative z-10 mt-4 mb-8">
-          <p className="text-xs italic text-gray-300">{t('auctions.disclaimer')}</p>
+
+          {/* States */}
+          {loading ? (
+            <div className="flex flex-col items-center justify-center py-32 gap-4">
+              <div className="w-8 h-8 border-2 border-red-600 border-t-transparent rounded-full animate-spin" />
+              <p className="text-gray-400">{t('auctions.loading')}</p>
+            </div>
+          ) : error ? (
+            <div className="text-center py-32">
+              <p className="text-gray-400 mb-4">{t('auctions.errorLoading')}</p>
+              <button onClick={reload} className="text-sm text-red-400 hover:text-red-300 underline underline-offset-2">{t('auctions.refresh')}</button>
+            </div>
+          ) : auctions.length === 0 ? (
+            <div className="text-center py-32">
+              <p className="text-gray-400">{t('auctions.noAuctions')}</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+              {auctions.map((auction) => (
+                <AuctionCard key={auction.id} auction={auction} onOpen={setSelected} />
+              ))}
+            </div>
+          )}
+
+          {/* Disclaimer */}
+          <p className="mt-10 text-xs text-gray-600 italic">{t('auctions.disclaimer')}</p>
         </div>
       </main>
+
+      {/* ── LIGHTBOX ── */}
       {selected && (
         <div className="fixed inset-0 z-[100] bg-black/95 flex flex-col">
-          <button
-            type="button"
-            aria-label={t('gallery.close')}
-            className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 text-white rounded-full w-10 h-10 flex items-center justify-center text-xl"
-            onClick={() => setSelected(null)}
-          >
-            ×
-          </button>
-          <div className="mt-16 md:mt-20 w-full px-4 pb-6">
-            <div className="mx-auto max-w-6xl">
-              <div className="text-center text-white text-lg md:text-xl font-semibold mb-4 clamp-2" title={selected.title || ''}>
-                {selected.title}
-              </div>
+          <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
+            <h2 className="text-white font-bold text-lg truncate max-w-[80%]">{selected.title}</h2>
+            <button
+              type="button"
+              aria-label={t('gallery.close')}
+              className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+              onClick={() => setSelected(null)}
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+          <div className="flex-1 overflow-y-auto px-4 py-6">
+            <div className="mx-auto max-w-5xl">
               <VehicleGallery images={selected.images} altBase={selected.title || 'Auction'} />
             </div>
           </div>
@@ -130,5 +146,3 @@ export default function AuctionsPage() {
     </Layout>
   );
 }
-
-

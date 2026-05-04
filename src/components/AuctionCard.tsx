@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useI18n } from '@/i18n/I18nProvider';
+import { ZoomIn } from 'lucide-react';
 
 interface AuctionItem {
   id: string;
@@ -20,46 +21,66 @@ export default function AuctionCard({ auction, onOpen }: { auction: AuctionItem;
   const localeTag = locale === 'fr' ? 'fr-FR' : 'en-GB';
 
   return (
-    <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md bg-white flex flex-col h-full transition-shadow hover:shadow-lg">
-      <div
-        className="relative w-full h-48 sm:h-56 bg-white cursor-zoom-in"
-        onClick={() => onOpen?.(auction)}
-        role="button"
-        aria-label={t('auctionsCard.open')}
-        tabIndex={0}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            onOpen?.(auction);
-          }
-        }}
-      >
-        <Image src={imageUrl} alt={auction.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-contain p-4" />
+    <div
+      className="group bg-[#151515] border border-white/5 rounded-2xl overflow-hidden flex flex-col cursor-pointer hover:border-white/20 transition-all duration-300"
+      onClick={() => onOpen?.(auction)}
+      role="button"
+      tabIndex={0}
+      aria-label={t('auctionsCard.open')}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onOpen?.(auction); }
+      }}
+    >
+      {/* Image */}
+      <div className="relative w-full h-48 bg-[#0d0d0d] overflow-hidden">
+        <Image
+          src={imageUrl}
+          alt={auction.title}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          className="object-contain p-3 transition-transform duration-500 group-hover:scale-105"
+        />
+        {/* Hover overlay */}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+          <ZoomIn className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+        </div>
+        {/* Image count badge */}
+        {auction.images.length > 1 && (
+          <div className="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] font-medium px-2 py-0.5 rounded-full">
+            {auction.images.length} photos
+          </div>
+        )}
       </div>
-      <div className="p-4 flex flex-col flex-grow">
-        <h3 className="text-base md:text-lg font-bold mb-2 leading-tight clamp-2 break-words break-anywhere" title={auction.title}>{auction.title}</h3>
-        <div className="text-sm text-gray-600 space-y-1 mb-2 flex-grow">
+
+      {/* Info */}
+      <div className="p-4 flex flex-col flex-grow gap-2">
+        <h3 className="text-sm font-bold text-white leading-tight line-clamp-2" title={auction.title}>
+          {auction.title}
+        </h3>
+
+        <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-gray-400 flex-grow">
           {typeof auction.year === 'number' && (
-            <p>{t('vehicleCard.year')}: {auction.year}</p>
+            <span>{auction.year}</span>
           )}
           {typeof auction.mileage === 'number' && (
-            <p>{t('vehicleCard.mileage')}: {auction.mileage.toLocaleString(localeTag)} km</p>
+            <span>{auction.mileage.toLocaleString(localeTag)} km</span>
           )}
           {auction.auctionHouse && (
-            <p>{t('auctionsCard.house')}: {auction.auctionHouse}</p>
+            <span className="text-gray-500">{auction.auctionHouse}</span>
           )}
           {auction.grade && (
-            <p>{t('auctionsCard.grade')}: {auction.grade}</p>
+            <span className="border border-white/10 rounded px-1.5 py-0.5 text-gray-300">
+              Grade {auction.grade}
+            </span>
           )}
         </div>
+
         {typeof auction.priceYen === 'number' && (
-          <p className="text-sm font-semibold text-gray-800 mt-auto">
-            {t('auctionsCard.priceYen')}: {auction.priceYen.toLocaleString(localeTag)} ¥
-          </p>
+          <div className="pt-2 border-t border-white/5 font-mono font-bold text-white text-sm">
+            {auction.priceYen.toLocaleString(localeTag)} ¥
+          </div>
         )}
       </div>
     </div>
   );
 }
-
-
