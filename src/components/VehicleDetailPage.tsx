@@ -128,12 +128,6 @@ export default function VehicleDetailPage({ vehicle }: Props) {
               <div className="text-4xl md:text-5xl font-bold tracking-tighter text-white mb-1">
                 {formatPrice(vehicle.price)}
               </div>
-              {vehicle.priceNote && (
-                <div className="flex items-center md:justify-end gap-1.5 text-xs text-gray-400 font-medium">
-                  <Info className="w-3.5 h-3.5 flex-shrink-0" />
-                  {vehicle.priceNote}
-                </div>
-              )}
             </div>
           </div>
         </div>
@@ -236,9 +230,6 @@ export default function VehicleDetailPage({ vehicle }: Props) {
               <div className="mb-7">
                 <div className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-1">Prix total</div>
                 <div className="text-4xl font-bold text-white mb-1.5 tracking-tight">{formatPrice(vehicle.price)}</div>
-                {vehicle.priceNote && (
-                  <p className="text-xs text-gray-500">{vehicle.priceNote}</p>
-                )}
               </div>
 
               <div className="space-y-3">
