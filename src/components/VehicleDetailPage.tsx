@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, Check, ChevronRight, MessageCircle, Phone, Info, X } from 'lucide-react';
+import { ArrowLeft, Check, ChevronRight, MessageCircle, Phone, X } from 'lucide-react';
 
 type Primitive = string | number | boolean | null | undefined;
 
