@@ -11,7 +11,7 @@ import { usePathname } from 'next/navigation';
 
 function Logo({ className, variant = 'rect', brandDisplayName = 'MYG Import' }: { className?: string; variant?: 'rect' | 'square'; brandDisplayName?: string }) {
   // Point to an existing public asset to avoid 404
-  const initialSrc = '/images/backgrounds/Logo MYG.jpeg';
+  const initialSrc = '/images/backgrounds/Logo MYG.png';
   const [src, setSrc] = useState(initialSrc);
   const variantClass = variant === 'square' ? 'rounded-lg' : '';
   return (
