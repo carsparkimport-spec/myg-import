@@ -62,7 +62,7 @@ export default function EuropeLanding() {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent" />
         <div className="relative z-10 px-8 md:px-16 lg:px-24 max-w-2xl">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-none mb-6">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-none mb-6 text-red-500">
             Import<br />Europe
           </h1>
           <p className="text-xl md:text-2xl font-light text-gray-200 mb-10 leading-relaxed">
