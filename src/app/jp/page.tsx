@@ -42,7 +42,6 @@ export default function JapanLanding() {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent" />
         <div className="relative z-10 px-8 md:px-16 lg:px-24 max-w-2xl">
-          <p className="text-red-500 text-sm font-semibold uppercase tracking-widest mb-4">MYG Import · Japon</p>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-none mb-6 drop-shadow-lg">
             {t('hero.title')}
           </h1>
