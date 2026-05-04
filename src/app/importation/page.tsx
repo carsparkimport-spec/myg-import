@@ -21,21 +21,20 @@ export default function ImportationPage() {
   const { t } = useI18n();
 
   return (
-    <Layout title={t('import.meta')} mainClassName="bg-[#0d0d0d] text-white">
-      <div className="relative">
-        {/* Background confined to content area */}
-        <div className="absolute inset-0 overflow-hidden -z-10">
-          <Image
-            src="/images/backgrounds/fond_site_import_2560x1440.jpg"
-            alt=""
-            fill
-            priority
-            quality={90}
-            sizes="100vw"
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
-          />
-          <div className="absolute inset-0 bg-black/60" />
-        </div>
+    <Layout title={t('import.meta')} mainClassName="bg-transparent text-white">
+      {/* Fixed background — footer bg-black covers it naturally */}
+      <div className="fixed inset-0 -z-10">
+        <Image
+          src="/images/backgrounds/fond_site_import_2560x1440.jpg"
+          alt=""
+          fill
+          priority
+          quality={90}
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+        />
+      </div>
+      <div className="fixed inset-0 -z-10 bg-black/55" />
 
       <div className="container mx-auto px-4 py-16 max-w-3xl">
 
@@ -90,7 +89,6 @@ export default function ImportationPage() {
             {t('import.bottomSuffix')}
           </p>
         </div>
-      </div>
       </div>
     </Layout>
   );
