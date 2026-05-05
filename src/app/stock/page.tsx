@@ -63,11 +63,11 @@ export default function StockPage() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="bg-black/65 text-white min-h-screen">
+        <div className="text-white min-h-screen">
 
           {/* ── HERO ── */}
           <div className="relative pt-28 pb-16 px-6 text-center">
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent pointer-events-none" />
             <div className="relative z-10 max-w-3xl mx-auto">
               <p className="text-red-500 text-xs font-semibold uppercase tracking-[0.25em] mb-3">Stock · Europe</p>
               <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">{t('stock.title')}</h1>
