@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "whv33LoCTeeWYaBKhYtv7"
+uri = "file://public/images/backgrounds/eu-stock-bg.png"
+type = "image"
+title = "EU cinematic dark map background"
