@@ -12,6 +12,7 @@ interface Vehicle {
   price: number;
   images: string[];
   status?: string;
+  origin?: string;
 }
 
 interface VehicleCardProps {
@@ -20,11 +21,12 @@ interface VehicleCardProps {
 }
 
 const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle, basePath = '/voiture' }) => {
-  const { id, make, model, year, mileage, transmission, price, images, status } = vehicle;
+  const { id, make, model, year, mileage, transmission, price, images, status, origin } = vehicle;
   const { locale, t } = useI18n();
   const imageUrl = images[0] || '/vercel.svg';
   const localeTag = locale === 'fr' ? 'fr-FR' : 'en-GB';
   const isSold = status === 'Vendu';
+  const isJapan = origin === 'Japon';
 
   return (
     <div className={`group bg-[#151515]/80 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-300 hover:border-white/25 hover:bg-[#1a1a1a]/90 ${isSold ? 'opacity-60' : ''}`}>
@@ -37,6 +39,13 @@ const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle, basePath = '/voiture
           sizes="(max-width: 768px) 100vw, 33vw"
           className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
         />
+        {/* Badges top-left : origine */}
+        {isJapan && (
+          <div className="absolute top-3 left-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-widest">
+            🇯🇵 Japon
+          </div>
+        )}
+        {/* Badge top-right : vendu */}
         {isSold && (
           <div className="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
             Vendu

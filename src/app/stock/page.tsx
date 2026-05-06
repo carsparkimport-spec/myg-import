@@ -32,7 +32,7 @@ export default function StockPage() {
         const response = await fetch('/api/vehicles');
         if (response.ok) {
           const data = await response.json();
-          setVehicles(data.filter((v: Vehicle) => v.origin === 'Europe'));
+          setVehicles(data);
         }
       } catch (error) {
         console.error('Error fetching vehicles:', error);
