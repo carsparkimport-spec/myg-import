@@ -1,5 +1,40 @@
 [
   {
+    "id": "mazda-mx5-kinenbi",
+    "make": "Mazda",
+    "model": "MX-5 Roadster SKYACTIV-G 2.0 GS AL-KINENBI",
+    "status": "Disponible",
+    "origin": "Japon",
+    "year": 2023,
+    "mileage": 29500,
+    "fuel": "Essence",
+    "transmission": "Manuelle",
+    "price": 30990,
+    "description": "Mazda MX-5 Roadster SKYACTIV-G 2.0 – Édition spéciale AL-KINENBI (anniversaire), importée du Japon. Machine Gray Metallic (46G), intérieur cuir bordeaux. Capote souple bleue. Pack i-Activsense complet. Système audio BOSE® 9 haut-parleurs. Dossier complet sur demande.",
+    "images": [
+      "/images/vehicles/mazda-mx5-kinenbi/1.png",
+      "/images/vehicles/mazda-mx5-kinenbi/2.png",
+      "/images/vehicles/mazda-mx5-kinenbi/3.jpeg",
+      "/images/vehicles/mazda-mx5-kinenbi/4.png",
+      "/images/vehicles/mazda-mx5-kinenbi/5.jpeg",
+      "/images/vehicles/mazda-mx5-kinenbi/6.png",
+      "/images/vehicles/mazda-mx5-kinenbi/7.jpeg",
+      "/images/vehicles/mazda-mx5-kinenbi/8.png"
+    ],
+    "details": {
+      "Moteur": "SKYACTIV-G 2.0 – 184 ch",
+      "Boîte": "Manuelle 6 rapports",
+      "Année": "03/2023",
+      "Coloris": "Machine Gray Metallic (46G)",
+      "Kilométrage": "29 500 km",
+      "Capote": "Souple manuelle – coloris bleu",
+      "Équipements": "Pack i-Activsense (DAA, SCBS, TSR, SCBS R, BSM, RCTA, LDWS); Système audio BOSE® 9 haut-parleurs avec subwoofer intégrés dans les appuie-têtes; Éclairage Matrix LED avec ALH; Android Auto & Apple CarPlay sans fil; Navigation Mazda SD; Climatisation automatique; Sièges chauffants; Rétroviseur intérieur électrochrome; Volant sport cuir 3 branches; Levier de vitesses et frein à main gainés cuir; Jantes alliage sport; Caméra de recul; Aide au stationnement arrière; Arceaux de sécurité habillés; Régulateur/limiteur de vitesse Cruisematic; DSC + TCS; Contrôle pression pneus; Lunette arrière chauffante; ISOFIX passager",
+      "Modèle": "NGJ / EAMSD – Édition AL-KINENBI (anniversaire Japon)"
+    },
+    "featured": true,
+    "featuredOrder": 0
+  },
+  {
     "id": "clio-noir",
     "make": "Renault",
     "model": "Clio 1.5 BLUE dCi 100 ÉVOLUTION",
