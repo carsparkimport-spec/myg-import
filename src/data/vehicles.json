@@ -4,13 +4,13 @@
     "make": "Mazda",
     "model": "MX-5 Roadster SKYACTIV-G 2.0 GS AL-KINENBI",
     "status": "Disponible",
-    "origin": "Japon",
+    "origin": "Europe",
     "year": 2023,
     "mileage": 29500,
     "fuel": "Essence",
     "transmission": "Manuelle",
     "price": 30990,
-    "description": "Mazda MX-5 Roadster SKYACTIV-G 2.0 – Édition spéciale AL-KINENBI (anniversaire), importée du Japon. Machine Gray Metallic (46G), intérieur cuir bordeaux. Capote souple bleue. Pack i-Activsense complet. Système audio BOSE® 9 haut-parleurs. Dossier complet sur demande.",
+    "description": "Mazda MX-5 Roadster SKYACTIV-G 2.0 – Édition spéciale AL-KINENBI, origine Allemagne. Machine Gray Metallic (46G), intérieur cuir bordeaux. Capote souple bleue. Pack i-Activsense complet. Système audio BOSE® 9 haut-parleurs. Aucun entretien à prévoir – dernier entretien réalisé le 06/05/2026. Dossier complet sur demande.",
     "images": [
       "/images/vehicles/mazda-mx5-kinenbi/1.png",
       "/images/vehicles/mazda-mx5-kinenbi/2.png",
@@ -29,7 +29,8 @@
       "Kilométrage": "29 500 km",
       "Capote": "Souple manuelle – coloris bleu",
       "Équipements": "Pack i-Activsense (DAA, SCBS, TSR, SCBS R, BSM, RCTA, LDWS); Système audio BOSE® 9 haut-parleurs avec subwoofer intégrés dans les appuie-têtes; Éclairage Matrix LED avec ALH; Android Auto & Apple CarPlay sans fil; Navigation Mazda SD; Climatisation automatique; Sièges chauffants; Rétroviseur intérieur électrochrome; Volant sport cuir 3 branches; Levier de vitesses et frein à main gainés cuir; Jantes alliage sport; Caméra de recul; Aide au stationnement arrière; Arceaux de sécurité habillés; Régulateur/limiteur de vitesse Cruisematic; DSC + TCS; Contrôle pression pneus; Lunette arrière chauffante; ISOFIX passager",
-      "Modèle": "NGJ / EAMSD – Édition AL-KINENBI (anniversaire Japon)"
+      "Entretien": "Aucun entretien à prévoir – dernier entretien réalisé le 06/05/2026",
+      "Modèle": "NGJ / EAMSD – Édition AL-KINENBI"
     },
     "featured": true,
     "featuredOrder": 0
