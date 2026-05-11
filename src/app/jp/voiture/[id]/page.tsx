@@ -1,4 +1,1 @@
-export { default } from '@/app/voiture/[id]/page';
-
-
-
+export { default, generateMetadata } from '@/app/voiture/[id]/page';
