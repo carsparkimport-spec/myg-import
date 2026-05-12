@@ -32,6 +32,9 @@ export const metadata: Metadata = {
   authors: [{ name: "MYG Import" }],
   creator: "MYG Import",
   publisher: "MYG Import",
+  verification: {
+    google: "ZVKm5Z6YyJf5qEwEf8Xz7aObfDzF9Fx0XQrvBVComS4",
+  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
   openGraph: {
     type: "website",
