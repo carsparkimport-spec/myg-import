@@ -21,18 +21,9 @@ export default function OgImage() {
           position: "relative",
         }}
       >
-        {/* Red accent bar top */}
         <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 6, background: "#e30613", display: "flex" }} />
 
-        {/* Brand name */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 16,
-            marginBottom: 32,
-          }}
-        >
+        <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 32 }}>
           <div
             style={{
               fontSize: 72,
@@ -46,7 +37,6 @@ export default function OgImage() {
           </div>
         </div>
 
-        {/* Tagline */}
         <div
           style={{
             fontSize: 28,
@@ -60,7 +50,6 @@ export default function OgImage() {
           POWERED BY PASSION
         </div>
 
-        {/* Main headline */}
         <div
           style={{
             fontSize: 42,
@@ -74,10 +63,9 @@ export default function OgImage() {
             justifyContent: "center",
           }}
         >
-          Import voiture Luxembourg & Japon
+          Import voiture Luxembourg &amp; Japon
         </div>
 
-        {/* Sub */}
         <div
           style={{
             marginTop: 20,
@@ -87,10 +75,9 @@ export default function OgImage() {
             display: "flex",
           }}
         >
-          Stock Europe & JDM · Simulateur en ligne · Accompagnement clé en main
+          Stock Europe &amp; JDM · Simulateur en ligne · Accompagnement clé en main
         </div>
 
-        {/* CTA pill */}
         <div
           style={{
             marginTop: 40,
@@ -107,7 +94,6 @@ export default function OgImage() {
           DEVIS GRATUIT · myg-import.com
         </div>
 
-        {/* Red accent bar bottom */}
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 4, background: "#e30613", display: "flex" }} />
       </div>
     ),
