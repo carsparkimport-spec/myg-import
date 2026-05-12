@@ -34,6 +34,7 @@ export const metadata: Metadata = {
   publisher: "MYG Import",
   verification: {
     google: "ZVKm5Z6YyJf5qEwEf8Xz7aObfDzF9Fx0XQrvBVComS4",
+    other: { "msvalidate.01": "3A4DB76306E1EA5CB050E2D9764F8817" },
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
   openGraph: {
