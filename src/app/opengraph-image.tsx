@@ -42,7 +42,7 @@ export default function OgImage() {
               display: "flex",
             }}
           >
-            ///MYG
+            {"///"}MYG
           </div>
         </div>
 
