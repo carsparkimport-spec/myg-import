@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "À Propos de MYG Import",
+  title: "À propos de MYG Import — Importateur auto Luxembourg",
   description:
-    "Découvrez MYG Import, votre spécialiste en importation de véhicules depuis le Japon au Luxembourg. Notre équipe, notre philosophie, notre engagement pour la transparence.",
+    "MYG Import, votre spécialiste en importation automobile au Luxembourg. Passionnés d'automobiles japonaises, transparence totale, accompagnement personnalisé.",
   openGraph: {
-    title: "À Propos – MYG Import",
-    description:
-      "MYG Import, l'équipe luxembourgeoise passionnée d'automobiles japonaises. Notre histoire et nos valeurs.",
+    title: "À propos — MYG Import Luxembourg",
+    description: "L'équipe MYG Import, passionnée d'automobiles japonaises. Notre histoire, nos valeurs, notre engagement.",
   },
 };
 

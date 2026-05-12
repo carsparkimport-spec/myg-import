@@ -1,21 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Comment Importer une Voiture du Japon",
+  title: "Comment importer une voiture du Japon au Luxembourg",
   description:
-    "Guide complet du processus d'importation d'un véhicule depuis le Japon : enchères, inspection technique, transport maritime, dédouanement, homologation au Luxembourg.",
-  keywords: [
-    "comment importer voiture japon",
-    "processus importation japon luxembourg",
-    "enchères auto japon fonctionnement",
-    "transport voiture japon luxembourg",
-    "dédouanement véhicule japonais",
-    "homologation voiture japon luxembourg",
-  ],
+    "Guide complet d'importation depuis le Japon : enchères USS/TAA, inspection technique, transport maritime, dédouanement, homologation. Toutes les étapes expliquées.",
+  keywords: ["comment importer voiture japon", "processus importation japon luxembourg", "enchères auto japon fonctionnement", "dédouanement véhicule japonais"],
   openGraph: {
-    title: "Comment Importer une Voiture du Japon – MYG Import",
-    description:
-      "Découvrez toutes les étapes : enchères, inspection, transport, dédouanement et homologation de votre véhicule japonais.",
+    title: "Comment importer une voiture du Japon — MYG Import",
+    description: "Toutes les étapes : enchères, inspection, transport, dédouanement, homologation de votre véhicule japonais.",
   },
 };
 

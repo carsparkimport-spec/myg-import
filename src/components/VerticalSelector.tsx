@@ -96,7 +96,7 @@ export default function VerticalSelector() {
           <div className="absolute inset-0 overflow-hidden">
             <div
               className="absolute inset-0 bg-center bg-cover transition-transform duration-[6000ms] ease-out group-hover:scale-105"
-              style={{ backgroundImage: "url('/images/backgrounds/transporteur%20camion.png')" }}
+              style={{ backgroundImage: "url('/images/backgrounds/transporteur%20camion.webp')" }}
             />
             <div className="absolute inset-0 bg-black/50 group-hover:bg-black/25 transition-colors duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/50" />
@@ -130,7 +130,7 @@ export default function VerticalSelector() {
           <div className="absolute inset-0 overflow-hidden">
             <div
               className="absolute inset-0 bg-center bg-cover transition-transform duration-[6000ms] ease-out group-hover:scale-105"
-              style={{ backgroundImage: "url('/images/backgrounds/supra-main.png')" }}
+              style={{ backgroundImage: "url('/images/backgrounds/supra-main.webp')" }}
             />
             <div className="absolute inset-0 bg-black/50 group-hover:bg-black/25 transition-colors duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/50" />

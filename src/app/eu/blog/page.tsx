@@ -27,7 +27,7 @@ export default function EuBlogArticlePage() {
       category: 'Transport',
       readingTime: '5 min',
       updated: 'Déc. 2025',
-      cover: '/images/backgrounds/transporteur camion.png',
+      cover: '/images/backgrounds/transporteur camion.webp',
     },
     {
       id: 'immat-lu',
@@ -57,7 +57,7 @@ export default function EuBlogArticlePage() {
       category: 'Immatriculation',
       readingTime: '6 min',
       updated: 'Déc. 2025',
-      cover: '/images/backgrounds/Luxembourg France.png',
+      cover: '/images/backgrounds/Luxembourg France.webp',
     },
     {
       id: 'immat-be',

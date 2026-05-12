@@ -35,7 +35,7 @@ export default function JapanLanding() {
       <div
         className="relative h-screen text-white overflow-hidden flex items-center"
         style={{
-          backgroundImage: 'url(/images/backgrounds/supra-main.png), url(/images/backgrounds/supra-bg.png)',
+          backgroundImage: 'url(/images/backgrounds/supra-main.webp), url(/images/backgrounds/supra-bg.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

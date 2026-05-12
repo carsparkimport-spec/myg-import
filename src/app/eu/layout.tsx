@@ -2,26 +2,25 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Véhicules Européens Premium Luxembourg – MYG Import",
-    template: "%s | MYG Import Europe",
+    default: "Véhicules européens premium Luxembourg — MYG Import",
+    template: "%s — MYG Import Europe",
   },
   description:
-    "MYG Import propose une sélection de véhicules européens d'exception au Luxembourg. Qualité vérifiée, historique complet, livraison soignée.",
+    "Sélection de véhicules européens d'exception au Luxembourg. Qualité vérifiée, historique complet, accompagnement personnalisé de l'achat à la livraison.",
   keywords: [
     "voiture européenne occasion luxembourg",
     "import voiture europe luxembourg",
     "véhicule premium occasion luxembourg",
-    "achat voiture europe",
     "MYG Import europe",
-    "voiture importée luxembourg",
   ],
   openGraph: {
     type: "website",
     locale: "fr_LU",
     siteName: "MYG Import",
-    title: "Véhicules Européens Premium Luxembourg – MYG Import",
+    title: "Véhicules européens premium Luxembourg — MYG Import",
     description:
-      "Sélection de véhicules européens d'exception au Luxembourg. Qualité premium, historique vérifiable, accompagnement personnalisé.",
+      "Sélection de véhicules européens premium au Luxembourg. Qualité vérifiée, accompagnement personnalisé.",
+    images: [{ url: "/images/og/og-europe.jpg", width: 1200, height: 630, alt: "Véhicules Europe – MYG Import" }],
   },
 };
 

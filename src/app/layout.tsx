@@ -3,91 +3,58 @@ import { Inter, Roboto_Mono, Oswald, Antonio } from "next/font/google";
 import "./globals.css";
 import { I18nProvider } from "@/i18n/I18nProvider";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
+const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
+const robotoMono = Roboto_Mono({ variable: "--font-roboto-mono", subsets: ["latin"] });
+const oswald = Oswald({ variable: "--font-oswald", subsets: ["latin"], weight: ["400", "500", "600", "700"] });
+const antonio = Antonio({ variable: "--font-antonio", subsets: ["latin"], weight: ["400", "600", "700"] });
 
-const robotoMono = Roboto_Mono({
-  variable: "--font-roboto-mono",
-  subsets: ["latin"],
-});
-
-const oswald = Oswald({
-  variable: "--font-oswald",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-const antonio = Antonio({
-  variable: "--font-antonio",
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://myg-import.lu";
+const OG_IMAGE = `${SITE_URL}/images/og/og-default.jpg`;
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "MYG Import – Importation de Véhicules Japon & Europe Luxembourg",
-    template: "%s | MYG Import",
+    default: "Import voiture Luxembourg & Japon — MYG Import | Devis gratuit",
+    template: "%s — MYG Import",
   },
   description:
-    "MYG Import, votre spécialiste en importation de véhicules du Japon et d'Europe au Luxembourg. Sélection premium, prix transparents, accompagnement complet de l'achat à la livraison.",
+    "Importateur automobile au Luxembourg. Stock Europe & JDM japonais, simulateur en ligne, accompagnement clé en main. Devis gratuit sous 24h.",
   keywords: [
-    "import voiture japon luxembourg",
-    "importation véhicule japon",
+    "import voiture luxembourg",
+    "importation véhicule japon luxembourg",
+    "voiture JDM luxembourg",
+    "importateur automobile luxembourg",
     "achat voiture japon",
-    "voiture occasion japon",
-    "enchères auto japon",
-    "importation europe luxembourg",
     "MYG Import",
-    "véhicule import luxembourg",
+    "simulateur import voiture",
+    "voiture occasion luxembourg",
   ],
   authors: [{ name: "MYG Import" }],
   creator: "MYG Import",
   publisher: "MYG Import",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-    },
-  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
   openGraph: {
     type: "website",
     locale: "fr_LU",
     siteName: "MYG Import",
-    title: "MYG Import – Importation de Véhicules Japon & Europe Luxembourg",
+    url: SITE_URL,
+    title: "Import voiture Luxembourg & Japon — MYG Import | Devis gratuit",
     description:
-      "Votre spécialiste en importation de véhicules du Japon et d'Europe au Luxembourg. Sélection premium, prix transparents, accompagnement complet.",
-    images: [
-      {
-        url: "/images/backgrounds/Logo MYG.png",
-        width: 1200,
-        height: 630,
-        alt: "MYG Import",
-      },
-    ],
+      "Importateur automobile au Luxembourg. Stock Europe & JDM japonais, simulateur en ligne, accompagnement clé en main.",
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "MYG Import – Importation automobile Luxembourg" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MYG Import – Importation de Véhicules Japon & Europe Luxembourg",
-    description:
-      "Votre spécialiste en importation de véhicules du Japon et d'Europe au Luxembourg.",
+    title: "Import voiture Luxembourg & Japon — MYG Import",
+    description: "Importateur automobile au Luxembourg. Stock Europe & JDM japonais, simulateur en ligne.",
+    images: [OG_IMAGE],
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body
-        className={`${inter.variable} ${robotoMono.variable} ${oswald.variable} ${antonio.variable} antialiased`}
-      >
+      <body className={`${inter.variable} ${robotoMono.variable} ${oswald.variable} ${antonio.variable} antialiased`}>
         <I18nProvider>{children}</I18nProvider>
       </body>
     </html>

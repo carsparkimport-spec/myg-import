@@ -143,7 +143,7 @@ export default function SimulateurEUPage() {
 
   return (
     <Layout title="Simulateur fiscal (EU) - MYG Import" mainClassName="bg-transparent">
-      <div className="absolute inset-0 -z-10 bg-cover bg-center" style={{ backgroundImage: "url('/images/backgrounds/Immat.png')" }} />
+      <div className="absolute inset-0 -z-10 bg-cover bg-center" style={{ backgroundImage: "url('/images/backgrounds/Immat.webp')" }} />
       <div className="absolute inset-0 -z-10 bg-black/25" />
       <div className="container mx-auto px-4 py-10 max-w-4xl text-white">
         <div className="mx-auto max-w-2xl text-center mb-8">

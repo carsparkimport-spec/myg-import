@@ -18,7 +18,7 @@ export default function ImportationEuropePage() {
     <Layout title={t('import.meta')} mainClassName="bg-transparent text-white">
       <div
         style={{
-          backgroundImage: "url('/images/backgrounds/Onglet Import Eu.png')",
+          backgroundImage: "url('/images/backgrounds/Onglet Import Eu.webp')",
           backgroundAttachment: 'fixed',
           backgroundSize: 'cover',
           backgroundPosition: 'center 80%',

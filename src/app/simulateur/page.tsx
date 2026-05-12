@@ -182,7 +182,7 @@ export default function SimulateurPage() {
       {/* Background via background-attachment:fixed pour garder le footer visible */}
       <div
         style={{
-          backgroundImage: "url('/images/backgrounds/Maritime .png')",
+          backgroundImage: "url('/images/backgrounds/Maritime .webp')",
           backgroundAttachment: 'fixed',
           backgroundSize: 'cover',
           backgroundPosition: 'center',

@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Simulateur de Coût Import Japon",
+  title: "Simulateur de coût import Japon — Estimez votre budget",
   description:
-    "Estimez le coût total de votre importation depuis le Japon : prix d'achat aux enchères, transport maritime, taxes douanières, TVA, frais de mise en conformité.",
-  keywords: [
-    "simulateur import voiture japon",
-    "coût importation japon luxembourg",
-    "calculer prix import japon",
-    "taxes importation véhicule japon",
-    "budget import voiture japon",
-  ],
+    "Calculez le coût total de votre importation depuis le Japon : prix d'achat aux enchères, transport maritime, taxes douanières, TVA, homologation. Gratuit et instantané.",
+  keywords: ["simulateur import voiture japon", "coût importation japon luxembourg", "calculer prix import japon", "budget import JDM"],
   openGraph: {
-    title: "Simulateur Coût Import Japon – MYG Import",
-    description:
-      "Calculez votre budget d'importation depuis le Japon : enchères, transport, douanes, TVA, homologation.",
+    title: "Simulateur coût import Japon — MYG Import",
+    description: "Estimez votre budget d'importation depuis le Japon en quelques clics. Enchères, transport, douanes, TVA.",
   },
 };
 

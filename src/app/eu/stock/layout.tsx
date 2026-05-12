@@ -1,19 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Stock Véhicules Europe – Nos Annonces",
+  title: "Stock véhicules Europe — Nos annonces premium",
   description:
-    "Parcourez notre sélection de véhicules européens disponibles à l'achat au Luxembourg. Voitures récentes, vérifiées, avec historique d'entretien.",
-  keywords: [
-    "stock voitures europe luxembourg",
-    "annonces voiture occasion europe",
-    "acheter voiture europe luxembourg",
-    "véhicule occasion premium luxembourg",
-  ],
+    "Parcourez notre sélection de véhicules européens disponibles au Luxembourg. Voitures récentes, vérifiées, avec historique d'entretien complet.",
+  keywords: ["voiture européenne occasion luxembourg", "annonces voiture premium luxembourg", "stock véhicules europe"],
   openGraph: {
-    title: "Stock Véhicules Europe – MYG Import",
-    description:
-      "Sélection de véhicules européens vérifiés, disponibles au Luxembourg. Filtrez par disponibilité.",
+    title: "Stock véhicules Europe — MYG Import Luxembourg",
+    description: "Véhicules européens vérifiés, disponibles au Luxembourg. Filtrez par disponibilité.",
   },
 };
 

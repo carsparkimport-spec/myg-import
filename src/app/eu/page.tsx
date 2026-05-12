@@ -55,7 +55,7 @@ export default function EuropeLanding() {
       <div
         className="relative h-screen text-white overflow-hidden flex items-center"
         style={{
-          backgroundImage: "url('/images/backgrounds/transporteur camion.png')",
+          backgroundImage: "url('/images/backgrounds/transporteur camion.webp')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

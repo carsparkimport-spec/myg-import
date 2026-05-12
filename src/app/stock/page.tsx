@@ -57,7 +57,7 @@ export default function StockPage() {
     <Layout title={t('stock.title') + ' - MYG Import'}>
       <div
         style={{
-          backgroundImage: "url('/images/backgrounds/eu-stock-bg.png')",
+          backgroundImage: "url('/images/backgrounds/eu-stock-bg.webp')",
           backgroundAttachment: 'fixed',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
