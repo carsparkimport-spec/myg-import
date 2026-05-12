@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://myg-import.lu"}/sitemap.xml`,
+    sitemap: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://myg-import.com"}/sitemap.xml`,
   };
 }

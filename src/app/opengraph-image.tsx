@@ -104,7 +104,7 @@ export default function OgImage() {
             display: "flex",
           }}
         >
-          DEVIS GRATUIT · myg-import.lu
+          DEVIS GRATUIT · myg-import.com
         </div>
 
         {/* Red accent bar bottom */}

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import vehiclesData from "@/data/vehicles.json";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://myg-import.lu";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://myg-import.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

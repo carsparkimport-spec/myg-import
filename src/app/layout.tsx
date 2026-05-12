@@ -8,7 +8,7 @@ const robotoMono = Roboto_Mono({ variable: "--font-roboto-mono", subsets: ["lati
 const oswald = Oswald({ variable: "--font-oswald", subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 const antonio = Antonio({ variable: "--font-antonio", subsets: ["latin"], weight: ["400", "600", "700"] });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://myg-import.lu";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://myg-import.com";
 const OG_IMAGE = `${SITE_URL}/images/og/og-default.jpg`;
 
 export const metadata: Metadata = {
