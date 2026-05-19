@@ -12,7 +12,16 @@
     "price": 26450,
     "priceNote": "TVA incluse - hors frais immatriculation",
     "description": "Dacia Bigster Extreme Hybrid FHEV 156ch. Tout nouveau SUV familial, le moins cher du segment C. Finition Extreme top de gamme. Full hybrid 1.8L 155ch. Toit panoramique ouvrant serie - premiere chez Dacia. Coffre record 667 litres. Conso reelle 4.5 a 5.7L/100km. MediaNav Live Google integre. 9 unites disponibles. Livraison 3 a 5 semaines.",
-    "images": [],
+    "images": [
+      "/images/vehicles/dacia-bigster-extreme-hybrid/1.webp",
+      "/images/vehicles/dacia-bigster-extreme-hybrid/2.webp",
+      "/images/vehicles/dacia-bigster-extreme-hybrid/3.webp",
+      "/images/vehicles/dacia-bigster-extreme-hybrid/4.webp",
+      "/images/vehicles/dacia-bigster-extreme-hybrid/5.webp",
+      "/images/vehicles/dacia-bigster-extreme-hybrid/6.webp",
+      "/images/vehicles/dacia-bigster-extreme-hybrid/7.webp",
+      "/images/vehicles/dacia-bigster-extreme-hybrid/8.webp"
+    ],
     "details": {
       "Moteur": "1.8L Full Hybrid E-Tech 156ch",
       "Boite": "Automatique multimode",
@@ -63,39 +72,6 @@
     },
     "featured": true,
     "featuredOrder": 0
-  },
-  {
-    "id": "dacia-bigster-extreme-hybrid",
-    "make": "Dacia",
-    "model": "Bigster Extreme Hybrid 145",
-    "status": "Disponible",
-    "origin": "Europe",
-    "year": 2025,
-    "mileage": 0,
-    "fuel": "Hybride",
-    "transmission": "Automatique",
-    "price": 26450,
-    "description": "Dacia Bigster Extreme Hybrid 145 – Neuf, 0 km. Le SUV familial hybride rechargeable au meilleur rapport qualité/prix du marché. Finition Extreme : sellerie spécifique, toit panoramique, pack hiver, caméra 360°. Dossier complet sur demande.",
-    "images": [
-      "/images/vehicles/dacia-bigster-extreme-hybrid/1.webp",
-      "/images/vehicles/dacia-bigster-extreme-hybrid/2.webp",
-      "/images/vehicles/dacia-bigster-extreme-hybrid/3.webp",
-      "/images/vehicles/dacia-bigster-extreme-hybrid/4.webp",
-      "/images/vehicles/dacia-bigster-extreme-hybrid/5.webp",
-      "/images/vehicles/dacia-bigster-extreme-hybrid/6.webp",
-      "/images/vehicles/dacia-bigster-extreme-hybrid/7.webp",
-      "/images/vehicles/dacia-bigster-extreme-hybrid/8.webp"
-    ],
-    "details": {
-      "Moteur": "Hybride 145 ch",
-      "Boîte": "Automatique multi-mode",
-      "Année": "2025",
-      "Kilométrage": "0 km – Neuf",
-      "Carrosserie": "SUV 5 places",
-      "Finition": "Extreme"
-    },
-    "featured": true,
-    "featuredOrder": 1
   },
   {
     "id": "clio-noir",
