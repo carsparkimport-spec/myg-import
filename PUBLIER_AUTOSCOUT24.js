@@ -14,9 +14,14 @@ const path = require('path');
 // ============================================================
 // CONFIGURATION (stocker dans les Secrets Replit)
 // ============================================================
-const AS24_USERNAME   = process.env.AS24_USERNAME   || 'be-2142244743';
-const AS24_PASSWORD   = process.env.AS24_PASSWORD   || 'nA9Q0ukDsEk5D7yaRDHXU2VAH8kf4c';
-const AS24_CUSTOMER_ID = process.env.AS24_CUSTOMER_ID || '2142244743';
+const AS24_USERNAME   = process.env.AS24_USERNAME;
+const AS24_PASSWORD   = process.env.AS24_PASSWORD;
+const AS24_CUSTOMER_ID = process.env.AS24_CUSTOMER_ID;
+
+if (!AS24_USERNAME || !AS24_PASSWORD || !AS24_CUSTOMER_ID) {
+  console.error('❌ Secrets manquants : AS24_USERNAME, AS24_PASSWORD et AS24_CUSTOMER_ID doivent être définis dans les Secrets Replit.');
+  process.exit(1);
+}
 const SITE_BASE_URL   = process.env.SITE_BASE_URL   || 'https://myg-import.com';
 const BASE_URL = 'https://listing-creation.api.autoscout24.com';
 
