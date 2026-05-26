@@ -1,0 +1,71 @@
+Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <NotFoundBoundary notFound={[...]} notFoundStyles={[...]}>
+      <NotFoundErrorBoundary pathname="/" notFound={[...]} notFoundStyles={[...]} asNotFound={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter parallelRouterKey="children" url="/" tree={[...]} childNodes={Map} segmentPath={[...]} ...>
+              <ClientPageRoot Component={function Home} searchParams={{}} params={{}}>
+                <Home params={Promise} searchParams={Promise}>
+                  <VerticalSelector>
+                    <div className="bg-black t...">
+                      <style>
+                      <header>
+                      <section>
+                      <section className="bg-[#0a0a0...">
+                        <div className="max-w-7xl ...">
+                          <div>
+                          <div className="grid grid-...">
+                            <LinkComponent>
+                            <LinkComponent>
+                            <LinkComponent href="/voiture/m..." className="group block">
+                              <a
+                                className="group block"
+                                ref={function Link.LinkComponent.useCallback[setIntersectionWithResetRef]}
+                                onClick={function onClick}
+                                onMouseEnter={function onMouseEnter}
+                                onTouchStart={function onTouchStart}
++                               href="/voiture/mazda-mx5-kinenbi"
+-                               href="/voiture/citroen-c3-aircross-max-1-2-hybrid-145hp-e-dcs6-7-seats"
+                              >
+                                <div className="relative o...">
+                                  <div className="relative h...">
+                                    <div
+                                      className="absolute inset-0 bg-center bg-cover transition-transform duration-700..."
+                                      style={{
++                                       backgroundImage: "url('/images/vehicles/mazda-mx5-kinenbi/1.webp')"
+-                                       background-image: "url(\"/images/vehicles/citroen-c3-aircross-max-1-2-hybrid-1..."
+                                      }}
+                                    >
+                                    ...
+                                  <div className="bg-white/5...">
+                                    <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-1">
++                                     Mazda
+-                                     Citroën
+                                    ...
+                            ...
+                      ...
+              ...
+
+    at throwOnHydrationMismatch (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:2657:56)
+    at prepareToHydrateHostInstance (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:2712:23)
+    at completeWork (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:7258:60)
+    at runWithFiberInDEV (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:631:20)
+    at completeUnitOfWork (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:7996:23)
+    at performUnitOfWork (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:7938:28)
+    at workLoopConcurrent (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:7932:58)
+    at renderRootConcurrent (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:7914:71)
+    at performWorkOnRoot (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:7553:112)
+    at performWorkOnRootViaSchedulerTask (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:8387:9)
+    at MessagePort.performWorkUntilDeadline (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_107ce8._.js:2348:64)

@@ -34,7 +34,7 @@
       "Livraison": "3 a 4 semaines"
     },
     "featured": true,
-    "featuredOrder": -1
+    "featuredOrder": 4
   },
   {
     "id": "dacia-bigster-extreme-hybrid",
@@ -72,7 +72,7 @@
       "Livraison": "3 a 5 semaines"
     },
     "featured": true,
-    "featuredOrder": -1
+    "featuredOrder": 5
   },
   {
     "id": "mazda-mx5-kinenbi",
@@ -108,7 +108,7 @@
       "Modèle": "NGJ / EAMSD – Édition AL-KINENBI"
     },
     "featured": true,
-    "featuredOrder": 0
+    "featuredOrder": 3
   },
   {
     "id": "clio-noir",
@@ -144,7 +144,7 @@
       "Garantie": "Constructeur 24 mois (jusqu'en 01/2028)"
     },
     "featured": true,
-    "featuredOrder": 1
+    "featuredOrder": 6
   },
   {
     "id": "clio-gris",
@@ -180,7 +180,7 @@
       "Garantie": "Constructeur 24 mois (jusqu'en 01/2028)"
     },
     "featured": true,
-    "featuredOrder": 2
+    "featuredOrder": 7
   },
   {
     "id": "audi-tt-rs",
@@ -228,10 +228,10 @@
       "Entretien": "À jour, réalisé chez Audi (factures disponibles sur demande)"
     },
     "featured": true,
-    "featuredOrder": 4
+    "featuredOrder": 9
   },
   {
-    "id": "4",
+    "id": "porsche-cayman-s-987-2",
     "make": "Porsche",
     "model": "Cayman S 987.2",
     "status": "Vendu",
@@ -270,7 +270,7 @@
       "Garantie": "12 mois, extension possible"
     },
     "featured": true,
-    "featuredOrder": 3
+    "featuredOrder": 8
   },
   {
     "id": "macan-s",
@@ -318,7 +318,11 @@
     "price": 21440,
     "priceNote": "TVA incluse - hors frais immatriculation",
     "description": "Le Citroën C3 Aircross Max 1.2 Hybrid (145 HP) incarne le SUV familial malin et accessible. Avec son système hybride fluide et ses 7 places disponibles en option, il offre une vraie polyvalence pour les familles. Sa consommation réelle avoisine les 4,4 L/100 km grâce à la technologie e-DCS6, le positionnant parmi les SUV les moins gourmands du segment. Finition Max : sièges Advanced Comfort signés Citroën, technologies de confort héritées des segments supérieurs.",
-    "images": ["/images/vehicles/citroen-c3-aircross-max-1-2-hybrid-145hp-e-dcs6-7-seats/1.webp", "/images/vehicles/citroen-c3-aircross-max-1-2-hybrid-145hp-e-dcs6-7-seats/2.webp", "/images/vehicles/citroen-c3-aircross-max-1-2-hybrid-145hp-e-dcs6-7-seats/3.webp"],
+    "images": [
+      "/images/vehicles/citroen-c3-aircross-max-1-2-hybrid-145hp-e-dcs6-7-seats/1.webp",
+      "/images/vehicles/citroen-c3-aircross-max-1-2-hybrid-145hp-e-dcs6-7-seats/2.webp",
+      "/images/vehicles/citroen-c3-aircross-max-1-2-hybrid-145hp-e-dcs6-7-seats/3.webp"
+    ],
     "details": {
       "Moteur": "1.2 Hybrid 145 HP",
       "Boîte": "e-DCS6 Automatique",
@@ -330,7 +334,7 @@
       "Équipements": "Sièges Advanced Comfort; Volant multifonction; Climatisation; Écran tactile; Apple CarPlay/Android Auto"
     },
     "featured": true,
-    "featuredOrder": -1
+    "featuredOrder": 0
   },
   {
     "id": "byd-seal-u-dm-i-boost-18-3-kwh-218hp-e-cvt-phev",
@@ -361,7 +365,7 @@
       "Équipements": "Système DM-i innovant; Batterie 18.3 kWh; Recharge rapide; Climatisation automatique; Écran tactile; Sièges confortables"
     },
     "featured": true,
-    "featuredOrder": 0
+    "featuredOrder": 1
   },
   {
     "id": "renault-captur-expression-tce-100hp-6-mt",
@@ -377,7 +381,11 @@
     "price": 23500,
     "priceNote": "TVA incluse - hors frais immatriculation",
     "description": "Le Renault Captur TCe 100 incarne le SUV urbain dynamique et fiable. Moteur essence 1.0 TCe turbochargé, 100 ch : réactif et frugal à la fois. Finition Expression : équipement complet pour le prix, design extérieur modernisé avec optiques LED, intérieur agréable avec plastiques moussés. Banquette arrière coulissante sur 16 cm pour adapter l'habitabilité selon vos besoins. Coffre modulable de 422 à 1 275 litres.",
-    "images": ["/images/vehicles/renault-captur-expression-tce-100hp-6-mt/1.webp", "/images/vehicles/renault-captur-expression-tce-100hp-6-mt/2.webp", "/images/vehicles/renault-captur-expression-tce-100hp-6-mt/3.webp"],
+    "images": [
+      "/images/vehicles/renault-captur-expression-tce-100hp-6-mt/1.webp",
+      "/images/vehicles/renault-captur-expression-tce-100hp-6-mt/2.webp",
+      "/images/vehicles/renault-captur-expression-tce-100hp-6-mt/3.webp"
+    ],
     "details": {
       "Moteur": "1.0 TCe 100 HP turbochargé",
       "Boîte": "Manuelle 6 vitesses",
@@ -391,6 +399,6 @@
       "Équipements": "Finition Expression complète; Climatisation; Écran tactile; Apple CarPlay/Android Auto"
     },
     "featured": true,
-    "featuredOrder": 1
+    "featuredOrder": 2
   }
 ]
