@@ -147,7 +147,7 @@
     "price": 38342,
     "priceNote": "TVA incluse - hors frais immatriculation",
     "status": "Disponible",
-    "featured": false,
+    "featured": true,
     "origin": "Europe",
     "description": "Impressionnant dans ses proportions, le Renault Austral Esprit Alpine E-Tech 200 offre puissance et efficacité énergétique. Hybridation full hybrid 200 ch offre un rapport performances-efficience incomparable. Seulement 100 km/h sur routes, limitation électrifications chauffrages et passages volants Alcantara Alpine. Allure exclusive, sièges avant chauffrés et massants, climatisation manuelle, caméra 360°, OpenR Link 12V+ Google intégré, hayon électrique mains libres. Disponible en Gris Schiste Satin/Toit Noir ou Blanc Nacré Perlé/Toit Noir, immatriculation 06/2026, livraison sous 3 à 4 semaines",
     "colors": [
@@ -164,7 +164,8 @@
       "/images/vehicles/renault-austral-esprit-alpine-etech-200/6.webp",
       "/images/vehicles/renault-austral-esprit-alpine-etech-200/7.webp",
       "/images/vehicles/renault-austral-esprit-alpine-etech-200/8.webp"
-    ]
+    ],
+    "featuredOrder": 0
   },
   {
     "id": "dacia-bigster-extreme-hybrid-156ch",
@@ -211,7 +212,7 @@
     "price": 32490,
     "priceNote": "TVA 17% - hors frais d'immatriculation (34€ HT)",
     "status": "Neuf",
-    "featured": false,
+    "featured": true,
     "origin": "Europe",
     "description": "Mazda MX-5 Roadster SKYACTIV-G 2.0 - Édition spéciale AL-KINENBI. Origine Allemagne. Machine Gray Metallic (486), intérieur cuir bordeaux. Capote souple bleue. Pack i-Activsense complet. Système audio BOSE 9 haut-parleurs. Navigation Mazda SDN. Chauffage intérieur; Rétroviseur intérieur électrochrome. Vitres surteintées automobiles. Siège chauffant; Caméra de recul; Aide au stationnement arrière; Arceaux de stabilité fixés; Airbag conducteur & passager; Régulateur limiteur de vitesse; Cruise control; Rétroviseur intérieur électrochrome. Vitres surteintées. Clim auto; Aide au démarrage en côte; Branches Levées de vitesse Croisière; Sièges chauffants Réclinage; Rétroviseur intérieur électrochrome. Vitres surteintées Climatisation automatique;système audio BOSE 9 haut-parleurs. Navigation Mazda SDN. Klimatisierung automatique; Système de verrouillage et déverrouillage automatiques; siège chauffant; Caméra de recul; Aide au stationnement arrière; Arceaux de stabilité fixés; Airbag conducteur & passager; Régulateur limiteur de vitesse; Cruise control",
     "colors": [
@@ -226,7 +227,8 @@
       "/images/vehicles/mazda-mx5-kinenbi/5.webp",
       "/images/vehicles/mazda-mx5-kinenbi/6.webp",
       "/images/vehicles/mazda-mx5-kinenbi/7.webp"
-    ]
+    ],
+    "featuredOrder": 5
   },
   {
     "id": "renault-clio-noir",
@@ -275,16 +277,8 @@
     "priceNote": "TVA incluse - hors frais immatriculation",
     "status": "Disponible",
     "origin": "Europe",
-    "featured": true,
-    "featuredOrder": 5,
-    "images": [
-      "https://www.renault.fr/content/dam/renault/fr/vehicles/new-captur/gallery/01-new-captur-overview.jpg",
-      "https://www.renault.fr/content/dam/renault/fr/vehicles/new-captur/gallery/02-new-captur-interior.jpg",
-      "https://www.renault.fr/content/dam/renault/fr/vehicles/new-captur/gallery/03-new-captur-dashboard.jpg",
-      "https://www.renault.fr/content/dam/renault/fr/vehicles/new-captur/gallery/04-new-captur-technology.jpg",
-      "https://www.renault.fr/content/dam/renault/fr/vehicles/new-captur/gallery/05-new-captur-exterior.jpg",
-      "https://www.renault.fr/content/dam/renault/fr/vehicles/new-captur/gallery/06-new-captur-side.jpg"
-    ],
+    "featured": false,
+    "images": [],
     "colors": [
       {
         "name": "Rouge Flamme",
@@ -358,16 +352,8 @@
     "priceNote": "TVA incluse - hors frais immatriculation",
     "status": "Disponible",
     "origin": "Europe",
-    "featured": true,
-    "featuredOrder": 0,
-    "images": [
-      "https://www.kia.com/content/dam/kwcms/kme/fr/fr/assets/contents/models/sportage/overview.jpg",
-      "https://www.kia.com/content/dam/kwcms/kme/fr/fr/assets/contents/models/sportage/exterior-front.jpg",
-      "https://www.kia.com/content/dam/kwcms/kme/fr/fr/assets/contents/models/sportage/interior-dashboard.jpg",
-      "https://www.kia.com/content/dam/kwcms/kme/fr/fr/assets/contents/models/sportage/interior-comfort.jpg",
-      "https://www.kia.com/content/dam/kwcms/kme/fr/fr/assets/contents/models/sportage/technology.jpg",
-      "https://www.kia.com/content/dam/kwcms/kme/fr/fr/assets/contents/models/sportage/side-profile.jpg"
-    ],
+    "featured": false,
+    "images": [],
     "colors": [
       {
         "name": "Blanc Casa",
@@ -445,9 +431,7 @@
     "status": "Disponible",
     "origin": "Europe",
     "featured": false,
-    "images": [
-      "/images/vehicles/alfa-romeo-tonale-tributo-italiano/1.webp"
-    ],
+    "images": [],
     "availability": 2,
     "deliveryWeeks": "5-7"
   },
@@ -467,9 +451,7 @@
     "status": "Disponible",
     "origin": "Europe",
     "featured": false,
-    "images": [
-      "/images/vehicles/dacia-duster-4x2-expression-tce-140hp/1.webp"
-    ],
+    "images": [],
     "availability": 2,
     "deliveryWeeks": "3-4"
   },
@@ -489,9 +471,7 @@
     "status": "Disponible",
     "origin": "Europe",
     "featured": false,
-    "images": [
-      "/images/vehicles/dacia-jogger-extreme-lpg/1.webp"
-    ],
+    "images": [],
     "availability": 1,
     "deliveryWeeks": "4-5"
   },
@@ -511,9 +491,7 @@
     "status": "Disponible",
     "origin": "Europe",
     "featured": false,
-    "images": [
-      "/images/vehicles/dacia-sandero-stepway-tce-110hp/1.webp"
-    ],
+    "images": [],
     "availability": 1,
     "deliveryWeeks": "3-4"
   },
@@ -533,9 +511,7 @@
     "status": "Disponible",
     "origin": "Europe",
     "featured": false,
-    "images": [
-      "/images/vehicles/fiat-ducato-furgon-140hp/1.webp"
-    ],
+    "images": [],
     "availability": 1,
     "deliveryWeeks": "4-6"
   },
@@ -555,9 +531,7 @@
     "status": "Disponible",
     "origin": "Europe",
     "featured": false,
-    "images": [
-      "/images/vehicles/fiat-ulysse-180hp-automatic/1.webp"
-    ],
+    "images": [],
     "availability": 1,
     "deliveryWeeks": "5-7"
   },
@@ -577,9 +551,7 @@
     "status": "Disponible",
     "origin": "Europe",
     "featured": false,
-    "images": [
-      "/images/vehicles/mg-zs-hybrid-197hp/1.webp"
-    ],
+    "images": [],
     "availability": 1,
     "deliveryWeeks": "4-5"
   },
@@ -599,9 +571,7 @@
     "status": "Disponible",
     "origin": "Europe",
     "featured": false,
-    "images": [
-      "/images/vehicles/nissan-qq-digt-158hp/1.webp"
-    ],
+    "images": [],
     "availability": 1,
     "deliveryWeeks": "4-6"
   },
@@ -621,9 +591,7 @@
     "status": "Disponible",
     "origin": "Europe",
     "featured": false,
-    "images": [
-      "/images/vehicles/nissan-xtrail-vc-t-mhev/1.webp"
-    ],
+    "images": [],
     "availability": 1,
     "deliveryWeeks": "4-6"
   },
@@ -643,9 +611,7 @@
     "status": "Disponible",
     "origin": "Europe",
     "featured": false,
-    "images": [
-      "/images/vehicles/renault-captur-techno-etech-160hp-2/1.webp"
-    ],
+    "images": [],
     "availability": 1,
     "deliveryWeeks": "4-6"
   },
@@ -665,9 +631,7 @@
     "status": "Disponible",
     "origin": "Europe",
     "featured": false,
-    "images": [
-      "/images/vehicles/renault-captur-techno-etech-160hp-3/1.webp"
-    ],
+    "images": [],
     "availability": 1,
     "deliveryWeeks": "4-6"
   },
@@ -687,9 +651,7 @@
     "status": "Disponible",
     "origin": "Europe",
     "featured": false,
-    "images": [
-      "/images/vehicles/renault-captur-techno-etech-160hp-4/1.webp"
-    ],
+    "images": [],
     "availability": 1,
     "deliveryWeeks": "4-6"
   },
@@ -709,9 +671,7 @@
     "status": "Disponible",
     "origin": "Europe",
     "featured": false,
-    "images": [
-      "/images/vehicles/renault-captur-techno-tce-115hp/1.webp"
-    ],
+    "images": [],
     "availability": 1,
     "deliveryWeeks": "3-5"
   },
@@ -731,9 +691,7 @@
     "status": "Disponible",
     "origin": "Europe",
     "featured": false,
-    "images": [
-      "/images/vehicles/renault-symbioz-etech-160hp/1.webp"
-    ],
+    "images": [],
     "availability": 1,
     "deliveryWeeks": "4-6"
   },
@@ -753,9 +711,7 @@
     "status": "Disponible",
     "origin": "Europe",
     "featured": false,
-    "images": [
-      "/images/vehicles/renault-symbioz-etech-160hp-2/1.webp"
-    ],
+    "images": [],
     "availability": 1,
     "deliveryWeeks": "4-6"
   }
