@@ -1,5 +1,31 @@
 [
   {
+    "id": "renault-captur-160hp",
+    "make": "Renault",
+    "model": "Captur",
+    "year": 2024,
+    "fuel": "Hybrid",
+    "price": 27873,
+    "featured": true,
+    "featuredOrder": 4,
+    "images": [],
+    "mileage": 0,
+    "transmission": ""
+  },
+  {
+    "id": "kia-sportage-150hp",
+    "make": "Kia",
+    "model": "Sportage",
+    "year": 2024,
+    "fuel": "Petrol",
+    "price": 30457,
+    "featured": true,
+    "featuredOrder": 0,
+    "images": [],
+    "mileage": 0,
+    "transmission": ""
+  },
+  {
     "id": "byd-seal-u-dm-i-boost-18-3-kwh-218hp",
     "make": "BYD",
     "model": "Seal U DM-i",
@@ -12,7 +38,7 @@
     "priceNote": "TVA incluse - hors frais immatriculation",
     "status": "Disponible",
     "featured": true,
-    "featuredOrder": -1,
+    "featuredOrder": 5,
     "origin": "Europe",
     "description": "Le BYD Seal U DM-i est le meilleur-vendeur de la marque chinoise en France. Ce SUV hybride rechargeable offre une motorisation électrique dominante (197 hp) assistée par un moteur thermique 4-cylindres qui fonctionne essentiellement comme générateur. À faible vitesse, son silence et son confort de suspension impressionnent, tandis que l'écran pivotant et la batterie 18.3 kWh garantissent une autonomie électrique intéressante en usage quotidien. Livraison : 4-6 semaines.",
     "colors": [
@@ -46,7 +72,7 @@
     "priceNote": "TVA incluse - hors frais immatriculation",
     "status": "Disponible",
     "featured": true,
-    "featuredOrder": 0,
+    "featuredOrder": 1,
     "origin": "Europe",
     "description": "Le Dacia Bigster 1.8 Hybrid 155 offre un excellent rapport équipement-prix dans le segment SUV compact. Son moteur hybride 1.8 associe puissance (155 ch) et consommation modérée, tandis que la transmission automatique assure souplesse et agrément. Spacieux et pratique, le Bigster séduit les familles en quête de véhicule robuste et économe. Livraison : 3-5 semaines.",
     "colors": [
@@ -71,7 +97,7 @@
     "priceNote": "TVA incluse - hors frais immatriculation",
     "status": "Disponible",
     "featured": true,
-    "featuredOrder": 1,
+    "featuredOrder": 2,
     "origin": "Europe",
     "description": "Le Dacia Bigster Journey 1.8 Hybrid monte en équipement et en prestations. Avec le même moteur 155 ch très efficace, cette finition ajoute des éléments de confort et de technologie pour un prix justifié. Idéal pour ceux recherchant plus de raffinement sans compromis sur l'économie. Livraison : 3-5 semaines.",
     "colors": [
@@ -96,7 +122,7 @@
     "priceNote": "TVA incluse - hors frais immatriculation",
     "status": "Disponible",
     "featured": true,
-    "featuredOrder": 2,
+    "featuredOrder": 3,
     "origin": "Europe",
     "description": "Le Dacia Bigster Extreme représente le sommet de la gamme hybride 1.8. Avec tous les équipements de série et la meilleure finition disponible, cette version séduira les clients exigeants en termes de confort et de technologie, tout en conservant l'excellent rapport qualité-prix signature Dacia. Livraison : 3-5 semaines.",
     "colors": [
