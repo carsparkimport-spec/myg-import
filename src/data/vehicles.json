@@ -848,5 +848,86 @@
       "Batterie 1,4 kWh",
       "Consommation 4,9 L/100km"
     ]
+  },
+  {
+    "id": "audi-tt-rs",
+    "make": "Audi",
+    "model": "TT RS 2.5 TFSI 400ch quattro S tronic",
+    "status": "Vendu",
+    "origin": "Europe",
+    "year": 2022,
+    "mileage": 32000,
+    "fuel": "Essence",
+    "transmission": "S tronic",
+    "price": 55490,
+    "priceNote": "Pour la France : malus de 11 785 € à ajouter, soit 67 275 € + carte grise (28CV × prix du cheval de la région). Sous réserve d'erreurs.",
+    "description": "Audi TT RS 2.5 TFSI 400ch quattro S tronic – Gris Nardo verni. Mise en circulation 07/2022, 32 000 km. Animée par le mythique 5 cylindres 2.5 TFSI associé à la boîte S tronic et à la transmission intégrale quattro. Stage 1 réalisé chez BR Performance à 18 000 km pour une puissance de 472 ch (optimisation réversible). Entretien à jour réalisé chez Audi, factures disponibles sur demande.",
+    "images": [
+      "/images/vehicles/audi-tt-rs/vendu.webp",
+      "/images/vehicles/audi-tt-rs/1.webp",
+      "/images/vehicles/audi-tt-rs/2.webp",
+      "/images/vehicles/audi-tt-rs/3.webp",
+      "/images/vehicles/audi-tt-rs/4.webp",
+      "/images/vehicles/audi-tt-rs/5.webp",
+      "/images/vehicles/audi-tt-rs/6.webp",
+      "/images/vehicles/audi-tt-rs/7.webp",
+      "/images/vehicles/audi-tt-rs/8.webp",
+      "/images/vehicles/audi-tt-rs/9.webp",
+      "/images/vehicles/audi-tt-rs/10.webp",
+      "/images/vehicles/audi-tt-rs/11.webp"
+    ],
+    "details": {
+      "Moteur": "2.5 TFSI 5 cylindres – 400ch (472ch après Stage 1 BR Performance)",
+      "Boîte": "S tronic 7 rapports",
+      "Transmission": "quattro (intégrale)",
+      "Année": "07/2022",
+      "Coloris": "Gris Nardo verni",
+      "Kilométrage": "32 000 km",
+      "Équipements": "Pack Black Gloss extérieur; Insert aluminium race; Navigation MMI Plus avec MMI Touch; Interface Bluetooth; Audi Virtual Cockpit avec affichages Sport TT RS; Audi Connect; Caméra de recul; Bang & Olufsen Sound System; Audi Phone Box – chargeur induction / USB / AUX; Sellerie cuir & alcantara embossé RS Noir; Phares Audi Matrix LED avec clignotants dynamiques avant et arrière; Assistant de feux de route; Sorties d'échappement Sport RS + modification homologuée HJS Downpipe ECE avec système à valves; Train de pneus hiver avec jantes; Train de pneus été avec jantes Audi aluminium coulé style polygone 5 bras 19 pouces; Volant d'origine disponible",
+      "Stage 1": "BR Performance à 18 000 km – 472 ch – optimisation réversible (ECU + boîte S tronic)",
+      "Entretien": "À jour, réalisé chez Audi (factures disponibles sur demande)"
+    },
+    "featured": false
+  },
+  {
+    "id": "porsche-cayman-s-987-2",
+    "make": "Porsche",
+    "model": "Cayman S 987.2",
+    "status": "Vendu",
+    "origin": "Japon",
+    "year": 2009,
+    "mileage": 58900,
+    "fuel": "Essence",
+    "transmission": "PDK 7 rapports",
+    "price": 42500,
+    "description": "Porsche Cayman S phase 2 (987.2) – Import Japon. Dossier complet sur demande.",
+    "images": [
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/vendu.webp",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/1.webp",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/2.webp",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/3.webp",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/4.webp",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/5.webp",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/6.webp",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/7.webp",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/8.webp",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/9.webp",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/10.webp",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/11.webp",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/12.webp",
+      "/images/vehicles/Porsche%20Cayman%20S%20987.2/13.webp"
+    ],
+    "details": {
+      "Origine": "Import Japon",
+      "Moteur": "3.4L",
+      "Boîte": "Automatique PDK 7 rapports",
+      "Année": 2009,
+      "1re immat.": "21/04/2009",
+      "Options": "Pack sport chrono; Porsche Active Suspension Management (PASM); Phares bi-xénon directionnels + lave-phares; Peinture métallisée Noir Basalte; Climatisation automatique; Sièges chauffants; Intérieur cuir Alcantara Beige Sable",
+      "Entretien": "Gros entretien effectué récemment",
+      "Pneus": "Neufs avec équilibrage et géométrie",
+      "Garantie": "12 mois, extension possible"
+    },
+    "featured": false
   }
 ]
