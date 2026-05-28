@@ -11,6 +11,7 @@ interface Vehicle {
   id: string;
   make: string;
   model: string;
+  trim?: string;
   year: number;
   mileage: number;
   transmission: string;
@@ -135,6 +136,13 @@ export default function VehicleDetailPage({ vehicle }: Props) {
 
       {/* ── MAIN CONTENT ── */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-8">
+
+        {/* Trim badge */}
+        {vehicle.trim && (
+          <p className="text-sm font-bold tracking-widest uppercase text-red-400 mb-6">
+            — {vehicle.trim}
+          </p>
+        )}
 
         {/* Thumbnails */}
         {images.length > 1 && (

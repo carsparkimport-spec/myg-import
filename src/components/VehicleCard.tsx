@@ -6,6 +6,7 @@ interface Vehicle {
   id: string;
   make: string;
   model: string;
+  trim?: string;
   year: number;
   mileage: number;
   transmission: string;
@@ -21,7 +22,7 @@ interface VehicleCardProps {
 }
 
 const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle, basePath = '/voiture' }) => {
-  const { id, make, model, year, mileage, transmission, price, images, status, origin } = vehicle;
+  const { id, make, model, trim, year, mileage, transmission, price, images, status, origin } = vehicle;
   const { locale, t } = useI18n();
   const imageUrl = (images && images[0]) || '/vercel.svg';
   const localeTag = locale === 'fr' ? 'fr-FR' : 'en-GB';
@@ -56,6 +57,7 @@ const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle, basePath = '/voiture
       {/* Info */}
       <div className="p-5 flex flex-col flex-grow gap-1">
         <h3 className="text-lg font-bold text-white leading-tight">{make} {model}</h3>
+        {trim && <p className="text-xs text-gray-400 font-medium tracking-wide -mt-0.5">{trim}</p>}
         <p className="text-xl font-extrabold text-white font-mono">{(price ?? 0).toLocaleString(localeTag)} €</p>
         <div className="text-sm text-gray-400 space-y-0.5 mt-1 flex-grow">
           <p>{year} · {(mileage ?? 0).toLocaleString(localeTag)} km</p>
