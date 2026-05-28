@@ -20,9 +20,6 @@ interface Vehicle {
 }
 
 const vehicles = vehiclesData as Vehicle[];
-const featuredEU = vehicles
-  .filter(v => v.origin === 'Europe')
-  .slice(0, 3);
 
 const features = [
   {
@@ -48,6 +45,9 @@ const features = [
 ];
 
 export default function EuropeLanding() {
+  const featuredEU = vehicles
+    .filter(v => v.origin === 'Europe')
+    .slice(0, 3);
   return (
     <Layout title="Import Europe - MYG Import">
 

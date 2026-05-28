@@ -21,13 +21,13 @@ interface Vehicle {
 }
 
 const vehicles: Vehicle[] = vehiclesData as Vehicle[];
-const featuredVehicles = vehicles
-  .filter(v => v.featured)
-  .sort((a, b) => (a.featuredOrder ?? 9999) - (b.featuredOrder ?? 9999))
-  .slice(0, 3);
 
 export default function JapanLanding() {
   const { t } = useI18n();
+  const featuredVehicles = vehicles
+    .filter(v => v.featured)
+    .sort((a, b) => (a.featuredOrder ?? 9999) - (b.featuredOrder ?? 9999))
+    .slice(0, 3);
   return (
     <Layout title="MYG Import - Accueil | Powered by Passion">
 

@@ -24,14 +24,14 @@ interface Vehicle {
   featuredOrder?: number;
 }
 
-const featured = (vehiclesData as unknown as Vehicle[])
-  .filter(v => v.featured)
-  .sort((a, b) => (a.featuredOrder ?? 99) - (b.featuredOrder ?? 99));
-
 export default function VerticalSelector() {
   const router = useRouter();
   const { t } = useI18n();
   const [hoveredSide, setHoveredSide] = useState<'jp' | 'eu' | null>(null);
+
+  const featured = (vehiclesData as unknown as Vehicle[])
+    .filter(v => v.featured)
+    .sort((a, b) => (a.featuredOrder ?? 99) - (b.featuredOrder ?? 99));
 
   const choose = useCallback((vertical: 'jp' | 'eu') => {
     const days = 180;
