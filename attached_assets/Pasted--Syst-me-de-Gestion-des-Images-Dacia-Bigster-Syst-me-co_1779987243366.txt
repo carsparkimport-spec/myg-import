@@ -1,0 +1,419 @@
+# 📸 Système de Gestion des Images - Dacia Bigster
+
+Système complet pour télécharger, organiser et publier les images Dacia Bigster sur votre site myg-import.com.
+
+## 🎯 Objectif
+
+Importer les images haute résolution (HD) du Dacia Bigster depuis media.dacia.com, les organiser par variante (Journey, Extreme, Expression), générer des versions SD, et créer les fiches produit pour le site web.
+
+## 📋 Table des Matières
+
+1. [Prérequis](#prérequis)
+2. [Étapes Rapides](#étapes-rapides)
+3. [Scripts Python Disponibles](#scripts-python-disponibles)
+4. [Structure des Dossiers](#structure-des-dossiers)
+5. [Workflow Détaillé](#workflow-détaillé)
+6. [Troubleshooting](#troubleshooting)
+
+## ✅ Prérequis
+
+- Python 3.7+
+- Bibliothèque PIL/Pillow: `pip install Pillow`
+- Connexion internet stable
+- ~1-2 GB d'espace disque
+- Navigateur web (Chrome, Firefox, Safari)
+
+### Installation des Dépendances
+
+```bash
+pip install Pillow
+```
+
+## ⚡ Étapes Rapides
+
+### 1️⃣ Télécharger les Images
+
+```bash
+# Visitez https://media.dacia.com/all-new-bigster-dacia-elevated-essentials/?lang=eng
+# Cliquez sur "DOWNLOAD ALL ASSETS"
+# Acceptez les conditions
+# Sélectionnez "DOWNLOAD HD"
+# Les images seront téléchargées en ZIP
+```
+
+### 2️⃣ Organiser par Variante
+
+```bash
+# Placer le ZIP extraits dans un dossier temporaire
+python3 organiser_images.py /chemin/vers/images/extraites
+```
+
+### 3️⃣ Générer les Versions SD
+
+```bash
+python3 redimensionner_images.py
+```
+
+### 4️⃣ Vérifier la Qualité
+
+```bash
+python3 verifier_images.py
+```
+
+### 5️⃣ Générer les Fiches Produit
+
+```bash
+python3 generer_fiches_produit.py
+```
+
+### 6️⃣ Publier sur le Site
+
+```bash
+# Copier les images et descriptions sur myg-import.com
+# Voir ci-dessous pour détails
+```
+
+## 🐍 Scripts Python Disponibles
+
+### `organiser_images.py`
+**Fonction:** Trie automatiquement les images extraites par variante  
+**Usage:**
+```bash
+python3 organiser_images.py [chemin/vers/source]
+```
+**Résultat:** Images organisées dans structure `Journey/HD`, `Extreme/HD`, `Expression/HD`
+
+### `redimensionner_images.py`
+**Fonction:** Convertit images HD en versions SD (1024x768)  
+**Usage:**
+```bash
+python3 redimensionner_images.py
+```
+**Résultat:** Images SD dans dossiers correspondants `Journey/SD`, etc.
+
+### `verifier_images.py`
+**Fonction:** Contrôle qualité, résolutions et formats  
+**Usage:**
+```bash
+python3 verifier_images.py
+```
+**Résultat:** Rapport `rapport_qualite.json` avec détails
+
+### `generer_fiches_produit.py`
+**Fonction:** Crée fiches HTML, JSON et texte pour le site  
+**Usage:**
+```bash
+python3 generer_fiches_produit.py
+```
+**Résultat:** Fichiers dans dossier `Fiches_Produit/`
+
+## 📁 Structure des Dossiers
+
+```
+/Users/mathieuguilloux/Documents/Claude/Projects/CAR SUPPLIER/
+│
+├── Dacia_Bigster/                    ← Dossier principal
+│   ├── Journey/
+│   │   ├── HD/                       ← Images haute résolution
+│   │   │   ├── dacia_bigster_journey_01.jpg
+│   │   │   ├── dacia_bigster_journey_02.jpg
+│   │   │   └── ... (8-10 images)
+│   │   └── SD/                       ← Images standard definition
+│   │       ├── dacia_bigster_journey_01.jpg
+│   │       └── ... (mêmes images, 1024x768)
+│   │
+│   ├── Extreme/
+│   │   ├── HD/                       ← 8-10 images 4x4, premium
+│   │   └── SD/
+│   │
+│   └── Expression/
+│       ├── HD/                       ← 8-10 images entrée gamme
+│       └── SD/
+│
+├── Fiches_Produit/                   ← Fiches générées
+│   ├── fiche_journey.html
+│   ├── fiche_journey.json
+│   ├── texte_site_journey.txt
+│   ├── fiche_extreme.html
+│   └── ... (autres variantes)
+│
+├── WORKFLOW_IMAGES_DACIA.md          ← Guide détaillé (vous êtes ici)
+├── organiser_images.py               ← Script de tri
+├── redimensionner_images.py          ← Script de conversion
+├── verifier_images.py                ← Script de QA
+├── generer_fiches_produit.py         ← Script de génération
+└── README_IMAGES_DACIA.md            ← Ce fichier
+```
+
+## 🔧 Workflow Détaillé
+
+### Étape 1: Télécharger les Images
+
+1. Accédez à: https://media.dacia.com/all-new-bigster-dacia-elevated-essentials/?lang=eng
+2. Descendez au bouton "DOWNLOAD ALL ASSETS"
+3. Cliquez sur le bouton
+4. Une modal apparaît avec les conditions d'utilisation
+5. Cochez "I have read and accept the terms of use and download"
+6. Cliquez sur "DOWNLOAD HD" (pas "DOWNLOAD LD")
+7. Un fichier ZIP télécharge: `Bigster-All-medias-HD.zip` (environ 800 MB)
+8. Attendez la fin du téléchargement
+
+### Étape 2: Extraire le ZIP
+
+```bash
+# Macintosh/Linux
+unzip -d ~/Downloads/bigster_temp ~/Downloads/Bigster-All-medias-HD.zip
+
+# Windows
+# Double-cliquez sur le ZIP et extrayez
+```
+
+### Étape 3: Organiser par Variante
+
+```bash
+python3 organiser_images.py ~/Downloads/bigster_temp
+```
+
+Le script va:
+- Analyser chaque nom de fichier
+- Identifier la variante (JOURNEY, EXTREME, EXPRESSION)
+- Copier dans le bon dossier HD
+
+**Résultat attendu:**
+```
+✅ Journey       45 images
+⚠️  Non classées  3 images
+📈 Total         48 images
+```
+
+### Étape 4: Sélectionner les 8 Meilleures Images par Variante
+
+**Pour chaque variante, sélectionner:**
+
+**Journey (Hybrid 155, Indigo Blue):**
+1. Vue de face studio (fond blanc)
+2. Profile gauche
+3. Profile droit
+4. Vue arrière
+5. Tableau de bord
+6. Sièges intérieurs
+7. Photo dynamique sur route
+8. Parking/environnement vie quotidienne
+
+**Extreme (TCe 130 4x4, Schiste Grey):**
+1. Vue tout-terrain (4x4 action)
+2. Franchissement/off-road
+3. Profile général
+4. Vue arrière
+5. Intérieur cuir
+6. Finitions premium/jantes
+7. Tableau de bord avancé
+8. Photo lifestyle haute gamme
+
+**Expression (TCe 100, Entrée de gamme):**
+1. Vue frontale design épuré
+2. Profile
+3. Arrière fonctionnel
+4. Intérieur pratique
+5. Équipements essentiels
+6. Usage quotidien/famille
+7. Vue 3/4
+8. Détail finition
+
+**⚠️ IMPORTANT:** Supprimer les autres images pour ne garder que 8-10 par variante  
+(Cela optimise l'espace disque et facilite la gestion)
+
+### Étape 5: Générer Versions SD
+
+```bash
+python3 redimensionner_images.py
+```
+
+Convertit automatiquement:
+- Dimensions: Les images HD sont redimensionnées en 1024x768
+- Format: JPEG, qualité 85%
+- Destinat ion: Dossiers `HD/` → `SD/`
+
+**Résultat:**
+```
+📊 RÉSUMÉ DES OPÉRATIONS
+Journey         8 images
+Extreme         8 images
+Expression      8 images
+✓ Redimensionnement complété avec succès!
+```
+
+### Étape 6: Vérifier Qualité
+
+```bash
+python3 verifier_images.py
+```
+
+Vérifie:
+- ✅ Résolution HD: min 1920x1440
+- ✅ Résolution SD: ~1024x768
+- ✅ Format: JPEG uniquement
+- ✅ Absence de corruptions
+
+**Rapport généré:** `rapport_qualite.json`
+
+### Étape 7: Générer Fiches Produit
+
+```bash
+python3 generer_fiches_produit.py
+```
+
+Crée 3 fiches (HTML, JSON, TXT) pour chaque variante:
+- Description détaillée
+- Spécifications techniques
+- Équipements inclus
+- Prix avec marge (+1500€)
+- Délai de livraison
+
+**Résultats:** Dossier `Fiches_Produit/`
+
+### Étape 8: Publier sur myg-import.com
+
+1. **Connectez-vous** à l'administration du site
+2. **Créez 3 listings** (un par variante)
+3. **Pour chaque listing:**
+   - Titre: Copier depuis `Fiches_Produit/texte_site_*.txt`
+   - Description: Copier depuis la fiche HTML/texte
+   - Prix: Voir dans `fiche_*.json` (base + 1500€)
+   - Images: Uploader les 8 images HD
+   - Délai: "4-5 semaines"
+   - Stock: "Sur commande"
+4. **Publier** les listings
+
+## 📊 Format des Noms de Fichiers
+
+Standardiser les noms pour faciliter la gestion:
+
+```
+dacia_bigster_[variante]_[type]_[numéro].jpg
+
+Exemples:
+- dacia_bigster_journey_studio_01.jpg    (Vue studio)
+- dacia_bigster_journey_interior_01.jpg  (Intérieur)
+- dacia_bigster_extreme_4x4_01.jpg       (4x4 action)
+- dacia_bigster_expression_general_01.jpg (Vue générale)
+```
+
+## 🐛 Troubleshooting
+
+### ❓ Images ne téléchargent pas
+
+**Symptôme:** Le ZIP ne télécharge pas après clic sur "DOWNLOAD HD"
+
+**Solutions:**
+1. Vérifier la connexion internet (test: ping google.com)
+2. Essayer un autre navigateur (Chrome, Firefox)
+3. Accepter explicitement les conditions avec la checkbox
+4. Essayer depuis un autre appareil si possible
+5. Utiliser VPN si problème réseau
+
+### ❓ Les images téléchargées sont en basse résolution
+
+**Symptôme:** Les images sont trop petites (< 1920x1440)
+
+**Solutions:**
+1. S'assurer d'avoir cliqué sur "DOWNLOAD HD" (pas "DOWNLOAD LD")
+2. Vérifier dans les propriétés du fichier: dimensions réelles
+3. Re-télécharger depuis le site
+
+### ❓ Script organiser_images.py ne trouve pas les images
+
+**Symptôme:** "0 images trouvées"
+
+**Solutions:**
+```bash
+# Vérifier que le dossier source existe
+ls -la ~/Downloads/bigster_temp/
+
+# Vérifier la présence de fichiers jpg
+find ~/Downloads/bigster_temp/ -name "*.jpg" | wc -l
+
+# Utiliser le chemin absolu complet
+python3 organiser_images.py /Users/mathieuguilloux/Downloads/bigster_temp
+```
+
+### ❓ Erreur PIL/Pillow lors du redimensionnement
+
+**Symptôme:** "No module named 'PIL'"
+
+**Solutions:**
+```bash
+# Installer Pillow
+pip install Pillow
+
+# Ou spécifier la version Python
+python3 -m pip install Pillow
+
+# Vérifier l'installation
+python3 -c "from PIL import Image; print('OK')"
+```
+
+### ❓ Les images redimensionnées ne font pas 1024x768
+
+**Symptôme:** Rapport qualité montre des dimensions différentes
+
+**Solutions:**
+1. Relancer le redimensionnement: certaines images peuvent avoir échoué
+2. Vérifier dans `rapport_qualite.json` quelles images posent problème
+3. Les images problématiques peuvent être re-traitées manuellement
+
+### ❓ Marge de 1500€ incorrect
+
+**Symptôme:** Prix final ne correspond pas
+
+**Solutions:**
+1. Éditer `generer_fiches_produit.py`
+2. Modifier la clé `'prix_base'` pour chaque variante
+3. Re-exécuter le script
+
+```python
+'Journey': {
+    'prix_base': 28500,  # ← Modifier ici
+    'marge': 1500,
+    ...
+}
+```
+
+## 📞 Support & Questions
+
+En cas de problème:
+1. Vérifier ce guide (sections Troubleshooting)
+2. Consulter les logs générés (`.json` files)
+3. Re-télécharger si corrupted
+4. Contacter support media.dacia.com pour accès
+
+## ✨ Conseils
+
+- ✅ **Backup:** Garder une copie des images originales HD
+- ✅ **Noms:** Standardiser les noms de fichiers dès le départ
+- ✅ **Marge:** Vérifier que la marge de 1500€ est ajoutée correctement
+- ✅ **Délai:** Toujours spécifier "4-5 semaines" pour les commandes
+- ✅ **Images:** Tester l'affichage sur le site avant publication
+- ✅ **SEO:** Ajouter alt-text et descriptions détaillées
+
+## 📝 Checklist Finale
+
+Avant de publier sur le site:
+
+- [ ] ✅ Images HD téléchargées et extraites
+- [ ] ✅ Images organisées par variante
+- [ ] ✅ 8-10 meilleures images par variante sélectionnées
+- [ ] ✅ Versions SD générées (1024x768)
+- [ ] ✅ Vérification qualité passée
+- [ ] ✅ Fiches produit générées
+- [ ] ✅ Prix vérifiés (+1500€ de marge)
+- [ ] ✅ Délai de livraison indiqué (4-5 semaines)
+- [ ] ✅ Descriptions copiées sur le site
+- [ ] ✅ Images uploadées sur le site
+- [ ] ✅ Listings publiés et testés
+
+---
+
+**Dernière mise à jour:** 28/05/2026  
+**Version:** 1.0  
+**Auteur:** Claude Assistantix
