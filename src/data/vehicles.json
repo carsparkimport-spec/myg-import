@@ -335,7 +335,25 @@
       "height": "1.569 mm",
       "co2Emissions": "105-110 g/km",
       "fuelConsumption": "4,6-5,0 L/100km"
-    }
+    },
+    "equipment": [
+      "Moteur E-Tech Full Hybrid 160 ch",
+      "Transmission automatique DHT",
+      "OpenR Link avec Google intégré",
+      "Écran multimédia 8-10 pouces",
+      "Navigation GPS",
+      "Apple CarPlay et Android Auto",
+      "Climatisation automatique",
+      "Sièges avant chauffants",
+      "Volant cuir chauffant",
+      "Jantes alliage 18 pouces",
+      "Caméra de recul 360°",
+      "Capteurs de stationnement",
+      "29 systèmes d'aide à la conduite",
+      "Freinage d'urgence autonome",
+      "Batterie lithium-ion",
+      "Consommation 4,6-5,0 L/100km"
+    ]
   },
   {
     "id": "kia-sportage-lx-plus-tgdi-150hp",
@@ -413,7 +431,30 @@
       "co2Emissions": "148-156 g/km",
       "fuelConsumption": "6,5-7,0 L/100km",
       "wheelSize": "19 pouces alliage"
-    }
+    },
+    "equipment": [
+      "Moteur T-GDI 150 ch turbo + MHEV",
+      "Transmission DCT7 double embrayage",
+      "Écran tactile 12,3 pouces",
+      "Système UVO Connect",
+      "Navigation Google intégrée",
+      "Spotify et applications natives",
+      "Apple CarPlay et Android Auto sans fil",
+      "Climatisation trizone",
+      "Sièges chauffants et ventilants",
+      "Volant cuir chauffant",
+      "Jantes alliage 19 pouces",
+      "Toit panoramique coulissant",
+      "Caméra 360°",
+      "Moniteur d'angle mort",
+      "Régulateur adaptatif",
+      "Freinage d'urgence autonome",
+      "10 airbags",
+      "64 couleurs éclairage ambiant",
+      "Recharge sans fil Qi",
+      "Système audio Bose",
+      "Consommation 6,5-7,0 L/100km"
+    ]
   },
   {
     "id": "dacia-duster-4x2-expression-tce-140hp-mhev",
@@ -453,7 +494,21 @@
     "featured": false,
     "images": [],
     "availability": 1,
-    "deliveryWeeks": "4-5"
+    "deliveryWeeks": "4-5",
+    "equipment": [
+      "Moteur ECO-G 100 ch bi-carburant LPG/Essence",
+      "Transmission manuelle 6 rapports",
+      "7 places modulables",
+      "Écran 8 pouces",
+      "Apple CarPlay et Android Auto",
+      "Climatisation manuelle",
+      "Sièges 2e et 3e rangée repliables",
+      "Jantes acier 16 pouces",
+      "Coffre modulable jusqu'à 1.800 L",
+      "Système LPG économique",
+      "Autonomie étendue",
+      "Consommation 7,5 L/100km (essence)"
+    ]
   },
   {
     "id": "dacia-sandero-stepway-expression-tce-110hp",
@@ -473,7 +528,22 @@
     "featured": false,
     "images": [],
     "availability": 1,
-    "deliveryWeeks": "3-4"
+    "deliveryWeeks": "3-4",
+    "equipment": [
+      "Moteur TCe 110 ch turbo",
+      "Transmission manuelle 6 rapports",
+      "Écran 7 pouces numérique",
+      "Apple CarPlay et Android Auto",
+      "Climatisation manuelle",
+      "Barres de toit modulables",
+      "Jantes alliage 17 pouces",
+      "Rétroviseurs chauffants",
+      "Coffre modulable 420 L",
+      "Sièges arrière repliables",
+      "Programme Extended Grip",
+      "Freinage d'urgence automatique",
+      "Consommation 6,0 L/100km"
+    ]
   },
   {
     "id": "mg-zs-luxury-15l-hybrid-197hp-at",
@@ -493,12 +563,29 @@
     "featured": false,
     "images": [],
     "availability": 1,
-    "deliveryWeeks": "4-5"
+    "deliveryWeeks": "4-5",
+    "equipment": [
+      "Moteur Hybrid+ 1.5L 197 ch",
+      "Transmission CVT automatique",
+      "Écran tactile 8 pouces",
+      "Navigation GPS",
+      "Bluetooth et connectivité",
+      "Apple CarPlay et Android Auto",
+      "Climatisation automatique",
+      "Sièges partiellement cuir",
+      "Jantes alliage 18 pouces",
+      "Toit panoramique teinté",
+      "Caméra de recul",
+      "Capteurs de stationnement",
+      "Freinage d'urgence automatique",
+      "Systèmes d'aide à la conduite",
+      "Consommation 5,5 L/100km"
+    ]
   },
   {
     "id": "nissan-qq-nconnecta-13-digt-158hp-xtronic",
     "make": "Nissan",
-    "model": "QQ",
+    "model": "Qashqai",
     "trim": "N-Connecta 1.3 DIG-T 158HP X-Tronic",
     "year": 2024,
     "mileage": 0,
@@ -513,7 +600,23 @@
     "featured": false,
     "images": [],
     "availability": 1,
-    "deliveryWeeks": "4-6"
+    "deliveryWeeks": "4-6",
+    "equipment": [
+      "Moteur DIG-T 158 ch turbo + MHEV",
+      "Transmission CVT X-Tronic",
+      "Écran tactile 12,3 pouces",
+      "Système NissanConnect",
+      "Navigation Google intégrée",
+      "Apple CarPlay et Android Auto",
+      "Climatisation automatique",
+      "Jantes alliage 18 pouces",
+      "Caméra 360° (4 caméras)",
+      "Capteurs de stationnement",
+      "Recharge sans fil 15W",
+      "Freinage d'urgence automatique",
+      "Contrôle de trajectoire actif",
+      "Consommation 6,5 L/100km"
+    ]
   },
   {
     "id": "renault-captur-techno-etech-160hp-at-2",
@@ -533,7 +636,25 @@
     "featured": false,
     "images": [],
     "availability": 1,
-    "deliveryWeeks": "4-6"
+    "deliveryWeeks": "4-6",
+    "equipment": [
+      "Moteur E-Tech Full Hybrid 160 ch",
+      "Transmission automatique DHT",
+      "OpenR Link avec Google intégré",
+      "Écran multimédia 8-10 pouces",
+      "Navigation GPS",
+      "Apple CarPlay et Android Auto",
+      "Climatisation automatique",
+      "Sièges avant chauffants",
+      "Volant cuir chauffant",
+      "Jantes alliage 18 pouces",
+      "Caméra de recul 360°",
+      "Capteurs de stationnement",
+      "29 systèmes d'aide à la conduite",
+      "Freinage d'urgence autonome",
+      "Batterie lithium-ion",
+      "Consommation 4,6-5,0 L/100km"
+    ]
   },
   {
     "id": "renault-captur-techno-etech-160hp-at-3",
@@ -553,7 +674,25 @@
     "featured": false,
     "images": [],
     "availability": 1,
-    "deliveryWeeks": "4-6"
+    "deliveryWeeks": "4-6",
+    "equipment": [
+      "Moteur E-Tech Full Hybrid 160 ch",
+      "Transmission automatique DHT",
+      "OpenR Link avec Google intégré",
+      "Écran multimédia 8-10 pouces",
+      "Navigation GPS",
+      "Apple CarPlay et Android Auto",
+      "Climatisation automatique",
+      "Sièges avant chauffants",
+      "Volant cuir chauffant",
+      "Jantes alliage 18 pouces",
+      "Caméra de recul 360°",
+      "Capteurs de stationnement",
+      "29 systèmes d'aide à la conduite",
+      "Freinage d'urgence autonome",
+      "Batterie lithium-ion",
+      "Consommation 4,6-5,0 L/100km"
+    ]
   },
   {
     "id": "renault-captur-techno-etech-160hp-at-4",
@@ -573,7 +712,25 @@
     "featured": false,
     "images": [],
     "availability": 1,
-    "deliveryWeeks": "4-6"
+    "deliveryWeeks": "4-6",
+    "equipment": [
+      "Moteur E-Tech Full Hybrid 160 ch",
+      "Transmission automatique DHT",
+      "OpenR Link avec Google intégré",
+      "Écran multimédia 8-10 pouces",
+      "Navigation GPS",
+      "Apple CarPlay et Android Auto",
+      "Climatisation automatique",
+      "Sièges avant chauffants",
+      "Volant cuir chauffant",
+      "Jantes alliage 18 pouces",
+      "Caméra de recul 360°",
+      "Capteurs de stationnement",
+      "29 systèmes d'aide à la conduite",
+      "Freinage d'urgence autonome",
+      "Batterie lithium-ion",
+      "Consommation 4,6-5,0 L/100km"
+    ]
   },
   {
     "id": "renault-captur-techno-tce-115hp",
@@ -593,7 +750,24 @@
     "featured": false,
     "images": [],
     "availability": 1,
-    "deliveryWeeks": "3-5"
+    "deliveryWeeks": "3-5",
+    "equipment": [
+      "Moteur TCe 115 ch",
+      "Transmission manuelle 6 rapports",
+      "OpenR Link avec Google intégré",
+      "Écran multimédia 8 pouces",
+      "Navigation GPS",
+      "Apple CarPlay et Android Auto",
+      "Climatisation automatique",
+      "Sièges avant chauffants",
+      "Volant cuir chauffant",
+      "Jantes alliage 18 pouces",
+      "Caméra de recul 360°",
+      "Capteurs de stationnement",
+      "Régulateur de vitesse adaptatif",
+      "Freinage d'urgence autonome",
+      "Consommation 6,5 L/100km"
+    ]
   },
   {
     "id": "renault-symbioz-techno-etech-full-hybrid-160hp-at",
@@ -613,7 +787,27 @@
     "featured": false,
     "images": [],
     "availability": 1,
-    "deliveryWeeks": "4-6"
+    "deliveryWeeks": "4-6",
+    "equipment": [
+      "Moteur E-Tech Full Hybrid 160 ch",
+      "Transmission automatique DHT",
+      "OpenR Link avec Google intégré",
+      "Écran multimédia 10,4 pouces",
+      "Navigation GPS",
+      "Apple CarPlay et Android Auto",
+      "Climatisation automatique trizone",
+      "Sièges avant chauffants",
+      "Volant cuir chauffant",
+      "Jantes alliage 18 pouces",
+      "Toit panoramique teinté",
+      "Caméra de recul 360°",
+      "Aide au parking arrière",
+      "Régulateur adaptatif",
+      "Freinage d'urgence automatique",
+      "Maintien de voie actif",
+      "Batterie 1,4 kWh",
+      "Consommation 4,9 L/100km"
+    ]
   },
   {
     "id": "renault-symbioz-techno-etech-full-hybrid-160hp-at-2",
@@ -633,6 +827,26 @@
     "featured": false,
     "images": [],
     "availability": 1,
-    "deliveryWeeks": "4-6"
+    "deliveryWeeks": "4-6",
+    "equipment": [
+      "Moteur E-Tech Full Hybrid 160 ch",
+      "Transmission automatique DHT",
+      "OpenR Link avec Google intégré",
+      "Écran multimédia 10,4 pouces",
+      "Navigation GPS",
+      "Apple CarPlay et Android Auto",
+      "Climatisation automatique trizone",
+      "Sièges avant chauffants",
+      "Volant cuir chauffant",
+      "Jantes alliage 18 pouces",
+      "Toit panoramique teinté",
+      "Caméra de recul 360°",
+      "Aide au parking arrière",
+      "Régulateur adaptatif",
+      "Freinage d'urgence automatique",
+      "Maintien de voie actif",
+      "Batterie 1,4 kWh",
+      "Consommation 4,9 L/100km"
+    ]
   }
 ]
