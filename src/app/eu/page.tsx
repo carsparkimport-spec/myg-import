@@ -3,6 +3,7 @@
 import Layout from '@/components/Layout';
 import Link from 'next/link';
 import VehicleCard from '@/components/VehicleCard';
+import ReviewsCarousel from '@/components/ReviewsCarousel';
 import vehiclesData from '@/data/vehicles.json';
 
 interface Vehicle {
@@ -120,6 +121,8 @@ export default function EuropeLanding() {
           </div>
         </div>
       </div>
+
+      <ReviewsCarousel />
 
     </Layout>
   );

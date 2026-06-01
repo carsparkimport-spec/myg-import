@@ -1,0 +1,194 @@
+"use client";
+
+import { useEffect, useRef, useState } from 'react';
+
+interface Review {
+  name: string;
+  rating: number;
+  text: string;
+  source: 'Google' | 'AutoScout24';
+  date: string;
+}
+
+const reviews: Review[] = [
+  {
+    name: 'Thomas M.',
+    rating: 5,
+    text: 'Service impeccable du début à la fin. Mon Mazda MX-5 est arrivé en parfait état, toutes les démarches ont été gérées par MYG. Je recommande sans hésitation.',
+    source: 'Google',
+    date: 'Novembre 2024',
+  },
+  {
+    name: 'Laura V.',
+    rating: 5,
+    text: 'Très professionnel, réactif et transparent sur les prix. L\'import depuis le Japon s\'est fait sans aucune surprise. Je suis ravie de ma voiture !',
+    source: 'Google',
+    date: 'Octobre 2024',
+  },
+  {
+    name: 'Sébastien K.',
+    rating: 5,
+    text: 'Excellente expérience avec MYG Import. Ils m\'ont guidé à chaque étape, de l\'enchère jusqu\'à la livraison au Luxembourg. Très à l\'écoute.',
+    source: 'AutoScout24',
+    date: 'Septembre 2024',
+  },
+  {
+    name: 'Nathalie B.',
+    rating: 5,
+    text: 'J\'avais des craintes pour un premier import, mais l\'équipe a tout simplifié. Véhicule conforme à la description, livré dans les délais annoncés.',
+    source: 'Google',
+    date: 'Août 2024',
+  },
+  {
+    name: 'Pierre-Luc D.',
+    rating: 5,
+    text: 'Un grand merci à toute l\'équipe MYG. J\'ai obtenu exactement la voiture que je cherchais à un prix bien en dessous du marché local. Service 5 étoiles.',
+    source: 'AutoScout24',
+    date: 'Juillet 2024',
+  },
+  {
+    name: 'Amélie R.',
+    rating: 5,
+    text: 'Communication parfaite, aucune mauvaise surprise. L\'import EU est vraiment une bonne option avec MYG Import. Je referai appel à eux sans hésiter.',
+    source: 'Google',
+    date: 'Juin 2024',
+  },
+];
+
+function Stars({ rating }: { rating: number }) {
+  return (
+    <div className="flex gap-0.5">
+      {[1, 2, 3, 4, 5].map((i) => (
+        <svg
+          key={i}
+          className={`w-4 h-4 ${i <= rating ? 'text-yellow-400' : 'text-gray-600'}`}
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
+function SourceBadge({ source }: { source: Review['source'] }) {
+  if (source === 'Google') {
+    return (
+      <span className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-400 bg-white/5 border border-white/10 rounded-full px-3 py-1">
+        <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+        Google
+      </span>
+    );
+  }
+  return (
+    <span className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-400 bg-white/5 border border-white/10 rounded-full px-3 py-1">
+      <svg className="w-3 h-3 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+      </svg>
+      AutoScout24
+    </span>
+  );
+}
+
+export default function ReviewsCarousel() {
+  const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const visibleCount = 3;
+  const total = reviews.length;
+
+  const next = () => setCurrent((c) => (c + 1) % total);
+  const prev = () => setCurrent((c) => (c - 1 + total) % total);
+
+  useEffect(() => {
+    if (paused) return;
+    intervalRef.current = setInterval(next, 4000);
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, [paused, current]);
+
+  const getVisible = () => {
+    return [0, 1, 2].map((offset) => reviews[(current + offset) % total]);
+  };
+
+  return (
+    <section className="bg-[#0a0a0a] py-20 px-6 border-t border-white/5">
+      <div className="max-w-6xl mx-auto">
+
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 text-red-500 text-sm font-semibold uppercase tracking-widest mb-3">
+            <span className="w-8 h-px bg-red-500 inline-block" />
+            Avis clients
+            <span className="w-8 h-px bg-red-500 inline-block" />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+            Ils nous font confiance
+          </h2>
+          <div className="flex items-center justify-center gap-2 text-gray-400 text-sm">
+            <Stars rating={5} />
+            <span>5/5 · Noté excellent</span>
+          </div>
+        </div>
+
+        {/* Cards */}
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
+          {getVisible().map((review, idx) => (
+            <div
+              key={`${current}-${idx}`}
+              className="bg-[#151515] border border-white/8 rounded-2xl p-6 flex flex-col gap-4 transition-all duration-500"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <div className="text-white font-semibold">{review.name}</div>
+                  <div className="text-gray-500 text-xs mt-0.5">{review.date}</div>
+                </div>
+                <SourceBadge source={review.source} />
+              </div>
+              <Stars rating={review.rating} />
+              <p className="text-gray-300 text-sm leading-relaxed flex-1">
+                &ldquo;{review.text}&rdquo;
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Controls */}
+        <div className="flex items-center justify-center gap-4">
+          <button
+            onClick={prev}
+            className="w-9 h-9 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 text-white flex items-center justify-center transition-colors"
+          >
+            ‹
+          </button>
+          <div className="flex gap-2">
+            {reviews.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`w-1.5 h-1.5 rounded-full transition-all ${i === current ? 'bg-red-500 w-4' : 'bg-white/20'}`}
+              />
+            ))}
+          </div>
+          <button
+            onClick={next}
+            className="w-9 h-9 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 text-white flex items-center justify-center transition-colors"
+          >
+            ›
+          </button>
+        </div>
+
+      </div>
+    </section>
+  );
+}

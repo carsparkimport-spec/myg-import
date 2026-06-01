@@ -4,6 +4,7 @@ import Layout from '@/components/Layout';
 import Link from 'next/link';
 import { useI18n } from '@/i18n/I18nProvider';
 import VehicleCard from '@/components/VehicleCard';
+import ReviewsCarousel from '@/components/ReviewsCarousel';
 import vehiclesData from '@/data/vehicles.json';
 
 interface Vehicle {
@@ -89,6 +90,8 @@ export default function JapanLanding() {
           )}
         </div>
       </div>
+
+      <ReviewsCarousel />
 
     </Layout>
   );
