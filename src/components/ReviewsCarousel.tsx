@@ -12,46 +12,32 @@ interface Review {
 
 const reviews: Review[] = [
   {
-    name: 'Thomas M.',
+    name: 'Tom Flick',
     rating: 5,
-    text: 'Service impeccable du début à la fin. Mon Mazda MX-5 est arrivé en parfait état, toutes les démarches ont été gérées par MYG. Je recommande sans hésitation.',
+    text: 'Quand un vendeur de voitures est passionné d\'automobile et souhaite vous proposer des véhicules d\'occasion rigoureusement contrôlés, qu\'il s\'agisse de modèles standards ou de voitures de sport, vous aurez le privilège de négocier avec MYG. Merci Mathieu Guilloux',
     source: 'Google',
-    date: 'Novembre 2024',
+    date: 'Mai 2026',
   },
   {
-    name: 'Laura V.',
+    name: 'F B',
     rating: 5,
-    text: 'Très professionnel, réactif et transparent sur les prix. L\'import depuis le Japon s\'est fait sans aucune surprise. Je suis ravie de ma voiture !',
+    text: 'Je tiens à exprimer ma reconnaissance pour l\'excellent service que j\'ai reçu lors de la vente de ma voiture et de l\'achat de ma nouvelle. L\'expérience a été très professionnelle et dynamique du début à la fin. Ils ont réussi à vendre ma voiture rapidement et m\'ont trouvé un véhicule qui correspondait parfaitement à tous mes critères. Ils se sont également occupés de tout, de la prise en charge du véhicule à la gestion complète des formalités d\'immatriculation. Je recommande vivement leurs services !',
     source: 'Google',
-    date: 'Octobre 2024',
+    date: 'Avril 2026',
   },
   {
-    name: 'Sébastien K.',
+    name: 'Frank',
     rating: 5,
-    text: 'Excellente expérience avec MYG Import. Ils m\'ont guidé à chaque étape, de l\'enchère jusqu\'à la livraison au Luxembourg. Très à l\'écoute.',
+    text: 'J\'ai vendu mon véhicule via ce dépôt-vente et l\'expérience a été excellente du début à la fin. Équipe très professionnelle, disponible et transparente. Les démarches administratives ont été simples et rapides. On sent un vrai sérieux et un bon suivi client. Je recommande sans hésitation ce garage pour leur professionnalisme et leur confiance.',
     source: 'AutoScout24',
-    date: 'Septembre 2024',
+    date: '07.05.2026',
   },
   {
-    name: 'Nathalie B.',
+    name: 'Franck',
     rating: 5,
-    text: 'J\'avais des craintes pour un premier import, mais l\'équipe a tout simplifié. Véhicule conforme à la description, livré dans les délais annoncés.',
-    source: 'Google',
-    date: 'Août 2024',
-  },
-  {
-    name: 'Pierre-Luc D.',
-    rating: 5,
-    text: 'Un grand merci à toute l\'équipe MYG. J\'ai obtenu exactement la voiture que je cherchais à un prix bien en dessous du marché local. Service 5 étoiles.',
+    text: 'De très bons conseils.',
     source: 'AutoScout24',
-    date: 'Juillet 2024',
-  },
-  {
-    name: 'Amélie R.',
-    rating: 5,
-    text: 'Communication parfaite, aucune mauvaise surprise. L\'import EU est vraiment une bonne option avec MYG Import. Je referai appel à eux sans hésiter.',
-    source: 'Google',
-    date: 'Juin 2024',
+    date: '05.05.2026',
   },
 ];
 
