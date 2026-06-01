@@ -129,6 +129,11 @@ export default function VehicleDetailPage({ vehicle }: Props) {
               <div className="text-4xl md:text-5xl font-bold tracking-tighter text-white mb-1">
                 {formatPrice(vehicle.price)}
               </div>
+              {vehicle.details?.['Livraison'] && (
+                <p className="text-sm font-semibold text-red-400 tracking-wide">
+                  ⏱ Disponible sous {vehicle.details['Livraison'] as string}
+                </p>
+              )}
             </div>
           </div>
         </div>
