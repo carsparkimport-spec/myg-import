@@ -349,6 +349,42 @@
     ]
   },
   {
+    "id": "clio-gris",
+    "make": "Renault",
+    "model": "Clio 1.5 BLUE dCi 100 ÉVOLUTION",
+    "trim": "Clio 1.5 BLUE dCi 100 ÉVOLUTION",
+    "status": "Neuf",
+    "origin": "Europe",
+    "year": 2026,
+    "mileage": 11,
+    "fuel": "Diesel",
+    "transmission": "Manuelle",
+    "price": 19990,
+    "priceNote": "TVA 17% – hors frais d'immatriculation (340 € TTC)",
+    "featured": false,
+    "description": "Renault Clio 1.5 Blue dCi 100ch finition Évolution. Véhicule neuf, mise en circulation 01/2026. Coloris Gris Schiste. Garantie constructeur 24 mois jusqu'en 01/2028. Prix de 19 990 € TTC (TVA 17%), hors frais d'immatriculation de 340 € TTC.",
+    "images": [
+      "/images/vehicles/renault-clio-gris/1.webp",
+      "/images/vehicles/renault-clio-gris/2.webp",
+      "/images/vehicles/renault-clio-gris/3.webp",
+      "/images/vehicles/renault-clio-gris/4.webp",
+      "/images/vehicles/renault-clio-gris/5.webp",
+      "/images/vehicles/renault-clio-gris/6.webp",
+      "/images/vehicles/renault-clio-gris/7.webp",
+      "/images/vehicles/renault-clio-gris/8.webp",
+      "/images/vehicles/renault-clio-gris/9.webp"
+    ],
+    "details": {
+      "Moteur": "1.5 Blue dCi 100ch",
+      "Boîte": "Manuelle",
+      "Année": "01/2026",
+      "Coloris": "Gris Schiste",
+      "Kilométrage": "11 km",
+      "Équipements": "Sellerie textile gris avec motif 3D; Capteur de pression des pneus; Éclairage Full LED Pure Vision; Front Assist (anti-collision); Pack Black; Pack City (radar de recul, rétroviseurs électriques dégivrants); Reconnaissance des panneaux de signalisation; Système de surveillance de l'attention du conducteur; Intelligent Speed Assist; Système d'antiblocage des roues (ABS); Freinage d'urgence; Climatisation manuelle; Tableau de bord numérique 7 pouces; Écran central tactile 7 pouces; Réplication smartphone sans fil; Aide au démarrage en côte; Régulateur de vitesse; Aide au maintien dans la voie; Jantes tôle 16 pouces avec enjoliveurs",
+      "Garantie": "Constructeur 24 mois (jusqu'en 01/2028)"
+    }
+  },
+  {
     "id": "renault-captur-techno-etech-160hp",
     "make": "Renault",
     "model": "Captur",
