@@ -191,7 +191,18 @@ export default function VehicleDetailPage({ vehicle }: Props) {
             {vehicle.description && (
               <section>
                 <h2 className="text-xl font-bold border-b border-white/10 pb-3 mb-4">À propos de ce véhicule</h2>
-                <p className="text-gray-300 leading-relaxed text-base font-light">{vehicle.description}</p>
+                <p className="text-gray-300 leading-relaxed text-base font-light">
+                  {(() => {
+                    const idx = vehicle.description.search(/[Dd]isponible sous/);
+                    if (idx === -1) return vehicle.description;
+                    return (
+                      <>
+                        {vehicle.description.slice(0, idx)}
+                        <span className="text-red-400 font-semibold">{vehicle.description.slice(idx)}</span>
+                      </>
+                    );
+                  })()}
+                </p>
               </section>
             )}
 
