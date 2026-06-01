@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, Check, ChevronRight, MessageCircle, Phone, X } from 'lucide-react';
+import { ArrowLeft, Check, ChevronRight, Download, MessageCircle, Phone, X } from 'lucide-react';
 
 type Primitive = string | number | boolean | null | undefined;
 
@@ -293,12 +293,23 @@ export default function VehicleDetailPage({ vehicle }: Props) {
       {/* ── LIGHTBOX ── */}
       {lightboxOpen && (
         <div className="fixed inset-0 z-[200] bg-black/95 flex items-center justify-center">
-          <button
-            className="absolute top-5 right-5 bg-white/10 hover:bg-white/20 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors"
-            onClick={() => setLightboxOpen(false)}
-          >
-            <X className="w-5 h-5" />
-          </button>
+          <div className="absolute top-5 right-5 flex items-center gap-2">
+            <a
+              href={images[activeIndex]}
+              download
+              className="bg-white/10 hover:bg-white/20 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors"
+              title="Télécharger l'image"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Download className="w-4 h-4" />
+            </a>
+            <button
+              className="bg-white/10 hover:bg-white/20 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors"
+              onClick={() => setLightboxOpen(false)}
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
           {images.length > 1 && (
             <>
               <button
