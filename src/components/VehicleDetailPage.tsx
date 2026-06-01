@@ -29,8 +29,12 @@ interface Props {
   vehicle: Vehicle;
 }
 
+function formatNum(n: number) {
+  return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '\u00a0');
+}
+
 function formatPrice(price: number) {
-  return new Intl.NumberFormat('fr-FR').format(price) + ' €';
+  return formatNum(price) + '\u00a0€';
 }
 
 export default function VehicleDetailPage({ vehicle }: Props) {
@@ -42,7 +46,7 @@ export default function VehicleDetailPage({ vehicle }: Props) {
   const isNeuf = vehicle.status?.toLowerCase() === 'neuf';
 
   const quickSpecs = [
-    { label: 'Kilométrage', value: `${vehicle.mileage.toLocaleString('fr-FR')} km` },
+    { label: 'Kilométrage', value: `${formatNum(vehicle.mileage)}\u00a0km` },
     { label: 'Boîte', value: vehicle.transmission },
     ...(vehicle.fuel ? [{ label: 'Carburant', value: vehicle.fuel }] : []),
     { label: 'Année', value: String(vehicle.year) },
