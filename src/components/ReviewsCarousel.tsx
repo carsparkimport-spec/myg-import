@@ -87,7 +87,6 @@ export default function ReviewsCarousel() {
   const [paused, setPaused] = useState(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const visibleCount = 3;
   const total = reviews.length;
 
   const next = () => setCurrent((c) => (c + 1) % total);
