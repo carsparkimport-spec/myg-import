@@ -222,38 +222,6 @@
     ]
   },
   {
-    "id": "renault-austral-esprit-alpine-etech-200",
-    "make": "Renault",
-    "model": "Austral Esprit Alpine E-Tech 200",
-    "trim": "Austral Esprit Alpine E-Tech 200",
-    "year": 2026,
-    "mileage": 0,
-    "fuel": "Hybride",
-    "transmission": "Automatique",
-    "price": 38342,
-    "priceNote": "TVA incluse - hors frais immatriculation",
-    "status": "Disponible",
-    "featured": true,
-    "origin": "Europe",
-    "description": "Impressionnant dans ses proportions, le Renault Austral Esprit Alpine E-Tech 200 offre puissance et efficacité énergétique. Hybridation full hybrid 200 ch offre un rapport performances-efficience incomparable. Seulement 100 km/h sur routes, limitation électrifications chauffrages et passages volants Alcantara Alpine. Allure exclusive, sièges avant chauffrés et massants, climatisation manuelle, caméra 360°, OpenR Link 12V+ Google intégré, hayon électrique mains libres. Disponible en Gris Schiste Satin/Toit Noir ou Blanc Nacré Perlé/Toit Noir, immatriculation 06/2026, livraison sous 3 à 4 semaines",
-    "colors": [
-      "Gris Schiste Satin",
-      "Blanc Nacré Perlé"
-    ],
-    "availability": 0,
-    "images": [
-      "/images/vehicles/renault-austral-esprit-alpine-etech-200/1.webp",
-      "/images/vehicles/renault-austral-esprit-alpine-etech-200/2.webp",
-      "/images/vehicles/renault-austral-esprit-alpine-etech-200/3.webp",
-      "/images/vehicles/renault-austral-esprit-alpine-etech-200/4.webp",
-      "/images/vehicles/renault-austral-esprit-alpine-etech-200/5.webp",
-      "/images/vehicles/renault-austral-esprit-alpine-etech-200/6.webp",
-      "/images/vehicles/renault-austral-esprit-alpine-etech-200/7.webp",
-      "/images/vehicles/renault-austral-esprit-alpine-etech-200/8.webp"
-    ],
-    "featuredOrder": 0
-  },
-  {
     "id": "dacia-bigster-extreme-hybrid-156ch",
     "make": "Dacia",
     "model": "Bigster",
