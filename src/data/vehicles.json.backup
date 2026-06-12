@@ -84,7 +84,7 @@
     "mileage": 29500,
     "fuel": "Essence",
     "transmission": "Manuelle",
-    "price": 30990,
+    "price": 30990 TTC,
     "description": "Mazda MX-5 Roadster SKYACTIV-G 2.0 – Édition spéciale AL-KINENBI, origine Allemagne. Machine Gray Metallic (46G), intérieur cuir bordeaux. Capote souple bleue. Pack i-Activsense complet. Système audio BOSE® 9 haut-parleurs. Aucun entretien à prévoir – dernier entretien réalisé le 06/05/2026. Dossier complet sur demande.",
     "images": [
       "/images/vehicles/mazda-mx5-kinenbi/1.webp",
@@ -122,7 +122,7 @@
     "transmission": "Manuelle",
     "price": 19490,
     "priceNote": "TVA 17%",
-    "description": "Renault Clio 1.5 Blue dCi 100ch finition Évolution. Véhicule neuf, mise en circulation 01/2026. Garantie constructeur 24 mois jusqu'en 01/2028. Prix de 19 990 € TTC (TVA 17%), hors frais d'immatriculation de 340 € TTC.",
+    "description": "Renault Clio 1.5 Blue dCi 100ch finition Évolution. Véhicule neuf, mise en circulation 01/2026. Garantie constructeur 24 mois jusqu'en 01/2028. Prix de 19 990 € TTC (TVA 17%)",
     "images": [
       "/images/vehicles/renault-clio-noir/1.webp",
       "/images/vehicles/renault-clio-noir/2.webp",
