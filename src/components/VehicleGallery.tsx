@@ -131,14 +131,15 @@ export default function VehicleGallery({ images, altBase }: VehicleGalleryProps)
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
+          onClick={() => setLightboxOpen(false)}
           role="dialog"
           aria-label={t('gallery.lightbox')}
         >
           <button
             type="button"
             aria-label={t('gallery.close')}
-            className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 text-white rounded-full w-10 h-10 flex items-center justify-center text-xl"
-            onClick={() => setLightboxOpen(false)}
+            className="absolute top-4 right-4 bg-white text-black rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold shadow-lg hover:bg-gray-200 z-10"
+            onClick={(e) => { e.stopPropagation(); setLightboxOpen(false); }}
           >
             ×
           </button>
@@ -148,16 +149,16 @@ export default function VehicleGallery({ images, altBase }: VehicleGalleryProps)
               <button
                 type="button"
                 aria-label={t('gallery.previous')}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full w-12 h-12 hidden md:flex items-center justify-center text-2xl"
-                onClick={goPrev}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full w-12 h-12 hidden md:flex items-center justify-center text-2xl z-10"
+                onClick={(e) => { e.stopPropagation(); goPrev(); }}
               >
                 ‹
               </button>
               <button
                 type="button"
                 aria-label={t('gallery.next')}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full w-12 h-12 hidden md:flex items-center justify-center text-2xl"
-                onClick={goNext}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full w-12 h-12 hidden md:flex items-center justify-center text-2xl z-10"
+                onClick={(e) => { e.stopPropagation(); goNext(); }}
               >
                 ›
               </button>
