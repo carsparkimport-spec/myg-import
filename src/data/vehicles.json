@@ -549,5 +549,31 @@
       "Options": "Train roulants revus; Nouveau PCM 10,9 pouces, bandeau LED arrière, boucliers restylés; Suspension pneumatique à hauteur variable; PASM (Porsche Active Suspension Management); Sorties d'échappement sport en Noir; Réservoir 75 litres; Servotronic Plus; Jantes Sport Classic 21 pouces en Noir (finition brillante); Sièges sport adaptatifs (18 positions électriques) avec Pack Mémoire; Sièges chauffants à l'avant; Volant Sport GT en cuir avec chauffage du volant; Ceintures de sécurité Rouge Grenat; Toit ouvrant panoramique; Assistance parking avant et arrière avec caméra de recul et vue 360°; Régulateur de vitesse adaptatif"
     },
     "featured": false
+  },
+  {
+    "id": "dacia-bigster-extreme-hybrid-155",
+    "make": "Dacia",
+    "model": "Bigster",
+    "trim": "Extreme Hybrid 155 ch AT FHEV",
+    "year": 2026,
+    "mileage": 0,
+    "fuel": "Hybride FHEV",
+    "transmission": "Automatique",
+    "price": 0,
+    "priceNote": "TVA incluse – hors frais d'immatriculation",
+    "status": "Neuf",
+    "origin": "Europe",
+    "featured": false,
+    "description": "Dacia Bigster Extreme Hybrid 155 ch AT FHEV. Véhicule neuf, disponible en plusieurs coloris (Bleu Indigo, Gris Schiste, Vert Cèdre Métallisé). Garantie 3 ans constructeur. Consommation combinée 5,4 L/100 km. 1ère immatriculation administrative : 02/2026. Disponible sous 3 à 5 semaines.",
+    "colors": ["Bleu Indigo", "Gris Schiste", "Vert Cèdre Métallisé"],
+    "images": [],
+    "details": {
+      "Motorisation": "Hybride FHEV 155 ch – Boîte automatique – Consommation 5,4 l/100 km",
+      "Garantie": "3 ans constructeur",
+      "1ère immatriculation": "02/2026",
+      "Livraison": "3 à 5 semaines",
+      "Équipements": "Rétroviseurs extérieurs couleur brun cuivre; Barres de toit longitudinales modulables couleur gris pierre; Jantes alliage 18 pouces semi biton design TAGASAN; Habillage planche de bord et accoudoir avant en kaki – Sellerie tissu EXTREME; Tapis de sol avant/arrière en caoutchouc motif topographique bords relevés; Tapis de coffre réversible et enroulable; Régulateur de vitesse adaptatif; Gestion automatique des feux de route; Vitres arrière surteintées; Carte Dacia mains libres – verrouillage déverrouillage démarrage sans clé; Toit ouvrant panoramique en verre à ouverture électrique; Accessoire YouClip 3-en-1 lampe crochet et porte-gobelet; Console centrale haute avec rangement fermé – accoudoir – rangement réfrigéré; Compteur numérique 10 pouces; Support smartphone YouClip fixable sur planche de bord; Chargeur smartphone à induction; MEDIA NAV LIVE 10,1 pouces avec navigation intégrée d'usine; Radio DAB – Bluetooth mains libres et streaming audio; 2 prises USB-C – 6 haut-parleurs – son 3D Arkamys; Commandes au volant et réplication smartphone sans fil; Cartographie Europe avec mises à jour gratuites pendant 8 ans",
+      "Options incluses": "Pack Hiver (pare-brise chauffant + sièges chauffants + volant chauffant) + Pack City (surveillance angles morts + radars stationnement avant/latéraux + caméra multi-vues) + Hayon électrique automatique + Roue de secours temporaire"
+    }
   }
 ]
