@@ -22,13 +22,13 @@ export function InterestedButton() {
 }
 
 export function SpecsTableRows({ price, year, mileage, transmission }: { price: number; year: number; mileage: number; transmission: string }) {
-  const { t, locale } = useI18n();
-  const tag = locale === 'fr' ? 'fr-FR' : 'en-GB';
+  const { t } = useI18n();
+  const fmt = (n: number) => Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '\u202f');
   return (
     <>
-      <tr className="border-b"><td className="py-2 font-semibold">{t('vehicleDetail.price')}</td><td className="py-2 text-xl font-bold text-red-600">{price.toLocaleString(tag)} €</td></tr>
+      <tr className="border-b"><td className="py-2 font-semibold">{t('vehicleDetail.price')}</td><td className="py-2 text-xl font-bold text-red-600">{fmt(price)} €</td></tr>
       <tr className="border-b"><td className="py-2 font-semibold">{t('vehicleDetail.year')}</td><td className="py-2">{year}</td></tr>
-      <tr className="border-b"><td className="py-2 font-semibold">{t('vehicleDetail.mileage')}</td><td className="py-2">{mileage.toLocaleString(tag)} km</td></tr>
+      <tr className="border-b"><td className="py-2 font-semibold">{t('vehicleDetail.mileage')}</td><td className="py-2">{fmt(mileage)} km</td></tr>
       <tr className="border-b"><td className="py-2 font-semibold">{t('vehicleDetail.transmission')}</td><td className="py-2">{transmission}</td></tr>
     </>
   );
