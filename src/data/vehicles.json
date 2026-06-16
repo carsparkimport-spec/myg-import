@@ -8,7 +8,7 @@
     "mileage": 0,
     "fuel": "Hybride rechargeable",
     "transmission": "Automatique e-CVT",
-    "price": 33490,
+    "price": 39990,
     "priceNote": "TVA incluse - hors frais immatriculation",
     "status": "Neuf",
     "featured": true,
@@ -20,7 +20,17 @@
     ],
     "interior": "Marron / Noir",
     "availability": 1,
-    "images": [],
+    "images": [
+      "/images/vehicles/byd-seal-u-dm-i-design-awd/1.png",
+      "/images/vehicles/byd-seal-u-dm-i-design-awd/2.png",
+      "/images/vehicles/byd-seal-u-dm-i-design-awd/3.png",
+      "/images/vehicles/byd-seal-u-dm-i-design-awd/4.png",
+      "/images/vehicles/byd-seal-u-dm-i-design-awd/5.png",
+      "/images/vehicles/byd-seal-u-dm-i-design-awd/6.png",
+      "/images/vehicles/byd-seal-u-dm-i-design-awd/7.png",
+      "/images/vehicles/byd-seal-u-dm-i-design-awd/8.png",
+      "/images/vehicles/byd-seal-u-dm-i-design-awd/9.jpeg"
+    ],
     "details": {
       "Motorisation": "Hybride rechargeable DM-i — Transmission intégrale AWD",
       "Puissance": "323 ch (324 ch) — 550 Nm de couple",
