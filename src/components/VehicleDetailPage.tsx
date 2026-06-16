@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, Check, ChevronRight, MessageCircle, Phone, X } from 'lucide-react';
@@ -58,6 +58,17 @@ export default function VehicleDetailPage({ vehicle }: Props) {
 
   const goLeft = () => setActiveIndex((i) => (i - 1 + images.length) % images.length);
   const goRight = () => setActiveIndex((i) => (i + 1) % images.length);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (!lightboxOpen) return;
+      if (e.key === 'Escape') setLightboxOpen(false);
+      if (e.key === 'ArrowLeft') goLeft();
+      if (e.key === 'ArrowRight') goRight();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [lightboxOpen]);
 
   return (
     <div className="min-h-screen bg-[#0d0d0d] text-white font-sans">
@@ -307,24 +318,27 @@ export default function VehicleDetailPage({ vehicle }: Props) {
 
       {/* ── LIGHTBOX ── */}
       {lightboxOpen && (
-        <div className="fixed inset-0 z-[200] bg-black/95 flex items-center justify-center">
+        <div
+          className="fixed inset-0 z-[200] bg-black/95 flex items-center justify-center cursor-zoom-out"
+          onClick={() => setLightboxOpen(false)}
+        >
           <button
-            className="absolute top-5 right-5 bg-white/10 hover:bg-white/20 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors"
-            onClick={() => setLightboxOpen(false)}
+            className="absolute top-5 right-5 bg-white/10 hover:bg-white/20 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors z-10"
+            onClick={(e) => { e.stopPropagation(); setLightboxOpen(false); }}
           >
             <X className="w-5 h-5" />
           </button>
           {images.length > 1 && (
             <>
               <button
-                className="absolute left-5 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full w-12 h-12 hidden md:flex items-center justify-center text-2xl transition-colors"
-                onClick={goLeft}
+                className="absolute left-5 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full w-12 h-12 hidden md:flex items-center justify-center text-2xl transition-colors z-10"
+                onClick={(e) => { e.stopPropagation(); goLeft(); }}
               >
                 ‹
               </button>
               <button
-                className="absolute right-5 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full w-12 h-12 hidden md:flex items-center justify-center text-2xl transition-colors"
-                onClick={goRight}
+                className="absolute right-5 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full w-12 h-12 hidden md:flex items-center justify-center text-2xl transition-colors z-10"
+                onClick={(e) => { e.stopPropagation(); goRight(); }}
               >
                 ›
               </button>
@@ -336,11 +350,11 @@ export default function VehicleDetailPage({ vehicle }: Props) {
               alt={`${vehicle.make} ${vehicle.model} – photo ${activeIndex + 1}`}
               fill
               sizes="92vw"
-              className="object-contain"
+              className="object-contain pointer-events-none"
               priority
             />
           </div>
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-gray-400 text-sm">
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-gray-400 text-sm pointer-events-none">
             {activeIndex + 1} / {images.length}
           </div>
         </div>
