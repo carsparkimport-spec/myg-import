@@ -16,6 +16,7 @@ export default function VehicleGallery({ images, altBase }: VehicleGalleryProps)
   const [lightboxOpen, setLightboxOpen] = useState<boolean>(false);
   const touchStartXRef = useRef<number | null>(null);
   const touchDeltaXRef = useRef<number>(0);
+  const swipedRef = useRef<boolean>(false);
 
   const goPrev = useCallback(() => {
     setCurrentIndex((idx) => (idx - 1 + safeImages.length) % safeImages.length);
@@ -58,11 +59,10 @@ export default function VehicleGallery({ images, altBase }: VehicleGalleryProps)
     const dx = touchDeltaXRef.current;
     const threshold = 50; // px
     if (Math.abs(dx) > threshold) {
-      if (dx > 0) {
-        goPrev();
-      } else {
-        goNext();
-      }
+      swipedRef.current = true;
+      if (dx > 0) goPrev(); else goNext();
+    } else {
+      swipedRef.current = false;
     }
     touchStartXRef.current = null;
     touchDeltaXRef.current = 0;
@@ -131,7 +131,7 @@ export default function VehicleGallery({ images, altBase }: VehicleGalleryProps)
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
-          onClick={() => setLightboxOpen(false)}
+          onClick={(e) => { if (e.target === e.currentTarget) setLightboxOpen(false); }}
           role="dialog"
           aria-label={t('gallery.lightbox')}
         >
@@ -165,13 +165,16 @@ export default function VehicleGallery({ images, altBase }: VehicleGalleryProps)
             </>
           )}
 
-          <div className="relative w-[92vw] h-[82vh]">
+          <div
+            className="relative w-[92vw] h-[82vh] cursor-zoom-out"
+            onClick={(e) => { e.stopPropagation(); if (!swipedRef.current) setLightboxOpen(false); swipedRef.current = false; }}
+          >
             <Image
               src={safeImages[currentIndex]}
               alt={`${altBase} – ${t('gallery.image')} ${currentIndex + 1}`}
               fill
               sizes="92vw"
-              className="object-contain"
+              className="object-contain pointer-events-none"
               priority
             />
           </div>
