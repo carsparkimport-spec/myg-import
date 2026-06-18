@@ -579,7 +579,8 @@
     ],
     "interior": "Similicuir / Tissu",
     "images": [
-      "/images/vehicles/ford-puma-st-line-x/1.png"
+      "/images/vehicles/ford-puma-st-line-x/1.png",
+      "/images/vehicles/ford-puma-st-line-x/2.png"
     ],
     "details": {
       "Motorisation": "1.0 EcoBoost Hybrid 125ch (92kW) — 3 cylindres mild-hybrid",
