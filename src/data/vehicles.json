@@ -510,5 +510,43 @@
       "Options": "Train roulants revus; Nouveau PCM 10,9 pouces, bandeau LED arrière, boucliers restylés; Suspension pneumatique à hauteur variable; PASM (Porsche Active Suspension Management); Sorties d'échappement sport en Noir; Réservoir 75 litres; Servotronic Plus; Jantes Sport Classic 21 pouces en Noir (finition brillante); Sièges sport adaptatifs (18 positions électriques) avec Pack Mémoire; Sièges chauffants à l'avant; Volant Sport GT en cuir avec chauffage du volant; Ceintures de sécurité Rouge Grenat; Toit ouvrant panoramique; Assistance parking avant et arrière avec caméra de recul et vue 360°; Régulateur de vitesse adaptatif"
     },
     "featured": false
+  },
+  {
+    "id": "ford-puma-st-line-ecoboost-125",
+    "make": "Ford",
+    "model": "Puma",
+    "trim": "ST-Line 1.0 EcoBoost 125hp Automatique",
+    "year": 2026,
+    "mileage": 0,
+    "fuel": "Essence",
+    "transmission": "Automatique",
+    "price": 0,
+    "priceNote": "TVA incluse - hors frais immatriculation",
+    "status": "Neuf",
+    "featured": false,
+    "origin": "Europe",
+    "description": "Le Ford Puma ST-Line 1.0 EcoBoost 125ch Automatique 2026 — crossover 5 portes au style sportif. Moteur 3 cylindres 1.0L EcoBoost 125ch (92kW), boîte automatique, 129g/km CO₂ WLTP. Finition ST-Line avec suspensions sport, sièges baquets, cockpit virtuel et hayon électrique.",
+    "colors": [
+      "Bleu Foncé"
+    ],
+    "interior": "Noir / Sport",
+    "availability": 1,
+    "images": [
+      "/images/vehicles/ford-puma-st-line/1.png",
+      "/images/vehicles/ford-puma-st-line/2.png",
+      "/images/vehicles/ford-puma-st-line/3.png",
+      "/images/vehicles/ford-puma-st-line/4.png"
+    ],
+    "details": {
+      "Motorisation": "1.0 EcoBoost 125ch (92kW) — 3 cylindres",
+      "Boîte": "Automatique",
+      "Émissions CO₂": "129 g/km WLTP",
+      "Carrosserie": "Crossover 5 portes",
+      "Extérieur": "Phares LED; Feux arrière LED; Jantes alliage 17''; Pare-brise chauffant; Vitres arrière surteintées; Suspensions sport",
+      "Confort": "Hayon électrique; Démarrage sans clé; Accès sans clé; Climatisation automatique; Vitres électriques av/ar; Rétroviseurs électriques chauffants et rabattables; Rétroviseur intérieur à atténuation automatique; Régulateur de vitesse; Capteur de lumière; Capteur de pluie; Aide à l'éclairage automatique; Direction assistée électrique",
+      "Intérieur": "Sièges baquets avant chauffants; Volant sport en cuir multifonction chauffant; Siège conducteur réglable en hauteur + soutien lombaire; Accoudoir avant; Éclairage d'ambiance; Garnissage de toit noir; Démarrage/arrêt automatique",
+      "Équipements": "Cockpit virtuel; Écran tactile 12'' Sync 4; Apple CarPlay; Bluetooth; Chargeur smartphone sans fil; Caméra de recul; Radars de stationnement arrière; Sélection de modes de conduite",
+      "Sécurité & ADAS": "ABS; ESP; Aide au démarrage en côte; Avertissement de franchissement de ligne; Lane Assist; Reconnaissance des panneaux de signalisation; Airbags conducteur, latéraux et rideaux"
+    }
   }
 ]
