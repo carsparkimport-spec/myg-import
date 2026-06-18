@@ -557,5 +557,40 @@
       "Livraison": "15 jours – 3 semaines"
     },
     "deliveryTime": "Disponible sous 15 jours – 3 semaines"
+  },
+  {
+    "id": "ford-puma-st-line-x-hybrid-dct",
+    "make": "Ford",
+    "model": "Puma",
+    "trim": "ST-Line X 1.0 EcoBoost Hybrid DCT",
+    "year": 2025,
+    "mileage": 0,
+    "fuel": "Hybride essence",
+    "transmission": "Automatique DCT",
+    "price": 0,
+    "priceNote": "TVA incluse - hors frais immatriculation",
+    "status": "Neuf",
+    "featured": false,
+    "origin": "Europe",
+    "description": "Le Ford Puma ST-Line X 1.0 EcoBoost Hybrid DCT 2025 — le haut de gamme de la Puma. Moteur mild-hybrid 125ch (92kW), boîte DCT automatique, 134g/km CO₂ WLTP. Équipements premium : toit panoramique électrique, phares Adaptive Matrix LED, roues 19\", audio Bang & Olufsen, caméra 360° et pack hiver. Disponible en Gris non métallisé ou Noir, intérieur similicuir/tissu.",
+    "colors": [
+      "Gris non métallisé",
+      "Noir"
+    ],
+    "interior": "Similicuir / Tissu",
+    "images": [],
+    "details": {
+      "Motorisation": "1.0 EcoBoost Hybrid 125ch (92kW) — 3 cylindres mild-hybrid",
+      "Boîte": "Automatique DCT",
+      "Émissions CO₂": "134 g/km WLTP",
+      "Carrosserie": "Crossover 5 portes",
+      "Couleurs disponibles": "Gris non métallisé; Noir",
+      "Extérieur": "Phares Adaptive Matrix LED; Feux de jour LED; Feux arrière LED; Toit panoramique électrique; Aileron arrière; Jantes alliage 19''; Pare-brise chauffant; Vitres arrière surteintées",
+      "Confort": "Hayon électrique; Démarrage sans clé; Accès sans clé; Climatisation automatique; Vitres électriques av/ar; Rétroviseurs électriques chauffants et rabattables; Rétroviseur intérieur à atténuation automatique; Régulateur de vitesse adaptatif; Capteur de lumière; Capteur de pluie; Aide à l'éclairage automatique; Direction assistée; Démarrage/arrêt automatique",
+      "Intérieur": "Sièges baquets avant chauffants (similicuir); Volant sport en cuir multifonction chauffant; Sièges avant réglables en hauteur + soutien lombaire; Accoudoir avant coulissant; Garnissage de toit noir",
+      "Équipements": "Cockpit virtuel; Écran tactile 12'' Sync 4 Bang & Olufsen; Apple CarPlay; Android Auto; DAB+; Bluetooth; Chargeur smartphone sans fil; Caméra 360°; Radars de stationnement avant et arrière; Sélection de modes de conduite",
+      "Sécurité & ADAS": "ABS; ESP; Front Assist; Avertissement de franchissement de ligne; Lane Assist; Système d'information d'angle mort; Détection de trafic transversal arrière; Reconnaissance des panneaux; Airbags conducteur, passager, latéraux et rideaux",
+      "Options incluses": "Pack hiver (AGWAB); Pack assistance à la conduite (DBCBA)"
+    }
   }
 ]
