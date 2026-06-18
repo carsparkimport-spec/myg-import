@@ -525,17 +525,23 @@
     "status": "Neuf",
     "featured": false,
     "origin": "Europe",
-    "description": "Le Ford Puma ST-Line 1.0 EcoBoost 125ch Automatique 2026 — crossover 5 portes au style sportif. Moteur 3 cylindres 1.0L EcoBoost 125ch (92kW), boîte automatique, 129g/km CO₂ WLTP. Finition ST-Line avec suspensions sport, sièges baquets, cockpit virtuel et hayon électrique.",
+    "description": "Le Ford Puma ST-Line 1.0 EcoBoost 125ch Automatique 2026 — crossover 5 portes au style sportif. Moteur 3 cylindres 1.0L EcoBoost 125ch (92kW), boîte automatique, 129g/km CO₂ WLTP. Finition ST-Line avec suspensions sport, sièges baquets, cockpit virtuel et hayon électrique. Disponible en Noir métallisé ou Gris pastel, intérieur Noir.",
     "colors": [
-      "Bleu Foncé"
+      "Noir métallisé",
+      "Gris pastel"
     ],
-    "interior": "Noir / Sport",
+    "interior": "Noir",
     "availability": 1,
     "images": [
       "/images/vehicles/ford-puma-st-line/1.png",
       "/images/vehicles/ford-puma-st-line/2.png",
       "/images/vehicles/ford-puma-st-line/3.png",
-      "/images/vehicles/ford-puma-st-line/4.png"
+      "/images/vehicles/ford-puma-st-line/4.png",
+      "/images/vehicles/ford-puma-st-line/5.png",
+      "/images/vehicles/ford-puma-st-line/6.png",
+      "/images/vehicles/ford-puma-st-line/7.png",
+      "/images/vehicles/ford-puma-st-line/8.png",
+      "/images/vehicles/ford-puma-st-line/9.png"
     ],
     "details": {
       "Motorisation": "1.0 EcoBoost 125ch (92kW) — 3 cylindres",
@@ -546,7 +552,8 @@
       "Confort": "Hayon électrique; Démarrage sans clé; Accès sans clé; Climatisation automatique; Vitres électriques av/ar; Rétroviseurs électriques chauffants et rabattables; Rétroviseur intérieur à atténuation automatique; Régulateur de vitesse; Capteur de lumière; Capteur de pluie; Aide à l'éclairage automatique; Direction assistée électrique",
       "Intérieur": "Sièges baquets avant chauffants; Volant sport en cuir multifonction chauffant; Siège conducteur réglable en hauteur + soutien lombaire; Accoudoir avant; Éclairage d'ambiance; Garnissage de toit noir; Démarrage/arrêt automatique",
       "Équipements": "Cockpit virtuel; Écran tactile 12'' Sync 4; Apple CarPlay; Bluetooth; Chargeur smartphone sans fil; Caméra de recul; Radars de stationnement arrière; Sélection de modes de conduite",
-      "Sécurité & ADAS": "ABS; ESP; Aide au démarrage en côte; Avertissement de franchissement de ligne; Lane Assist; Reconnaissance des panneaux de signalisation; Airbags conducteur, latéraux et rideaux"
+      "Sécurité & ADAS": "ABS; ESP; Aide au démarrage en côte; Avertissement de franchissement de ligne; Lane Assist; Reconnaissance des panneaux de signalisation; Airbags conducteur, latéraux et rideaux",
+      "Couleurs disponibles": "Noir métallisé; Gris pastel"
     }
   }
 ]
