@@ -279,6 +279,56 @@
     }
   },
   {
+    "id": "nissan-qq-nconnecta-toit-pano-pack-hiver",
+    "make": "Nissan",
+    "model": "Qashqai",
+    "trim": "N-Connecta 1.3 DIG-T 158HP X-Tronic",
+    "year": 2026,
+    "mileage": 0,
+    "fuel": "Essence mild-hybrid",
+    "transmission": "Automatique X-Tronic",
+    "price": 0,
+    "priceNote": "TVA incluse - hors frais immatriculation",
+    "status": "Neuf",
+    "featured": false,
+    "origin": "Europe",
+    "description": "Le Nissan Qashqai N-Connecta 1.3 DIG-T 158HP X-Tronic, disponible en Silver (KY0G), Ceramic Grey (KBY) ou Pearl White (QBEG). Equipé du toit panoramique vitré et du Pack Hiver (sièges avant chauffants, pare-brise chauffant, volant chauffant). Disponible sous 3 à 4 semaines.",
+    "colors": [
+      "Silver (KY0G)",
+      "Ceramic Grey (KBY)",
+      "Pearl White (QBEG)"
+    ],
+    "interior": "Tissu noir/gris",
+    "availability": 1,
+    "images": [
+      "/images/vehicles/nissan-qashqai-nconnecta-silver/1.png",
+      "/images/vehicles/nissan-qashqai-nconnecta-silver/2.png",
+      "/images/vehicles/nissan-qashqai-nconnecta-silver/3.png",
+      "/images/vehicles/nissan-qashqai-nconnecta-silver/4.png",
+      "/images/vehicles/nissan-qashqai-nconnecta-silver/5.png",
+      "/images/vehicles/nissan-qashqai-nconnecta-silver/6.png",
+      "/images/vehicles/nissan-qashqai-nconnecta-silver/7.png",
+      "/images/vehicles/nissan-qashqai-nconnecta-silver/8.jpeg",
+      "/images/vehicles/nissan-qashqai-nconnecta-silver/9.png",
+      "/images/vehicles/nissan-qashqai-nconnecta-silver/10.png",
+      "/images/vehicles/nissan-qashqai-nconnecta-silver/11.jpeg",
+      "/images/vehicles/nissan-qashqai-nconnecta-silver/12.png"
+    ],
+    "details": {
+      "Motorisation": "1.3 DIG-T 158HP mild-hybrid",
+      "Boîte": "Automatique X-Tronic (CVT)",
+      "Traction": "Traction avant",
+      "Options incluses": "Toit panoramique vitré; Pack Hiver : sièges avant chauffants, pare-brise chauffant, volant chauffant",
+      "Sécurité & ADAS": "Freinage urgence AEB piétons/cyclistes/intersections; Alerte franchissement de ligne et angle mort; Assistant intelligent de vitesse; Régulateur de vitesse intelligent; Reconnaissance des panneaux; Alerte trafic transversal arrière; Freinage urgence arrière; ProPILOT Assist avec NAVI-Link; 7 airbags",
+      "Extérieur": "Jantes alliage 18''; Projecteurs LED croisement et route; Feux de jour LED; Feux arrière LED; Allumage automatique des phares; Capteur de pluie et essuie-glaces automatiques; Capteur de luminosité; Rétroviseurs électriques rabattables chauffants; Barres de toit argentées; Vitres arrière et lunette surteintées",
+      "Intérieur": "Sellerie tissu noir/gris; Garnitures PVC avec inserts noir anodisé et chrome satiné; Rétroviseur intérieur sans cadre à atténuation automatique; Volant gainé cuir texturé; Éclairage d'ambiance multicolore (portes, console, plancher); Climatisation automatique bi-zone; Siège conducteur réglable manuellement + soutien lombaire électrique 2 voies; Séparateur de coffre; Roue de secours",
+      "Connectivité": "Verrouillage/déverrouillage automatique à l'approche et à l'éloignement",
+      "Couleurs disponibles": "Silver (KY0G); Ceramic Grey (KBY); Pearl White (QBEG)",
+      "Garantie": "3 ans ou 100 000 km",
+      "Livraison": "3 à 4 semaines (sous réserve de disponibilité)"
+    }
+  },
+  {
     "id": "mazda-mx5-kinenbi",
     "make": "Mazda",
     "model": "MX-5 Roadster",
