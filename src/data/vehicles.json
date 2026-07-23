@@ -97,6 +97,7 @@
       "/images/vehicles/byd-seal-u-dm-i-boost-delan-black/12.png"
     ],
     "details": {
+      "Couleurs disponibles": "Obsidian Black; Snow White; Boundless Cloud",
       "Motorisation": "Hybride rechargeable DM-i — Traction avant",
       "Boîte": "Automatique",
       "Batterie": "Blade BYD LFP 18.3 kWh",
@@ -117,8 +118,7 @@
       "Garantie générale": "6 ans / 150 000 km",
       "Garantie carrosserie": "12 ans / km illimité",
       "Entretien": "1 an ou 15 000 km",
-      "Livraison": "2 à 3 semaines (sous réserve de disponibilité)",
-      "Couleurs disponibles": "Obsidian Black; Snow White; Boundless Cloud"
+      "Livraison": "2 à 3 semaines (sous réserve de disponibilité)"
     }
   },
   {
@@ -159,6 +159,7 @@
       "/images/vehicles/byd-seal-u-dm-i-boost-delan-black/12.png"
     ],
     "details": {
+      "Couleurs disponibles": "Snow White; Boundless Cloud; Black Delan",
       "Motorisation": "Hybride rechargeable DM-i — Traction avant",
       "Boîte": "Automatique",
       "Batterie": "Blade BYD LFP 18.3 kWh",
@@ -179,8 +180,7 @@
       "Garantie générale": "6 ans / 150 000 km",
       "Garantie carrosserie": "12 ans / km illimité",
       "Entretien": "1 an ou 15 000 km",
-      "Livraison": "2 à 3 semaines (sous réserve de disponibilité)",
-      "Couleurs disponibles": "Snow White; Boundless Cloud; Black Delan"
+      "Livraison": "2 à 3 semaines (sous réserve de disponibilité)"
     }
   },
   {
@@ -380,6 +380,7 @@
       "/images/vehicles/nissan-qashqai-nconnecta-silver/12.png"
     ],
     "details": {
+      "Couleurs disponibles": "Silver (KY0G); Ceramic Grey (KBY); Pearl White (QBEG)",
       "Motorisation": "1.3 DIG-T 158HP mild-hybrid",
       "Boîte": "Automatique X-Tronic (CVT)",
       "Traction": "Traction avant",
@@ -388,7 +389,6 @@
       "Extérieur": "Jantes alliage 18''; Projecteurs LED croisement et route; Feux de jour LED; Feux arrière LED; Allumage automatique des phares; Capteur de pluie et essuie-glaces automatiques; Capteur de luminosité; Rétroviseurs électriques rabattables chauffants; Barres de toit argentées; Vitres arrière et lunette surteintées",
       "Intérieur": "Sellerie tissu noir/gris; Garnitures PVC avec inserts noir anodisé et chrome satiné; Rétroviseur intérieur sans cadre à atténuation automatique; Volant gainé cuir texturé; Éclairage d'ambiance multicolore (portes, console, plancher); Climatisation automatique bi-zone; Siège conducteur réglable manuellement + soutien lombaire électrique 2 voies; Séparateur de coffre; Roue de secours",
       "Connectivité": "Verrouillage/déverrouillage automatique à l'approche et à l'éloignement",
-      "Couleurs disponibles": "Silver (KY0G); Ceramic Grey (KBY); Pearl White (QBEG)",
       "Garantie": "3 ans ou 100 000 km",
       "Livraison": "3 à 4 semaines (sous réserve de disponibilité)"
     }
@@ -454,12 +454,12 @@
       "/images/vehicles/dacia-duster/13.png"
     ],
     "details": {
+      "Couleurs disponibles": "Black, Khaki Lichen, Grey Shiste, Vert Cèdre, Sandstone Beige",
       "Moteur": "Mild Hybrid 140ch",
       "Boîte": "Manuelle",
       "Consommation": "5,4 L/100 km",
       "Garantie": "3 ans",
       "Livraison": "3 à 5 semaines",
-      "Couleurs disponibles": "Black, Khaki Lichen, Grey Shiste, Vert Cèdre, Sandstone Beige",
       "Options incluses": "Pack Hiver (sièges/volant chauffants) + Roue de secours temporaire + Media Nav Live (écran 10,1\", audio 3D Arkamys 6HP, navigation, CarPlay/Android Auto sans fil)",
       "Équipements": "Phares avant ECO-LED en forme de Y; Feux de jour avant et arrière à LED en forme de Y; Barres de toit longitudinales noires; Boucliers couleur carrosserie; Vitres arrière teintées; Jantes alliage 17 pouces TERGAN; Caméra de recul; Radars de stationnement arrière; Rétroviseurs extérieurs électriques et chauffants; Capteur de pluie + essuie-glaces automatiques; Climatisation manuelle; Volant gainé de cuir synthétique; Volant réglable en hauteur et en profondeur; Écran numérique TFT 7 pouces face au conducteur; Vitres avant et arrière électriques à impulsion; Banquette arrière rabattable 1/3 – 2/3; Console centrale haute avec accoudoir et rangement; Frein de stationnement électrique; Rétroviseur intérieur jour/nuit manuel; Lunette arrière chauffante; Allumage automatique des phares; Aide au freinage d'urgence (AFU); Freinage automatique d'urgence (AEBS); Alerte de collision frontale (FCW); Régulateur et limiteur de vitesse; Assistant intelligent de vitesse (ISA); Reconnaissance des panneaux de signalisation (TSR); Aide au maintien dans la voie (LKA) + alerte franchissement ligne (LDW); Contrôle électronique de stabilité (ESP) + aide démarrage en côte (HSA); ABS + répartition électronique; Contrôle de traction; Airbags frontaux conducteur et passager; Airbags latéraux avant et rideaux; Ceintures avant avec prétensionneurs et limiteurs d'effort; Alerte non-bouclage ceintures avant et arrière; ISOFIX pour sièges enfants; Désactivation airbag passager avant; Système d'appel d'urgence; Bouton MY SAFETY; Surveillance indirecte pression des pneus; Verrouillage centralisé à distance; Mode de conduite ECO; Indicateur de changement de rapport; Kit de réparation pneumatique"
     }
@@ -609,6 +609,7 @@
       "/images/vehicles/ford-puma-st-line/9.png"
     ],
     "details": {
+      "Couleurs disponibles": "Noir métallisé; Gris pastel",
       "Motorisation": "1.0 EcoBoost 125ch (92kW) — 3 cylindres",
       "Boîte": "Automatique",
       "Émissions CO₂": "129 g/km WLTP",
@@ -618,7 +619,6 @@
       "Intérieur": "Sièges baquets avant chauffants avec surpiqûres rouges; Volant sport en cuir multifonction chauffant; Siège conducteur réglable en hauteur + soutien lombaire; Accoudoir avant; Éclairage d'ambiance; Garnissage de toit noir; Démarrage/arrêt automatique",
       "Équipements": "Cockpit virtuel; Écran tactile 12'' Sync 4; Apple CarPlay; Bluetooth; Chargeur smartphone sans fil; Caméra de recul; Radars de stationnement arrière; Sélection de modes de conduite",
       "Sécurité & ADAS": "ABS; ESP; Aide au démarrage en côte; Avertissement de franchissement de ligne; Lane Assist; Reconnaissance des panneaux de signalisation; Airbags conducteur, latéraux et rideaux",
-      "Couleurs disponibles": "Noir métallisé; Gris pastel",
       "Livraison": "15 jours – 3 semaines"
     },
     "deliveryTime": "Disponible sous 15 jours – 3 semaines"
@@ -651,11 +651,11 @@
       "/images/vehicles/ford-puma-st-line-x/5.png"
     ],
     "details": {
+      "Couleurs disponibles": "Gris non métallisé; Noir",
       "Motorisation": "1.0 EcoBoost Hybrid 125ch (92kW) — 3 cylindres mild-hybrid",
       "Boîte": "Automatique DCT",
       "Émissions CO₂": "134 g/km WLTP",
       "Carrosserie": "Crossover 5 portes",
-      "Couleurs disponibles": "Gris non métallisé; Noir",
       "Extérieur": "Phares Adaptive Matrix LED; Feux de jour LED; Feux arrière LED; Toit panoramique électrique; Aileron arrière; Jantes alliage 19''; Pare-brise chauffant; Vitres arrière surteintées",
       "Confort": "Hayon électrique; Démarrage sans clé; Accès sans clé; Climatisation automatique; Vitres électriques av/ar; Rétroviseurs électriques chauffants et rabattables; Rétroviseur intérieur à atténuation automatique; Régulateur de vitesse adaptatif; Capteur de lumière; Capteur de pluie; Aide à l'éclairage automatique; Direction assistée; Démarrage/arrêt automatique",
       "Intérieur": "Sièges baquets avant chauffants (similicuir); Volant sport en cuir multifonction chauffant; Sièges avant réglables en hauteur + soutien lombaire; Accoudoir avant coulissant; Garnissage de toit noir",
@@ -698,6 +698,7 @@
       "/images/vehicles/toyota-yaris-hybrid-teamplayer/9.jpeg"
     ],
     "details": {
+      "Couleurs disponibles": "Gris Argent métallisé; Gris Célestine; Noir Intense; Bleu Genièvre",
       "Motorisation": "1.5 VVT-i Hybrid 116ch — Toyota Safety Sense",
       "Boîte": "Automatique CVT",
       "Consommation": "4,2 l/100km",
@@ -708,8 +709,7 @@
       "Pack Confort": "Smart Key (av/ar); Démarrage Start/Stop; 6 haut-parleurs; Chargeur smartphone induction; Éclairage d'ambiance bleu; Sièges avant chauffants (conducteur + passager); Volant chauffant; Éclairage LED aux pieds",
       "Confort": "Climatisation automatique; Lève-vitres électriques One-Touch; Rétroviseurs extérieurs chauffants électriques; Rétroviseur intérieur électrochrome; Verrouillage centralisé à distance; Frein de stationnement électrique; Banquette arrière rabattable 60/40; Plancher coffre double niveau; Fixations ISOFIX; Accoudoir central avant",
       "Équipements": "Écran multimédia 9'' Toyota Touch; Bluetooth / Commandes vocales; Intégration smartphone; Port USB-C avant; Commandes audio au volant; Caméra de recul",
-      "Sécurité & ADAS": "Toyota Safety Sense: Système précollision PCS (cyclistes); Régulateur de vitesse adaptatif; Assistant suivi de voie; Reconnaissance panneaux RSA; Assistant feux de route AHB; ABS + EBD; VSC; Aide au démarrage en côte; Détection fatigue conducteur; eCall",
-      "Couleurs disponibles": "Gris Argent métallisé; Gris Célestine; Noir Intense; Bleu Genièvre"
+      "Sécurité & ADAS": "Toyota Safety Sense: Système précollision PCS (cyclistes); Régulateur de vitesse adaptatif; Assistant suivi de voie; Reconnaissance panneaux RSA; Assistant feux de route AHB; ABS + EBD; VSC; Aide au démarrage en côte; Détection fatigue conducteur; eCall"
     }
   }
 ]
