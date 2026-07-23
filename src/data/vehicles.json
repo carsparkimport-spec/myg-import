@@ -139,7 +139,8 @@
     "colors": [
       "Snow White",
       "Boundless Cloud",
-      "Black Delan"
+      "Black Delan",
+      "Time Grey"
     ],
     "interior": "Noir / Marron (au choix)",
     "availability": 1,
@@ -159,7 +160,7 @@
       "/images/vehicles/byd-seal-u-dm-i-boost-delan-black/12.png"
     ],
     "details": {
-      "Couleurs disponibles": "Snow White; Boundless Cloud; Black Delan",
+      "Couleurs disponibles": "Snow White; Boundless Cloud; Black Delan; Time Grey",
       "Motorisation": "Hybride rechargeable DM-i — Traction avant",
       "Boîte": "Automatique",
       "Batterie": "Blade BYD LFP 18.3 kWh",
