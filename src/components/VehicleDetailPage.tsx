@@ -21,6 +21,7 @@ interface Vehicle {
   description: string;
   images: string[];
   status?: string;
+  colors?: string[];
   details?: Record<string, Primitive>;
   [key: string]: unknown;
 }
@@ -50,6 +51,9 @@ export default function VehicleDetailPage({ vehicle }: Props) {
     { label: 'Boîte', value: vehicle.transmission },
     ...(vehicle.fuel ? [{ label: 'Carburant', value: vehicle.fuel }] : []),
     { label: 'Année', value: String(vehicle.year) },
+    ...(vehicle.colors && vehicle.colors.length > 0
+      ? [{ label: 'Couleurs', value: vehicle.colors.join(' · ') }]
+      : []),
   ];
 
   const detailEntries = vehicle.details
