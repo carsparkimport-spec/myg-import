@@ -257,7 +257,15 @@ export default function VehicleDetailPage({ vehicle }: Props) {
                         className={`px-5 py-4 text-sm border-b border-white/5 last:border-0 flex justify-between items-start gap-4 ${idx % 2 === 0 ? '' : 'bg-[#181818]'}`}
                       >
                         <span className="text-gray-400 font-medium flex-shrink-0">{label}</span>
-                        <span className="text-white font-semibold text-right">{String(value ?? '')}</span>
+                        {String(value ?? '').includes(';') ? (
+                          <ul className="text-white font-semibold text-right list-none space-y-1">
+                            {String(value ?? '').split(';').map((item, i) => (
+                              <li key={i} className="before:content-['–'] before:mr-1 before:text-gray-400">{item.trim()}</li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <span className="text-white font-semibold text-right">{String(value ?? '')}</span>
+                        )}
                       </div>
                     ))}
                 </div>
