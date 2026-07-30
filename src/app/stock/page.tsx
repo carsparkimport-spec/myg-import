@@ -16,6 +16,7 @@ interface Vehicle {
   images: string[];
   status?: string;
   origin?: string;
+  [key: string]: unknown;
 }
 
 type Filter = 'tous' | 'dispo' | 'vendu';
@@ -45,7 +46,14 @@ export default function StockPage() {
 
   const available = vehicles.filter(v => v.status !== 'Vendu');
   const sold      = vehicles.filter(v => v.status === 'Vendu');
-  const displayed = filter === 'dispo' ? available : filter === 'vendu' ? sold : vehicles;
+
+  const sortedAll = [
+    ...vehicles.filter(v => v.make === 'BYD' && v.status !== 'Vendu'),
+    ...vehicles.filter(v => v.make !== 'BYD' && v.status !== 'Vendu'),
+    ...vehicles.filter(v => v.status === 'Vendu'),
+  ];
+
+  const displayed = filter === 'dispo' ? available : filter === 'vendu' ? sold : sortedAll;
 
   const tabs: { key: Filter; label: string; count: number }[] = [
     { key: 'tous',  label: 'Tous',        count: vehicles.length },
