@@ -258,13 +258,13 @@ export default function VehicleDetailPage({ vehicle }: Props) {
                       >
                         <span className="text-gray-400 font-medium flex-shrink-0">{label}</span>
                         {String(value ?? '').includes(';') ? (
-                          <ul className="text-white font-semibold text-right list-none space-y-1">
+                          <ul className="text-white font-semibold list-none space-y-1">
                             {String(value ?? '').split(';').map((item, i) => (
                               <li key={i} className="before:content-['–'] before:mr-1 before:text-gray-400">{item.trim()}</li>
                             ))}
                           </ul>
                         ) : (
-                          <span className="text-white font-semibold text-right">{String(value ?? '')}</span>
+                          <span className="text-white font-semibold">{String(value ?? '')}</span>
                         )}
                       </div>
                     ))}
