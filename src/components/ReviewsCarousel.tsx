@@ -53,6 +53,13 @@ const reviews: Review[] = [
     source: 'Google',
     date: 'Juin 2026',
   },
+  {
+    name: 'Thomas He',
+    rating: 5,
+    text: 'J\'ai récemment acheté un véhicule chez Myg Import et je suis entièrement satisfait de mon expérience. Mathieu a fait preuve d\'un grand professionnalisme du premier contact jusqu\'à la remise du véhicule. Il a été à l\'écoute, disponible et très transparent sur l\'historique, l\'état et les caractéristiques du véhicule. Toutes mes questions ont reçu des réponses claires et honnêtes. On sent une véritable passion pour l\'automobile ainsi qu\'une volonté de proposer des véhicules de qualité tout en accompagnant sérieusement ses clients. Je recommande Myg Import et Mathieu sans la moindre hésitation à toute personne recherchant un véhicule avec un professionnel fiable, sérieux et compétent.',
+    source: 'Google',
+    date: 'Juin 2026',
+  },
 ];
 
 function Stars({ rating }: { rating: number }) {
