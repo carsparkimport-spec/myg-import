@@ -39,6 +39,13 @@ const reviews: Review[] = [
     source: 'AutoScout24',
     date: '05.05.2026',
   },
+  {
+    name: 'Raphael Bubani',
+    rating: 5,
+    text: 'Un grand merci pour le service et votre disponibilité. Nous sommes très content de notre achat, Mathieu a pu nous fournir le véhicule que nous cherchions dans un délai rapide à un prix très intéressant. Nous recommandons.',
+    source: 'Google',
+    date: 'Juin 2026',
+  },
 ];
 
 function Stars({ rating }: { rating: number }) {
