@@ -46,6 +46,13 @@ const reviews: Review[] = [
     source: 'Google',
     date: 'Juin 2026',
   },
+  {
+    name: 'Iyed Bennour',
+    rating: 5,
+    text: 'Excellente expérience avec MYG Import ! Je leur ai confié la vente de ma voiture et ils ont géré l\'intégralité du processus d\'une main de maître. Estimation, paperasse… je n\'ai eu à m\'occuper de rien. Mathieu fait preuve d\'un grand professionnalisme et son accompagnement permet de vendre l\'esprit tranquille. Un service 5 étoiles que je recommande sans hésiter.',
+    source: 'Google',
+    date: 'Juin 2026',
+  },
 ];
 
 function Stars({ rating }: { rating: number }) {
