@@ -732,7 +732,22 @@
       "Obsidian Black"
     ],
     "interior": "Noir / Beige",
-    "images": [],
+    "images": [
+      "/images/vehicles/byd-atto-2-dm-i-boost/1.jpeg",
+      "/images/vehicles/byd-atto-2-dm-i-boost/2.jpeg",
+      "/images/vehicles/byd-atto-2-dm-i-boost/3.png",
+      "/images/vehicles/byd-atto-2-dm-i-boost/4.jpeg",
+      "/images/vehicles/byd-atto-2-dm-i-boost/5.jpeg",
+      "/images/vehicles/byd-atto-2-dm-i-boost/6.png",
+      "/images/vehicles/byd-atto-2-dm-i-boost/7.jpeg",
+      "/images/vehicles/byd-atto-2-dm-i-boost/8.jpeg",
+      "/images/vehicles/byd-atto-2-dm-i-boost/9.jpeg",
+      "/images/vehicles/byd-atto-2-dm-i-boost/10.png",
+      "/images/vehicles/byd-atto-2-dm-i-boost/11.png",
+      "/images/vehicles/byd-atto-2-dm-i-boost/12.jpeg",
+      "/images/vehicles/byd-atto-2-dm-i-boost/13.jpeg",
+      "/images/vehicles/byd-atto-2-dm-i-boost/14.jpeg"
+    ],
     "description": "Le BYD ATTO 2 DM-i Boost est un SUV compact hybride rechargeable developpant 212 ch (156 kW). Autonomie tout electrique jusqu'a 90 km WLTP, consommation mixte ponderee de 1,8 a 2,1 L/100 km. Batterie 18 kWh, toit vitre panoramique, camera 360deg, ADAS complet et sellerie cuir vegan. Disponible sous 3 a 5 semaines.",
     "details": {
       "Couleurs disponibles": "Time Grey / Skiing White / Obsidian Black",
