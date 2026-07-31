@@ -61,7 +61,8 @@
       "Garantie generale": "6 ans / 150 000 km",
       "Garantie moteur": "8 ans / 150 000 km",
       "Garantie batterie": "8 ans / 160 000 km"
-    }
+    },
+    "hidden": true
   },
   {
     "id": "byd-atto-2-dm-i-boost",
@@ -207,7 +208,8 @@
       "Charge & conduite": "V2L (Vehicle-to-Load); Modes de conduite : Eco, Normal, Sport, Snow; Pompe à chaleur",
       "Garantie générale": "6 ans / 150 000 km",
       "Garantie batterie": "8 ans / 200 000 km"
-    }
+    },
+    "hidden": true
   },
   {
     "id": "byd-seal-u-dm-i-design-323hp-awd",

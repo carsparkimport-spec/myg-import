@@ -20,7 +20,7 @@ interface Vehicle {
   origin?: string;
 }
 
-const vehicles = vehiclesData as Vehicle[];
+const vehicles = (vehiclesData as Array<Vehicle & { hidden?: boolean }>).filter(v => !v.hidden);
 
 const features = [
   {

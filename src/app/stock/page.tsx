@@ -53,6 +53,7 @@ export default function StockPage() {
     ...vehicles.filter(v => v.status === 'Vendu'),
   ];
 
+
   const displayed = filter === 'dispo' ? available : filter === 'vendu' ? sold : sortedAll;
 
   const tabs: { key: Filter; label: string; count: number }[] = [
