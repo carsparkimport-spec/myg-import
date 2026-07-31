@@ -231,7 +231,20 @@
       "Arctic Blue"
     ],
     "interior": "Cuir véritable Noir",
-    "images": [],
+    "images": [
+      "/images/vehicles/byd-seal-excellence-awd/1.png",
+      "/images/vehicles/byd-seal-excellence-awd/2.png",
+      "/images/vehicles/byd-seal-excellence-awd/3.png",
+      "/images/vehicles/byd-seal-excellence-awd/4.png",
+      "/images/vehicles/byd-seal-excellence-awd/5.png",
+      "/images/vehicles/byd-seal-excellence-awd/6.png",
+      "/images/vehicles/byd-seal-excellence-awd/7.png",
+      "/images/vehicles/byd-seal-excellence-awd/8.png",
+      "/images/vehicles/byd-seal-excellence-awd/9.png",
+      "/images/vehicles/byd-seal-excellence-awd/10.png",
+      "/images/vehicles/byd-seal-excellence-awd/11.png",
+      "/images/vehicles/byd-seal-excellence-awd/12.png"
+    ],
     "hidden": true,
     "description": "Le BYD SEAL Excellence AWD est une berline sportive 100 % électrique bi-moteur développant 530 ch (390 kW) et 670 Nm de couple. Transmission intégrale AWD, 0 à 100 km/h en 3,8 s, batterie Blade 82,56 kWh, autonomie 580 km (NEDC). Charge DC CCS2 150 kW (0→80 % en 26 min), V2L intégré. Sellerie cuir véritable, son DYNAUDIO 12 HP, écran pivotant 15,6\", sièges avant ventilés et chauffants, W-HUD, caméras 360°, ADAS complet. Disponible sous 4 à 6 semaines.",
     "details": {
