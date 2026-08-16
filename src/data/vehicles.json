@@ -1011,13 +1011,13 @@
     "make": "BYD",
     "model": "Seal U DM-i",
     "trim": "Boost",
-    "year": 2026,
-    "mileage": 0,
+    "year": 2025,
+    "mileage": 15000,
     "fuel": "Hybride rechargeable",
     "transmission": "Automatique",
-    "price": 32490,
+    "price": 29900,
     "priceNote": "TVA incluse - hors frais immatriculation",
-    "status": "Neuf",
+    "status": "Vendu",
     "featured": false,
     "origin": "Europe",
     "description": "Le BYD SEAL U DM-i Boost en Delan Black — SUV hybride rechargeable DM-i à la présence imposante. Consommation pondérée WLTP : 0,9 L/100 km. Autonomie électrique jusqu'à 80 km en cycle mixte (125 km en urbain), autonomie totale jusqu'à 1 080 km. Recharge AC 11 kW (~2h30) ou DC rapide (30→80% en 35 min). Intérieur similicuir vegan disponible en Noir ou Marron (au choix). Disponible sous 2 à 3 semaines.",
@@ -1027,6 +1027,7 @@
     "interior": "Noir / Marron (au choix)",
     "availability": 1,
     "images": [
+      "/images/vehicles/byd-seal-u-dm-i-boost-2/vendu.webp",
       "/images/vehicles/byd-seal-u-dm-i-boost-2/1.jpeg",
       "/images/vehicles/byd-seal-u-dm-i-boost-2/2.jpeg",
       "/images/vehicles/byd-seal-u-dm-i-boost-2/3.jpeg",
@@ -1081,7 +1082,6 @@
       "Garantie carrosserie": "12 ans / km illimité",
       "Entretien": "1 an ou 15 000 km",
       "Livraison": "2 à 3 semaines (sous réserve de disponibilité)"
-    },
-    "hidden": true
+    }
   }
 ]
