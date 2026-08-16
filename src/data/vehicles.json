@@ -1083,5 +1083,54 @@
       "Entretien": "1 an ou 15 000 km",
       "Livraison": "2 à 3 semaines (sous réserve de disponibilité)"
     }
+  },
+  {
+    "id": "toyota-yaris-hybrid-teamplayer-2",
+    "make": "Toyota",
+    "model": "Yaris",
+    "trim": "Hybrid 116 1.5 VVT-i Team Player + Pack Confort",
+    "year": 2026,
+    "mileage": 0,
+    "fuel": "Hybride essence",
+    "transmission": "Automatique CVT",
+    "price": 23490,
+    "priceNote": "TVA incluse - hors frais immatriculation",
+    "status": "Vendu",
+    "featured": false,
+    "origin": "Europe",
+    "description": "La Toyota Yaris Hybrid 116ch 2026 — citadine hybride fiable, économique et agréable au quotidien. Moteur 1.5 VVT-i Hybrid 116ch, boîte CVT automatique, 4,2 l/100km. Finition Team Player avec Pack Confort : écran 9 pouces, caméra de recul, climatisation auto, Toyota Safety Sense, sièges chauffants et volant chauffant. Garantie 3 ans / 100 000 km.",
+    "colors": [
+      "Gris Argent métallisé",
+      "Gris Célestine",
+      "Noir Intense",
+      "Bleu Genièvre"
+    ],
+    "interior": "Tissu noir",
+    "images": [
+      "/images/vehicles/toyota-yaris-hybrid-teamplayer-2/vendu.webp",
+      "/images/vehicles/toyota-yaris-hybrid-teamplayer-2/1.png",
+      "/images/vehicles/toyota-yaris-hybrid-teamplayer-2/2.png",
+      "/images/vehicles/toyota-yaris-hybrid-teamplayer-2/3.png",
+      "/images/vehicles/toyota-yaris-hybrid-teamplayer-2/4.png",
+      "/images/vehicles/toyota-yaris-hybrid-teamplayer-2/5.jpeg",
+      "/images/vehicles/toyota-yaris-hybrid-teamplayer-2/6.jpeg",
+      "/images/vehicles/toyota-yaris-hybrid-teamplayer-2/7.png",
+      "/images/vehicles/toyota-yaris-hybrid-teamplayer-2/8.jpeg",
+      "/images/vehicles/toyota-yaris-hybrid-teamplayer-2/9.jpeg"
+    ],
+    "details": {
+      "Couleurs disponibles": "Gris Argent métallisé; Gris Célestine; Noir Intense; Bleu Genièvre",
+      "Motorisation": "1.5 VVT-i Hybrid 116ch — Toyota Safety Sense",
+      "Boîte": "Automatique CVT",
+      "Consommation": "4,2 l/100km",
+      "Carrosserie": "Citadine 5 portes",
+      "Garantie": "3 ans / 100 000 km",
+      "Livraison": "3 à 5 semaines",
+      "Extérieur": "Phares avant LED avec signature lumineuse; Feux de jour LED; Feux arrière LED; Clignotants LED; Antibrouillards LED; Jantes alliage 16'' noires; Vitres arrière surteintées; Becquet arrière noir; Antenne requin",
+      "Pack Confort": "Smart Key (av/ar); Démarrage Start/Stop; 6 haut-parleurs; Chargeur smartphone induction; Éclairage d'ambiance bleu; Sièges avant chauffants (conducteur + passager); Volant chauffant; Éclairage LED aux pieds",
+      "Confort": "Climatisation automatique; Lève-vitres électriques One-Touch; Rétroviseurs extérieurs chauffants électriques; Rétroviseur intérieur électrochrome; Verrouillage centralisé à distance; Frein de stationnement électrique; Banquette arrière rabattable 60/40; Plancher coffre double niveau; Fixations ISOFIX; Accoudoir central avant",
+      "Équipements": "Écran multimédia 9'' Toyota Touch; Bluetooth / Commandes vocales; Intégration smartphone; Port USB-C avant; Commandes audio au volant; Caméra de recul",
+      "Sécurité & ADAS": "Toyota Safety Sense: Système précollision PCS (cyclistes); Régulateur de vitesse adaptatif; Assistant suivi de voie; Reconnaissance panneaux RSA; Assistant feux de route AHB; ABS + EBD; VSC; Aide au démarrage en côte; Détection fatigue conducteur; eCall"
+    }
   }
 ]
