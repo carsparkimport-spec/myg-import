@@ -5,6 +5,7 @@ export const modules: ModuleMap = {
   "./components/mockups/eu-home/Constellation.tsx": () => import("../components/mockups/eu-home/Constellation.tsx"),
   "./components/mockups/eu-home/Current.tsx": () => import("../components/mockups/eu-home/Current.tsx"),
   "./components/mockups/eu-home/EuropeanCourtyard.tsx": () => import("../components/mockups/eu-home/EuropeanCourtyard.tsx"),
+  "./components/mockups/eu-home/EuropeanCourtyardTerracotta.tsx": () => import("../components/mockups/eu-home/EuropeanCourtyardTerracotta.tsx"),
   "./components/mockups/eu-home/GoldenHour.tsx": () => import("../components/mockups/eu-home/GoldenHour.tsx"),
   "./components/mockups/eu-home/GoldenHourValley.tsx": () => import("../components/mockups/eu-home/GoldenHourValley.tsx"),
   "./components/mockups/eu-home/LuxembourgShowroom.tsx": () => import("../components/mockups/eu-home/LuxembourgShowroom.tsx"),
