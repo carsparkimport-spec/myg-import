@@ -11,6 +11,7 @@ export const modules: ModuleMap = {
   "./components/mockups/eu-home/LuxembourgShowroom.tsx": () => import("../components/mockups/eu-home/LuxembourgShowroom.tsx"),
   "./components/mockups/eu-home/MYGImportTerracotta.tsx": () => import("../components/mockups/eu-home/MYGImportTerracotta.tsx"),
   "./components/mockups/eu-home/MYGImportTerracottaCars.tsx": () => import("../components/mockups/eu-home/MYGImportTerracottaCars.tsx"),
+  "./components/mockups/eu-home/MYGImportTerracottaCarsClean.tsx": () => import("../components/mockups/eu-home/MYGImportTerracottaCarsClean.tsx"),
   "./components/mockups/eu-home/Redesign.tsx": () => import("../components/mockups/eu-home/Redesign.tsx"),
   "./components/mockups/eu-home/Route.tsx": () => import("../components/mockups/eu-home/Route.tsx"),
   "./components/mockups/eu-home/Showroom.tsx": () => import("../components/mockups/eu-home/Showroom.tsx"),
