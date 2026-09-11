@@ -22,7 +22,7 @@ export default function EuropeanCourtyard() {
           <div className="courtyard-hero-photo" aria-label="Véhicule devant notre showroom européen" role="img" />
           <div className="courtyard-hero-copy">
             <p className="courtyard-kicker">Sélection européenne · Bertrange</p>
-            <h1>Le juste<br /><em>modèle.</em></h1>
+            <h1>Le bon véhicule,<br /><em>au meilleur prix</em><br />en Europe.</h1>
             <p className="courtyard-lede">Des véhicules choisis pour leur histoire, leur configuration et leur état. Livrés depuis les meilleures adresses européennes.</p>
             <div className="courtyard-actions">
               <a className="courtyard-button" href="#collection">Voir la collection</a>
