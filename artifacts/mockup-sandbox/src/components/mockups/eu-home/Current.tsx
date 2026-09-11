@@ -78,7 +78,7 @@ export default function Current() {
       <Header />
       <main>
         <section className="eu-hero">
-          <div className="eu-hero-image" style={{ backgroundImage: 'url("/__mockup/images/eu-home/current-hero-luxembourg.png")' }} />
+          <div className="eu-hero-image" style={{ backgroundImage: 'url("/__mockup/images/eu-home/current-hero-luxembourg-v2.png")' }} />
           <div className="eu-hero-shade" />
           <div className="eu-hero-copy">
             <h1>Import<br />Europe</h1>
