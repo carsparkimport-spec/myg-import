@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap");
+
+/* A brighter, warmer treatment for the photographic hero. The image remains
+   atmospheric, but the vehicle and Luxembourg setting read immediately. */
+.eu-home-copy-e5SWod3U-bright {}
+
+.eu-page {
+  font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+  font-weight: 400;
+}
+
+.eu-header a,
+.eu-language {
+  font-weight: 500;
+}
+
+.eu-hero h1 {
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.eu-hero p {
+  font-weight: 400;
+}
+
+.eu-button,
+.eu-contact {
+  font-weight: 600;
+}
+
+.eu-benefits h2,
+.eu-reviews h2,
+.eu-feature h3,
+.eu-vehicle-info h3,
+.eu-footer h3 {
+  font-weight: 600;
+}
+
+.eu-hero-image {
+  filter: brightness(1.22) saturate(1.08) contrast(0.96);
+}
+
+.eu-hero-image-accessible {
+  background-position: center center;
+  filter: brightness(1.16) saturate(1.06) contrast(0.98);
+}
+
+.eu-hero-shade {
+  background:
+    linear-gradient(90deg, rgba(7, 9, 10, 0.93) 0%, rgba(7, 9, 10, 0.67) 35%, rgba(7, 9, 10, 0.12) 72%, rgba(7, 9, 10, 0.03) 100%),
+    linear-gradient(180deg, rgba(5, 7, 8, 0.12) 0%, rgba(5, 7, 8, 0.02) 48%, rgba(5, 7, 8, 0.2) 100%);
+}
+
+.eu-hero-copy {
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.28);
+  isolation: isolate;
+}
+
+.eu-hero-copy::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -32px auto -30px -26px;
+  width: min(75vw, 820px);
+  background: linear-gradient(90deg, rgba(7, 9, 10, 0.76) 0%, rgba(7, 9, 10, 0.56) 56%, rgba(7, 9, 10, 0) 100%);
+  pointer-events: none;
+}
+
+@media (max-width: 560px) {
+  .eu-hero-image {
+    filter: brightness(1.12) saturate(1.05) contrast(0.97);
+  }
+
+  .eu-hero-image-accessible {
+    background-position: 58% center;
+    filter: brightness(1.1) saturate(1.04) contrast(0.98);
+  }
+
+  .eu-hero-shade {
+    background:
+      linear-gradient(90deg, rgba(7, 9, 10, 0.7) 0%, rgba(7, 9, 10, 0.36) 100%),
+      linear-gradient(180deg, rgba(5, 7, 8, 0.16), rgba(5, 7, 8, 0.28));
+  }
+}
