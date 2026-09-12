@@ -1,0 +1,107 @@
+import { useEffect, useState } from "react";
+
+const benefits = [
+  ["01", "Prix transparents", "Une estimation claire du prix, de la TVA et du transport avant chaque décision."],
+  ["02", "Réseau européen", "Nous ouvrons les bons stocks auprès de partenaires sélectionnés dans toute l'Europe."],
+  ["03", "Dossier suivi", "COC, contrôle technique et immatriculation : chaque étape reste lisible et suivie."],
+  ["04", "Livraison sereine", "Votre véhicule arrive au Luxembourg avec un calendrier précis et une équipe joignable."],
+];
+
+const vehicles = [
+  { image: "car-1.jpeg", make: "BMW", model: "Série 3 Touring", year: "2022", mileage: "32 500", price: "31 900", tag: "Sélection du moment" },
+  { image: "car-2.png", make: "BYD", model: "Seal U DM-i", year: "2025", mileage: "15 000", price: "33 490", tag: "Récent" },
+  { image: "car-3.png", make: "Toyota", model: "Yaris Hybrid", year: "2024", mileage: "21 800", price: "22 490", tag: "Urbain" },
+];
+
+const reviews = [
+  ["Tom Flick", "Une équipe passionnée, rigoureuse et très présente. La voiture correspondait exactement à ce que nous cherchions.", "Mai 2026"],
+  ["F B", "De la première recherche à la livraison, tout était précis. Une vraie expérience de conseil, sans pression.", "Avril 2026"],
+  ["Frank", "Les démarches européennes sont devenues simples. Disponible, transparent et efficace.", "07.05.2026"],
+];
+
+function Header() {
+  return (
+    <header className="qe-header">
+      <a href="#top" className="qe-logo"><img src="/__mockup/images/eu-home/logo.png" alt="MYG Import" /></a>
+      <nav>
+        <a href="#stock">Le stock</a>
+        <a href="#method">La méthode</a>
+        <a href="#reviews">Témoignages</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div className="qe-head-right"><span>LU / FR</span><a href="#contact" className="qe-pill qe-pill-dark">Parler à un conseiller <b>↗</b></a></div>
+    </header>
+  );
+}
+
+function VehicleCard({ vehicle }: { vehicle: typeof vehicles[number] }) {
+  return (
+    <article className="qe-vehicle">
+      <div className="qe-vehicle-photo"><img src={`/__mockup/images/eu-home/${vehicle.image}`} alt={`${vehicle.make} ${vehicle.model}`} /><span>{vehicle.tag}</span></div>
+      <div className="qe-vehicle-copy">
+        <div><p className="qe-overline">{vehicle.make} · {vehicle.year}</p><h3>{vehicle.model}</h3></div>
+        <strong>{vehicle.price} <small>€</small></strong>
+        <p className="qe-specs">{vehicle.mileage} km <i /> Automatique <i /> Disponible</p>
+        <a href="#contact">Recevoir la fiche <b>↗</b></a>
+      </div>
+    </article>
+  );
+}
+
+function Reviews() {
+  const [active, setActive] = useState(0);
+  useEffect(() => {
+    const timer = window.setInterval(() => setActive((value) => (value + 1) % reviews.length), 5600);
+    return () => window.clearInterval(timer);
+  }, []);
+  return (
+    <section className="qe-reviews" id="reviews">
+      <div className="qe-review-heading"><p className="qe-overline">Ce que l'on retient</p><h2>Le bon véhicule,<br /><em>sans détour.</em></h2></div>
+      <div className="qe-review-content">
+        <div className="qe-rating"><span>★★★★★</span><b>5.0</b><small>sur Google</small></div>
+        <blockquote>“{reviews[active][1]}”</blockquote>
+        <div className="qe-review-author"><b>{reviews[active][0]}</b><span>{reviews[active][2]}</span></div>
+        <div className="qe-dots">{reviews.map((review, index) => <button key={review[0]} aria-label={`Témoignage ${index + 1}`} className={index === active ? "active" : ""} onClick={() => setActive(index)} />)}</div>
+      </div>
+    </section>
+  );
+}
+
+export default function EuHomeCopyMCJeAitXQuietEditorial() {
+  return (
+    <div className="qe-page" id="top">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+        :root{--ink:#252728;--muted:#73756f;--paper:#f5f2eb;--line:#d8d4ca;--orange:#cb5d39;--cream:#e8e1d4}
+        *{box-sizing:border-box}.qe-page{background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100%;font-size:14px}.qe-page a{color:inherit;text-decoration:none}.qe-header{height:82px;display:flex;align-items:center;justify-content:space-between;padding:0 5.5%;border-bottom:1px solid var(--line);background:rgba(245,242,235,.94);position:relative;z-index:2}.qe-logo img{width:111px;filter:brightness(.26)}.qe-header nav{display:flex;gap:34px;margin-left:70px}.qe-header nav a,.qe-head-right span{font:11px 'DM Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:#5e605b}.qe-header nav a:hover{color:var(--orange)}.qe-head-right{display:flex;align-items:center;gap:24px}.qe-pill{padding:12px 16px;border-radius:30px;font-size:12px;font-weight:600}.qe-pill-dark{background:var(--ink);color:var(--paper)!important}.qe-pill b,.qe-vehicle-copy a b{font-size:17px;margin-left:10px;font-weight:400}.qe-hero{display:grid;grid-template-columns:42% 58%;min-height:535px}.qe-hero-copy{padding:76px 8% 62px 13%;display:flex;flex-direction:column;justify-content:center}.qe-overline{font:10px 'DM Mono',monospace;text-transform:uppercase;letter-spacing:.15em;color:var(--orange);margin:0 0 22px}.qe-hero h1{font:600 clamp(46px,5.2vw,76px)/.98 'Playfair Display',serif;letter-spacing:-.045em;margin:0 0 25px}.qe-hero h1 em,.qe-review-heading em{color:var(--orange);font-weight:500}.qe-hero-copy>p{max-width:380px;color:var(--muted);line-height:1.75;font-size:15px;margin:0}.qe-actions{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}.qe-hero-image{min-height:535px;background:url('/__mockup/images/eu-home/current-hero-luxembourg-v2.png') center/cover;position:relative}.qe-hero-image:after{content:'MYG / 2026';position:absolute;right:30px;bottom:27px;font:10px 'DM Mono',monospace;color:#f5f2eb;letter-spacing:.13em}.qe-button{display:inline-flex;align-items:center;background:var(--orange);color:#fff!important;border-radius:2px;padding:14px 19px;font-size:12px;font-weight:600}.qe-button-light{background:transparent;color:var(--ink)!important;border:1px solid var(--line)}.qe-note{border-top:1px solid var(--line);margin-top:54px;padding-top:14px;font:10px 'DM Mono',monospace;text-transform:uppercase;letter-spacing:.11em;color:var(--muted)}.qe-benefits{padding:82px 7% 96px;background:var(--cream)}.qe-section-head{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid #cbc4b7;padding-bottom:26px;margin-bottom:42px}.qe-section-head h2,.qe-stock h2{font:500 clamp(31px,3.3vw,47px)/1.05 'Playfair Display',serif;letter-spacing:-.03em;margin:0}.qe-section-head p{max-width:230px;color:var(--muted);line-height:1.6;margin:0}.qe-feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px}.qe-feature{border-top:1px solid #bdb6a9;padding-top:15px}.qe-feature span{font:11px 'DM Mono',monospace;color:var(--orange)}.qe-feature h3{font:600 18px 'Playfair Display',serif;margin:23px 0 10px}.qe-feature p{color:var(--muted);line-height:1.65;margin:0;font-size:13px}.qe-stock{padding:90px 7%;background:var(--paper)}.qe-stock-intro{display:flex;justify-content:space-between;align-items:end;margin-bottom:36px}.qe-stock-intro p{color:var(--muted);margin:14px 0 0;line-height:1.6}.qe-stock-intro a{font:11px 'DM Mono',monospace;text-transform:uppercase;border-bottom:1px solid var(--orange);padding-bottom:5px;white-space:nowrap}.qe-vehicle-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:18px}.qe-vehicle{background:#eeeae2}.qe-vehicle-photo{height:206px;position:relative;overflow:hidden}.qe-vehicle:first-child .qe-vehicle-photo{height:280px}.qe-vehicle-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}.qe-vehicle:hover img{transform:scale(1.035)}.qe-vehicle-photo span{position:absolute;top:13px;left:13px;padding:6px 8px;background:var(--paper);font:9px 'DM Mono',monospace;text-transform:uppercase;letter-spacing:.08em}.qe-vehicle-copy{padding:20px 20px 18px;display:grid;grid-template-columns:1fr auto;gap:8px}.qe-vehicle-copy h3{font:500 22px 'Playfair Display',serif;margin:0}.qe-vehicle-copy strong{font:600 17px 'DM Sans',sans-serif}.qe-vehicle-copy strong small{font-size:11px}.qe-vehicle-copy .qe-overline{margin:0 0 6px;font-size:9px}.qe-specs{grid-column:1/-1;color:var(--muted);font:10px 'DM Mono',monospace;margin:7px 0 10px}.qe-specs i{display:inline-block;height:3px;width:3px;border-radius:50%;background:var(--orange);margin:0 8px 2px}.qe-vehicle-copy>a{grid-column:1/-1;border-top:1px solid #d2ccc1;padding-top:13px;font-size:12px}.qe-centered{text-align:center;margin-top:36px}.qe-reviews{display:grid;grid-template-columns:1fr 1fr;gap:11%;padding:96px 13%;background:var(--ink);color:var(--paper)}.qe-review-heading h2{font:500 clamp(39px,4.7vw,62px)/1.03 'Playfair Display',serif;letter-spacing:-.045em;margin:0}.qe-review-heading .qe-overline{color:#d48364}.qe-review-content{padding-top:27px}.qe-rating{display:flex;align-items:center;gap:11px;font-family:'DM Mono',monospace}.qe-rating span{color:#d48364;letter-spacing:2px}.qe-rating small{color:#aaa79f}.qe-rating b{font-size:12px}.qe-review-content blockquote{font:italic 500 clamp(23px,2.5vw,31px)/1.3 'Playfair Display',serif;margin:37px 0 26px;max-width:520px}.qe-review-author{display:flex;gap:16px;font:10px 'DM Mono',monospace;text-transform:uppercase;letter-spacing:.08em}.qe-review-author span{color:#9b9a92}.qe-dots{display:flex;gap:7px;margin-top:39px}.qe-dots button{width:28px;height:3px;border:0;background:#565853;padding:0;cursor:pointer}.qe-dots button.active{background:#d48364}.qe-footer{padding:48px 7%;display:flex;justify-content:space-between;background:#ddd7cc;color:#50514c}.qe-footer img{width:96px;filter:brightness(.35);margin-bottom:14px}.qe-footer p{font-size:12px;line-height:1.6;margin:0}.qe-footer small{display:block;margin-top:25px;font:10px 'DM Mono',monospace}.qe-footer-links{display:flex;gap:48px}.qe-footer-links h4{font:10px 'DM Mono',monospace;text-transform:uppercase;color:var(--orange);margin:0 0 15px}.qe-footer-links a{display:block;font-size:12px;margin:7px 0}@media(max-width:760px){.qe-header{padding:0 5%;height:68px}.qe-header nav{display:none}.qe-head-right span{display:none}.qe-pill{padding:10px 12px;font-size:11px}.qe-hero{display:flex;flex-direction:column-reverse}.qe-hero-image{min-height:320px}.qe-hero-copy{padding:52px 8%}.qe-benefits,.qe-stock{padding:62px 7%}.qe-section-head,.qe-stock-intro{display:block}.qe-section-head p{margin-top:18px}.qe-feature-grid{grid-template-columns:1fr 1fr;gap:28px 18px}.qe-vehicle-grid{display:block}.qe-vehicle{margin-bottom:18px}.qe-vehicle-photo,.qe-vehicle:first-child .qe-vehicle-photo{height:220px}.qe-reviews{display:block;padding:68px 8%}.qe-review-content{padding-top:48px}.qe-footer{display:block;padding:42px 8%}.qe-footer-links{margin-top:32px;gap:40px}}
+      `}</style>
+      <Header />
+      <main>
+        <section className="qe-hero">
+          <div className="qe-hero-copy">
+            <p className="qe-overline">Import automobile · Luxembourg</p>
+            <h1>Une voiture<br /><em>bien choisie.</em></h1>
+            <p>Nous trouvons le véhicule qui vous ressemble dans les stocks européens. Une recherche précise, un prix lisible, un accompagnement humain.</p>
+            <div className="qe-actions"><a href="#contact" className="qe-button">Commencer ma recherche <b>↗</b></a><a href="#method" className="qe-button qe-button-light">Notre méthode</a></div>
+            <div className="qe-note">BMW · BYD · Toyota · Audi · Hyundai · VW</div>
+          </div>
+          <div className="qe-hero-image" />
+        </section>
+        <section className="qe-benefits" id="method">
+          <div className="qe-section-head"><h2>L'Europe,<br /><em>autrement.</em></h2><p>Une expertise locale pour un marché sans frontières. Nous nous occupons du chemin.</p></div>
+          <div className="qe-feature-grid">{benefits.map(([number, title, desc]) => <article className="qe-feature" key={number}><span>{number}</span><h3>{title}</h3><p>{desc}</p></article>)}</div>
+        </section>
+        <section className="qe-stock" id="stock">
+          <div className="qe-stock-intro"><div><p className="qe-overline">Le stock du moment</p><h2>Quelques belles<br /><em>trouvailles.</em></h2><p>Des exemples de véhicules que nous pouvons sourcer pour vous.</p></div><a href="#contact">Voir tout le stock ↗</a></div>
+          <div className="qe-vehicle-grid">{vehicles.map((vehicle) => <VehicleCard key={vehicle.model} vehicle={vehicle} />)}</div>
+          <div className="qe-centered"><a href="#contact" className="qe-button qe-button-light">Recevoir une sélection personnalisée</a></div>
+        </section>
+        <Reviews />
+      </main>
+      <footer className="qe-footer" id="contact">
+        <div><img src="/__mockup/images/eu-home/logo.png" alt="MYG Import" /><p>Le bon véhicule. Le bon chemin.<br />Depuis le Luxembourg, partout en Europe.</p><small>© 2026 MYG Import</small></div>
+        <div className="qe-footer-links"><div><h4>Explorer</h4><a href="#stock">Le stock</a><a href="#method">La méthode</a><a href="#reviews">Témoignages</a></div><div><h4>Parler avec nous</h4><a href="mailto:contact@myg-import.com">contact@myg-import.com</a><a href="tel:+352661408330">+352 661 408 330</a></div></div>
+      </footer>
+    </div>
+  );
+}
