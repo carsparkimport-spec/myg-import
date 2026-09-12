@@ -9,9 +9,9 @@ const features = [
 ];
 
 const vehicles = [
-  { image: "car-1.jpeg", make: "BMW", model: "M4 Competition", year: "2022", mileage: "32 500", price: "59 900" },
-  { image: "car-2.png", make: "Porsche", model: "911 Carrera", year: "2021", mileage: "18 200", price: "89 500" },
-  { image: "car-3.png", make: "Mercedes-Benz", model: "AMG GT", year: "2020", mileage: "41 800", price: "74 900" },
+  { image: "car-1.jpeg", make: "BMW", model: "Série 3 Touring", year: "2022", mileage: "32 500", price: "31 900" },
+  { image: "car-2.png", make: "BYD", model: "Seal U DM-i", year: "2025", mileage: "15 000", price: "33 490" },
+  { image: "car-3.png", make: "Toyota", model: "Yaris Hybrid", year: "2024", mileage: "21 800", price: "22 490" },
 ];
 
 const reviews = [
@@ -81,16 +81,18 @@ export default function Current() {
           <div className="eu-hero-image" style={{ backgroundImage: 'url("/__mockup/images/eu-home/current-hero-luxembourg-v2.png")' }} />
           <div className="eu-hero-shade" />
           <div className="eu-hero-copy">
-            <h1>Import<br />Europe</h1>
-            <p>Réseau intra-UE, conformité et immatriculation, TVA et garantie européenne.</p>
-            <div className="eu-hero-buttons"><a href="#stock" className="eu-button">Voir le stock Europe</a><a href="#process" className="eu-button eu-button-ghost">Notre process</a></div>
+             <h1>Votre voiture<br />est en Europe.</h1>
+             <p>Nous recherchons pour vous le bon véhicule parmi les stocks disponibles partout en Europe, selon vos critères et votre budget.</p>
+             <div className="eu-hero-buttons"><a href="#contact" className="eu-button">Lancer ma recherche</a><a href="#process" className="eu-button eu-button-ghost">Découvrir notre méthode</a></div>
+             <div className="eu-brand-note" style={{ marginTop: 34, paddingLeft: 15, borderLeft: "2px solid #dc2626", display: "grid", gap: 5, color: "#bdbdbd", fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase" }}><span>Recherche multimarque</span><b style={{ color: "#fff", fontSize: 12, letterSpacing: ".04em", fontWeight: 600, textTransform: "none" }}>BMW · BYD · Toyota · Audi · Hyundai · VW</b></div>
           </div>
         </section>
         <section className="eu-benefits" id="process">
           <div className="eu-section-inner">
             <h2>Pourquoi importer depuis l'Europe ?</h2>
             <div className="eu-feature-grid">{features.map(([icon, title, desc]) => <article className="eu-feature" key={title}><span>{icon}</span><h3>{title}</h3><p>{desc}</p></article>)}</div>
-            <h2 className="eu-stock-heading" id="stock">Véhicules disponibles</h2>
+             <h2 className="eu-stock-heading" id="stock">Quelques opportunités trouvées en Europe</h2>
+             <p className="eu-stock-intro" style={{ maxWidth: 680, color: "#999", fontSize: 15, margin: "0 0 25px" }}>Les véhicules présentés illustrent les recherches que nous pouvons mener pour vous. La disponibilité évolue chaque jour selon les stocks européens.</p>
             <div className="eu-vehicle-grid">{vehicles.map((vehicle) => <VehicleCard key={vehicle.model} vehicle={vehicle} />)}</div>
             <div className="eu-centered"><a href="#stock" className="eu-button">Voir tout le stock Europe</a></div>
           </div>
