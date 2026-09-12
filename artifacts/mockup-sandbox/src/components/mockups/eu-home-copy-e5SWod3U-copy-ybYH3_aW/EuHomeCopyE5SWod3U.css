@@ -38,6 +38,8 @@
 
 .eu-hero-image {
   filter: brightness(1.22) saturate(1.08) contrast(0.96);
+  background-position: 62% center !important;
+  transform: scale(1.015);
 }
 
 .eu-hero-shade {
@@ -50,6 +52,51 @@
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.28);
 }
 
+.eu-hero-vehicle-tag {
+  position: absolute;
+  right: clamp(24px, 5vw, 76px);
+  bottom: 34px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 270px;
+  padding: 12px 15px;
+  color: #f6f2e9;
+  background: rgba(20, 24, 24, 0.58);
+  border: 1px solid rgba(246, 242, 233, 0.24);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 35px rgba(5, 7, 8, 0.18);
+}
+
+.eu-hero-vehicle-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #d64a3b;
+  box-shadow: 0 0 0 5px rgba(214, 74, 59, 0.15);
+}
+
+.eu-hero-vehicle-tag div {
+  display: grid;
+  gap: 4px;
+}
+
+.eu-hero-vehicle-tag small {
+  color: #d8c7a7;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.eu-hero-vehicle-tag strong {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
 @media (max-width: 560px) {
   .eu-hero-image {
     filter: brightness(1.12) saturate(1.05) contrast(0.97);
@@ -59,5 +106,12 @@
     background:
       linear-gradient(90deg, rgba(7, 9, 10, 0.7) 0%, rgba(7, 9, 10, 0.36) 100%),
       linear-gradient(180deg, rgba(5, 7, 8, 0.16), rgba(5, 7, 8, 0.28));
+  }
+
+  .eu-hero-vehicle-tag {
+    right: 18px;
+    bottom: 18px;
+    max-width: 235px;
+    padding: 10px 12px;
   }
 }
