@@ -47,6 +47,7 @@ export const modules: ModuleMap = {
   "./components/mockups/eu-home-copy-e5SWod3U-copy-ybYH3_aW/RailwayImport.tsx": () => import("../components/mockups/eu-home-copy-e5SWod3U-copy-ybYH3_aW/RailwayImport.tsx"),
   "./components/mockups/eu-home-copy-e5SWod3U-copy-ybYH3_aW/Redesign.tsx": () => import("../components/mockups/eu-home-copy-e5SWod3U-copy-ybYH3_aW/Redesign.tsx"),
   "./components/mockups/eu-home-copy-e5SWod3U-copy-ybYH3_aW/Route.tsx": () => import("../components/mockups/eu-home-copy-e5SWod3U-copy-ybYH3_aW/Route.tsx"),
+  "./components/mockups/eu-home-copy-e5SWod3U-copy-ybYH3_aW/RoutePlanner.tsx": () => import("../components/mockups/eu-home-copy-e5SWod3U-copy-ybYH3_aW/RoutePlanner.tsx"),
   "./components/mockups/eu-home-copy-e5SWod3U-copy-ybYH3_aW/Showroom.tsx": () => import("../components/mockups/eu-home-copy-e5SWod3U-copy-ybYH3_aW/Showroom.tsx"),
   "./components/mockups/eu-home-copy-e5SWod3U-copy-ybYH3_aW/StockFirst.tsx": () => import("../components/mockups/eu-home-copy-e5SWod3U-copy-ybYH3_aW/StockFirst.tsx"),
   "./components/mockups/eu-home-copy-mCJeAitX/AlpineSun.tsx": () => import("../components/mockups/eu-home-copy-mCJeAitX/AlpineSun.tsx"),
