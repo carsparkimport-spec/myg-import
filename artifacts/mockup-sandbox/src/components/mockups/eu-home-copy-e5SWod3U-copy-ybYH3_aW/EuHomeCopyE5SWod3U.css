@@ -37,9 +37,9 @@
 }
 
 .eu-hero-image {
-  filter: brightness(1.22) saturate(1.08) contrast(0.96);
-  background-position: 62% center !important;
-  transform: scale(1.015);
+  filter: brightness(1.18) saturate(1.06) contrast(0.97);
+  background-position: 58% center !important;
+  transform: scale(1.01);
 }
 
 .eu-hero-shade {

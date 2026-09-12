@@ -79,7 +79,7 @@ export default function EuHomeCopyE5SWod3UCopyYbYH3_aW() {
       <Header />
       <main>
         <section className="eu-hero">
-           <div className="eu-hero-image eu-hero-image-summer" style={{ backgroundImage: 'url("/__mockup/images/eu-home-copy-e5SWod3U-summer-hero.png")' }} />
+           <div className="eu-hero-image eu-hero-image-summer" style={{ backgroundImage: 'url("/__mockup/images/myg-eu-summer-front-crop.png")' }} />
           <div className="eu-hero-shade" />
            <div className="eu-hero-copy">
              <h1>Votre voiture<br />est en Europe.</h1>
