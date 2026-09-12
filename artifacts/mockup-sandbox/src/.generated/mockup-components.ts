@@ -16,6 +16,7 @@ export const modules: ModuleMap = {
   "./components/mockups/eu-home/Redesign.tsx": () => import("../components/mockups/eu-home/Redesign.tsx"),
   "./components/mockups/eu-home/Route.tsx": () => import("../components/mockups/eu-home/Route.tsx"),
   "./components/mockups/eu-home/Showroom.tsx": () => import("../components/mockups/eu-home/Showroom.tsx"),
+  "./components/mockups/eu-home/StockFirst.tsx": () => import("../components/mockups/eu-home/StockFirst.tsx"),
   "./components/mockups/homepage/CinematicSplit.tsx": () => import("../components/mockups/homepage/CinematicSplit.tsx"),
   "./components/mockups/homepage/PremiumDark.tsx": () => import("../components/mockups/homepage/PremiumDark.tsx"),
   "./components/mockups/homepage/VehicleDetail.tsx": () => import("../components/mockups/homepage/VehicleDetail.tsx")
