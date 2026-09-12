@@ -83,7 +83,7 @@ export default function EuHomeCopyE5SWod3U() {
           <div className="eu-hero-shade" />
           <div className="eu-hero-copy">
              <h1>Votre voiture<br />est en Europe.</h1>
-             <p>Nous recherchons pour vous le bon véhicule parmi les stocks disponibles partout en Europe, selon vos critères et votre budget.</p>
+             <p className="font-thin">Nous recherchons pour vous le bon véhicule au meilleur prix parmi les stocks disponibles partout en Europe, selon vos critères et votre budget.</p>
               <div className="eu-hero-buttons"><a href="/__mockup/preview/eu-home-copy-e5SWod3U/VehicleSearch" className="eu-button">Lancer ma recherche</a><a href="#process" className="eu-button eu-button-ghost">Découvrir notre méthode</a></div>
               <div className="eu-brand-note" style={{ marginTop: 34, paddingLeft: 15, borderLeft: "2px solid #dc2626", display: "grid", gap: 5, color: "#bdbdbd", fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase" }}><span>Recherche multimarque</span><b style={{ color: "#fff", fontSize: 12, letterSpacing: ".04em", fontWeight: 600, textTransform: "none" }}>BMW · BYD · Toyota · Audi · Hyundai · VW · …</b></div>
           </div>
