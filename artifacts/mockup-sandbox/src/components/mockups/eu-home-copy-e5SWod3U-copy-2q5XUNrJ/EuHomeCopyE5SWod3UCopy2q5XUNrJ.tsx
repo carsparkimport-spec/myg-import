@@ -79,7 +79,7 @@ export default function EuHomeCopyE5SWod3UCopy2q5XUNrJ() {
       <Header />
       <main>
         <section className="eu-hero">
-           <div className="eu-hero-image eu-hero-image-summer eu-hero-image-accessible" style={{ backgroundImage: 'url("/__mockup/images/eu-home-accessible-multicar-hero.png")' }} />
+           <div className="eu-hero-image eu-hero-image-summer eu-hero-image-accessible" style={{ backgroundImage: 'url("/__mockup/images/eu-home-front-accessible-cars-hero.png")' }} />
           <div className="eu-hero-shade" />
           <div className="eu-hero-copy">
               <h1>Le bon véhicule,<br />au bon budget.</h1>
