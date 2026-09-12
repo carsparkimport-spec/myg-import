@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./current.css";
+import "./EuHomeCopyE5SWod3U.css";
 
 const features = [
   ["🇪🇺", "TVA", "Facturation adaptée, véhicules TTC ou TVA récupérable selon profil."],
