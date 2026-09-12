@@ -38,7 +38,9 @@
 
 .eu-hero-image {
   filter: brightness(1.18) saturate(1.06) contrast(0.97);
-  background-position: 58% center !important;
+  /* Keep the crop on the front quarter: the vehicle reads immediately,
+     while the grille badge naturally falls outside the visible frame. */
+  background-position: 30% center !important;
   transform: scale(1.01);
 }
 
