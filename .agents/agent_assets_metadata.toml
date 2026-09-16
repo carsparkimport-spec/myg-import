@@ -19,3 +19,17 @@ mtime_ms = 1789135335129
 storage_uri = "gcs://replit-rams-assets-riker/rams/assets/repl:92dd8ac8-36f0-4c67-b8d1-57d268cef3df/50553865-c28c-42d7-a5b2-49f8238a6801/4b310972-e6f5-4ae9-9cea-ddf82c043f59"
 storage_version_token = "1789562827731306"
 content_type = "image/png"
+
+[[outputs]]
+id = "fNuEkUxkIMpZDRapY4oMj"
+uri = "file://exports/myg-vehicule-rue-luxembourg-ete.jpg"
+type = "image"
+title = "Véhicule dans une rue de Luxembourg"
+description = "Composition finale en 1920 × 1080 avec le véhicule et le décor estival luxembourgeois."
+logical_id = "ecbbba3c-7865-40ae-961f-4ca17b9a6b2e"
+content_hash = "sha256:42262a08d55434ba440a5d4952de882d92d7fd88b211ced124c72aa297062ec7"
+size = 636256
+mtime_ms = 1789565406623
+storage_uri = "gcs://replit-rams-assets-riker/rams/assets/repl:92dd8ac8-36f0-4c67-b8d1-57d268cef3df/ecbbba3c-7865-40ae-961f-4ca17b9a6b2e/a265153d-da2d-41eb-83b6-7e30d8b76c89"
+storage_version_token = "1789565412810786"
+content_type = "image/jpeg"
