@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./current.css";
+import "./EuHomeCopyMCJeAitXCopyOfDqtO_t.css";
 
 const features = [
   ["🇪🇺", "TVA", "Facturation adaptée, véhicules TTC ou TVA récupérable selon profil."],
@@ -78,7 +78,8 @@ export default function EuHomeCopyMCJeAitXCopyOfDqtO_t() {
       <Header />
       <main>
         <section className="eu-hero">
-          <div className="eu-hero-image" style={{ backgroundImage: 'url("/__mockup/images/eu-home-actuel6-q8-summer-composite.png")' }} />
+          <div className="eu-hero-image" style={{ backgroundImage: 'url("/__mockup/images/eu-home-actuel6-rue-luxembourg-summer.png")' }} />
+          <img className="eu-hero-vehicle" src="/__mockup/images/eu-home-actuel6-vehicle-cutout.png" alt="SUV présenté dans une rue estivale de Luxembourg" />
           <div className="eu-hero-shade" />
           <div className="eu-hero-copy">
              <h1
