@@ -1,8 +1,21 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "whv33LoCTeeWYaBKhYtv7"
 uri = "file://public/images/backgrounds/eu-stock-bg.png"
 type = "image"
 title = "EU flag elegant muted blue premium"
+
+[[outputs]]
+id = "v2TIy7QNt8N-8YP6UQlr-"
+uri = "file://artifacts/mockup-sandbox/public/images/eu-home/current-hero-luxembourg-v2.png"
+type = "image"
+title = "Image du hero Luxembourg"
+description = "Image d’arrière-plan éclaircie utilisée dans la maquette MYG Import."
+logical_id = "50553865-c28c-42d7-a5b2-49f8238a6801"
+content_hash = "sha256:ae0eae179b4497e45ccf980f35575d051f234c55d0f17baeca13ad41b5544710"
+size = 1732639
+mtime_ms = 1789135335129
+storage_uri = "gcs://replit-rams-assets-riker/rams/assets/repl:92dd8ac8-36f0-4c67-b8d1-57d268cef3df/50553865-c28c-42d7-a5b2-49f8238a6801/4b310972-e6f5-4ae9-9cea-ddf82c043f59"
+storage_version_token = "1789562827731306"
+content_type = "image/png"
