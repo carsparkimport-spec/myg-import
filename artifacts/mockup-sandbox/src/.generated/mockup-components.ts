@@ -101,6 +101,7 @@ export const modules: ModuleMap = {
   "./components/mockups/eu-home-copy-mCJeAitX/Showroom.tsx": () => import("../components/mockups/eu-home-copy-mCJeAitX/Showroom.tsx"),
   "./components/mockups/eu-home-copy-mCJeAitX/StockFirst.tsx": () => import("../components/mockups/eu-home-copy-mCJeAitX/StockFirst.tsx"),
   "./components/mockups/eu-home-fullscreen/EuHomeFullscreen.tsx": () => import("../components/mockups/eu-home-fullscreen/EuHomeFullscreen.tsx"),
+  "./components/mockups/eu-home-guided/EuHomeGuided.tsx": () => import("../components/mockups/eu-home-guided/EuHomeGuided.tsx"),
   "./components/mockups/homepage/CinematicSplit.tsx": () => import("../components/mockups/homepage/CinematicSplit.tsx"),
   "./components/mockups/homepage/PremiumDark.tsx": () => import("../components/mockups/homepage/PremiumDark.tsx"),
   "./components/mockups/homepage/VehicleDetail.tsx": () => import("../components/mockups/homepage/VehicleDetail.tsx"),
