@@ -1,0 +1,5 @@
+/* Quiet correction variant: preserve the existing composition while returning the photography to a natural grade. */
+.myg-clean .myg-head-cta,
+.myg-clean .myg-hero-note{display:none}
+.myg-clean .myg-cars-hero:after{background:linear-gradient(90deg,rgba(48,30,27,.66) 0%,rgba(58,35,30,.25) 43%,rgba(58,35,30,.04) 78%),linear-gradient(0deg,rgba(42,27,25,.42),transparent 50%)}
+.myg-clean .myg-cars-hero:before{filter:saturate(.92) brightness(1.04)}
