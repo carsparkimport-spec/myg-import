@@ -78,8 +78,7 @@ export default function EuHomeCopyMCJeAitXCopyOfDqtO_t() {
       <Header />
       <main>
         <section className="eu-hero">
-          <div className="eu-hero-image" style={{ backgroundImage: 'url("/__mockup/images/eu-home-actuel6-rue-luxembourg-summer.png")' }} />
-          <img className="eu-hero-vehicle" src="/__mockup/images/eu-home-actuel6-vehicle-cutout.png" alt="SUV présenté dans une rue estivale de Luxembourg" />
+          <div className="eu-hero-image" style={{ backgroundImage: 'url("/__mockup/images/eu-home-copy-mCJeAitX-copy-ofDqtO_t-luxembourg-attached.jpeg")' }} />
           <div className="eu-hero-shade" />
           <div className="eu-hero-copy">
              <h1
