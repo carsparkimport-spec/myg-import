@@ -78,8 +78,8 @@ export default function EuHomeCopyMCJeAitXCopyInbvxw3r() {
       <Header />
       <main>
         <section className="eu-hero">
-          <div className="eu-hero-image" style={{ backgroundImage: 'url("/__mockup/images/eu-home/current-hero-luxembourg-v2.png")' }} />
-          <div className="eu-hero-shade" />
+          <div className="eu-hero-image" style={{ backgroundImage: 'url("/__mockup/images/eu-home-copy-inbvxw3r-summer-hero.png")', filter: "brightness(1.08) saturate(1.08) contrast(.98)" }} />
+          <div className="eu-hero-shade" style={{ background: "linear-gradient(90deg, rgba(22,25,22,.63) 0%, rgba(22,25,22,.38) 34%, rgba(58,44,26,.10) 72%, rgba(58,44,26,.02) 100%), linear-gradient(180deg, rgba(250,214,154,.10), rgba(250,214,154,0) 45%)" }} />
           <div className="eu-hero-copy">
              <h1
                className="text-[color:var(--color-gray-50)] border-t-[color:var(--elevate-1)] border-r-[color:var(--elevate-1)] border-b-[color:var(--elevate-1)] border-l-[color:var(--elevate-1)] bg-[color:var(--elevate-1)] font-medium">Votre voiture<br />est en Europe.</h1>
