@@ -9,9 +9,9 @@ const features = [
 ];
 
 const vehicles = [
-  { image: "car-1.jpeg", make: "BYD", model: "Atto 3", year: "2022", mileage: "32 500", price: "31 900" },
-  { image: "car-2.png", make: "BYD", model: "Seal", year: "2025", mileage: "15 000", price: "33 490" },
-  { image: "car-3.png", make: "BYD", model: "Seal U DM-i", year: "2024", mileage: "21 800", price: "22 490" },
+  { image: "car-1.jpeg", make: "BYD", model: "Atto 3", year: "2022", mileage: "32 500", price: "24 990" },
+  { image: "car-2.png", make: "BYD", model: "Seal", year: "2025", mileage: "15 000", price: "37 490" },
+  { image: "car-3.png", make: "BYD", model: "Seal U DM-i", year: "2024", mileage: "21 800", price: "29 990" },
 ];
 
 const reviews = [
