@@ -1,0 +1,53 @@
+Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RenderFromTemplateContext>
+      <ScrollAndFocusHandler segmentPath={[...]}>
+        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+            <LoadingBoundary hasLoading={false} loading={undefined} loadingStyles={undefined} loadingScripts={undefined}>
+              <NotFoundBoundary notFound={undefined} notFoundStyles={undefined}>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter parallelRouterKey="children" url="/eu" tree={[...]} childNodes={Map} ...>
+                      <ClientPageRoot Component={function EuropeLanding} searchParams={{}} params={{}}>
+                        <EuropeLanding params={Promise} searchParams={Promise}>
+                          <Layout title="Import Eur...">
+                            <NoopHead>
+                            <div className="flex flex-...">
+                              <Header>
+                              <main
++                               className="flex-grow relative z-10 pt-20 bg-gray-100 text-gray-900"
+-                               className="flex-grow relative z-10 pt-20 bg-[#0d0d0d] text-white"
+                              >
++                               <div
++                                 className="relative h-screen text-white overflow-hidden flex items-center"
++                                 style={{backgroundImage:"url('/imag...",backgroundSize:"cover",backgroundPosition:"center"}}
++                               >
+-                               <section
+-                                 className="relative flex min-h-[calc(100vh-5rem)] items-center overflow-hidden bg-co..."
+-                                 style={{background-image:"url(\"/ima..."}}
+-                               >
+                                ...
+                              ...
+                      ...
+
+    at throwOnHydrationMismatch (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:2657:56)
+    at beginWork (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:5405:918)
+    at runWithFiberInDEV (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:631:20)
+    at performUnitOfWork (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:7936:97)
+    at workLoopConcurrent (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:7932:58)
+    at renderRootConcurrent (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:7914:71)
+    at performWorkOnRoot (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:7553:112)
+    at performWorkOnRootViaSchedulerTask (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:8387:9)
+    at MessagePort.performWorkUntilDeadline (https://92dd8ac8-36f0-4c67-b8d1-57d268cef3df-00-2evf6s6euwzzy.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_107ce8._.js:2348:64)

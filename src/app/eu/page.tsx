@@ -1,6 +1,7 @@
 "use client";
 
 import Layout from '@/components/Layout';
+import Image from 'next/image';
 import Link from 'next/link';
 import VehicleCard from '@/components/VehicleCard';
 import ReviewsCarousel from '@/components/ReviewsCarousel';
@@ -61,9 +62,16 @@ export default function EuropeLanding() {
   return (
     <Layout title="Import Europe - MYG Import" mainClassName="bg-[#0d0d0d] text-white">
       <section
-        className="relative flex min-h-[calc(100vh-5rem)] items-center overflow-hidden bg-cover bg-center text-white"
-        style={{ backgroundImage: "url('/images/backgrounds/eu-home-luxembourg.jpeg')" }}
+        className="relative flex min-h-[calc(100vh-5rem)] items-center overflow-hidden text-white"
       >
+        <Image
+          src="/images/backgrounds/eu-home-luxembourg.jpeg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/10" />
         <div className="relative z-10 w-full max-w-[700px] px-7 py-16 sm:px-10 md:px-16 lg:px-[7vw]">
           <h1 className="font-sans text-[clamp(4rem,7vw,95px)] font-medium leading-[0.94] tracking-[-0.05em]">
