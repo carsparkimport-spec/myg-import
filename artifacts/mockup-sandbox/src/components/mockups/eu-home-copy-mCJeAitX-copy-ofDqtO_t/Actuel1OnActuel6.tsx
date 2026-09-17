@@ -61,8 +61,8 @@ export default function Actuel1OnActuel6() {
         <section className="eu-hero">
           <div className="eu-hero-image" style={{ backgroundImage: 'url("/__mockup/images/eu-home-copy-mCJeAitX-copy-ofDqtO_t-luxembourg-attached.jpeg")' }} />
           <div className="eu-hero-shade" />
-          <div className="eu-hero-copy text-base font-normal opacity-[1]"><h1>Votre voiture<br />est en Europe.</h1>
-            <p className="text-[20px]">Nous recherchons pour vous le bon véhicule parmi les stocks disponibles partout en Europe, selon vos critères et votre budget.</p>
+          <div className="font-normal text-[95px]"><h1>Votre voiture<br />est en Europe.</h1>
+            <p className="text-[23px]">Nous recherchons pour vous le bon véhicule parmi les stocks disponibles partout en Europe, selon vos critères et votre budget.</p>
             <div className="eu-hero-buttons"><a href="#contact" className="eu-button bg-[color:var(--color-red-500)]">Lancer ma recherche</a><a href="#process" className="eu-button eu-button-ghost">Découvrir notre méthode</a></div>
             <div className="text-[color:var(--tw-ring-offset-color)]" style={{ marginTop: 34, paddingLeft: 15, borderLeft: "2px solid #dc2626", display: "grid", gap: 5, color: "#bdbdbd", fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase" }}><span>Recherche multimarque</span><b style={{ color: "#fff", fontSize: 12, letterSpacing: ".04em", fontWeight: 600, textTransform: "none" }}>BMW · BYD · Toyota · Audi · Hyundai · VW</b></div>
           </div>
