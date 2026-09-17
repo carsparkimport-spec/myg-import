@@ -10,9 +10,10 @@ const features = [
 ];
 
 const vehicles = [
-  { image: "car-1.jpeg", make: "BYD", model: "Atto 3 EVO", year: "2025", mileage: "0", price: "40 490" },
+  { image: "car-1.jpeg", make: "BYD", model: "ATTO 2 DM-i Boost", year: "2025", mileage: "0", price: "29 990" },
   { image: "car-2.png", make: "BYD", model: "Seal Excellence AWD", year: "2026", mileage: "0", price: "47 790" },
   { image: "car-3.png", make: "BYD", model: "Seal U DM-i Design", year: "2026", mileage: "0", price: "38 490" },
+  { image: "car-3.png", make: "BYD", model: "Seal U DM-i Boost", year: "2026", mileage: "0", price: "33 490" },
 ];
 
 const reviews = [
