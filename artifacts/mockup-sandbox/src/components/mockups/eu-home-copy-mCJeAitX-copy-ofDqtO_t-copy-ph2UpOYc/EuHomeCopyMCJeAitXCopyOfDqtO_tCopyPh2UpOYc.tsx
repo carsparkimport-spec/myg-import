@@ -82,7 +82,7 @@ export default function EuHomeCopyMCJeAitXCopyOfDqtO_tCopyPh2UpOYc() {
           <div className="eu-hero-shade" />
           <div className="eu-hero-copy">
              <h1
-               className="text-[color:var(--color-gray-50)] border-t-[color:var(--elevate-1)] border-r-[color:var(--elevate-1)] border-b-[color:var(--elevate-1)] border-l-[color:var(--elevate-1)] bg-[color:var(--elevate-1)] font-medium">Votre voiture<br />est en Europe.</h1>
+               className="text-[color:var(--color-gray-50)] border-t-[color:var(--elevate-1)] border-r-[color:var(--elevate-1)] border-b-[color:var(--elevate-1)] border-l-[color:var(--elevate-1)] bg-[color:var(--elevate-1)] font-medium mt-[2px]">Votre voiture<br />est en Europe.</h1>
              <p>Nous recherchons pour vous le bon véhicule parmi les stocks disponibles partout en Europe, selon vos critères et votre budget.</p>
              <div className="eu-hero-buttons"><a href="#contact" className="eu-button opacity-[1] bg-[color:var(--color-red-500)]">Lancer ma recherche</a><a href="#process" className="eu-button eu-button-ghost">Découvrir notre méthode</a></div>
              <div className="text-[color:var(--color-gray-300)]" style={{ marginTop: 34, paddingLeft: 15, borderLeft: "2px solid #dc2626", display: "grid", gap: 5, color: "#bdbdbd", fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase" }}><span>Recherche multimarque</span><b style={{ color: "#fff", fontSize: 12, letterSpacing: ".04em", fontWeight: 600, textTransform: "none" }}>BMW · BYD · Toyota · Audi · Hyundai · VW</b></div>
