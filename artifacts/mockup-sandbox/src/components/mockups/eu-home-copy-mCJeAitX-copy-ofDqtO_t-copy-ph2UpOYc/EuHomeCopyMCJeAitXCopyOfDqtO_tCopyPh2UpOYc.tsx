@@ -5,7 +5,7 @@ const features = [
   ["🇪🇺", "TVA", "Facturation adaptée, véhicules TTC ou TVA récupérable selon profil."],
   ["🛡️", "Garantie EU", "Couverture européenne avec réseaux partenaires et extensions disponibles."],
   ["📋", "Conformité", "Dossier complet : COC, contrôle technique, immatriculation locale."],
-  ["🚚", "Délais courts", "Transports intra-UE optimisés, livraison rapide dans toute l'Europe."],
+  ["🚚", "Transport", "Transports intra-UE optimisés, livraison rapide dans toute l'Europe."],
 ];
 
 const vehicles = [
