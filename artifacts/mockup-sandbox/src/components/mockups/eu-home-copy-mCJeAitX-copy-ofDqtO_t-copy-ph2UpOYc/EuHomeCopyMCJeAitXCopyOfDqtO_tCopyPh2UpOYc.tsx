@@ -102,9 +102,9 @@ export default function EuHomeCopyMCJeAitXCopyOfDqtO_tCopyPh2UpOYc() {
       </main>
       <footer className="eu-footer text-[color:var(--color-white)] bg-[color:var(--color-black)]" id="contact">
         <div className="eu-footer-inner text-[color:var(--color-white)]">
-          <div className="text-[color:var(--tw-ring-offset-color)]"><img src="/__mockup/images/eu-home/logo.png" alt="MYG Import" /><p>Votre partenaire pour l'importation de véhicules en Europe.</p><small>© 2026 MYG Import</small></div>
-          <div><h3>Navigation</h3><a href="#top">Accueil</a><a href="#stock">Nos véhicules</a><a href="#process">Importation</a><a href="#reviews">Avis clients</a></div>
-          <div><h3>Contact</h3><p>8 Rue des Mérovingiens<br />8070 Bertrange - Luxembourg</p><p>contact@myg-import.com<br />+352 661 408 330</p></div>
+          <div className="text-[color:var(--color-white)]"><img src="/__mockup/images/eu-home/logo.png" alt="MYG Import" /><p>Votre partenaire pour l'importation de véhicules en Europe.</p><small>© 2026 MYG Import</small></div>
+          <div className="text-[color:var(--color-white)]"><h3>Navigation</h3><a href="#top">Accueil</a><a href="#stock">Nos véhicules</a><a href="#process">Importation</a><a href="#reviews">Avis clients</a></div>
+          <div className="text-[color:var(--color-white)]"><h3>Contact</h3><p>8 Rue des Mérovingiens<br />8070 Bertrange - Luxembourg</p><p>contact@myg-import.com<br />+352 661 408 330</p></div>
         </div>
       </footer>
     </div>
