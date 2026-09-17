@@ -23,7 +23,7 @@ const reviews = [
 function Header() {
   const links = [["Accueil", "#top"], ["Nos Véhicules", "#stock"], ["Importation", "#process"], ["Simulateur", "#contact"], ["À Propos", "#about"], ["Blog", "#reviews"]];
   return (
-    <header className="eu-header border-b-[#000000fa]">
+    <header className="eu-header">
       <a href="#top" className="eu-logo-link"><img src="/__mockup/images/eu-home/logo.png" alt="MYG Import" /></a>
       <nav className="eu-nav">{links.map(([label, href]) => <a key={label} href={href}>{label}</a>)}</nav>
       <div className="eu-header-actions"><button className="eu-language">FR⌄</button><a className="eu-contact bg-[color:var(--color-red-600)]" href="#contact">Nous contacter</a></div>
