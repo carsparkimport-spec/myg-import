@@ -1,0 +1,1 @@
+- [Composant canvas actif](canvas-active-component.md) — préserver les réglages manuels; ne jamais reconnecter le cadre Europe à une ancienne variante.
