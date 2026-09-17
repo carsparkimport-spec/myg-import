@@ -79,7 +79,7 @@ export default function Current() {
       <main>
         <section className="eu-hero">
           <div className="eu-hero-image" style={{ backgroundImage: 'url("/__mockup/images/current-eu-hero-luxembourg.jpeg")' }} />
-          <div className="eu-hero-shade" />
+          <div className="eu-hero-shade opacity-[0.3]" />
           <div className="eu-hero-copy">
              <h1 className="font-medium text-[95px]">Votre voiture<br />est en Europe.</h1>
              <p>Nous recherchons pour vous le bon véhicule parmi les stocks disponibles partout en Europe, selon vos critères et votre budget.</p>
