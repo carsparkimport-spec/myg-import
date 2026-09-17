@@ -10,11 +10,13 @@ interface Vehicle {
   id: string;
   make: string;
   model: string;
+  trim?: string;
   year: number;
   mileage: number;
   transmission: string;
   price: number;
   images: string[];
+  status?: string;
   featured?: boolean;
   featuredOrder?: number;
   origin?: string;
@@ -46,84 +48,98 @@ const features = [
 ];
 
 export default function EuropeLanding() {
-  const featuredEU = vehicles
-    .filter(v => v.origin === 'Europe')
-    .slice(0, 3);
-  return (
-    <Layout title="Import Europe - MYG Import">
+  const featuredIds = [
+    'byd-atto-2-dm-i-boost',
+    'byd-seal-excellence-awd',
+    'byd-seal-u-dm-i-design-323hp-awd',
+    'byd-seal-u-dm-i-boost-delan-black',
+  ];
+  const featuredEU = featuredIds
+    .map(id => vehicles.find(vehicle => vehicle.id === id))
+    .filter((vehicle): vehicle is (typeof vehicles)[number] => Boolean(vehicle));
 
-      {/* ── HERO ── */}
-      <div
-        className="relative h-screen text-white overflow-hidden flex items-center"
-        style={{
-          backgroundImage: "url('/images/backgrounds/transporteur camion.webp')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
+  return (
+    <Layout title="Import Europe - MYG Import" mainClassName="bg-[#0d0d0d] text-white">
+      <section
+        className="relative flex min-h-[calc(100vh-5rem)] items-center overflow-hidden bg-cover bg-center text-white"
+        style={{ backgroundImage: "url('/images/backgrounds/eu-home-luxembourg.jpeg')" }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent" />
-        <div className="relative z-10 px-8 md:px-16 lg:px-24 max-w-2xl">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-none mb-6">
-            Import<br />Europe
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/10" />
+        <div className="relative z-10 w-full max-w-[700px] px-7 py-16 sm:px-10 md:px-16 lg:px-[7vw]">
+          <h1 className="font-sans text-[clamp(4rem,7vw,95px)] font-medium leading-[0.94] tracking-[-0.05em]">
+            Votre voiture<br />est en Europe.
           </h1>
-          <p className="text-xl md:text-2xl font-light text-gray-200 mb-10 leading-relaxed">
-            Réseau intra-UE, conformité et immatriculation, TVA et garantie européenne.
+          <p className="mt-7 max-w-[600px] text-lg leading-relaxed text-gray-200 md:text-[23px]">
+            Nous recherchons pour vous le bon véhicule parmi les stocks disponibles partout en Europe, selon vos critères et votre budget.
           </p>
-          <div className="flex flex-wrap gap-4">
-            <Link href="/eu/stock">
-              <span className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-xl shadow-[0_0_24px_rgba(220,38,38,0.3)] hover:shadow-[0_0_36px_rgba(220,38,38,0.5)] transition-all cursor-pointer">
-                Voir le stock Europe
-              </span>
+          <div className="mt-9 flex flex-wrap gap-3.5">
+            <Link
+              href="/eu/contact"
+              className="rounded-lg bg-red-600 px-6 py-3 font-bold text-white shadow-[0_5px_22px_rgba(220,38,38,0.27)] transition-colors hover:bg-red-700"
+            >
+              Lancer ma recherche
             </Link>
-            <Link href="/eu/importation">
-              <span className="inline-block bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-bold py-4 px-10 rounded-xl transition-all cursor-pointer">
-                Notre process
-              </span>
+            <Link
+              href="/eu/importation"
+              className="rounded-lg border border-white/30 bg-white/10 px-6 py-3 font-bold text-white transition-colors hover:bg-white/20"
+            >
+              Découvrir notre méthode
             </Link>
           </div>
+          <div className="mt-8 grid gap-1 border-l-2 border-red-600 pl-4 text-xs uppercase tracking-[0.08em] text-gray-300">
+            <span>Recherche multimarque</span>
+            <strong className="font-semibold normal-case tracking-[0.04em] text-white">
+              BMW · BYD · Toyota · Audi · Hyundai · VW
+            </strong>
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* ── FEATURES ── */}
-      <div className="bg-[#0d0d0d] py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+      <section className="bg-[#0d0d0d] px-5 py-20" id="process">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="mb-10 text-center text-3xl font-bold tracking-tight text-white md:text-4xl">
             Pourquoi importer depuis l&apos;Europe ?
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
-            {features.map((f) => (
-              <div key={f.title} className="bg-[#151515] border border-white/5 rounded-2xl p-6 hover:border-white/15 transition-all">
-                <div className="text-3xl mb-4">{f.icon}</div>
-                <h3 className="text-white font-bold text-lg mb-2">{f.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{f.desc}</p>
-              </div>
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {features.map(feature => (
+              <article
+                key={feature.title}
+                className="min-h-[190px] rounded-2xl border border-white/5 bg-[#151515] p-6 transition-colors hover:border-white/20"
+              >
+                <span className="text-3xl">{feature.icon}</span>
+                <h3 className="mt-3 text-lg font-bold text-white">{feature.title}</h3>
+                <p className="mt-1 text-sm leading-relaxed text-gray-400">{feature.desc}</p>
+              </article>
             ))}
           </div>
 
-          {/* ── STOCK APERÇU ── */}
+          <h2 id="stock" className="mb-2 mt-16 text-center text-3xl font-bold tracking-tight text-white">
+            Quelques opportunités trouvées en Europe
+          </h2>
+          <p className="mx-auto mb-7 max-w-[680px] text-center text-[15px] leading-relaxed text-gray-400">
+            Les véhicules présentés illustrent les recherches que nous pouvons mener pour vous. La disponibilité évolue chaque jour selon les stocks européens.
+          </p>
+
           {featuredEU.length > 0 && (
-            <>
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">Véhicules disponibles</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-                {featuredEU.map((vehicle) => (
-                  <VehicleCard key={vehicle.id} vehicle={vehicle} basePath="/eu/voiture" />
-                ))}
-              </div>
-            </>
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
+              {featuredEU.map(vehicle => (
+                <VehicleCard key={vehicle.id} vehicle={vehicle} />
+              ))}
+            </div>
           )}
 
-          <div className="text-center">
-            <Link href="/eu/stock">
-              <span className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-xl transition-all cursor-pointer shadow-[0_0_20px_rgba(220,38,38,0.15)] hover:shadow-[0_0_30px_rgba(220,38,38,0.3)]">
-                Voir tout le stock Europe
-              </span>
+          <div className="mt-9 text-center">
+            <Link
+              href="/eu/stock"
+              className="inline-block rounded-lg bg-red-600 px-6 py-3 font-bold text-white shadow-[0_5px_22px_rgba(220,38,38,0.27)] transition-colors hover:bg-red-700"
+            >
+              Voir tout le stock Europe
             </Link>
           </div>
         </div>
-      </div>
+      </section>
 
       <ReviewsCarousel />
-
     </Layout>
   );
 }
