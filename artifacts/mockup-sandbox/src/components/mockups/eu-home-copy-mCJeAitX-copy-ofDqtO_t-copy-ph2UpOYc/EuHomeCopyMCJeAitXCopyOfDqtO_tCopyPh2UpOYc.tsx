@@ -55,9 +55,9 @@ function Reviews() {
   return (
     <section className="eu-reviews" id="reviews">
       <div className="eu-section-inner">
-        <div className="eu-eyebrow text-center text-[color:var(--color-red-500)] font-extrabold">— Avis clients —</div>
-        <h2>Ils nous font confiance</h2>
-        <div className="eu-rating"><span>★★★★★</span> <small>5/5 · Noté excellent</small></div>
+        <div className="eu-eyebrow text-center text-[color:var(--color-red-500)] font-extrabold pt-[20px] pb-[20px] text-[20px]">— Avis clients —</div>
+        <h2 className="text-center">Ils nous font confiance</h2>
+        <div className="eu-rating pt-[20px] pb-[20px]"><span>★★★★★</span> <small>5/5 · Noté excellent</small></div>
         <div className="eu-review-grid">
           {reviews.map((review, index) => (
             <article className={`eu-review ${index === current ? "eu-review-active" : ""}`} key={review[0]}>
@@ -84,25 +84,25 @@ export default function EuHomeCopyMCJeAitXCopyOfDqtO_tCopyPh2UpOYc() {
              <h1
                className="text-[color:var(--color-gray-50)] border-t-[color:var(--elevate-1)] border-r-[color:var(--elevate-1)] border-b-[color:var(--elevate-1)] border-l-[color:var(--elevate-1)] bg-[color:var(--elevate-1)] font-medium">Votre voiture<br />est en Europe.</h1>
              <p>Nous recherchons pour vous le bon véhicule parmi les stocks disponibles partout en Europe, selon vos critères et votre budget.</p>
-             <div className="eu-hero-buttons"><a href="#contact" className="eu-button bg-[color:var(--color-red-600)] opacity-[1]">Lancer ma recherche</a><a href="#process" className="eu-button eu-button-ghost">Découvrir notre méthode</a></div>
-             <div className="eu-brand-note" style={{ marginTop: 34, paddingLeft: 15, borderLeft: "2px solid #dc2626", display: "grid", gap: 5, color: "#bdbdbd", fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase" }}><span>Recherche multimarque</span><b style={{ color: "#fff", fontSize: 12, letterSpacing: ".04em", fontWeight: 600, textTransform: "none" }}>BMW · BYD · Toyota · Audi · Hyundai · VW</b></div>
+             <div className="eu-hero-buttons"><a href="#contact" className="eu-button opacity-[1] bg-[color:var(--color-red-500)]">Lancer ma recherche</a><a href="#process" className="eu-button eu-button-ghost">Découvrir notre méthode</a></div>
+             <div className="text-[color:var(--color-gray-300)]" style={{ marginTop: 34, paddingLeft: 15, borderLeft: "2px solid #dc2626", display: "grid", gap: 5, color: "#bdbdbd", fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase" }}><span>Recherche multimarque</span><b style={{ color: "#fff", fontSize: 12, letterSpacing: ".04em", fontWeight: 600, textTransform: "none" }}>BMW · BYD · Toyota · Audi · Hyundai · VW</b></div>
           </div>
         </section>
         <section className="eu-benefits" id="process">
           <div className="eu-section-inner">
-            <h2 className="text-center">Pourquoi importer depuis l'Europe ?</h2>
-            <div className="eu-feature-grid text-[18px]">{features.map(([icon, title, desc]) => <article className={`eu-feature${title === "TVA" ? " pl-[25px] pr-[25px] ml-[0px] mr-[0px] text-[16px]" : title === "Garantie EU" ? " font-medium" : title === "Conformité" ? " text-center" : ""}`} key={title}><span>{icon}</span><h3>{title}</h3><p>{desc}</p></article>)}</div>
-             <h2 className="eu-stock-heading text-center" id="stock">Quelques opportunités trouvées en Europe</h2>
-               <p className="eu-stock-intro text-center" style={{ display: "block", width: "100%", maxWidth: 680, color: "#999", fontSize: 15, margin: "0 auto 25px", textAlign: "center" }}>Les véhicules présentés illustrent les recherches que nous pouvons mener pour vous. La disponibilité évolue chaque jour selon les stocks européens.</p>
+            <h2 className="text-center mt-[2px] mb-[2px] pt-[20px] pb-[20px]">Pourquoi importer depuis l'Europe ?</h2>
+            <div className="text-[18px]">{features.map(([icon, title, desc]) => <article className={`eu-feature${title === "TVA" ? " pl-[25px] pr-[25px] ml-[0px] mr-[0px] text-[16px] text-center" : title === "Garantie EU" ? " font-medium" : title === "Conformité" ? " text-center" : ""}`} key={title}><span>{icon}</span><h3>{title}</h3><p>{desc}</p></article>)}</div>
+             <h2 className="eu-stock-heading text-center pt-[20px] pb-[20px]" id="stock">Quelques opportunités trouvées en Europe</h2>
+               <p className="eu-stock-intro text-center text-[17px]" style={{ display: "block", width: "100%", maxWidth: 680, color: "#999", fontSize: 15, margin: "0 auto 25px", textAlign: "center" }}>Les véhicules présentés illustrent les recherches que nous pouvons mener pour vous. La disponibilité évolue chaque jour selon les stocks européens.</p>
             <div className="eu-vehicle-grid">{vehicles.map((vehicle) => <VehicleCard key={vehicle.model} vehicle={vehicle} />)}</div>
             <div className="eu-centered"><a href="#stock" className="eu-button">Voir tout le stock Europe</a></div>
           </div>
         </section>
         <Reviews />
       </main>
-      <footer className="eu-footer bg-[color:var(--color-black)] text-[color:var(--color-white)]" id="contact">
+      <footer className="eu-footer text-[color:var(--color-white)] bg-[color:var(--color-black)]" id="contact">
         <div className="eu-footer-inner text-[color:var(--color-white)]">
-          <div><img src="/__mockup/images/eu-home/logo.png" alt="MYG Import" /><p>Votre partenaire pour l'importation de véhicules en Europe.</p><small>© 2026 MYG Import</small></div>
+          <div className="text-[color:var(--tw-ring-offset-color)]"><img src="/__mockup/images/eu-home/logo.png" alt="MYG Import" /><p>Votre partenaire pour l'importation de véhicules en Europe.</p><small>© 2026 MYG Import</small></div>
           <div><h3>Navigation</h3><a href="#top">Accueil</a><a href="#stock">Nos véhicules</a><a href="#process">Importation</a><a href="#reviews">Avis clients</a></div>
           <div><h3>Contact</h3><p>8 Rue des Mérovingiens<br />8070 Bertrange - Luxembourg</p><p>contact@myg-import.com<br />+352 661 408 330</p></div>
         </div>
