@@ -1,13 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Actuel1OnActuel6.css";
 
-const features = [
-  ["🇪🇺", "TVA", "Facturation adaptée, véhicules TTC ou TVA récupérable selon profil."],
-  ["🛡️", "Garantie EU", "Couverture européenne avec réseaux partenaires et extensions disponibles."],
-  ["📋", "Conformité", "Dossier complet : COC, contrôle technique, immatriculation locale."],
-  ["🚚", "Délais courts", "Transports intra-UE optimisés, livraison rapide dans toute l'Europe."],
-];
-
 const vehicles = [
   { image: "car-1.jpeg", make: "BYD", model: "Atto 3", year: "2022", mileage: "32 500", price: "24 990" },
   { image: "car-2.png", make: "BYD", model: "Seal", year: "2025", mileage: "15 000", price: "37 490" },
@@ -69,7 +62,12 @@ export default function Actuel1OnActuel6() {
         </section>
         <section className="eu-benefits opacity-[1]" id="process"><div className="eu-section-inner">
           <h2 className="text-center">Pourquoi importer depuis l'Europe ?</h2>
-          <div className="eu-feature-grid">{features.map(([icon, title, desc]) => <article className={title === "Garantie EU" || title === "Délais courts" ? "eu-feature text-center" : "eu-feature"} key={title}><span>{icon}</span><h3>{title}</h3><p>{desc}</p></article>)}</div>
+          <div className="eu-feature-grid">
+            <article className="eu-feature"><span>🇪🇺</span><h3>TVA</h3><p>Facturation adaptée, véhicules TTC ou TVA récupérable selon profil.</p></article>
+            <article className="eu-feature text-center"><span>🛡️</span><h3>Garantie EU</h3><p>Couverture européenne avec réseaux partenaires et extensions disponibles.</p></article>
+            <article className="eu-feature"><span>📋</span><h3>Conformité</h3><p>Dossier complet : COC, contrôle technique, immatriculation locale.</p></article>
+            <article className="eu-feature text-center"><span>🚚</span><h3>Délais courts</h3><p>Transports intra-UE optimisés, livraison rapide dans toute l'Europe.</p></article>
+          </div>
           <h2 className="eu-stock-heading font-normal text-center" id="stock">Quelques opportunités trouvées en Europe</h2>
           <p className="eu-stock-intro text-center" style={{ display: "block", width: "100%", maxWidth: 680, color: "#999", fontSize: 15, margin: "0 auto 25px", textAlign: "center" }}>Les véhicules présentés illustrent les recherches que nous pouvons mener pour vous. La disponibilité évolue chaque jour selon les stocks européens.</p>
           <div className="eu-vehicle-grid">{vehicles.map((vehicle) => <VehicleCard key={vehicle.model} vehicle={vehicle} />)}</div>

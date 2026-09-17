@@ -1,0 +1,1 @@
+import{j as r}from"./index-D_b4cUkD.js";import t from"./MYGImportTerracottaCars-DIQfjWvj.js";/* empty css                            */function m(){return r.jsx("div",{className:"myg-clean",children:r.jsx(t,{})})}export{m as default};
