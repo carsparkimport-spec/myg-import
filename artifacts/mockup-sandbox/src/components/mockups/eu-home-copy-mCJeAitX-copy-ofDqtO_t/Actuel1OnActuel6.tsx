@@ -60,16 +60,16 @@ export default function Actuel1OnActuel6() {
       <main>
         <section className="eu-hero">
           <div className="eu-hero-image" style={{ backgroundImage: 'url("/__mockup/images/eu-home-copy-mCJeAitX-copy-ofDqtO_t-luxembourg-attached.jpeg")' }} />
-          <div className="eu-hero-shade" />
-          <div className="eu-hero-copy"><h1 className="font-normal text-[95px]">Votre voiture<br />est en Europe.</h1>
+          <div className="eu-hero-shade opacity-[0.25]" />
+          <div className="eu-hero-copy"><h1 className="font-medium text-[95px]">Votre voiture<br />est en Europe.</h1>
             <p className="text-[23px]">Nous recherchons pour vous le bon véhicule parmi les stocks disponibles partout en Europe, selon vos critères et votre budget.</p>
             <div className="eu-hero-buttons"><a href="#contact" className="eu-button bg-[color:var(--color-red-500)]">Lancer ma recherche</a><a href="#process" className="eu-button eu-button-ghost">Découvrir notre méthode</a></div>
-            <div className="text-[color:var(--tw-ring-offset-color)]" style={{ marginTop: 34, paddingLeft: 15, borderLeft: "2px solid #dc2626", display: "grid", gap: 5, color: "#bdbdbd", fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase" }}><span>Recherche multimarque</span><b style={{ color: "#fff", fontSize: 12, letterSpacing: ".04em", fontWeight: 600, textTransform: "none" }}>BMW · BYD · Toyota · Audi · Hyundai · VW</b></div>
+            <div className="text-[color:var(--color-gray-300)]" style={{ marginTop: 34, paddingLeft: 15, borderLeft: "2px solid #dc2626", display: "grid", gap: 5, color: "#bdbdbd", fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase" }}><span>Recherche multimarque</span><b style={{ color: "#fff", fontSize: 12, letterSpacing: ".04em", fontWeight: 600, textTransform: "none" }}>BMW · BYD · Toyota · Audi · Hyundai · VW</b></div>
           </div>
         </section>
-        <section className="eu-benefits" id="process"><div className="eu-section-inner">
+        <section className="eu-benefits opacity-[1]" id="process"><div className="eu-section-inner">
           <h2 className="text-center">Pourquoi importer depuis l'Europe ?</h2>
-          <div className="eu-feature-grid">{features.map(([icon, title, desc]) => <article className={title === "Garantie EU" ? "eu-feature text-center" : "eu-feature"} key={title}><span>{icon}</span><h3>{title}</h3><p>{desc}</p></article>)}</div>
+          <div className="eu-feature-grid">{features.map(([icon, title, desc]) => <article className={title === "Garantie EU" || title === "Délais courts" ? "eu-feature text-center" : "eu-feature"} key={title}><span>{icon}</span><h3>{title}</h3><p>{desc}</p></article>)}</div>
           <h2 className="eu-stock-heading font-normal text-center" id="stock">Quelques opportunités trouvées en Europe</h2>
           <p className="eu-stock-intro text-center" style={{ display: "block", width: "100%", maxWidth: 680, color: "#999", fontSize: 15, margin: "0 auto 25px", textAlign: "center" }}>Les véhicules présentés illustrent les recherches que nous pouvons mener pour vous. La disponibilité évolue chaque jour selon les stocks européens.</p>
           <div className="eu-vehicle-grid">{vehicles.map((vehicle) => <VehicleCard key={vehicle.model} vehicle={vehicle} />)}</div>
