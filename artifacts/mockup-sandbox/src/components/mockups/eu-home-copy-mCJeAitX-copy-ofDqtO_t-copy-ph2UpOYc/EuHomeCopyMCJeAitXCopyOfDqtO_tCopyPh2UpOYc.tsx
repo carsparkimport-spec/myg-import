@@ -57,7 +57,7 @@ function Reviews() {
       <div className="eu-section-inner">
         <div className="eu-eyebrow text-center text-[color:var(--color-red-500)] font-extrabold pt-[20px] pb-[20px] text-[20px]">— Avis clients —</div>
         <h2 className="text-center">Ils nous font confiance</h2>
-        <div className="eu-rating pt-[20px] pb-[20px]"><span>★★★★★</span> <small>5/5 · Noté excellent</small></div>
+        <div className="eu-rating pt-[10px] pb-[10px]"><span>★★★★★</span> <small>5/5 · Noté excellent</small></div>
         <div className="eu-review-grid">
           {reviews.map((review, index) => (
             <article className={`eu-review ${index === current ? "eu-review-active" : ""}`} key={review[0]}>
@@ -82,20 +82,20 @@ export default function EuHomeCopyMCJeAitXCopyOfDqtO_tCopyPh2UpOYc() {
           <div className="eu-hero-shade" />
           <div className="eu-hero-copy">
              <h1
-               className="text-[color:var(--color-gray-50)] border-t-[color:var(--elevate-1)] border-r-[color:var(--elevate-1)] border-b-[color:var(--elevate-1)] border-l-[color:var(--elevate-1)] bg-[color:var(--elevate-1)] font-medium mt-[2px] mb-[20px] text-[85px]">Votre voiture<br />est en Europe.</h1>
+               className="border-t-[color:var(--elevate-1)] border-r-[color:var(--elevate-1)] border-b-[color:var(--elevate-1)] border-l-[color:var(--elevate-1)] bg-[color:var(--elevate-1)] font-medium mt-[2px] mb-[20px] text-[85px] text-[color:var(--color-white)]">Votre voiture<br />est en Europe.</h1>
              <p>Nous recherchons pour vous le bon véhicule parmi les stocks disponibles partout en Europe, selon vos critères et votre budget.</p>
-             <div className="eu-hero-buttons"><a href="#contact" className="eu-button opacity-[1] bg-[color:var(--color-red-500)]">Lancer ma recherche</a><a href="#process" className="eu-button eu-button-ghost">Découvrir notre méthode</a></div>
+             <div className="eu-hero-buttons"><a href="#contact" className="eu-button opacity-[1] bg-[color:var(--color-red-500)] text-[color:var(--color-white)]">Lancer ma recherche</a><a href="#process" className="eu-button eu-button-ghost text-[color:var(--color-white)]">Découvrir notre méthode</a></div>
              <div className="text-[color:var(--color-gray-300)]" style={{ marginTop: 34, paddingLeft: 15, borderLeft: "2px solid #dc2626", display: "grid", gap: 5, color: "#bdbdbd", fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase" }}><span>Recherche multimarque</span><b style={{ color: "#fff", fontSize: 12, letterSpacing: ".04em", fontWeight: 600, textTransform: "none" }}>BMW · BYD · Toyota · Audi · Hyundai · VW</b></div>
           </div>
         </section>
         <section className="eu-benefits" id="process">
           <div className="eu-section-inner">
             <h2 className="text-center mt-[2px] mb-[2px] pt-[20px] pb-[20px]">Pourquoi importer depuis l'Europe ?</h2>
-            <div className="eu-feature-grid">{features.map(([icon, title, desc]) => <article className="eu-feature" key={title}><span>{icon}</span><h3>{title}</h3><p>{desc}</p></article>)}</div>
+            <div className="text-[35px]">{features.map(([icon, title, desc]) => <article className={title === "Garantie EU" ? "eu-feature text-center" : "eu-feature"} key={title}><span>{icon}</span><h3>{title}</h3><p>{desc}</p></article>)}</div>
              <h2 className="eu-stock-heading text-center pt-[20px] pb-[20px]" id="stock">Quelques opportunités trouvées en Europe</h2>
                <p className="eu-stock-intro text-center text-[17px]" style={{ display: "block", width: "100%", maxWidth: 680, color: "#999", fontSize: 15, margin: "0 auto 25px", textAlign: "center" }}>Les véhicules présentés illustrent les recherches que nous pouvons mener pour vous. La disponibilité évolue chaque jour selon les stocks européens.</p>
             <div className="eu-vehicle-grid">{vehicles.map((vehicle) => <VehicleCard key={vehicle.model} vehicle={vehicle} />)}</div>
-            <div className="eu-centered"><a href="#stock" className="eu-button">Voir tout le stock Europe</a></div>
+            <div className="eu-centered"><a href="#stock" className="eu-button bg-[color:var(--color-red-500)]">Voir tout le stock Europe</a></div>
           </div>
         </section>
         <Reviews />
