@@ -69,8 +69,8 @@ export default function Actuel1OnActuel6() {
         </section>
         <section className="eu-benefits" id="process"><div className="eu-section-inner">
           <h2 className="text-center">Pourquoi importer depuis l'Europe ?</h2>
-          <div className="eu-feature-grid">{features.map(([icon, title, desc]) => <article className="eu-feature" key={title}><span>{icon}</span><h3>{title}</h3><p>{desc}</p></article>)}</div>
-          <h2 className="eu-stock-heading text-left font-normal" id="stock">Quelques opportunités trouvées en Europe</h2>
+          <div className="eu-feature-grid">{features.map(([icon, title, desc]) => <article className={title === "Garantie EU" ? "eu-feature text-center" : "eu-feature"} key={title}><span>{icon}</span><h3>{title}</h3><p>{desc}</p></article>)}</div>
+          <h2 className="eu-stock-heading font-normal text-center" id="stock">Quelques opportunités trouvées en Europe</h2>
           <p className="eu-stock-intro" style={{ maxWidth: 680, color: "#999", fontSize: 15, margin: "0 0 25px" }}>Les véhicules présentés illustrent les recherches que nous pouvons mener pour vous. La disponibilité évolue chaque jour selon les stocks européens.</p>
           <div className="eu-vehicle-grid">{vehicles.map((vehicle) => <VehicleCard key={vehicle.model} vehicle={vehicle} />)}</div>
           <div className="eu-centered"><a href="#stock" className="eu-button">Voir tout le stock Europe</a></div>
