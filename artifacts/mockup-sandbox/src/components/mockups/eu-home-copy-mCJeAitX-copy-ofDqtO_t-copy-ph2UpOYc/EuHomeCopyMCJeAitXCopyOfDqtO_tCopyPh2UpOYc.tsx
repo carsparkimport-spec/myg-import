@@ -91,7 +91,7 @@ export default function EuHomeCopyMCJeAitXCopyOfDqtO_tCopyPh2UpOYc() {
         <section className="eu-benefits" id="process">
           <div className="eu-section-inner">
             <h2 className="text-center">Pourquoi importer depuis l'Europe ?</h2>
-            <div className="text-[18px]">{features.map(([icon, title, desc]) => <article className={`eu-feature${title === "TVA" ? " pl-[25px] pr-[25px] ml-[0px] mr-[0px] text-[16px]" : title === "Garantie EU" ? " font-medium" : title === "Conformité" ? " text-center" : ""}`} key={title}><span>{icon}</span><h3>{title}</h3><p>{desc}</p></article>)}</div>
+            <div className="eu-feature-grid text-[18px]">{features.map(([icon, title, desc]) => <article className={`eu-feature${title === "TVA" ? " pl-[25px] pr-[25px] ml-[0px] mr-[0px] text-[16px]" : title === "Garantie EU" ? " font-medium" : title === "Conformité" ? " text-center" : ""}`} key={title}><span>{icon}</span><h3>{title}</h3><p>{desc}</p></article>)}</div>
              <h2 className="eu-stock-heading text-center" id="stock">Quelques opportunités trouvées en Europe</h2>
                <p className="eu-stock-intro text-center" style={{ display: "block", width: "100%", maxWidth: 680, color: "#999", fontSize: 15, margin: "0 auto 25px", textAlign: "center" }}>Les véhicules présentés illustrent les recherches que nous pouvons mener pour vous. La disponibilité évolue chaque jour selon les stocks européens.</p>
             <div className="eu-vehicle-grid">{vehicles.map((vehicle) => <VehicleCard key={vehicle.model} vehicle={vehicle} />)}</div>
