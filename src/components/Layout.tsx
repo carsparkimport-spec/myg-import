@@ -34,18 +34,11 @@ const Header = () => {
   const brand = firstSegment === 'myg' || firstSegment === 'car-spark' ? firstSegment : '';
   const vertical = firstSegment === 'jp' || firstSegment === 'eu' ? firstSegment : '';
   const brandDisplayName = brand === 'car-spark' ? 'Car Spark Import' : 'MYG Import';
-  const homeHref = pathname.startsWith('/eu')
-    ? '/eu'
-    : pathname.startsWith('/jp')
-      ? '/jp'
-      : brand
-        ? `/${brand}`
-        : '/';
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black h-20 shadow-lg">
       <div className="container mx-auto px-4 flex items-center justify-between h-full">
         <div className="flex-shrink-0 flex items-center h-full">
-          <Link href={homeHref} className="flex items-center" aria-label={`Accueil ${brandDisplayName}`}>
+          <Link href="/" className="flex items-center" aria-label="Accueil principal">
             <Logo variant="rect" className="h-14 md:h-16 w-auto" brandDisplayName={brandDisplayName} />
           </Link>
         </div>
