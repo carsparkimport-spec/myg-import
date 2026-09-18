@@ -66,8 +66,8 @@ export default function VerticalSelector() {
           </Link>
         </div>
         <nav className="hidden md:flex flex-1 justify-center items-center gap-5 text-sm font-medium">
-          <Link href="/jp/stock" className="text-gray-300 hover:text-white transition-colors">Stock Japon</Link>
           <Link href="/eu/stock" className="text-gray-300 hover:text-white transition-colors">Stock Europe</Link>
+          <Link href="/jp/stock" className="text-gray-300 hover:text-white transition-colors">Stock Japon</Link>
           <Link href="/jp/importation" className="text-gray-300 hover:text-white transition-colors">{t('nav.import') || 'Importation'}</Link>
           <Link href="/jp/simulateur" className="text-gray-300 hover:text-white transition-colors">{t('nav.sim') || 'Simulateur'}</Link>
           <Link href="/jp/a-propos" className="text-gray-300 hover:text-white transition-colors">{t('nav.about') || 'À Propos'}</Link>
