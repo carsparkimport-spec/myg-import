@@ -72,7 +72,7 @@ export default function EuropeLanding() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/10 opacity-[0.3]" />
         <div className="relative z-10 w-full max-w-[700px] px-7 py-16 sm:px-10 md:px-16 lg:px-[7vw]">
           <h1 className="font-sans text-[clamp(4rem,7vw,95px)] font-medium leading-[0.94] tracking-[-0.05em]">
             Votre voiture<br />est en Europe.
