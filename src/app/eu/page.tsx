@@ -112,9 +112,9 @@ export default function EuropeLanding() {
             {features.map(feature => (
               <article
                 key={feature.title}
-                className="min-h-[190px] rounded-2xl border border-white/5 bg-[#151515] p-6 transition-colors hover:border-white/20"
+                className="min-h-[190px] rounded-2xl border border-white/5 bg-[#151515] p-6 text-center transition-colors hover:border-white/20"
               >
-                <span className="text-3xl">{feature.icon}</span>
+                <span className="text-3xl text-center">{feature.icon}</span>
                 <h3 className="mt-3 text-lg font-bold text-white">{feature.title}</h3>
                 <p className="mt-1 text-sm leading-relaxed text-gray-400">{feature.desc}</p>
               </article>
