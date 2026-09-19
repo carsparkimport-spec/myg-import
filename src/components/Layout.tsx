@@ -2,7 +2,6 @@
 
 import React, { ReactNode, Suspense, useState } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from './Navigation';
 import { useI18n } from '@/i18n/I18nProvider';
@@ -38,9 +37,9 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black h-20 shadow-lg">
       <div className="container mx-auto px-4 flex items-center justify-between h-full">
         <div className="flex-shrink-0 flex items-center h-full">
-          <Link href="/" className="flex items-center" aria-label="Accueil principal">
+          <a href="/" className="flex items-center" aria-label="Accueil principal">
             <Logo variant="rect" className="h-14 md:h-16 w-auto" brandDisplayName={brandDisplayName} />
-          </Link>
+          </a>
         </div>
         <div className="hidden md:flex flex-1 justify-center">
           <Suspense fallback={null}>
@@ -51,12 +50,12 @@ const Header = () => {
           <Suspense fallback={null}>
             <LanguageSwitcher />
           </Suspense>
-          <Link 
+          <a
             href={brand ? `/${brand}/contact` : (vertical ? `/${vertical}/contact` : '/contact')} 
             className="bg-red-600 hover:bg-red-700 text-white font-medium h-10 px-5 inline-flex items-center rounded-full transition-colors duration-300 whitespace-nowrap"
           >
             {t('cta.contact')}
-          </Link>
+          </a>
         </div>
       </div>
     </header>
@@ -85,14 +84,14 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-4">{t('footer.nav')}</h4>
             <ul className="space-y-2">
-              <li><Link href="/" className="hover:text-white">Changer d’univers</Link></li>
-              <li><Link href={brand ? `/${brand}` : (vertical ? `/${vertical}` : '/')} className="hover:text-white">{t('nav.home')}</Link></li>
-              <li><Link href={brand ? `/${brand}/stock` : (vertical ? `/${vertical}/stock` : '/stock')} className="hover:text-white">{t('nav.stock')}</Link></li>
-              <li><Link href={brand ? `/${brand}/importation` : (vertical ? `/${vertical}/importation` : '/importation')} className="hover:text-white">{t('nav.import')}</Link></li>
-              <li><Link href={brand ? `/${brand}/simulateur` : (vertical ? `/${vertical}/simulateur` : '/simulateur')} className="hover:text-white">{t('nav.sim')}</Link></li>
-              <li><Link href={brand ? `/${brand}/a-propos` : (vertical ? `/${vertical}/a-propos` : '/a-propos')} className="hover:text-white">{t('nav.about')}</Link></li>
-              <li><Link href={brand ? `/${brand}/blog` : (vertical ? `/${vertical}/blog` : '/blog')} className="hover:text-white">{t('nav.blog')}</Link></li>
-              <li><Link href={brand ? `/${brand}/cgv#toc` : (vertical ? `/${vertical}/cgv#toc` : '/cgv#toc')} className="hover:text-white">{t('nav.cgv')}</Link></li>
+              <li><a href="/" className="hover:text-white">Changer d’univers</a></li>
+              <li><a href={brand ? `/${brand}` : (vertical ? `/${vertical}` : '/')} className="hover:text-white">{t('nav.home')}</a></li>
+              <li><a href={brand ? `/${brand}/stock` : (vertical ? `/${vertical}/stock` : '/stock')} className="hover:text-white">{t('nav.stock')}</a></li>
+              <li><a href={brand ? `/${brand}/importation` : (vertical ? `/${vertical}/importation` : '/importation')} className="hover:text-white">{t('nav.import')}</a></li>
+              <li><a href={brand ? `/${brand}/simulateur` : (vertical ? `/${vertical}/simulateur` : '/simulateur')} className="hover:text-white">{t('nav.sim')}</a></li>
+              <li><a href={brand ? `/${brand}/a-propos` : (vertical ? `/${vertical}/a-propos` : '/a-propos')} className="hover:text-white">{t('nav.about')}</a></li>
+              <li><a href={brand ? `/${brand}/blog` : (vertical ? `/${vertical}/blog` : '/blog')} className="hover:text-white">{t('nav.blog')}</a></li>
+              <li><a href={brand ? `/${brand}/cgv#toc` : (vertical ? `/${vertical}/cgv#toc` : '/cgv#toc')} className="hover:text-white">{t('nav.cgv')}</a></li>
             </ul>
           </div>
           <div>

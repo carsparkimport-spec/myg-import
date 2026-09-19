@@ -58,7 +58,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body className={`${inter.variable} ${robotoMono.variable} ${oswald.variable} ${antonio.variable} antialiased`}>
+      <body
+        suppressHydrationWarning
+        className={`${inter.variable} ${robotoMono.variable} ${oswald.variable} ${antonio.variable} antialiased`}
+      >
         <I18nProvider>{children}</I18nProvider>
       </body>
     </html>

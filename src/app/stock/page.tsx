@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useMemo } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import Layout from '@/components/Layout';
@@ -99,7 +98,7 @@ export default function StockPage() {
             {BRANDS.map(brand => {
               const count = brandCounts[brand.name] || 0;
               return (
-                <Link
+                <a
                   key={brand.slug}
                   href={`${pathname}/${brand.slug}`}
                   className="group flex flex-col items-center gap-2"
@@ -121,7 +120,7 @@ export default function StockPage() {
                   <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-400 group-hover:text-white transition-colors text-center">
                     {brand.name}
                   </span>
-                </Link>
+                </a>
               );
             })}
           </div>
