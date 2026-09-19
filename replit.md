@@ -6,6 +6,14 @@ MYG Import is a Next.js-based web application for a Luxembourg-based Japanese ve
 
 # Recent Changes
 
+**September 19, 2026**: Cleanup step 1 (branch `cleanup/etape-1-suppressions`)
+- Removed the catch-all `src/app/[brand]` route (any unknown URL used to render the homepage instead of a 404)
+- Removed the unused second i18n system (`src/components/i18n/`); the only i18n system is now `src/i18n/` (JSON locales)
+- Removed dead components (`VehicleDetailI18n`, `VehicleDetailsCard`), empty files, invalid `vehicles.json.backup` and throwaway scripts
+- Removed `next/head` from `Layout` (no effect in the App Router); internal links now use `next/link`
+- `/__mockup` rewrite is now limited to development
+- `tsc`: 0 errors; ESLint: 18 errors -> 0
+
 **January 31, 2026**: Translation system improvements
 - Added complete translations for VerticalSelector component (homepage Japan/Europe selector)
 - Added full English/French translations for Shaken article in blog (previously hardcoded in French)
@@ -55,7 +63,6 @@ Preferred communication style: Simple, everyday language.
 - Custom client-side i18n system with locale provider pattern
 - Two locales supported: French (default) and English
 - Translation keys stored in JSON format (`src/i18n/locales/`)
-- Alternative i18n implementation exists in `src/components/i18n/` with TypeScript message files
 - Language preference persisted via cookies and URL query parameters
 - URL-based locale switching with query string `?lang=en|fr`
 
@@ -117,7 +124,6 @@ Preferred communication style: Simple, everyday language.
 **UI Components**:
 - `VehicleCard`: Grid-based vehicle listing with image, specs, and price
 - `VehicleGallery`: Image carousel with lightbox, keyboard navigation, and touch gestures
-- `VehicleDetailsCard`: Dynamic details table with special formatting for options lists
 - `LanguageSwitcher`: Toggle between FR/EN with visual active state
 - `Navigation`: Active route highlighting with translated labels
 
@@ -171,12 +177,6 @@ Preferred communication style: Simple, everyday language.
 - Full control over translation loading and caching
 - Avoids dependency bloat for simple use case
 - Trade-off: Manual implementation vs. library features
-
-**Why Dual i18n Implementations**:
-- Legacy `src/i18n/` with JSON files
-- Newer `src/components/i18n/` with TypeScript modules
-- Inconsistency suggests migration in progress
-- TypeScript approach provides better type safety and IDE support
 
 **Why Client-Side Document Parsing**:
 - Mammoth.js runs in browser to avoid server-side binary dependencies
