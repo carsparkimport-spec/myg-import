@@ -28,5 +28,5 @@ export const BRANDS: Brand[] = [
   { name: 'Jeep', slug: 'jeep', logo: '/images/brands/jeep.svg' },
   { name: 'Fiat', slug: 'fiat', logo: '/images/brands/fiat.svg' },
   { name: 'Citroën', slug: 'citroen', logo: '/images/brands/citroen.svg' },
-  { name: 'AION', slug: 'aion', logo: '/images/brands/aion.svg' },
+  { name: 'AION', slug: 'aion', logo: '/images/brands/aion-logo.svg' },
 ];
