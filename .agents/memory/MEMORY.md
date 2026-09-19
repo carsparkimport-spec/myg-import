@@ -1,2 +1,3 @@
 - [Composant canvas actif](canvas-active-component.md) — préserver les réglages manuels; ne jamais reconnecter le cadre Europe à une ancienne variante.
 - [Aperçu Server obsolète](server-preview-stale.md) — le cadre canvas peut conserver un ancien client malgré un HTML serveur à jour; vérifier la réponse SSR.
+- [Port Server occupé](server-port-orphan.md) — un workflow terminé peut laisser Next.js sur le port 5000; supprimer l’ancien processus avant de redémarrer.
