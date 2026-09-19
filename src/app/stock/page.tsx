@@ -128,12 +128,12 @@ export default function StockPage() {
 
         {/* ── FILTER BAR ── */}
         <div className="sticky top-20 z-30 bg-black/70 backdrop-blur-md border-b border-white/10">
-          <div className="container mx-auto px-6 flex items-center gap-2 py-3">
+          <div className="container mx-auto px-6 flex flex-wrap items-center gap-1.5 sm:gap-2 py-3">
             {tabs.map(tab => (
               <button
                 key={tab.key}
                 onClick={() => setFilter(tab.key)}
-                className={`flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold transition-all ${
+                className={`flex items-center gap-1.5 px-2.5 sm:gap-2 sm:px-5 py-2 rounded-full text-sm font-bold transition-all ${
                   filter === tab.key
                     ? 'bg-red-600 text-white shadow-[0_0_16px_rgba(220,38,38,0.4)]'
                     : 'bg-white/5 text-gray-300 hover:bg-white/10 border border-white/10'
@@ -146,7 +146,7 @@ export default function StockPage() {
               </button>
             ))}
             {!loading && (
-              <span className="ml-auto text-xs text-gray-500">
+              <span className="ml-auto hidden text-xs text-gray-500 sm:inline">
                 {displayed.length} véhicule{displayed.length > 1 ? 's' : ''}
               </span>
             )}
