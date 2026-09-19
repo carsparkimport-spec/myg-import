@@ -103,13 +103,13 @@ export default function StockPage() {
                   href={`${pathname}/${brand.slug}`}
                   className="group flex flex-col items-center gap-2"
                 >
-                  <div className="relative w-full aspect-square max-w-[56px] bg-white rounded-xl border border-white/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_24px_rgba(220,38,38,0.35)] group-hover:border-red-600/50">
+                  <div className="relative w-full aspect-square max-w-[72px] bg-white rounded-xl border border-white/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_24px_rgba(220,38,38,0.35)] group-hover:border-red-600/50">
                     <Image
                       src={brand.logo}
                       alt={brand.name}
                       fill
-                      sizes="56px"
-                      className="object-contain p-2.5"
+                      sizes="72px"
+                      className="object-contain p-2"
                     />
                     {count > 0 && (
                       <span className="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] font-bold min-w-[18px] h-[18px] flex items-center justify-center rounded-full px-1">
