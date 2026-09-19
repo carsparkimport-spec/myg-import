@@ -16,7 +16,7 @@ export default function BlogPage() {
   const { t, tObject } = useI18n();
 
   return (
-    <Layout title={t('blog.title')}>
+    <Layout>
       <main className="bg-[#0d0d0d] text-white min-h-screen">
 
         {/* ── HERO ── */}

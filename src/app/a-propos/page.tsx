@@ -1,7 +1,6 @@
 "use client";
 
 import Layout from '@/components/Layout';
-import { useI18n } from '@/i18n/I18nProvider';
 import { Check } from 'lucide-react';
 
 const STATS = [
@@ -42,10 +41,9 @@ const VALUES = [
 ];
 
 export default function AboutPage() {
-  const { t } = useI18n();
 
   return (
-    <Layout title={t('about.meta')}>
+    <Layout>
       <main className="bg-[#0d0d0d] text-white min-h-screen">
 
         {/* ── HERO ── */}

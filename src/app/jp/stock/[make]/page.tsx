@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useParams, usePathname } from 'next/navigation';
 import Layout from '@/components/Layout';
-import { useI18n } from '@/i18n/I18nProvider';
 import VehicleCard from '@/components/VehicleCard';
 import { BRANDS } from '@/data/brands';
 
@@ -23,7 +22,6 @@ interface Vehicle {
 }
 
 export default function BrandStockPage() {
-  const { t } = useI18n();
   const params = useParams<{ make: string }>();
   const pathname = usePathname();
   const brand = BRANDS.find(b => b.slug === params.make);
@@ -63,7 +61,7 @@ export default function BrandStockPage() {
   const displayed = selectedModel ? brandVehicles.filter(v => v.model === selectedModel) : brandVehicles;
 
   return (
-    <Layout title={`${brand ? brand.name + ' - ' : ''}${t('stock.title')} - MYG Import`}>
+    <Layout>
       <div className="bg-gradient-to-b from-black via-[#0c0c0c] to-black min-h-screen text-white">
 
         {/* ── HERO ── */}

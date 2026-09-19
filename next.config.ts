@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
   },
   compress: true,
   async rewrites() {
+    // Le sandbox de maquettes n'existe qu'en développement
+    if (process.env.NODE_ENV === "production") return [];
     return [
       {
         source: "/__mockup/:path*",

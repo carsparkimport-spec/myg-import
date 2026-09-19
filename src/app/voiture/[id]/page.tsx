@@ -73,7 +73,7 @@ export default async function VehiclePage({ params }: { params: Promise<{ id: st
   if (!vehicle) notFound();
 
   return (
-    <Layout title={`${vehicle.make} ${vehicle.model} (${vehicle.year}) | MYG Import`}>
+    <Layout>
       <VehicleDetailPage vehicle={vehicle} />
     </Layout>
   );

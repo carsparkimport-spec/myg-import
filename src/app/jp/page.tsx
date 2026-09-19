@@ -30,7 +30,7 @@ export default function JapanLanding() {
     .sort((a, b) => (a.featuredOrder ?? 9999) - (b.featuredOrder ?? 9999))
     .slice(0, 3);
   return (
-    <Layout title="MYG Import - Accueil | Powered by Passion">
+    <Layout>
 
       {/* ── HERO ── */}
       <div

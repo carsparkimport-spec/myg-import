@@ -20,7 +20,7 @@ export default function ContactPage() {
   }
 
   return (
-    <Layout title={t('contact.meta')}>
+    <Layout>
       <main className="bg-[#0d0d0d] text-white min-h-screen">
 
         {/* ── HERO ── */}

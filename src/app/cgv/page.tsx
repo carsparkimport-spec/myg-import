@@ -214,7 +214,7 @@ function CGVPageContent() {
   );
 
   return (
-    <Layout title={t('cgv.meta')}>
+    <Layout>
       <main className="bg-gray-100 text-gray-800 min-h-screen py-12">
         <div className="container mx-auto px-4 max-w-3xl">
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-black">{t('cgv.title')}</h1>
@@ -364,7 +364,7 @@ function CGVPageContent() {
 
 export default function CGVPage() {
   return (
-    <Suspense fallback={<Layout title="Loading..."><div className="min-h-screen bg-gray-100 flex items-center justify-center"><p>Loading...</p></div></Layout>}>
+    <Suspense fallback={<Layout><div className="min-h-screen bg-gray-100 flex items-center justify-center"><p>Loading...</p></div></Layout>}>
       <CGVPageContent />
     </Suspense>
   );

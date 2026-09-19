@@ -2,6 +2,7 @@
 
 import Layout from '@/components/Layout';
 import Image from 'next/image';
+import Link from 'next/link';
 import VehicleCard from '@/components/VehicleCard';
 import ReviewsCarousel from '@/components/ReviewsCarousel';
 import vehiclesData from '@/data/vehicles.json';
@@ -59,7 +60,7 @@ export default function EuropeLanding() {
     .filter((vehicle): vehicle is (typeof vehicles)[number] => Boolean(vehicle));
 
   return (
-    <Layout title="Import Europe - MYG Import" mainClassName="bg-[#0d0d0d] text-white">
+    <Layout mainClassName="bg-[#0d0d0d] text-white">
       <section
         className="relative flex min-h-[calc(100vh-5rem)] items-center overflow-hidden text-white"
       >
@@ -80,18 +81,18 @@ export default function EuropeLanding() {
             Nous recherchons pour vous le bon véhicule parmi les stocks disponibles partout en Europe, selon vos critères et votre budget.
           </p>
           <div className="mt-9 flex flex-wrap gap-3.5">
-            <a
+            <Link
               href="/eu/contact"
               className="rounded-lg bg-red-600 px-6 py-3 font-bold text-white shadow-[0_5px_22px_rgba(220,38,38,0.27)] transition-colors hover:bg-red-700"
             >
               Lancer ma recherche
-            </a>
-            <a
+            </Link>
+            <Link
               href="/eu/importation"
               className="rounded-lg border border-white/30 bg-white/10 px-6 py-3 font-bold text-white transition-colors hover:bg-white/20"
             >
               Découvrir notre méthode
-            </a>
+            </Link>
           </div>
           <div className="mt-8 grid gap-1 border-l-2 border-red-600 pl-4 text-xs uppercase tracking-[0.08em] text-gray-300">
             <span>Recherche multimarque</span>
@@ -136,12 +137,12 @@ export default function EuropeLanding() {
           )}
 
           <div className="mt-9 text-center">
-            <a
+            <Link
               href="/eu/stock"
               className="inline-block rounded-lg bg-red-600 px-6 py-3 font-bold text-white shadow-[0_5px_22px_rgba(220,38,38,0.27)] transition-colors hover:bg-red-700"
             >
               Voir tout le stock Europe
-            </a>
+            </Link>
           </div>
         </div>
       </section>

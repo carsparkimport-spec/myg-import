@@ -1,12 +1,10 @@
 'use client';
 
 import Layout from '@/components/Layout';
-import { useI18n } from '@/i18n/I18nProvider';
 import Link from 'next/link';
 import { useState } from 'react';
 
 export default function EuBlogArticlePage() {
-  const { t } = useI18n();
   type ArticleId = 'route' | 'immat-lu' | 'immat-neuve-lu' | 'immat-fr' | 'immat-be';
   const [article, setArticle] = useState<ArticleId>('route');
 
@@ -73,7 +71,7 @@ export default function EuBlogArticlePage() {
 
   const selected = articles.find((a) => a.id === article)!;
   return (
-    <Layout title={t('blog.title')}>
+    <Layout>
       <div className="container mx-auto px-4 py-10">
         <nav className="text-sm text-gray-600 mb-2">
           <Link href="/eu" className="underline underline-offset-2 decoration-gray-300 hover:decoration-gray-700">EU</Link>

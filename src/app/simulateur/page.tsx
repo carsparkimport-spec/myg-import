@@ -178,7 +178,7 @@ export default function SimulateurPage() {
   ];
 
   return (
-    <Layout title="Simulateur de Coût - MYG Import" mainClassName="bg-transparent">
+    <Layout mainClassName="bg-transparent">
       {/* Background via background-attachment:fixed pour garder le footer visible */}
       <div
         style={{

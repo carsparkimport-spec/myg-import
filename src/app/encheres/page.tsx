@@ -58,7 +58,7 @@ export default function AuctionsPage() {
   }, []);
 
   return (
-    <Layout title={t('auctions.meta') || 'Enchères passées - MYG Import'}>
+    <Layout>
       <main className="relative min-h-screen text-white">
         {/* Full-page background */}
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/backgrounds/FUKUOKA.jpg')" }} />

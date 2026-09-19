@@ -69,7 +69,7 @@ export default function StockPage() {
   ];
 
   return (
-    <Layout title={t('stock.title') + ' - MYG Import'}>
+    <Layout>
       <div className="bg-gradient-to-b from-black via-[#0c0c0c] to-black min-h-screen text-white">
 
         {/* ── HERO ── */}
