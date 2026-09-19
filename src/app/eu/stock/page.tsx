@@ -1,4 +1,5 @@
-export { default } from '@/app/stock/page';
+import StockPage from '@/app/stock/page';
 
-
-
+export default function EuropeStockPage() {
+  return <StockPage />;
+}

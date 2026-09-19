@@ -3,8 +3,8 @@ name: Aperçu Server obsolète
 description: Distinguer un rendu client périmé dans le cadre canvas du HTML réellement servi par Next.js.
 ---
 
-Le cadre Server du canvas peut continuer à afficher un ancien composant après redémarrage du workflow, bascule d’état du cadre et suppression du cache `.next`, alors que la réponse HTML actuelle contient bien le nouveau rendu.
+Le cadre Server du canvas peut continuer à afficher un ancien composant lorsque les scripts `/_next/static` sont servis avec un cache immutable en développement, alors que la réponse HTML actuelle contient déjà le nouveau rendu.
 
-**Why:** Le client intégré peut échouer pendant l’hydratation et conserver visuellement l’ancien arbre, ce qui donne l’impression que les modifications de source ne sont pas appliquées.
+**Why:** Un cache longue durée sur les bundles de développement associe un ancien composant client à un HTML serveur récent, provoquant une erreur d’hydratation et parfois un ancien rendu visuel.
 
-**How to apply:** En cas de divergence, vérifier d’abord le HTML SSR avec une requête directe vers le domaine de développement. Si le HTML est correct mais le cadre reste ancien et que Turbopack signale une hydratation invalide, utiliser le serveur Next.js standard pour le Preview.
+**How to apply:** Garder le cache immutable uniquement en production et servir `/_next/static` avec `no-store` en développement. Après correction, supprimer `.next` et redémarrer le workflow une fois.
