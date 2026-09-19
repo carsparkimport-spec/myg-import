@@ -1,5 +1,6 @@
 'use client'; // Mark as a Client Component
 
+import Link from 'next/link';
 import { usePathname } from 'next/navigation'; // Hook to get the current path
 import { useI18n } from '@/i18n/I18nProvider';
 
@@ -30,12 +31,12 @@ const Navigation = () => {
         const isActive = pathname === href || (href !== '/' && pathname.startsWith(`${href}/`));
         const key = link.name === 'Accueil' ? 'home' : link.name === 'Nos Véhicules' ? 'stock' : link.name === 'Enchères passées' ? 'auctions' : link.name === 'Importation' ? 'import' : link.name === 'Simulateur' ? 'sim' : link.name === 'À Propos' ? 'about' : 'blog';
         return (
-          <a
+          <Link
             key={link.name}
             href={href}
             className={`inline-flex items-center h-10 px-4 rounded-md text-base font-semibold text-white hover:text-red-600 transition-colors duration-200 whitespace-nowrap ${isActive ? 'text-red-600 underline underline-offset-4 decoration-red-600' : ''}`}>
             {t(`nav.${key}`)}
-          </a>
+          </Link>
         );
       })}
     </nav>
