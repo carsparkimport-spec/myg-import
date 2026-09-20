@@ -30,6 +30,17 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
+      ...(process.env.NODE_ENV !== "production"
+        ? [
+            {
+              source: "/eu/stock",
+              headers: [
+                { key: "Clear-Site-Data", value: '"cache"' },
+                { key: "Cache-Control", value: "no-store, max-age=0" },
+              ],
+            },
+          ]
+        : []),
       {
         source: "/images/:path*",
         headers: [
