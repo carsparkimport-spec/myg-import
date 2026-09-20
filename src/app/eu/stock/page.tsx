@@ -1,3 +1,5 @@
-import EuropeStockPage from './EuropeStockPage';
+import StockPage from '@/app/stock/page';
 
-export default EuropeStockPage;
+export default function EuropeStockPage() {
+  return <StockPage />;
+}
