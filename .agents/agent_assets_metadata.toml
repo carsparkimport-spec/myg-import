@@ -33,3 +33,17 @@ mtime_ms = 1789565406623
 storage_uri = "gcs://replit-rams-assets-riker/rams/assets/repl:92dd8ac8-36f0-4c67-b8d1-57d268cef3df/ecbbba3c-7865-40ae-961f-4ca17b9a6b2e/7810dcf5-e2f4-4bf9-a954-34cf14e18f53"
 storage_version_token = "1789565634755872"
 content_type = "image/jpeg"
+
+[[outputs]]
+id = "q0cOfb63QVkHKniEnaWP6"
+uri = "file://screenshots/production-eu-stock.png"
+type = "image"
+title = "Version publiée — Stock Europe"
+description = "Capture directe de https://myg-import.com/eu/stock, sans utiliser la version locale du Server."
+logical_id = "431ebe60-3529-4d10-bf4d-e513611967dc"
+content_hash = "sha256:54dfc2dc6b01794248461bdba63f2f45c63d6f6033d05fb6f0b37dc7169afb12"
+size = 429266
+mtime_ms = 1789909410481
+storage_uri = "gcs://replit-rams-assets-riker/rams/assets/repl:92dd8ac8-36f0-4c67-b8d1-57d268cef3df/431ebe60-3529-4d10-bf4d-e513611967dc/ddab174f-1735-486b-8855-d49f8a059194"
+storage_version_token = "1789909417474041"
+content_type = "image/png"
