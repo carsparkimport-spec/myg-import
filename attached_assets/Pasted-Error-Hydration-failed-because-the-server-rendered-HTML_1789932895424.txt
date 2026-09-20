@@ -1,0 +1,63 @@
+Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RenderFromTemplateContext>
+      <ScrollAndFocusHandler segmentPath={[...]}>
+        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+            <LoadingBoundary hasLoading={false} loading={undefined} loadingStyles={undefined} loadingScripts={undefined}>
+              <NotFoundBoundary notFound={undefined} notFoundStyles={undefined}>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter parallelRouterKey="children" url="/eu/stock" tree={[...]} childNodes={Map} ...>
+                      <EuropeStockPage>
+                        <StockPage>
+                          <Layout title="Nos Véhicu...">
+                            <NoopHead>
+                            <div className="flex flex-...">
+                              <Header>
+                              <main className="flex-grow ...">
+                                <div
+                                  style={{
++                                   backgroundImage: "url('/images/backgrounds/eu-stock-bg.webp')"
++                                   backgroundAttachment: "fixed"
++                                   backgroundSize: "cover"
++                                   backgroundPosition: "center"
+                                  }}
+-                                 className="bg-gradient-to-b from-black via-[#0c0c0c] to-black min-h-screen text-white"
+                                >
+                                  <div
++                                   className="text-white min-h-screen"
+-                                   className="relative pt-28 pb-14 px-6 text-center overflow-hidden"
+                                  >
+                                    <div
++                                     className="relative pt-28 pb-16 px-6 text-center"
+-                                     className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(220,38,38,0..."
+                                    >
++                                     <div
++                                       className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-..."
++                                     >
+                                      ...
+                                    ...
+                              ...
+                      ...
+
+    at throwOnHydrationMismatch (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:4102:11)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9903:17)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:544:16)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14986:22)
+    at workLoopConcurrent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14980:9)
+    at renderRootConcurrent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14955:15)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14287:11)
+    at performWorkOnRootViaSchedulerTask (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15843:7)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:44:48)
