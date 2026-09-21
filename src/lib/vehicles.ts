@@ -40,6 +40,76 @@ function translateGearbox(raw: unknown): unknown {
   return m[2] === '1' ? `${type} (1 rapport)` : `${type} ${m[2]} rapports`;
 }
 
+// --- Francisation des textes Stockcoach (anglais / neerlandais) ---
+
+const decodeEntities = (t: string) =>
+  t.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+
+// Modeles, descriptions, motorisation
+const TEXT_RULES: [RegExp, string][] = [
+  [/(\d)\s*(?:hp|pk)\b/gi, '$1 ch'],
+  [/\bhp\b/gi, 'ch'],
+  [/\s*-\s*mileage test\b/gi, ''],
+  [/\b(Allure) finish\b/gi, '$1'],
+  [/\bDubbele Cabine\b/gi, 'Double cabine'],
+  [/\bLong Version\b/gi, 'Version longue'],
+];
+
+function frText(raw: unknown): unknown {
+  if (typeof raw !== 'string') return raw;
+  return TEXT_RULES.reduce((t, [re, to]) => t.replace(re, to), decodeEntities(raw)).replace(/\s+/g, ' ').trim();
+}
+
+// Dommages : "Right front door - Scratch" -> "Porte avant droite - Rayure"
+const DAMAGE_PARTS: Record<string, string> = {
+  door: 'Porte', wheel: 'Jante', pillar: 'Montant', fender: 'Aile', mirror: 'Rétroviseur',
+};
+const DAMAGE_PLACES: Record<string, string> = {
+  hood: 'Capot', roof: 'Toit', trunk: 'Coffre', tailgate: 'Hayon', windshield: 'Pare-brise',
+  'front bumper': 'Pare-chocs avant', 'rear bumper': 'Pare-chocs arrière',
+  'under front bumper': 'Dessous du pare-chocs avant', 'under rear bumper': 'Dessous du pare-chocs arrière',
+};
+const DAMAGE_TYPES: Record<string, string> = {
+  scratch: 'Rayure', 'stone chip': 'Impact de gravillon', dent: 'Bosse',
+  crack: 'Fissure', rust: 'Rouille', chip: 'Éclat', broken: 'Cassé',
+};
+
+function frDamagePlace(place: string): string {
+  const m = place.match(/^(left|right) (front|rear) (door|wheel|pillar|fender|mirror)$/i);
+  if (m) {
+    const side = m[1].toLowerCase() === 'left' ? 'gauche' : 'droite';
+    const pos = m[2].toLowerCase() === 'front' ? 'avant' : 'arrière';
+    return `${DAMAGE_PARTS[m[3].toLowerCase()]} ${pos} ${side}`;
+  }
+  return DAMAGE_PLACES[place.toLowerCase()] ?? place;
+}
+
+function frDamages(raw: unknown): unknown {
+  if (typeof raw !== 'string') return raw;
+  return raw
+    .split(';')
+    .map(d => {
+      const [place, type] = d.split(' - ').map(x => x.trim());
+      return [frDamagePlace(place), type ? (DAMAGE_TYPES[type.toLowerCase()] ?? type) : '']
+        .filter(Boolean)
+        .join(' - ');
+    })
+    .join(';');
+}
+
+// Equipements restes en anglais cote Stockcoach (correspondance exacte)
+const EQUIPMENT_FR: Record<string, string> = {
+  'front armrest': 'Accoudoir avant',
+};
+
+function frEquipments(raw: unknown): unknown {
+  if (typeof raw !== 'string') return raw;
+  return decodeEntities(raw)
+    .split(';')
+    .map(e => EQUIPMENT_FR[e.trim().toLowerCase()] ?? e)
+    .join(';');
+}
+
 function normalizeStockcoach(raw: Record<string, unknown>): SiteVehicle {
   // Champs internes (VIN, identifiants fournisseur) : jamais exposes au public
   const { _vin, _source, _sourceId, ...v } = raw;
@@ -48,9 +118,17 @@ function normalizeStockcoach(raw: Record<string, unknown>): SiteVehicle {
   return {
     ...v,
     make: normalizeMake(String(v.make ?? '')),
+    model: frText(v.model),
+    description: frText(v.description),
     fuel: FUEL[String(v.fuel)] ?? v.fuel,
     transmission: translateGearbox(v.transmission),
-    details: { ...details, ...(details.Boite ? { Boite: translateGearbox(details.Boite) } : {}) },
+    details: {
+      ...details,
+      ...(details.Boite ? { Boite: translateGearbox(details.Boite) } : {}),
+      ...(details.Moteur ? { Moteur: frText(details.Moteur) } : {}),
+      ...(details.Dommages ? { Dommages: frDamages(details.Dommages) } : {}),
+      ...(details.Equipements ? { Equipements: frEquipments(details.Equipements) } : {}),
+    },
   } as unknown as SiteVehicle;
 }
 
