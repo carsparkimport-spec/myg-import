@@ -1,12 +1,11 @@
 "use client";
 
 import { useState, useEffect, useMemo } from 'react';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import Layout from '@/components/Layout';
 import { useI18n } from '@/i18n/I18nProvider';
 import VehicleCard from '@/components/VehicleCard';
-import { BRANDS } from '@/data/brands';
+import BrandGrid from '@/components/BrandGrid';
 
 interface Vehicle {
   id: string;
@@ -94,36 +93,7 @@ export default function StockPage() {
           <p className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-gray-500 mb-8">
             Choisissez une marque
           </p>
-          <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-3 max-w-5xl mx-auto">
-            {BRANDS.map(brand => {
-              const count = brandCounts[brand.name] || 0;
-              return (
-                <a
-                  key={brand.slug}
-                  href={`${pathname}/${brand.slug}`}
-                  className="group flex flex-col items-center gap-2"
-                >
-                  <div className="relative w-full aspect-square max-w-[72px] bg-white rounded-xl border border-white/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_24px_rgba(220,38,38,0.35)] group-hover:border-red-600/50">
-                    <Image
-                      src={brand.logo}
-                      alt={brand.name}
-                      fill
-                      sizes="72px"
-                      className="object-contain p-2"
-                    />
-                    {count > 0 && (
-                      <span className="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] font-bold min-w-[18px] h-[18px] flex items-center justify-center rounded-full px-1">
-                        {count}
-                      </span>
-                    )}
-                  </div>
-                  <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-400 group-hover:text-white transition-colors text-center">
-                    {brand.name}
-                  </span>
-                </a>
-              );
-            })}
-          </div>
+          <BrandGrid counts={brandCounts} loading={loading} basePath={pathname} />
         </div>
 
         {/* ── FILTER BAR ── */}

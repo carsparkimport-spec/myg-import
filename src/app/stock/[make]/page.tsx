@@ -2,10 +2,10 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { useParams, usePathname } from 'next/navigation';
 import Layout from '@/components/Layout';
 import VehicleCard from '@/components/VehicleCard';
+import { BrandEmblem } from '@/components/BrandGrid';
 import { BRANDS } from '@/data/brands';
 
 interface Vehicle {
@@ -76,9 +76,7 @@ export default function BrandStockPage() {
               ← Toutes les marques
             </Link>
             {brand && (
-              <div className="relative w-24 h-24 bg-white rounded-2xl border border-white/10">
-                <Image src={brand.logo} alt={brand.name} fill sizes="96px" className="object-contain p-4" />
-              </div>
+              <BrandEmblem brand={brand} />
             )}
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
               {brand ? brand.name : 'Marque introuvable'}

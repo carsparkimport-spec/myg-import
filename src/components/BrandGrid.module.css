@@ -1,0 +1,287 @@
+/* Grille des marques : cartes "verre fumé", logos monochromes, apparition progressive */
+
+.wrap {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+}
+
+.grid {
+  --gap: 14px;
+  --cols: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap);
+}
+@media (min-width: 640px) { .grid { --cols: 3; } }
+@media (min-width: 768px) { .grid { --cols: 4; } }
+@media (min-width: 1024px) { .grid { --cols: 6; } }
+
+.card {
+  position: relative;
+  isolation: isolate;
+  flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.7rem 0.75rem 1.35rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.085) 0%, rgba(255, 255, 255, 0.02) 42%, rgba(255, 255, 255, 0.04) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.09),
+    0 18px 34px -22px rgba(0, 0, 0, 0.9);
+  color: #e6e6ea;
+  text-decoration: none;
+  overflow: hidden;
+  animation: rise 0.75s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: calc(var(--i, 0) * 45ms);
+  transition:
+    transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1),
+    border-color 0.4s ease,
+    box-shadow 0.5s ease;
+}
+
+/* Halo rouge diffus au survol */
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(120% 90% at 50% 0%, rgba(220, 38, 38, 0.26), transparent 62%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Filet lumineux en haut de carte */
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  opacity: 0.35;
+  transition: opacity 0.4s ease, background 0.4s ease;
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-4px);
+  border-color: rgba(239, 68, 68, 0.45);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 26px 44px -24px rgba(220, 38, 38, 0.45);
+}
+.card:hover::before,
+.card:focus-visible::before { opacity: 1; }
+.card:hover::after,
+.card:focus-visible::after {
+  opacity: 1;
+  background: linear-gradient(90deg, transparent, rgba(248, 113, 113, 0.95), transparent);
+}
+.card:focus-visible { outline: 2px solid #ef4444; outline-offset: 3px; }
+
+.arrow {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  color: #f87171;
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.card:hover .arrow,
+.card:focus-visible .arrow { opacity: 1; transform: translate(0, 0); }
+
+.logoMark {
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  transition: color 0.4s ease, transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.4s ease;
+}
+
+.logo {
+  width: 100%;
+  max-width: 98px;
+  height: 60px;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.55));
+}
+.card:hover .logo,
+.card:focus-visible .logo {
+  color: #fff;
+  transform: scale(1.08) translateY(-2px);
+  filter: drop-shadow(0 8px 20px rgba(220, 38, 38, 0.35));
+}
+
+.name {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #d4d4d8;
+  transition: color 0.4s ease;
+}
+.card:hover .name { color: #fff; }
+
+.count {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: -0.35rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: #8e8e98;
+  transition: color 0.4s ease;
+}
+.count::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 8px 1px rgba(239, 68, 68, 0.8);
+}
+.card:hover .count { color: #d4d4d8; }
+
+/* --- Marques disponibles sur demande : bandeau discret --- */
+
+.requestTitle {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin: 0 auto;
+  max-width: 34rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #6b6b75;
+  white-space: nowrap;
+}
+.requestTitle::before,
+.requestTitle::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.14));
+}
+.requestTitle::after { transform: scaleX(-1); }
+
+.requestNote {
+  margin: 0.7rem 0 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #71717a;
+}
+
+.strip {
+  --gap: 6px;
+  --cols: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px var(--gap);
+  margin-top: 1.6rem;
+}
+@media (min-width: 640px) { .strip { --cols: 4; } }
+@media (min-width: 768px) { .strip { --cols: 6; } }
+@media (min-width: 1024px) { .strip { --cols: 8; } }
+
+.mini {
+  flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 0.4rem 0.9rem;
+  border-radius: 14px;
+  color: #6f6f79;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: color 0.35s ease, background 0.35s ease, border-color 0.35s ease;
+}
+.mini .logoMark { width: 100%; max-width: 56px; height: 30px; }
+.mini:hover,
+.mini:focus-visible {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(239, 68, 68, 0.35);
+}
+.mini:focus-visible { outline: 2px solid #ef4444; outline-offset: 2px; }
+.miniName {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  color: inherit;
+}
+
+/* --- Chargement --- */
+
+.skeleton {
+  flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
+  height: 168px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: linear-gradient(110deg, rgba(255, 255, 255, 0.03) 30%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.03) 70%);
+  background-size: 220% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+/* --- Bandeau de la page d'une marque --- */
+
+.emblem {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02) 55%, rgba(255, 255, 255, 0.05));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 30px 60px -28px rgba(220, 38, 38, 0.55);
+  color: #fff;
+  animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.emblem::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(120% 90% at 50% 0%, rgba(220, 38, 38, 0.3), transparent 65%);
+}
+.emblem .logoMark { width: 4.8rem; height: 4.8rem; filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6)); }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes shimmer {
+  from { background-position: 120% 0; }
+  to { background-position: -120% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card, .emblem, .skeleton { animation: none; }
+  .card, .logoMark, .arrow { transition: none; }
+}
