@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Layout from '@/components/Layout';
 import VehicleDetailPage from '@/components/VehicleDetailPage';
 import { notFound } from 'next/navigation';
-import vehiclesData from '@/data/vehicles.json';
+import { getAllVehicles } from '@/lib/vehicles';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -28,7 +28,7 @@ export async function generateMetadata(
   { params }: { params: Promise<{ id: string }> }
 ): Promise<Metadata> {
   const { id } = await params;
-  const vehicles: Vehicle[] = vehiclesData as unknown as Vehicle[];
+  const vehicles: Vehicle[] = getAllVehicles() as unknown as Vehicle[];
   const vehicle = vehicles.find(v => v.id === id);
 
   if (!vehicle) {
@@ -67,7 +67,7 @@ export async function generateMetadata(
 
 export default async function VehiclePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const vehicles: Vehicle[] = vehiclesData as unknown as Vehicle[];
+  const vehicles: Vehicle[] = getAllVehicles() as unknown as Vehicle[];
   const vehicle = vehicles.find(v => v.id === id);
 
   if (!vehicle) notFound();

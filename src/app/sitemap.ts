@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import vehiclesData from "@/data/vehicles.json";
+import { getAllVehicles } from "@/lib/vehicles";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://myg-import.com";
 
@@ -25,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/eu/cgv`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
   ];
 
-  const vehiclePages: MetadataRoute.Sitemap = vehiclesData.map((v) => ({
+  const vehiclePages: MetadataRoute.Sitemap = getAllVehicles().map((v) => ({
     url: `${BASE_URL}/voiture/${v.id}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,

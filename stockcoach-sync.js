@@ -4,7 +4,7 @@
  * Version basee sur le vrai spec OpenAPI BUYER-V1.
  *
  * Phase de test : recupere les vehicules en stock, mappe vers le schema
- * vehicles.json du site, ecrit dans stockcoach-vehicles.json (local,
+ * vehicles.json du site, ecrit dans src/data/stockcoach-vehicles.json (local,
  * pas encore publie). Aucune marge appliquee pour l'instant.
  *
  * Variables d'environnement requises (Replit Secrets) :
@@ -257,9 +257,9 @@ async function main() {
   const mapped = detailed.map(mapVehicle).filter(Boolean);
 
   const fs = require("fs");
-  fs.writeFileSync("./stockcoach-vehicles.json", JSON.stringify(mapped, null, 2));
+  fs.writeFileSync(require("path").join(__dirname, "src/data/stockcoach-vehicles.json"), JSON.stringify(mapped, null, 2));
 
-  console.log(`Termine. ${mapped.length} vehicules ecrits dans stockcoach-vehicles.json`);
+  console.log(`Termine. ${mapped.length} vehicules ecrits dans src/data/stockcoach-vehicles.json`);
   if (mapped[0]) {
     console.log("--- Exemple (premier vehicule) ---");
     console.log(JSON.stringify(mapped[0], null, 2));

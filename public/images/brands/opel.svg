@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <title>Opel</title>
+  <circle cx="100" cy="100" r="74" fill="none" stroke="#111" stroke-width="12"/>
+  <path d="M22 96 L84 86 L74 100 L178 88 L116 114 L126 100 Z" fill="#111"/>
+</svg>
