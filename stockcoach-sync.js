@@ -31,6 +31,36 @@ if (!EMAIL || !PASSWORD) {
   process.exit(1);
 }
 
+const fs = require("fs");
+const path = require("path");
+const crypto = require("crypto");
+
+const OUTPUT = path.join(__dirname, "src/data/stockcoach-vehicles.json");
+
+// Identifiants publics neutres : aleatoires, sans lien calculable avec l'id Stockcoach.
+// La correspondance (id public <-> _sourceId) reste dans le fichier de sortie, prive.
+// Un vehicule deja connu garde son id public (adresses stables d'une synchro a l'autre).
+const knownIds = new Map();
+try {
+  for (const p of JSON.parse(fs.readFileSync(OUTPUT, "utf8"))) {
+    if (p._sourceId != null && !/-sc\d+$/.test(p.id)) knownIds.set(p._sourceId, p.id);
+  }
+} catch {
+  // premiere synchro : pas de fichier
+}
+const usedIds = new Set(knownIds.values());
+
+function publicId(v, make, model) {
+  if (knownIds.has(v.id)) return knownIds.get(v.id);
+  let id;
+  do {
+    id = `${slugify(make)}-${slugify(model)}-${crypto.randomBytes(4).toString("hex")}`;
+  } while (usedIds.has(id));
+  usedIds.add(id);
+  knownIds.set(v.id, id);
+  return id;
+}
+
 function maskToken(t) {
   if (!t) return "(vide)";
   return t.length > 20
@@ -187,7 +217,7 @@ function mapVehicle(v) {
     ? new Date(w.firstRegistrationDate).getFullYear()
     : null;
 
-  const id = `${slugify(g.make)}-${slugify(g.model)}-sc${v.id}`;
+  const id = publicId(v, g.make, g.model);
   const transmission = gb.gears
     ? `${gb.gearbox || ""} ${gb.gears} rapports`.trim()
     : gb.gearbox || null;
@@ -256,8 +286,7 @@ async function main() {
 
   const mapped = detailed.map(mapVehicle).filter(Boolean);
 
-  const fs = require("fs");
-  fs.writeFileSync(require("path").join(__dirname, "src/data/stockcoach-vehicles.json"), JSON.stringify(mapped, null, 2));
+  fs.writeFileSync(OUTPUT, JSON.stringify(mapped, null, 2));
 
   console.log(`Termine. ${mapped.length} vehicules ecrits dans src/data/stockcoach-vehicles.json`);
   if (mapped[0]) {

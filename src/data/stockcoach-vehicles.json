@@ -1,6 +1,6 @@
 [
   {
-    "id": "geely-starray-sc35004",
+    "id": "geely-starray-fa7e6fa2",
     "make": "Geely",
     "model": "Starray Launch Edition",
     "status": "Disponible",
@@ -66,7 +66,7 @@
     "_vin": "LB3P11SD4TH328647"
   },
   {
-    "id": "peugeot-2008-sc20915",
+    "id": "peugeot-2008-1cb543b6",
     "make": "Peugeot",
     "model": "2008 Allure finish",
     "status": "Disponible",
@@ -129,7 +129,7 @@
     "_vin": "SJNJ12TA6U2233327"
   },
   {
-    "id": "peugeot-2008-sc20908",
+    "id": "peugeot-2008-0f9743f4",
     "make": "Peugeot",
     "model": "2008 Allure",
     "status": "Disponible",
@@ -189,7 +189,7 @@
     "_vin": "VF3VPFC10TZ053554"
   },
   {
-    "id": "peugeot-2008-sc20906",
+    "id": "peugeot-2008-09853778",
     "make": "Peugeot",
     "model": "2008 Allure",
     "status": "Disponible",
@@ -218,7 +218,7 @@
     "_vin": "VR3USHNK5RJ789059"
   },
   {
-    "id": "peugeot-2008-sc20902",
+    "id": "peugeot-2008-de83ea0c",
     "make": "Peugeot",
     "model": "2008 Allure",
     "status": "Disponible",
@@ -284,7 +284,7 @@
     "_vin": "SJNJ12TA7U2238276"
   },
   {
-    "id": "peugeot-2008-sc20896",
+    "id": "peugeot-2008-d368d6ff",
     "make": "Peugeot",
     "model": "2008 GT",
     "status": "Disponible",
@@ -313,7 +313,7 @@
     "_vin": "VR3USHNS8RJ775687"
   },
   {
-    "id": "peugeot-2008-sc20889",
+    "id": "peugeot-2008-c6d2d59a",
     "make": "Peugeot",
     "model": "2008 GT",
     "status": "Disponible",
@@ -342,7 +342,7 @@
     "_vin": "VR3USHNS8RJ771347"
   },
   {
-    "id": "peugeot-2008-sc20825",
+    "id": "peugeot-2008-67652e3a",
     "make": "Peugeot",
     "model": "2008 GT",
     "status": "Disponible",
@@ -371,7 +371,7 @@
     "_vin": "VR3USHNS3RJ775483"
   },
   {
-    "id": "mg-mg5-sc20357",
+    "id": "mg-mg5-1dd7c972",
     "make": "MG",
     "model": "MG5 Luxury",
     "status": "Disponible",
@@ -400,7 +400,7 @@
     "_vin": "LSJE24091RG016183"
   },
   {
-    "id": "hyundai-tucson-sc20321",
+    "id": "hyundai-tucson-89b472e9",
     "make": "Hyundai",
     "model": "Tucson N-Line Shine Sensation Pack",
     "status": "Disponible",
@@ -429,7 +429,7 @@
     "_vin": "TMAJB812DPJ266996"
   },
   {
-    "id": "peugeot-2008-sc19698",
+    "id": "peugeot-2008-6e4a3e13",
     "make": "Peugeot",
     "model": "2008 Allure",
     "status": "Disponible",
@@ -458,7 +458,7 @@
     "_vin": "VR3USHNK4RJ773211"
   },
   {
-    "id": "peugeot-2008-sc19680",
+    "id": "peugeot-2008-fbef4afc",
     "make": "Peugeot",
     "model": "2008 Allure",
     "status": "Disponible",
@@ -487,7 +487,7 @@
     "_vin": "VR3USHNK5RJ745546"
   },
   {
-    "id": "peugeot-2008-sc19668",
+    "id": "peugeot-2008-3d862af2",
     "make": "Peugeot",
     "model": "2008 Allure",
     "status": "Disponible",
@@ -516,7 +516,7 @@
     "_vin": "VR3USHNK7RJ745449"
   },
   {
-    "id": "peugeot-2008-sc19660",
+    "id": "peugeot-2008-fa638582",
     "make": "Peugeot",
     "model": "2008 Active",
     "status": "Disponible",
@@ -545,7 +545,7 @@
     "_vin": "VR3USHNK7RJ744981"
   },
   {
-    "id": "volvo-v60-sc19418",
+    "id": "volvo-v60-2ac7be08",
     "make": "Volvo",
     "model": "V60",
     "status": "Disponible",
@@ -575,7 +575,7 @@
     "_vin": "YV1ZWBFVDN1465118"
   },
   {
-    "id": "toyota-corolla-sc19416",
+    "id": "toyota-corolla-62e53760",
     "make": "Toyota",
     "model": "Corolla TS",
     "status": "Disponible",
@@ -605,7 +605,7 @@
     "_vin": "SB1Z93BE90E303762"
   },
   {
-    "id": "mg-marvel-r-sc19184",
+    "id": "mg-marvel-r-b2498f2d",
     "make": "MG",
     "model": "Marvel R Luxury",
     "status": "Disponible",
@@ -635,7 +635,7 @@
     "_vin": "LSJE24091PS020969"
   },
   {
-    "id": "mg-marvel-r-sc19181",
+    "id": "mg-marvel-r-2a871bf7",
     "make": "MG",
     "model": "Marvel R Luxury",
     "status": "Disponible",
@@ -665,7 +665,7 @@
     "_vin": "LSJE2409XPS025569"
   },
   {
-    "id": "volkswagen-t7-multivan-sc17882",
+    "id": "volkswagen-t7-multivan-c53a41ca",
     "make": "Volkswagen",
     "model": "T7 Multivan Style Long Version",
     "status": "Disponible",
@@ -694,7 +694,7 @@
     "_vin": "WV2ZZZST6RH025980"
   },
   {
-    "id": "volkswagen-t7-multivan-sc17880",
+    "id": "volkswagen-t7-multivan-f4113789",
     "make": "Volkswagen",
     "model": "T7 Multivan Style Long Version",
     "status": "Disponible",
@@ -723,7 +723,7 @@
     "_vin": "WV2ZZZST5RH026036"
   },
   {
-    "id": "citroen-c4-sc16773",
+    "id": "citroen-c4-5016677c",
     "make": "Citroen",
     "model": "C4 Plus",
     "status": "Disponible",
@@ -752,7 +752,7 @@
     "_vin": "VR7BAHNSARE007018"
   },
   {
-    "id": "hyundai-tucson-sc15620",
+    "id": "hyundai-tucson-a70b39e2",
     "make": "Hyundai",
     "model": "Tucson Feel Comfort",
     "status": "Disponible",
@@ -781,7 +781,7 @@
     "_vin": "TMAJD81BAPJ482079"
   },
   {
-    "id": "hyundai-tucson-sc15612",
+    "id": "hyundai-tucson-939eddc1",
     "make": "Hyundai",
     "model": "Tucson Feel Comfort",
     "status": "Disponible",
@@ -810,7 +810,7 @@
     "_vin": "TMAJD81BAPJ483034"
   },
   {
-    "id": "peugeot-308-sc13645",
+    "id": "peugeot-308-6a5e4a4c",
     "make": "Peugeot",
     "model": "308 Allure Pack",
     "status": "Disponible",
@@ -839,7 +839,7 @@
     "_vin": "VR3FPHNSLPY666684"
   },
   {
-    "id": "opel-movano-sc11993",
+    "id": "opel-movano-9537777c",
     "make": "Opel",
     "model": "Movano Fourgon 3500 Heavy L3H2 - mileage test",
     "status": "Disponible",
@@ -892,7 +892,7 @@
     "_vin": "VXEYDBPFCRG000845"
   },
   {
-    "id": "fiat-scudo-sc8541",
+    "id": "fiat-scudo-cb1e0a5b",
     "make": "Fiat",
     "model": "Scudo L3 Dubbele Cabine",
     "status": "Disponible",
