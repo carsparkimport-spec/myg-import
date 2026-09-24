@@ -1,11 +1,23 @@
 #!/usr/bin/env node
 /**
  * Stockcoach (S.A.M. Buyer API) -> myg-import.com sync script
- * Version basee sur le vrai spec OpenAPI BUYER-V1.
+ * Version basee sur le vrai spec OpenAPI BUYER-V1, avec sync incremental.
  *
- * Phase de test : recupere les vehicules en stock, mappe vers le schema
- * vehicles.json du site, ecrit dans src/data/stockcoach-vehicles.json (local,
- * pas encore publie). Aucune marge appliquee pour l'instant.
+ * Mappe vers le schema vehicles.json du site et tient a jour un catalogue
+ * local de tout le stock. Ne publie sur le site que les vehicules ayant un
+ * prix de vente (voir scripts/stockcoach-publish.js), lance a la fin.
+ *
+ * Sync incremental : la premiere execution recupere tout le stock
+ * disponible. Les executions suivantes ne recuperent que ce qui a
+ * change depuis le dernier sync reussi (date stockee automatiquement
+ * dans .stockcoach-sync-state.json, rien a faire manuellement).
+ * Pour forcer un sync complet : node stockcoach-sync.js --full
+ *
+ * Fichiers generes :
+ *   stockcoach-vehicles.json   catalogue complet (cumule d'un run a l'autre ;
+ *                              vendus -> "Vendu", hors stock -> "Retire")
+ *   stockcoach-removed.json    vehicules vendus/indisponibles (ce run)
+ *   .stockcoach-sync-state.json  date du dernier sync (usage interne)
  *
  * Variables d'environnement requises (Replit Secrets) :
  *   STOCKCOACH_EMAIL
@@ -14,7 +26,7 @@
  *   STOCKCOACH_ENV    = "beta" (defaut) ou "prod"
  *   STOCKCOACH_MARKUP = "0" (defaut)
  *
- * Usage : node stockcoach-sync.js
+ * Usage : node stockcoach-sync.js [--full]
  */
 
 const ENV = process.env.STOCKCOACH_ENV === "prod" ? "prod" : "beta";
@@ -22,6 +34,26 @@ const BASE_URL = `https://${ENV}.stockcoach.app/api/public`;
 const MARKUP = Number(process.env.STOCKCOACH_MARKUP || 0);
 const EMAIL = process.env.STOCKCOACH_EMAIL;
 const PASSWORD = process.env.STOCKCOACH_PASSWORD;
+const FORCE_FULL = process.argv.includes("--full");
+
+const fs = require("fs");
+const STATE_FILE = "./.stockcoach-sync-state.json";
+const OUTPUT_FILE = "./stockcoach-vehicles.json"; // catalogue complet, cumule
+const REMOVED_FILE = "./stockcoach-removed.json"; // vehicules vendus/indisponibles de ce run
+
+function loadLastSyncAt() {
+  if (FORCE_FULL) return null;
+  try {
+    const state = JSON.parse(fs.readFileSync(STATE_FILE, "utf8"));
+    return state.lastSyncAt || null;
+  } catch {
+    return null; // pas de fichier d'etat = premiere execution = sync complet
+  }
+}
+
+function saveSyncState(timestamp) {
+  fs.writeFileSync(STATE_FILE, JSON.stringify({ lastSyncAt: timestamp }, null, 2));
+}
 
 if (!EMAIL || !PASSWORD) {
   console.error(
@@ -29,36 +61,6 @@ if (!EMAIL || !PASSWORD) {
       "(Replit Secrets, pas en dur dans le code)."
   );
   process.exit(1);
-}
-
-const fs = require("fs");
-const path = require("path");
-const crypto = require("crypto");
-
-const OUTPUT = path.join(__dirname, "src/data/stockcoach-vehicles.json");
-
-// Identifiants publics neutres : aleatoires, sans lien calculable avec l'id Stockcoach.
-// La correspondance (id public <-> _sourceId) reste dans le fichier de sortie, prive.
-// Un vehicule deja connu garde son id public (adresses stables d'une synchro a l'autre).
-const knownIds = new Map();
-try {
-  for (const p of JSON.parse(fs.readFileSync(OUTPUT, "utf8"))) {
-    if (p._sourceId != null && !/-sc\d+$/.test(p.id)) knownIds.set(p._sourceId, p.id);
-  }
-} catch {
-  // premiere synchro : pas de fichier
-}
-const usedIds = new Set(knownIds.values());
-
-function publicId(v, make, model) {
-  if (knownIds.has(v.id)) return knownIds.get(v.id);
-  let id;
-  do {
-    id = `${slugify(make)}-${slugify(model)}-${crypto.randomBytes(4).toString("hex")}`;
-  } while (usedIds.has(id));
-  usedIds.add(id);
-  knownIds.set(v.id, id);
-  return id;
 }
 
 function maskToken(t) {
@@ -211,13 +213,15 @@ function mapVehicle(v) {
   const g = v.generalInfo || {};
   const e = v.engine || {};
   const gb = v.gearbox || {};
+  const b = v.body || {};
   const price = v.pricing?.price?.price ?? null;
   const w = v.warranty || {};
+  const color = b.color?.name || null;
   const year = w.firstRegistrationDate
     ? new Date(w.firstRegistrationDate).getFullYear()
     : null;
 
-  const id = publicId(v, g.make, g.model);
+  const id = `${slugify(g.make)}-${slugify(g.model)}-sc${v.id}`;
   const transmission = gb.gears
     ? `${gb.gearbox || ""} ${gb.gears} rapports`.trim()
     : gb.gearbox || null;
@@ -231,6 +235,8 @@ function mapVehicle(v) {
     id,
     make: g.make || null,
     model: [g.model, g.finish].filter(Boolean).join(" "),
+    baseModel: g.model || null,
+    finish: g.finish || null,
     status,
     origin: "Europe",
     year,
@@ -253,6 +259,7 @@ function mapVehicle(v) {
         ? `${e.consumption.wltpCombined}L/100km`
         : "",
       Equipements: (v.equipments || []).map((eq) => eq.name).filter(Boolean).join(";"),
+      ...(color ? { Couleur: color } : {}),
       ...(damages ? { Dommages: damages } : {}),
     },
     featured: false,
@@ -268,29 +275,73 @@ function mapVehicle(v) {
 // ---------------------------------------------------------------------
 async function main() {
   console.log(`--- Stockcoach sync (environnement: ${ENV}) ---`);
+  if (ENV === "prod") {
+    console.log("!!! ENVIRONNEMENT DE PRODUCTION - donnees reelles, pas de test !!!");
+  }
+  const requestStartedAt = new Date().toISOString();
+  const lastSyncAt = loadLastSyncAt();
+
+  console.log(
+    lastSyncAt
+      ? `Mode incremental : vehicules modifies depuis ${lastSyncAt}`
+      : "Mode complet (premiere execution, ou --full force)"
+  );
+
   const token = await authenticate();
 
   console.log("Recuperation de la liste des vehicules...");
-  const baseList = await fetchAllVehicles(token);
+  const baseList = await fetchAllVehicles(token, lastSyncAt);
   console.log(`Total recu: ${baseList.length} vehicules (tous statuts confondus).`);
 
-  const inStock = baseList.filter((v) => v.availability === "STOCK");
-  console.log(`Dont ${inStock.length} en statut STOCK.`);
+  const toPublish = baseList.filter((v) => v.availability === "STOCK");
+  const toRemove = baseList.filter(
+    (v) => v.availability === "SOLD" || v.availability === "OUT_OF_STOCK"
+  );
+  console.log(`  -> ${toPublish.length} a publier (STOCK), ${toRemove.length} a retirer (SOLD/OUT_OF_STOCK).`);
 
-  console.log("Recuperation des details (images, equipements, dommages)...");
+  console.log("Recuperation des details (images, equipements, couleur, dommages)...");
   const detailed = [];
-  for (const v of inStock) {
+  for (const v of toPublish) {
     const detail = await fetchVehicleDetail(token, v.id);
     if (detail) detailed.push(detail);
   }
 
   const mapped = detailed.map(mapVehicle).filter(Boolean);
 
-  fs.writeFileSync(OUTPUT, JSON.stringify(mapped, null, 2));
+  // Catalogue cumule : un sync incremental ne renvoie que les changements.
+  let catalog = [];
+  try {
+    catalog = JSON.parse(fs.readFileSync(OUTPUT_FILE, "utf8"));
+  } catch {
+    // premiere execution : pas encore de catalogue
+  }
+  const bySourceId = new Map(catalog.map((v) => [v._sourceId, v]));
+  for (const v of mapped) bySourceId.set(v._sourceId, v);
+  for (const v of toRemove) {
+    const known = bySourceId.get(v.id);
+    if (known) known.status = v.availability === "SOLD" ? "Vendu" : "Retire";
+  }
+  fs.writeFileSync(OUTPUT_FILE, JSON.stringify([...bySourceId.values()], null, 2));
 
-  console.log(`Termine. ${mapped.length} vehicules ecrits dans src/data/stockcoach-vehicles.json`);
+  const removedSummary = toRemove.map((v) => ({
+    _sourceId: v.id,
+    _vin: v.vin || null,
+    make: v.generalInfo?.make || null,
+    model: v.generalInfo?.model || null,
+    availability: v.availability,
+  }));
+  fs.writeFileSync(REMOVED_FILE, JSON.stringify(removedSummary, null, 2));
+
+  saveSyncState(requestStartedAt);
+
+  console.log(
+    `Termine. ${mapped.length} vehicule(s) mis a jour dans ${OUTPUT_FILE} ` +
+      `(${bySourceId.size} au total), ${removedSummary.length} vendus/retires dans ${REMOVED_FILE}.`
+  );
+  require("./scripts/stockcoach-publish").publish();
+  console.log(`Prochain sync : incremental depuis ${requestStartedAt} (sauf --full).`);
   if (mapped[0]) {
-    console.log("--- Exemple (premier vehicule) ---");
+    console.log("--- Exemple (premier vehicule publie) ---");
     console.log(JSON.stringify(mapped[0], null, 2));
   }
 }
@@ -299,5 +350,3 @@ main().catch((err) => {
   console.error("Erreur:", err.message);
   process.exit(1);
 });
-
-

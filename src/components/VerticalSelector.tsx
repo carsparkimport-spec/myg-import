@@ -198,7 +198,7 @@ export default function VerticalSelector() {
                   <div className="bg-white/5 p-4">
                     <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-1">{v.make}</p>
                     <h3 className="text-white font-semibold text-sm mb-3 leading-snug line-clamp-2">{v.model}</h3>
-                    <p className="text-red-500 font-bold text-base mb-3">{formatNumber(v.price)} €</p>
+                    <p className="text-red-500 font-bold text-base mb-3">{formatNumber(v.price)} € <span className="text-xs font-semibold text-gray-500">TTC</span></p>
                     <div className="flex items-center gap-2 text-[11px] text-gray-600">
                       <span>{v.year}</span>
                       <span>·</span>

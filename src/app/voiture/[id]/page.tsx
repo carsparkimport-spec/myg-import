@@ -35,7 +35,7 @@ export async function generateMetadata(
     return { title: 'Véhicule introuvable' };
   }
 
-  const title = `${vehicle.make} ${vehicle.model} (${vehicle.year}) – ${vehicle.price.toLocaleString('fr-LU')} €`;
+  const title = `${vehicle.make} ${vehicle.model} (${vehicle.year}) – ${vehicle.price.toLocaleString('fr-LU')} € TTC`;
   const description = vehicle.description;
   const image = vehicle.images?.[0];
 

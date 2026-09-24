@@ -58,7 +58,7 @@ const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle, basePath = '/voiture
       <div className="p-5 flex flex-col flex-grow gap-1">
         <h3 className="text-lg font-bold text-white leading-tight">{make} {model}</h3>
         {trim && <p className="text-xs text-gray-400 font-medium tracking-wide -mt-0.5">{trim}</p>}
-        <p className="text-xl font-extrabold text-white font-mono">{fmt(price ?? 0)} €</p>
+        <p className="text-xl font-extrabold text-white font-mono">{fmt(price ?? 0)} € <span className="text-sm font-semibold text-gray-400">TTC</span></p>
         <div className="text-sm text-gray-400 space-y-0.5 mt-1 flex-grow">
           <p>{year} · {fmt(mileage ?? 0)} km</p>
           <p>{transmission ?? ''}</p>

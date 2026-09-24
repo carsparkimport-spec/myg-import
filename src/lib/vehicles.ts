@@ -9,11 +9,6 @@ export type SiteVehicle = Record<string, unknown> & {
   hidden?: boolean;
 };
 
-// Le stock Stockcoach vient de l'environnement beta (donnees de test, marge a 0).
-// Il n'est visible qu'en developpement, ou en production si SHOW_STOCKCOACH=1.
-const SHOW_STOCKCOACH =
-  process.env.SHOW_STOCKCOACH === '1' || process.env.NODE_ENV !== 'production';
-
 const plain = (s: string) =>
   s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
@@ -134,8 +129,7 @@ function normalizeStockcoach(raw: Record<string, unknown>): SiteVehicle {
 
 export function getAllVehicles(): SiteVehicle[] {
   const base = baseVehicles as unknown as SiteVehicle[];
-  if (!SHOW_STOCKCOACH) return base;
-
+  // Stock Stockcoach : seuls les vehicules avec un prix de vente (scripts/stockcoach-publish.js)
   const known = new Set(base.map(v => v.id));
   const fromStockcoach = (stockcoachVehicles as unknown as Record<string, unknown>[])
     .map(normalizeStockcoach)
