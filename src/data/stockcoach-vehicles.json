@@ -58,7 +58,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 69516,
-    "_vin": "TMBJW7PS8TT108131"
+    "_vin": "TMBJW7PS8TT108131",
+    "baseModel": "Kodiaq"
   },
   {
     "id": "mg-mg3-standard-a832a955",
@@ -115,7 +116,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 69765,
-    "_vin": "LSJWP4395TZ169484"
+    "_vin": "LSJWP4395TZ169484",
+    "baseModel": "MG3"
   },
   {
     "id": "mg-mg3-standard-0489c6ad",
@@ -173,7 +175,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 69766,
-    "_vin": "LSJWP439XTZ168508"
+    "_vin": "LSJWP439XTZ168508",
+    "baseModel": "MG3"
   },
   {
     "id": "mg-mg3-standard-33ce0752",
@@ -231,7 +234,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 69767,
-    "_vin": "LSJWP439XTZ169383"
+    "_vin": "LSJWP439XTZ169383",
+    "baseModel": "MG3"
   },
   {
     "id": "hyundai-kona-n-line-x-my26-25169879",
@@ -287,7 +291,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70476,
-    "_vin": "KMHHB811XVU238825"
+    "_vin": "KMHHB811XVU238825",
+    "baseModel": "Kona"
   },
   {
     "id": "hyundai-kona-n-line-x-my26-3d0d44bb",
@@ -343,7 +348,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70478,
-    "_vin": "KMHHB8117VU238653"
+    "_vin": "KMHHB8117VU238653",
+    "baseModel": "Kona"
   },
   {
     "id": "hyundai-kona-n-line-x-my26-e50e6a42",
@@ -399,7 +405,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70483,
-    "_vin": "KMHHB811XVU239215"
+    "_vin": "KMHHB811XVU239215",
+    "baseModel": "Kona"
   },
   {
     "id": "hyundai-kona-n-line-x-my26-be7ba030",
@@ -455,7 +462,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70489,
-    "_vin": "KMHHB8117VU239365"
+    "_vin": "KMHHB8117VU239365",
+    "baseModel": "Kona"
   },
   {
     "id": "hyundai-kona-n-line-x-my26-93081cc8",
@@ -511,7 +519,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70490,
-    "_vin": "KMHHB8115VU250378"
+    "_vin": "KMHHB8115VU250378",
+    "baseModel": "Kona"
   },
   {
     "id": "hyundai-tucson-n-line-x-7eca19bb",
@@ -570,7 +579,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70493,
-    "_vin": "TMAJB811XVJ520362"
+    "_vin": "TMAJB811XVJ520362",
+    "baseModel": "Tucson"
   },
   {
     "id": "hyundai-tucson-n-line-x-4e369dd5",
@@ -629,7 +639,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70494,
-    "_vin": "TMAJB8112VJ520307"
+    "_vin": "TMAJB8112VJ520307",
+    "baseModel": "Tucson"
   },
   {
     "id": "hyundai-tucson-n-line-x-pano-f789f486",
@@ -690,7 +701,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70499,
-    "_vin": "TMAJB8119VJ511751"
+    "_vin": "TMAJB8119VJ511751",
+    "baseModel": "Tucson"
   },
   {
     "id": "hyundai-tucson-n-line-fdb287ed",
@@ -744,7 +756,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70560,
-    "_vin": "TMAJA8129TJ469140"
+    "_vin": "TMAJA8129TJ469140",
+    "baseModel": "Tucson"
   },
   {
     "id": "nissan-qashqai-n-connecta-ca82b7b7",
@@ -801,7 +814,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70575,
-    "_vin": "SJNJ12TAXU2232231"
+    "_vin": "SJNJ12TAXU2232231",
+    "baseModel": "Qashqai"
   },
   {
     "id": "hyundai-tucson-n-line-c7a7ed76",
@@ -855,7 +869,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70586,
-    "_vin": "TMAJA8121TJ469312"
+    "_vin": "TMAJA8121TJ469312",
+    "baseModel": "Tucson"
   },
   {
     "id": "hyundai-tucson-n-line-46de7919",
@@ -909,7 +924,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70587,
-    "_vin": "TMAJA8120TJ469334"
+    "_vin": "TMAJA8120TJ469334",
+    "baseModel": "Tucson"
   },
   {
     "id": "nissan-qashqai-n-connecta-84c7daf0",
@@ -968,7 +984,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70588,
-    "_vin": "SJNJ12TA6U2231481"
+    "_vin": "SJNJ12TA6U2231481",
+    "baseModel": "Qashqai"
   },
   {
     "id": "hyundai-tucson-n-line-313531da",
@@ -1022,7 +1039,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70615,
-    "_vin": "TMAJA8125TJ469037"
+    "_vin": "TMAJA8125TJ469037",
+    "baseModel": "Tucson"
   },
   {
     "id": "hyundai-tucson-n-line-2wd-f2e714fe",
@@ -1076,7 +1094,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70621,
-    "_vin": "TMAJA8129TJ469767"
+    "_vin": "TMAJA8129TJ469767",
+    "baseModel": "Tucson"
   },
   {
     "id": "mg-mg3-standard-fda8b50d",
@@ -1133,7 +1152,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70666,
-    "_vin": "LSJWP4392TZ168440"
+    "_vin": "LSJWP4392TZ168440",
+    "baseModel": "MG3"
   },
   {
     "id": "mg-zs-comfort-c5e297a4",
@@ -1193,7 +1213,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70673,
-    "_vin": "LSJWS4392TZ166461"
+    "_vin": "LSJWS4392TZ166461",
+    "baseModel": "ZS"
   },
   {
     "id": "nissan-qashqai-tekna-aa7349e4",
@@ -1230,7 +1251,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70748,
-    "_vin": "SJNJ12TA4U2302693"
+    "_vin": "SJNJ12TA4U2302693",
+    "baseModel": "Qashqai"
   },
   {
     "id": "nissan-qashqai-tekna-24b8e414",
@@ -1267,7 +1289,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70751,
-    "_vin": "SJNJ12TA1U2337806"
+    "_vin": "SJNJ12TA1U2337806",
+    "baseModel": "Qashqai"
   },
   {
     "id": "nissan-qashqai-tekna-838df31b",
@@ -1304,7 +1327,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70753,
-    "_vin": "SJNJ12TA9U2322227"
+    "_vin": "SJNJ12TA9U2322227",
+    "baseModel": "Qashqai"
   },
   {
     "id": "mg-mg3-luxury-82a075fa",
@@ -1363,7 +1387,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 70829,
-    "_vin": "LSJWP4393TZ152036"
+    "_vin": "LSJWP4393TZ152036",
+    "baseModel": "MG3"
   },
   {
     "id": "mg-mg3-luxury-8b593092",
@@ -1424,7 +1449,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71685,
-    "_vin": "LSJWP4393TZ199017"
+    "_vin": "LSJWP4393TZ199017",
+    "baseModel": "MG3"
   },
   {
     "id": "mg-mg3-luxury-881d1e61",
@@ -1485,7 +1511,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71686,
-    "_vin": "LSJWP4394TZ198863"
+    "_vin": "LSJWP4394TZ198863",
+    "baseModel": "MG3"
   },
   {
     "id": "mg-mg3-luxury-ad234471",
@@ -1546,7 +1573,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71687,
-    "_vin": "LSJWP4391TZ178974"
+    "_vin": "LSJWP4391TZ178974",
+    "baseModel": "MG3"
   },
   {
     "id": "nissan-juke-n-connecta-2ddac94c",
@@ -1600,7 +1628,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71696,
-    "_vin": "SJNF16FA4U2186114"
+    "_vin": "SJNF16FA4U2186114",
+    "baseModel": "Juke"
   },
   {
     "id": "nissan-qashqai-tekna-40c65808",
@@ -1660,7 +1689,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71735,
-    "_vin": "SJNJ12TA7U2379381"
+    "_vin": "SJNJ12TA7U2379381",
+    "baseModel": "Qashqai"
   },
   {
     "id": "nissan-qashqai-tekna-9b900a6a",
@@ -1721,7 +1751,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71736,
-    "_vin": "SJNJ12TA6U2401256"
+    "_vin": "SJNJ12TA6U2401256",
+    "baseModel": "Qashqai"
   },
   {
     "id": "nissan-qashqai-n-connecta-f0ca3c97",
@@ -1778,7 +1809,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71738,
-    "_vin": "SJNJ12TA0U2368044"
+    "_vin": "SJNJ12TA0U2368044",
+    "baseModel": "Qashqai"
   },
   {
     "id": "hyundai-i20-black-line-style-ee6d5aab",
@@ -1833,7 +1865,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71777,
-    "_vin": "NLHBR51G2TZ799438"
+    "_vin": "NLHBR51G2TZ799438",
+    "baseModel": "i20"
   },
   {
     "id": "hyundai-i20-black-line-style-c14d883a",
@@ -1889,7 +1922,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71793,
-    "_vin": "NLHBR51G4TZ799473"
+    "_vin": "NLHBR51G4TZ799473",
+    "baseModel": "i20"
   },
   {
     "id": "hyundai-i20-black-line-style-51177b25",
@@ -1944,7 +1978,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71794,
-    "_vin": "NLHBR51G7TZ798298"
+    "_vin": "NLHBR51G7TZ798298",
+    "baseModel": "i20"
   },
   {
     "id": "hyundai-i20-black-line-style-2e8aaf70",
@@ -2000,7 +2035,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71796,
-    "_vin": "NLHBR51G0TZ799308"
+    "_vin": "NLHBR51G0TZ799308",
+    "baseModel": "i20"
   },
   {
     "id": "hyundai-i20-black-line-style-58ecae2d",
@@ -2056,7 +2092,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71798,
-    "_vin": "NLHBR51G3TZ799030"
+    "_vin": "NLHBR51G3TZ799030",
+    "baseModel": "i20"
   },
   {
     "id": "byd-atto-2-1-5-dm-i-boost-a969d16c",
@@ -2113,7 +2150,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71847,
-    "_vin": "LC0C74C47T4121934"
+    "_vin": "LC0C74C47T4121934",
+    "baseModel": "ATTO 2"
   },
   {
     "id": "byd-atto-2-boost-49c18023",
@@ -2177,7 +2215,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71893,
-    "_vin": "LC0C74C4XT4088220"
+    "_vin": "LC0C74C4XT4088220",
+    "baseModel": "ATTO 2"
   },
   {
     "id": "byd-atto-2-boost-dc850777",
@@ -2239,7 +2278,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71895,
-    "_vin": "LC0C74C45T4096256"
+    "_vin": "LC0C74C45T4096256",
+    "baseModel": "ATTO 2"
   },
   {
     "id": "nissan-juke-acenta-51cac11e",
@@ -2294,7 +2334,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71912,
-    "_vin": "SJNF16FA4U2193189"
+    "_vin": "SJNF16FA4U2193189",
+    "baseModel": "Juke"
   },
   {
     "id": "toyota-yaris-cross-cross-style-7e73ab47",
@@ -2352,7 +2393,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71928,
-    "_vin": "JTDKGCGB60A202770"
+    "_vin": "JTDKGCGB60A202770",
+    "baseModel": "Yaris Cross"
   },
   {
     "id": "toyota-yaris-style-cross-c4003e1d",
@@ -2409,7 +2451,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71929,
-    "_vin": "JTDKGCGB60A200940"
+    "_vin": "JTDKGCGB60A200940",
+    "baseModel": "Yaris"
   },
   {
     "id": "toyota-yaris-style-cross-139aa35c",
@@ -2470,7 +2513,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71930,
-    "_vin": "JTDKGCGBX0A208975"
+    "_vin": "JTDKGCGBX0A208975",
+    "baseModel": "Yaris"
   },
   {
     "id": "byd-atto-2-boost-136ec184",
@@ -2533,7 +2577,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71937,
-    "_vin": "LC0C74C40T4225956"
+    "_vin": "LC0C74C40T4225956",
+    "baseModel": "ATTO 2"
   },
   {
     "id": "byd-atto-2-boost-5aaf1e22",
@@ -2597,7 +2642,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 71946,
-    "_vin": "LC0C74C46T4212385"
+    "_vin": "LC0C74C46T4212385",
+    "baseModel": "ATTO 2"
   },
   {
     "id": "geely-starray-max-dd9fd9ca",
@@ -2666,7 +2712,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 72017,
-    "_vin": "LB3P11SD5TH372026"
+    "_vin": "LB3P11SD5TH372026",
+    "baseModel": "Starray"
   },
   {
     "id": "geely-starray-max-7f28ce2f",
@@ -2735,7 +2782,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 72018,
-    "_vin": "LB3P11SD5TH372219"
+    "_vin": "LB3P11SD5TH372219",
+    "baseModel": "Starray"
   },
   {
     "id": "mg-zs-luxury-a209301f",
@@ -2796,7 +2844,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 72032,
-    "_vin": "LSJWS4399TZ142867"
+    "_vin": "LSJWS4399TZ142867",
+    "baseModel": "ZS"
   },
   {
     "id": "mg-zs-standard-48f6199b",
@@ -2854,7 +2903,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 72075,
-    "_vin": "LSJWS4392TZ167741"
+    "_vin": "LSJWS4392TZ167741",
+    "baseModel": "ZS"
   },
   {
     "id": "mg-zs-standard-52344c05",
@@ -2913,7 +2963,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 72077,
-    "_vin": "LSJWS4397TZ175253"
+    "_vin": "LSJWS4397TZ175253",
+    "baseModel": "ZS"
   },
   {
     "id": "mg-zs-standard-5bdb8314",
@@ -2974,7 +3025,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 72078,
-    "_vin": "LSJWS4399TZ173228"
+    "_vin": "LSJWS4399TZ173228",
+    "baseModel": "ZS"
   },
   {
     "id": "mg-zs-standard-ef56551f",
@@ -3033,7 +3085,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 72079,
-    "_vin": "LSJWS4395TZ170424"
+    "_vin": "LSJWS4395TZ170424",
+    "baseModel": "ZS"
   },
   {
     "id": "hyundai-bayon-trend-b60b4b97",
@@ -3087,7 +3140,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 72103,
-    "_vin": "NLHBN81G5TZ744205"
+    "_vin": "NLHBN81G5TZ744205",
+    "baseModel": "Bayon"
   },
   {
     "id": "skoda-kamiq-selection-3c31d4a6",
@@ -3142,7 +3196,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 72132,
-    "_vin": "TMBGR6NW0V3032425"
+    "_vin": "TMBGR6NW0V3032425",
+    "baseModel": "Kamiq"
   },
   {
     "id": "skoda-kamiq-selection-c1d70b53",
@@ -3196,7 +3251,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 72135,
-    "_vin": "TMBGK6NWXV3062939"
+    "_vin": "TMBGK6NWXV3062939",
+    "baseModel": "Kamiq"
   },
   {
     "id": "skoda-kamiq-selection-399f0566",
@@ -3252,7 +3308,8 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 72137,
-    "_vin": "TMBGK6NW9V3068294"
+    "_vin": "TMBGK6NW9V3068294",
+    "baseModel": "Kamiq"
   },
   {
     "id": "nissan-qashqai-tekna-5c5f1063",
@@ -3312,6 +3369,7 @@
     "featuredOrder": null,
     "_source": "stockcoach",
     "_sourceId": 72191,
-    "_vin": "SJNJ12TAXU2372022"
+    "_vin": "SJNJ12TAXU2372022",
+    "baseModel": "Qashqai"
   }
 ]

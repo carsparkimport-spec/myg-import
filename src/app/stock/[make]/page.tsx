@@ -12,6 +12,7 @@ interface Vehicle {
   id: string;
   make: string;
   model: string;
+  baseModel?: string;
   year: number;
   mileage: number;
   transmission: string;
@@ -54,12 +55,29 @@ export default function BrandStockPage() {
     [vehicles, brand]
   );
 
-  const models = useMemo(
-    () => Array.from(new Set(brandVehicles.map(v => v.model))).sort(),
-    [brandVehicles]
-  );
+  // Liste des modeles regroupee par modele de base (sans la finition), sans tenir
+  // compte des majuscules : "MG3 LUXURY" et "MG3 Luxury" -> "MG3".
+  const modelKey = (v: Vehicle) => (v.baseModel || v.model).trim().toLowerCase();
+  const models = useMemo(() => {
+    const spellings = new Map<string, Map<string, number>>();
+    for (const v of brandVehicles) {
+      const name = (v.baseModel || v.model).trim();
+      const counts = spellings.get(modelKey(v)) ?? new Map<string, number>();
+      counts.set(name, (counts.get(name) ?? 0) + 1);
+      spellings.set(modelKey(v), counts);
+    }
+    // Libelle affiche : l'orthographe la plus frequente
+    return Array.from(spellings, ([key, counts]) => ({
+      key,
+      label: [...counts].sort((a, b) => b[1] - a[1])[0][0],
+    })).sort((a, b) => a.label.localeCompare(b.label, 'fr'));
+  }, [brandVehicles]);
 
-  const displayed = selectedModel ? brandVehicles.filter(v => v.model === selectedModel) : brandVehicles;
+  const selectedLabel = models.find(m => m.key === selectedModel)?.label;
+  const displayed = selectedModel ? brandVehicles.filter(v => modelKey(v) === selectedModel) : brandVehicles;
+  const displayedInStock = displayed.filter(v => v.status !== 'Vendu');
+  const displayedSold = displayed.filter(v => v.status === 'Vendu');
+  const inStockCount = brandVehicles.filter(v => v.status !== 'Vendu').length;
 
   return (
     <Layout>
@@ -78,12 +96,12 @@ export default function BrandStockPage() {
             {brand && (
               <BrandEmblem brand={brand} />
             )}
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
+            <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
               {brand ? brand.name : 'Marque introuvable'}
             </h1>
             {!loading && brand && (
               <p className="text-gray-400 text-sm uppercase tracking-wider">
-                {brandVehicles.length} véhicule{brandVehicles.length > 1 ? 's' : ''} en stock
+                {inStockCount} véhicule{inStockCount > 1 ? 's' : ''} en stock
               </p>
             )}
           </div>
@@ -128,23 +146,43 @@ export default function BrandStockPage() {
                 </button>
                 {models.map(model => (
                   <button
-                    key={model}
-                    onClick={() => setSelectedModel(model)}
+                    key={model.key}
+                    onClick={() => setSelectedModel(model.key)}
                     className={`w-full py-4 text-lg tracking-wide transition-colors ${
-                      selectedModel === model ? 'text-red-500 font-semibold' : 'text-gray-300 hover:text-white'
+                      selectedModel === model.key ? 'text-red-500 font-semibold' : 'text-gray-300 hover:text-white'
                     }`}
                   >
-                    {model}
+                    {model.label}
                   </button>
                 ))}
               </div>
 
-              {/* ── VEHICLE GRID ── */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {displayed.map(vehicle => (
-                  <VehicleCard key={vehicle.id} vehicle={vehicle} basePath="/eu/voiture" />
-                ))}
-              </div>
+              {/* ── VEHICLE GRID : en stock ── */}
+              {displayedInStock.length > 0 ? (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {displayedInStock.map(vehicle => (
+                    <VehicleCard key={vehicle.id} vehicle={vehicle} basePath="/eu/voiture" />
+                  ))}
+                </div>
+              ) : (
+                <p className="text-center text-gray-400 py-10">
+                  Aucun véhicule {selectedLabel || brand.name} disponible en stock pour le moment.
+                </p>
+              )}
+
+              {/* ── VEHICLE GRID : vendus ── */}
+              {displayedSold.length > 0 && (
+                <section className="mt-24 border-t border-white/10">
+                  <h2 className="text-center text-2xl font-bold uppercase tracking-widest text-red-500 mt-12 mb-10">
+                    Véhicules vendus ({displayedSold.length})
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 opacity-70">
+                    {displayedSold.map(vehicle => (
+                      <VehicleCard key={vehicle.id} vehicle={vehicle} basePath="/eu/voiture" />
+                    ))}
+                  </div>
+                </section>
+              )}
             </>
           )}
         </div>

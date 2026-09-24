@@ -42,6 +42,20 @@ const slugify = (s) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 
+// Modele de base sans la finition. Les vehicules synchronises avant l'ajout de
+// baseModel n'ont que "modele finition" : la finition est alors la fin du nom
+// par laquelle commence la description ("Sandero Expression" / "Expression TCe 100").
+function baseModelOf(v) {
+  if (v.baseModel) return v.baseModel;
+  const words = String(v.model || "").split(" ");
+  const desc = String(v.description || "");
+  for (let i = 1; i < words.length; i++) {
+    const finish = words.slice(i).join(" ");
+    if (desc === finish || desc.startsWith(finish + " ")) return words.slice(0, i).join(" ");
+  }
+  return v.model;
+}
+
 function publish() {
   const catalog = readJson(CATALOG);
   const prices = readJson(PRICES, {});
@@ -76,7 +90,7 @@ function publish() {
       continue;
     }
     counts[v.status]++;
-    published.push({ ...v, id: publicId(v), price });
+    published.push({ ...v, baseModel: baseModelOf(v), id: publicId(v), price });
   }
 
   fs.writeFileSync(OUTPUT, JSON.stringify(published, null, 2) + "\n");
