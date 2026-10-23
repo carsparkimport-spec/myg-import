@@ -1,0 +1,230 @@
+{
+  "hyundai-tucson-14d83d74": {
+    "firstRegistration": {
+      "value": "2026-03-16",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "hyundai-tucson-3d1aee85": {
+    "firstRegistration": {
+      "value": "2026-03-16",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "hyundai-tucson-1e86ed03": {
+    "firstRegistration": {
+      "value": "2026-03-16",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "peugeot-5008-c694d088": {
+    "firstRegistration": {
+      "value": "2025-08-29",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "hyundai-tucson-1968be80": {
+    "thermalPowerKw": {
+      "value": 132,
+      "source": "stockcoach:engine.kwCombustionEngine"
+    },
+    "firstRegistration": {
+      "value": "2026-07-27",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "hyundai-tucson-1ae56fe4": {
+    "thermalPowerKw": {
+      "value": 132,
+      "source": "stockcoach:engine.kwCombustionEngine"
+    },
+    "firstRegistration": {
+      "value": "2026-06-22",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "hyundai-tucson-ad3e8de4": {
+    "thermalPowerKw": {
+      "value": 132,
+      "source": "stockcoach:engine.kwCombustionEngine"
+    },
+    "firstRegistration": {
+      "value": "2026-07-27",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "hyundai-tucson-07152124": {
+    "thermalPowerKw": {
+      "value": 132,
+      "source": "stockcoach:engine.kwCombustionEngine"
+    },
+    "firstRegistration": {
+      "value": "2026-06-16",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "hyundai-tucson-0a7e0f7f": {
+    "thermalPowerKw": {
+      "value": 132,
+      "source": "stockcoach:engine.kwCombustionEngine"
+    },
+    "firstRegistration": {
+      "value": "2026-06-23",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "hyundai-tucson-0171b632": {
+    "thermalPowerKw": {
+      "value": 132,
+      "source": "stockcoach:engine.kwCombustionEngine"
+    },
+    "firstRegistration": {
+      "value": "2026-06-22",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "peugeot-5008-d9f9c2d7": {
+    "firstRegistration": {
+      "value": "2026-03-03",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "peugeot-5008-3f2dc94d": {
+    "firstRegistration": {
+      "value": "2026-03-03",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "peugeot-5008-ad778ee4": {
+    "firstRegistration": {
+      "value": "2026-03-05",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "peugeot-5008-801fa321": {
+    "firstRegistration": {
+      "value": "2026-03-03",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "peugeot-5008-02535452": {
+    "firstRegistration": {
+      "value": "2026-03-06",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "hyundai-tucson-1f844cfa": {
+    "thermalPowerKw": {
+      "value": 132,
+      "source": "stockcoach:engine.kwCombustionEngine"
+    },
+    "firstRegistration": {
+      "value": "2026-10-07",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "hyundai-tucson-f2a98480": {
+    "thermalPowerKw": {
+      "value": 132,
+      "source": "stockcoach:engine.kwCombustionEngine"
+    },
+    "firstRegistration": {
+      "value": "2026-10-07",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "hyundai-tucson-9efcc0f1": {
+    "thermalPowerKw": {
+      "value": 176,
+      "source": "stockcoach:engine.kwCombustionEngine"
+    },
+    "firstRegistration": {
+      "value": "2026-10-08",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "peugeot-5008-15a7bdba": {
+    "firstRegistration": {
+      "value": "2026-03-04",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "skoda-kodiaq-sportline-8a3e3cae": {
+    "firstRegistration": {
+      "value": "2026-05-28",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "hyundai-kona-n-line-x-my26-be7ba030": {
+    "firstRegistration": {
+      "value": "2026-10-15",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "hyundai-kona-n-line-x-my26-93081cc8": {
+    "firstRegistration": {
+      "value": "2026-09-01",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "hyundai-tucson-n-line-2wd-f2e714fe": {
+    "firstRegistration": {
+      "value": "2026-09-01",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "mg-mg3-luxury-881d1e61": {
+    "firstRegistration": {
+      "value": "2026-06-01",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "nissan-juke-n-connecta-2ddac94c": {
+    "firstRegistration": {
+      "value": "2026-06-15",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "nissan-juke-acenta-51cac11e": {
+    "firstRegistration": {
+      "value": "2026-05-27",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "toyota-yaris-cross-cross-style-7e73ab47": {
+    "firstRegistration": {
+      "value": "2026-07-01",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "hyundai-bayon-trend-b60b4b97": {
+    "firstRegistration": {
+      "value": "2026-05-13",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "skoda-kamiq-selection-3c31d4a6": {
+    "firstRegistration": {
+      "value": "2026-08-17",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "skoda-kamiq-selection-c1d70b53": {
+    "firstRegistration": {
+      "value": "2026-08-21",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "skoda-kamiq-selection-399f0566": {
+    "firstRegistration": {
+      "value": "2026-08-21",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  },
+  "mg-zs-e28483a9": {
+    "firstRegistration": {
+      "value": "2026-07-31",
+      "source": "stockcoach:warranty.firstRegistrationDate"
+    }
+  }
+}
