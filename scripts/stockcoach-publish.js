@@ -24,6 +24,7 @@ const ROOT = path.join(__dirname, "..");
 const CATALOG = path.join(ROOT, "stockcoach-vehicles.json");
 const PRICES = path.join(ROOT, "stockcoach-prices.json");
 const OUTPUT = path.join(ROOT, "src/data/stockcoach-vehicles.json");
+const OVERRIDES = path.join(ROOT, "src/data/stockcoach-overrides.json");
 
 function readJson(file, fallback) {
   try {
@@ -59,6 +60,8 @@ function baseModelOf(v) {
 function publish() {
   const catalog = readJson(CATALOG);
   const prices = readJson(PRICES, {});
+  // Photos et libelles confirmes par le vendeur, conserves apres synchronisation.
+  const overrides = readJson(OVERRIDES, {});
 
   // Identifiants publics neutres : aleatoires, sans lien calculable avec l'id Stockcoach.
   // Un vehicule deja publie garde son id (adresses stables d'une publication a l'autre).
@@ -90,7 +93,22 @@ function publish() {
       continue;
     }
     counts[v.status]++;
-    published.push({ ...v, baseModel: baseModelOf(v), id: publicId(v), price });
+    const override = overrides[sourceId] || {};
+    const presentation = {};
+    // Ne jamais remplacer l'identite, le statut ou les donnees techniques fournisseur.
+    for (const key of ["model", "trim", "colors", "images"]) {
+      if (override[key] !== undefined) presentation[key] = override[key];
+    }
+    const details = { ...(v.details || {}) };
+    if (override.details?.Couleur) details.Couleur = override.details.Couleur;
+    published.push({
+      ...v,
+      ...presentation,
+      details,
+      baseModel: baseModelOf(v),
+      id: publicId(v),
+      price,
+    });
   }
 
   fs.writeFileSync(OUTPUT, JSON.stringify(published, null, 2) + "\n");
